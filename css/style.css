@@ -92,8 +92,8 @@ p {
   gap: 2rem;
   min-height: 82px;
   padding: 1rem clamp(1.25rem, 4vw, 4rem);
-  background: rgba(239, 229, 210, 0.9);
-  border-bottom: 1px solid var(--line);
+  background: linear-gradient(180deg, rgba(239, 229, 210, 0.98), rgba(226, 211, 189, 0.94));
+  border-bottom: 2px solid rgba(79, 93, 58, 0.28);
   backdrop-filter: blur(14px);
 }
 
@@ -676,8 +676,8 @@ p {
     display: grid;
     gap: 0;
     padding: 1rem 1.25rem 1.5rem;
-    background: rgba(239, 229, 210, 0.98);
-    border-bottom: 1px solid var(--line);
+    background: linear-gradient(180deg, rgba(239, 229, 210, 0.99), rgba(226, 211, 189, 0.98));
+    border-bottom: 2px solid rgba(79, 93, 58, 0.28);
     box-shadow: var(--shadow);
     transform: translateY(-130%);
     visibility: hidden;
