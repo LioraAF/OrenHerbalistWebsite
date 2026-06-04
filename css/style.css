@@ -5,6 +5,8 @@
   --olive-dark: #29351f;
   --clay: #9b6045;
   --clay-dark: #6f3f2e;
+  --soil-brown-rgb: 90, 82, 63;
+  --dropdown-top-rgb: 116, 108, 84;
   --moss: #78805a;
   --text: #2f2a22;
   --muted: #756b5c;
@@ -92,8 +94,8 @@ p {
   gap: 2rem;
   min-height: 82px;
   padding: 1rem clamp(1.25rem, 4vw, 4rem);
-  background: linear-gradient(180deg, rgba(239, 229, 210, 0.98), rgba(226, 211, 189, 0.94));
-  border-bottom: 2px solid rgba(79, 93, 58, 0.28);
+  background: linear-gradient(0deg, rgba(239, 229, 210, 0.98), rgba(var(--soil-brown-rgb), 0.36));
+  border-bottom: 1.5px solid var(--olive-dark);
   backdrop-filter: blur(14px);
 }
 
@@ -676,17 +678,27 @@ p {
     display: grid;
     gap: 0;
     padding: 1rem 1.25rem 1.5rem;
-    background: linear-gradient(180deg, rgba(239, 229, 210, 0.99), rgba(226, 211, 189, 0.98));
-    border-bottom: 2px solid rgba(79, 93, 58, 0.28);
+    background: linear-gradient(0deg, rgba(239, 229, 210, 0.99), rgba(var(--dropdown-top-rgb), 0.75));
+    border-bottom: 1.5px solid var(--olive-dark);
     box-shadow: var(--shadow);
     transform: translateY(-130%);
     visibility: hidden;
-    transition: transform 220ms ease, visibility 220ms ease;
+    transition: transform 600ms ease, visibility 600ms ease;
   }
 
   .site-nav a {
     padding: 0.95rem 0;
     border-bottom: 1px solid var(--line);
+  }
+
+  .site-nav a::after {
+    background: var(--olive-dark);
+  }
+
+  .site-nav a:hover::after,
+  .site-nav a[aria-current="page"]::after {
+    background: var(--olive-dark);
+    height: 1.5px;
   }
 
   .nav-open .site-nav {
