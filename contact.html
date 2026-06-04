@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>יצירת קשר | אורן שושנה</title>
+  <meta name="description" content="יצירת קשר עם אורן שושנה, הרבליסט קליני.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="דף הבית של אורן שושנה">
+      <span class="brand-mark">עלה</span>
+      <span>
+        <strong>אורן שושנה</strong>
+        <small>הרבליסט קליני</small>
+      </span>
+    </a>
+
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span class="sr-only">פתיחת תפריט</span>
+    </button>
+
+    <nav class="site-nav" id="site-nav" aria-label="ניווט ראשי">
+      <a href="index.html">בית</a>
+      <a href="about.html">אודות</a>
+      <a href="products.html">מוצרים</a>
+      <a href="workshops.html">סדנאות</a>
+      <a href="contact.html" aria-current="page">יצירת קשר</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="contact-hero">
+      <div class="contact-photo" role="img" aria-label="שביל בגינה ירוקה ליד בית שקט"></div>
+      <div class="contact-panel">
+        <p class="eyebrow">יצירת קשר</p>
+        <h1>נעים להתחיל בשיחה קצרה.</h1>
+        <p>
+          לתיאום מפגש, בירור לגבי מוצר או הזמנת סדנה, אפשר להשאיר פרטים ואחזור
+          בהקדם.
+        </p>
+
+        <form class="contact-form" action="#" method="post">
+          <label for="name">שם מלא</label>
+          <input id="name" name="name" type="text" autocomplete="name">
+
+          <label for="phone">טלפון</label>
+          <input id="phone" name="phone" type="tel" autocomplete="tel">
+
+          <label for="email">אימייל</label>
+          <input id="email" name="email" type="email" autocomplete="email">
+
+          <label for="message">כמה מילים</label>
+          <textarea id="message" name="message" rows="5"></textarea>
+
+          <button class="button primary" type="submit">שליחת פרטים</button>
+          <p class="form-note">הטופס סטטי כרגע. ניתן לחבר אותו בהמשך לשירות שליחה.</p>
+        </form>
+      </div>
+    </section>
+
+    <section class="contact-details section-pad">
+      <article>
+        <h2>טלפון</h2>
+        <p><a href="tel:+972501234567">050-123-4567</a></p>
+      </article>
+      <article>
+        <h2>אימייל</h2>
+        <p><a href="mailto:oren@example.com">oren@example.com</a></p>
+      </article>
+      <article>
+        <h2>קליניקה</h2>
+        <p>מפגשים בתיאום מראש, באזור שקט וירוק.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>אורן שושנה | הרבליסט קליני</p>
+    <p><a href="contact.html">יצירת קשר</a></p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
