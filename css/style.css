@@ -11,8 +11,9 @@
   --text: #2f2a22;
   --muted: #756b5c;
   --line: rgba(79, 93, 58, 0.22);
-  --white-soft: rgba(255, 252, 245, 0.76);
+  --white-soft: rgba(255, 252, 245, 0.82);
   --shadow: 0 22px 60px rgba(55, 45, 30, 0.12);
+  --hero-photo-height: 375px;
 }
 
 * {
@@ -109,12 +110,18 @@ p {
 .brand-mark {
   display: grid;
   place-items: center;
-  width: 46px;
-  height: 46px;
+  width: 55px;
+  height: 55px;
   border: 1px solid rgba(79, 93, 58, 0.35);
   border-radius: 50%;
-  color: var(--olive);
-  font-size: 0.8rem;
+  overflow: hidden;
+}
+
+.brand-mark img {
+  width: 90%;
+  height: 90%;
+  object-fit: contain;
+  opacity: 0.86;
 }
 
 .brand strong,
@@ -165,8 +172,8 @@ p {
 
 .nav-toggle {
   display: none;
-  width: 44px;
-  height: 44px;
+  width: 55px;
+  height: 55px;
   padding: 0;
   background: transparent;
   border: 1px solid var(--line);
@@ -198,13 +205,14 @@ p {
 .hero {
   position: relative;
   display: grid;
-  min-height: calc(100vh - 82px);
+  min-height: 0;
   overflow: hidden;
   border-bottom: 1px solid var(--line);
 }
 
 .hero-image {
-  min-height: 680px;
+  height: var(--hero-photo-height);
+  min-height: 0;
   background-position: center;
   background-size: cover;
 }
@@ -222,19 +230,16 @@ p {
 }
 
 .hero-home {
-  position: absolute;
-  inset: 0;
+  position: relative;
   background-image:
-    linear-gradient(270deg, rgba(26, 31, 18, 0.2), rgba(239, 229, 210, 0.72) 62%, rgba(239, 229, 210, 0.92)),
+    linear-gradient(rgba(26, 31, 18, 0.08), rgba(239, 229, 210, 0.12)),
     url("https://images.unsplash.com/photo-1471193945509-9ad0617afabf?auto=format&fit=crop&w=1800&q=82");
 }
 
 .hero-content {
   position: relative;
-  align-self: end;
-  width: min(1040px, calc(100% - 2.5rem));
-  padding: clamp(5rem, 12vw, 10rem) 0 clamp(4rem, 10vw, 7rem);
-  margin: 0 auto;
+  width: 100%;
+  padding: clamp(3rem, 8vw, 7rem) clamp(1.25rem, 6vw, 5rem);
 }
 
 .hero-content p:not(.eyebrow) {
@@ -354,6 +359,12 @@ p {
   text-align: center;
 }
 
+.section-note {
+  max-width: 600px;
+  margin: 1rem auto 0;
+  color: var(--muted);
+}
+
 .cards-grid,
 .product-grid {
   display: grid;
@@ -367,10 +378,14 @@ p {
 .product-card,
 .workshop-item,
 .contact-details article {
-  border: 1px solid var(--line);
+  border: 1px solid rgba(79, 93, 58, 0.34);
   border-radius: 8px;
-  background: rgba(255, 252, 245, 0.76);
-  box-shadow: var(--shadow);
+  background: linear-gradient(180deg, rgba(255, 252, 245, 0.78), rgba(255, 252, 245, 0.6));
+  box-shadow:
+    0 28px 68px rgba(55, 45, 30, 0.16),
+    0 8px 18px rgba(55, 45, 30, 0.08),
+    inset 0 1px 0 rgba(255, 252, 245, 0.54);
+  backdrop-filter: blur(4px);
 }
 
 .simple-card {
@@ -394,11 +409,11 @@ p {
 }
 
 .site-footer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 2rem clamp(1.25rem, 4vw, 4rem);
+  display: grid;
+  grid-template-columns: minmax(160px, 220px) minmax(0, 1fr);
+  align-items: end;
+  gap: clamp(2rem, 5vw, 4rem);
+  padding: clamp(2rem, 5vw, 4rem) clamp(1.25rem, 4vw, 4rem);
   color: var(--muted);
   border-top: 1px solid var(--line);
 }
@@ -408,14 +423,45 @@ p {
   font-weight: 700;
 }
 
+.footer-logo {
+  display: inline-flex;
+  width: min(220px, 58vw);
+}
+
+.footer-logo img {
+  width: 100%;
+  height: auto;
+  opacity: 0.86;
+}
+
+.footer-brand {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.footer-contact {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.9rem 1.4rem;
+  margin: 0;
+  font-style: normal;
+}
+
+.footer-contact a {
+  padding-bottom: 0.25rem;
+  border-bottom: 1px solid rgba(79, 93, 58, 0.22);
+}
+
 .page-hero {
   display: grid;
-  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
-  min-height: 620px;
+  grid-template-columns: 1fr;
+  min-height: 0;
   border-bottom: 1px solid var(--line);
 }
 
 .page-hero-copy {
+  order: 2;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -434,9 +480,12 @@ p {
 }
 
 .page-hero-image {
+  order: 1;
   position: relative;
-  min-height: 520px;
+  height: var(--hero-photo-height);
+  min-height: 0;
   background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
 }
 
@@ -445,7 +494,14 @@ p {
 }
 
 .products-photo {
-  background-image: url("https://images.unsplash.com/photo-1516714435131-44d6b64dc6a2?auto=format&fit=crop&w=1500&q=82");
+  background-image:
+    linear-gradient(rgba(41, 53, 31, 0.08), rgba(239, 229, 210, 0.12)),
+    url("https://images.unsplash.com/photo-1714254258098-05246ccb6cbc?auto=format&fit=crop&w=1600&q=82");
+  background-position: center;
+}
+
+.products-hero .products-photo {
+  background-position: center;
 }
 
 .workshops-photo {
@@ -504,6 +560,116 @@ p {
   background-size: cover;
 }
 
+.products-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  gap: clamp(2rem, 7vw, 7rem);
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.apothecary-section {
+  background: linear-gradient(180deg, rgba(226, 211, 189, 0.54), rgba(239, 229, 210, 0));
+}
+
+.preparation-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  column-gap: clamp(1.25rem, 3vw, 1.75rem);
+  row-gap: clamp(1.75rem, 4vw, 2.5rem);
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.preparation-card {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(79, 93, 58, 0.34);
+  border-radius: 8px;
+  background: linear-gradient(180deg, rgba(255, 252, 245, 0.78), rgba(255, 252, 245, 0.6));
+  box-shadow:
+    0 28px 68px rgba(55, 45, 30, 0.16),
+    0 8px 18px rgba(55, 45, 30, 0.08),
+    inset 0 1px 0 rgba(255, 252, 245, 0.54);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.preparation-card:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 34px 76px rgba(55, 45, 30, 0.18),
+    0 10px 22px rgba(55, 45, 30, 0.1),
+    inset 0 1px 0 rgba(255, 252, 245, 0.54);
+}
+
+.preparation-image {
+  aspect-ratio: 1 / 1;
+  background-image:
+    linear-gradient(rgba(41, 53, 31, 0.06), rgba(239, 229, 210, 0.08)),
+    var(--prep-image);
+  background-position: center;
+  background-size: cover;
+  border-bottom: 1px solid rgba(79, 93, 58, 0.22);
+}
+
+.preparation-copy {
+  padding: clamp(1.2rem, 3vw, 1.55rem);
+}
+
+.preparation-type {
+  margin-bottom: 0.6rem;
+  color: var(--clay-dark);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.preparation-card h3 {
+  margin-bottom: 0.65rem;
+  font-size: clamp(1.55rem, 3vw, 2.1rem);
+}
+
+.preparation-card p:not(.preparation-type) {
+  color: var(--muted);
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+.prep-first-aid {
+  --prep-image: url("https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=900&q=82");
+}
+
+.prep-muscles {
+  --prep-image: url("https://images.unsplash.com/photo-1525577288853-c6f0a020a162?auto=format&fit=crop&w=900&q=82");
+}
+
+.prep-cycle {
+  --prep-image: url("https://images.unsplash.com/photo-1516714435131-44d6b64dc6a2?auto=format&fit=crop&w=900&q=82");
+}
+
+.prep-hydrosol {
+  --prep-image: url("https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&w=900&q=82");
+}
+
+.prep-repellent {
+  --prep-image: url("https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=900&q=82");
+}
+
+.prep-hawthorn {
+  --prep-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Hawthorn_Blossom._%2822710198028%29.jpg/1024px-Hawthorn_Blossom._%2822710198028%29.jpg");
+}
+
+.prep-roots {
+  --prep-image: url("../images/ashwagandha-roots-500x500.webp");
+}
+
+.prep-lettuce {
+  --prep-image: url("https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=900&q=82");
+}
+
+.prep-valerian {
+  --prep-image: url("https://images.unsplash.com/photo-1515150144380-bca9f1650ed9?auto=format&fit=crop&w=900&q=82");
+}
+
 .tea-photo {
   background-image: url("https://images.unsplash.com/photo-1597481499666-130f8eb7c9b1?auto=format&fit=crop&w=900&q=82");
 }
@@ -527,6 +693,10 @@ p {
   max-width: 640px;
   margin: 1rem auto 1.7rem;
   color: var(--muted);
+}
+
+.products-note {
+  padding-top: clamp(4rem, 8vw, 7rem);
 }
 
 .workshop-list {
@@ -579,19 +749,24 @@ p {
 
 .contact-hero {
   display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(360px, 0.95fr);
-  min-height: calc(100vh - 82px);
+  grid-template-columns: 1fr;
+  min-height: 0;
+  border-bottom: 1px solid var(--line);
 }
 
 .contact-photo {
+  order: 1;
   position: relative;
-  min-height: 640px;
+  height: var(--hero-photo-height);
+  min-height: 0;
   background-image: url("https://images.unsplash.com/photo-1492496913980-501348b61469?auto=format&fit=crop&w=1500&q=82");
   background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
 }
 
 .contact-panel {
+  order: 2;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -667,6 +842,46 @@ p {
   font-weight: 700;
 }
 
+@media (min-width: 921px) {
+  .nav-toggle {
+    display: block;
+  }
+
+  .site-nav {
+    position: fixed;
+    inset: 82px 0 auto 0;
+    display: grid;
+    gap: 0;
+    padding: 1rem 1.25rem 1.5rem;
+    background: linear-gradient(0deg, rgba(239, 229, 210, 0.99), rgba(var(--dropdown-top-rgb), 0.75));
+    border-bottom: 1.5px solid var(--olive-dark);
+    box-shadow: var(--shadow);
+    transform: translateY(-130%);
+    visibility: hidden;
+    transition: transform 600ms ease, visibility 600ms ease;
+  }
+
+  .site-nav a {
+    padding: 0.95rem 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .site-nav a::after {
+    background: var(--olive-dark);
+  }
+
+  .site-nav a:hover::after,
+  .site-nav a[aria-current="page"]::after {
+    background: var(--olive-dark);
+    height: 1.5px;
+  }
+
+  .nav-open .site-nav {
+    transform: translateY(0);
+    visibility: visible;
+  }
+}
+
 @media (max-width: 920px) {
   .nav-toggle {
     display: block;
@@ -712,7 +927,8 @@ p {
 
   .hero-home {
     position: relative;
-    min-height: 420px;
+    height: var(--hero-photo-height);
+    min-height: 0;
     background-image:
       linear-gradient(rgba(26, 31, 18, 0.08), rgba(239, 229, 210, 0.16)),
       url("https://images.unsplash.com/photo-1471193945509-9ad0617afabf?auto=format&fit=crop&w=1200&q=82");
@@ -724,6 +940,7 @@ p {
 
   .intro-section,
   .split-section,
+  .products-intro,
   .image-band,
   .page-hero,
   .values-section,
@@ -736,15 +953,19 @@ p {
     order: 2;
   }
 
-  .page-hero-image,
   .values-photo,
-  .wide-photo,
-  .contact-photo {
+  .wide-photo {
     min-height: 420px;
+  }
+
+  .contact-photo {
+    height: var(--hero-photo-height);
+    min-height: 0;
   }
 
   .cards-grid,
   .product-grid,
+  .preparation-grid,
   .contact-details {
     grid-template-columns: 1fr;
   }
@@ -762,8 +983,13 @@ p {
   }
 
   .brand-mark {
-    width: 40px;
-    height: 40px;
+    width: 48px;
+    height: 48px;
+  }
+
+  .nav-toggle {
+    width: 48px;
+    height: 48px;
   }
 
   .brand strong {
@@ -779,7 +1005,8 @@ p {
   }
 
   .hero-home {
-    min-height: 360px;
+    height: var(--hero-photo-height);
+    min-height: 0;
   }
 
   .hero-content {
@@ -792,6 +1019,14 @@ p {
 
   .button {
     width: 100%;
+  }
+
+  .site-footer {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-contact {
+    justify-content: flex-start;
   }
 
   .section-pad {
@@ -809,10 +1044,8 @@ p {
     padding-inline: 1rem;
   }
 
-  .page-hero-image,
   .values-photo,
-  .wide-photo,
-  .contact-photo {
+  .wide-photo {
     min-height: 340px;
   }
 }
