@@ -31,3 +31,56 @@ if (navToggle && siteNav) {
     }
   });
 }
+
+const storyMedia = document.querySelector(".story-media");
+
+if (storyMedia) {
+  const storyImages = [
+    "herbs-hands.jpg",
+    "herb-basket-steps.jpg",
+    "herb-trimming.jpg",
+    "hand-herb.jpg",
+    "basket-green-herbs.jpg",
+    "lavender-basket.jpg",
+  ];
+  const rotateEveryMs = 4000;
+  const pushMs = 650;
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let mainIndex = 0;
+  let smallIndex = 1;
+  let nextIndex = 2;
+
+  storyImages.forEach((src) => {
+    const image = new Image();
+    image.src = `images/story-gallery/${src}`;
+  });
+
+  const setStoryImages = () => {
+    storyMedia.style.setProperty("--story-main-image", `url("../images/story-gallery/${storyImages[mainIndex]}")`);
+    storyMedia.style.setProperty("--story-small-image", `url("../images/story-gallery/${storyImages[smallIndex]}")`);
+  };
+
+  const rotateStoryImages = () => {
+    const swapImages = () => {
+      smallIndex = mainIndex;
+      mainIndex = nextIndex;
+      nextIndex = (nextIndex + 1) % storyImages.length;
+      setStoryImages();
+    };
+
+    if (reduceMotion) {
+      swapImages();
+      return;
+    }
+
+    storyMedia.classList.add("is-pushing");
+
+    window.setTimeout(() => {
+      swapImages();
+      storyMedia.classList.remove("is-pushing");
+    }, pushMs);
+  };
+
+  setStoryImages();
+  window.setInterval(rotateStoryImages, rotateEveryMs);
+}

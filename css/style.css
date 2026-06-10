@@ -319,6 +319,85 @@ p {
   font-size: 1.08rem;
 }
 
+.story-section {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  align-items: center;
+  gap: clamp(2rem, 6vw, 6rem);
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.story-media {
+  --story-main-image: url("../images/story-gallery/herbs-hands.jpg");
+  --story-small-image: url("../images/story-gallery/herb-basket-steps.jpg");
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.72fr);
+  align-items: end;
+  gap: clamp(0.85rem, 2vw, 1.25rem);
+}
+
+.story-photo {
+  min-height: 340px;
+  border: 1px solid rgba(79, 93, 58, 0.28);
+  border-radius: 8px;
+  background-position: center;
+  background-size: cover;
+  box-shadow: 0 24px 54px rgba(55, 45, 30, 0.14);
+  opacity: 1;
+  transform: translateX(0) scale(1);
+  transform-origin: center bottom;
+  transition:
+    transform 650ms cubic-bezier(0.23, 1, 0.32, 1),
+    opacity 650ms ease;
+}
+
+.story-media.is-pushing .story-photo-main {
+  opacity: 0.9;
+  transform: translateX(calc(-100% - clamp(0.85rem, 2vw, 1.25rem))) scale(0.68);
+}
+
+.story-media.is-pushing .story-photo-secondary {
+  opacity: 0;
+  transform: translateX(-42%) scale(0.92);
+}
+
+.story-photo-main {
+  min-height: 520px;
+  background-image:
+    linear-gradient(rgba(41, 53, 31, 0.08), rgba(239, 229, 210, 0.08)),
+    var(--story-main-image);
+}
+
+.story-photo-secondary {
+  min-height: 340px;
+  background-image:
+    linear-gradient(rgba(41, 53, 31, 0.06), rgba(239, 229, 210, 0.1)),
+    var(--story-small-image);
+}
+
+.story-copy {
+  display: grid;
+  gap: 1.35rem;
+}
+
+.story-callout {
+  display: grid;
+  gap: 0.7rem;
+  padding-block: 1.35rem;
+  border-block: 1px solid rgba(79, 93, 58, 0.28);
+}
+
+.story-callout p {
+  color: var(--muted);
+}
+
+.story-callout a {
+  width: fit-content;
+  color: var(--clay-dark);
+  font-weight: 700;
+}
+
 .image-band {
   display: grid;
   grid-template-columns: minmax(0, 1.35fr) minmax(320px, 0.65fr);
@@ -409,12 +488,26 @@ p {
 }
 
 .site-footer {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
   display: grid;
-  grid-template-columns: minmax(160px, 220px) minmax(0, 1fr);
-  align-items: end;
-  gap: clamp(2rem, 5vw, 4rem);
-  padding: clamp(2rem, 5vw, 4rem) clamp(1.25rem, 4vw, 4rem);
+  grid-template-columns: minmax(330px, 520px) minmax(300px, 440px) minmax(330px, 520px);
+  grid-template-areas:
+    "contact brand links"
+    "note note note";
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  column-gap: clamp(2rem, 5vw, 6rem);
+  row-gap: clamp(1rem, 2vw, 1.6rem);
+  min-height: clamp(190px, 19vw, 255px);
+  padding: clamp(1.55rem, 3.1vw, 2.65rem) clamp(1.25rem, 6vw, 6rem);
   color: var(--muted);
+  text-align: center;
+  background:
+    linear-gradient(135deg, rgba(255, 252, 245, 0.88), rgba(226, 211, 189, 0.34)),
+    var(--cream);
   border-top: 1px solid var(--line);
 }
 
@@ -423,34 +516,282 @@ p {
   font-weight: 700;
 }
 
+.footer-botanical {
+  position: absolute;
+  top: clamp(0.75rem, 2vw, 1.6rem);
+  left: clamp(-3.25rem, -2.4vw, -1.25rem);
+  z-index: 0;
+  width: 353px;
+  opacity: 0.4;
+  transform: rotate(-4deg);
+  pointer-events: none;
+}
+
+.footer-botanical img {
+  width: 100%;
+  height: auto;
+  filter: grayscale(1) sepia(0.18) brightness(1.32);
+}
+
 .footer-logo {
-  display: inline-flex;
-  width: min(220px, 58vw);
+  display: block;
+  width: min(490px, 74vw);
 }
 
 .footer-logo img {
   width: 100%;
   height: auto;
-  opacity: 0.86;
+  opacity: 0.9;
 }
 
 .footer-brand {
+  grid-area: brand;
+  position: relative;
+  z-index: 1;
   display: grid;
-  gap: 0.9rem;
+  justify-items: center;
+  transform: translateY(0.35rem);
+}
+
+.footer-heading {
+  margin-bottom: 0;
+  color: var(--clay-dark);
+  font-size: 0.84rem;
+  font-weight: 700;
+}
+
+.footer-links,
+.footer-contact {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  align-content: start;
+}
+
+.footer-links {
+  grid-area: links;
+  display: grid;
+  align-items: start;
+  justify-self: center;
+  justify-items: center;
+  gap: 0.85rem;
+  text-align: center;
+}
+
+.footer-links .footer-heading {
+  width: 100%;
+  text-align: center;
 }
 
 .footer-contact {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  gap: 0.9rem 1.4rem;
+  grid-area: contact;
+  justify-self: center;
+  justify-items: center;
+  gap: 0.85rem;
   margin: 0;
   font-style: normal;
 }
 
-.footer-contact a {
-  padding-bottom: 0.25rem;
-  border-bottom: 1px solid rgba(79, 93, 58, 0.22);
+.footer-contact a:not(.footer-sign) {
+  width: fit-content;
+  color: var(--text);
+  font-size: clamp(1.05rem, 1.8vw, 1.35rem);
+  font-weight: 500;
+}
+
+.footer-link-row {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+.footer-link-row a {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  flex: 0 0 auto;
+  min-height: 0;
+  padding-inline: 0.75rem;
+  color: var(--text);
+  font-size: clamp(1.02rem, 1.6vw, 1.24rem);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.footer-link-row a:first-of-type {
+  padding-inline-start: 0;
+}
+
+.footer-link-row a + a::before {
+  position: absolute;
+  inset-inline-start: 0;
+  top: 50%;
+  width: 1px;
+  height: 1rem;
+  content: "";
+  background: rgba(79, 93, 58, 0.46);
+  transform: translateY(-50%);
+}
+
+.footer-link-row a:hover,
+.footer-contact a:hover {
+  color: var(--clay-dark);
+}
+
+.footer-signs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(1.1rem, 2.5vw, 1.8rem);
+}
+
+.footer-sign {
+  --footer-sign-size: clamp(38px, 4vw, 52px);
+  display: grid;
+  place-items: center;
+  width: var(--footer-sign-size);
+  height: var(--footer-sign-size);
+  padding: 0;
+  line-height: 1;
+  transition: transform 180ms ease;
+}
+
+.footer-icon {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  clip-path: circle(41% at 50% 50%);
+  opacity: 0.9;
+}
+
+.footer-sign-facebook .footer-icon {
+  background-image: url("../images/icons/facebook.png");
+}
+
+.footer-sign-whatsapp .footer-icon {
+  background-image: url("../images/icons/whatsapp.png");
+}
+
+.footer-sign-phone .footer-icon {
+  width: 86%;
+  height: 86%;
+  background-image: url("../images/icons/phone.png");
+  background-size: 124% auto;
+  clip-path: circle(46% at 50% 50%);
+}
+
+.footer-sign-instagram .footer-icon {
+  background-image: url("../images/icons/instagram.png");
+}
+
+.footer-sign:hover {
+  transform: translateY(-2px);
+}
+
+.footer-note {
+  grid-area: note;
+  position: relative;
+  z-index: 1;
+  max-width: 780px;
+  margin: 0 auto;
+  color: #4b4237;
+  font-size: clamp(0.98rem, 1.5vw, 1.15rem);
+  line-height: 1.8;
+}
+
+@media (max-width: 1500px) {
+  .site-footer {
+    grid-template-columns: minmax(285px, 400px) minmax(280px, 380px) minmax(285px, 400px);
+    column-gap: clamp(0.8rem, 2.4vw, 2.6rem);
+    padding-inline: clamp(1.25rem, 4vw, 4rem);
+  }
+
+  .footer-botanical {
+    left: clamp(-5rem, -4vw, -3.25rem);
+    width: 353px;
+  }
+
+  .footer-logo {
+    width: min(420px, 40vw);
+  }
+
+  .footer-link-row a {
+    padding-inline: 0.6rem;
+  }
+
+  .footer-sign {
+    --footer-sign-size: clamp(34px, 3.5vw, 48px);
+  }
+}
+
+@media (max-width: 1180px) {
+  .site-footer {
+    grid-template-columns: minmax(210px, 1fr) minmax(240px, 320px) minmax(300px, 1fr);
+    column-gap: clamp(0.5rem, 1.5vw, 1.5rem);
+    padding-inline: clamp(0.75rem, 2vw, 2rem);
+  }
+
+  .footer-botanical {
+    left: clamp(-7rem, -7vw, -4.75rem);
+    width: 353px;
+  }
+
+  .footer-logo {
+    width: min(335px, 36vw);
+  }
+
+  .footer-link-row a {
+    padding-inline: 0.48rem;
+  }
+
+  .footer-signs {
+    gap: clamp(0.8rem, 1.6vw, 1.2rem);
+  }
+
+  .footer-sign {
+    --footer-sign-size: clamp(30px, 3vw, 42px);
+  }
+}
+
+@media (max-width: 820px) {
+  .site-footer {
+    grid-template-columns: minmax(0, 520px);
+    grid-template-areas:
+      "brand"
+      "links"
+      "contact"
+      "note";
+    min-height: auto;
+    row-gap: clamp(1rem, 3vw, 1.6rem);
+  }
+
+  .footer-botanical {
+    display: none;
+  }
+
+  .footer-logo {
+    width: min(360px, 62vw);
+  }
+
+  .footer-brand {
+    transform: none;
+  }
+
+  .footer-links,
+  .footer-contact {
+    justify-self: center;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .footer-link-row {
+    justify-content: center;
+  }
 }
 
 .page-hero {
@@ -940,6 +1281,7 @@ p {
 
   .intro-section,
   .split-section,
+  .story-section,
   .products-intro,
   .image-band,
   .page-hero,
@@ -954,7 +1296,8 @@ p {
   }
 
   .values-photo,
-  .wide-photo {
+  .wide-photo,
+  .story-photo-main {
     min-height: 420px;
   }
 
@@ -1025,8 +1368,12 @@ p {
     grid-template-columns: 1fr;
   }
 
+  .footer-logo {
+    width: min(330px, 82vw);
+  }
+
   .footer-contact {
-    justify-content: flex-start;
+    gap: 0.55rem;
   }
 
   .section-pad {
@@ -1045,7 +1392,24 @@ p {
   }
 
   .values-photo,
-  .wide-photo {
+  .wide-photo,
+  .story-photo-main {
     min-height: 340px;
+  }
+
+  .story-media {
+    grid-template-columns: 1fr;
+  }
+
+  .story-media.is-pushing .story-photo-main {
+    transform: translateY(calc(100% + clamp(0.85rem, 2vw, 1.25rem))) scale(0.76);
+  }
+
+  .story-media.is-pushing .story-photo-secondary {
+    transform: translateY(34%) scale(0.92);
+  }
+
+  .story-photo-secondary {
+    min-height: 260px;
   }
 }
