@@ -331,6 +331,7 @@ p {
 .story-media {
   --story-main-image: url("../images/story-gallery/herbs-hands.jpg");
   --story-small-image: url("../images/story-gallery/herb-basket-steps.jpg");
+  position: relative;
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 0.72fr);
   align-items: end;
@@ -353,27 +354,27 @@ p {
 }
 
 .story-media.is-pushing .story-photo-main {
-  opacity: 0.9;
-  transform: translateX(calc(-100% - clamp(0.85rem, 2vw, 1.25rem))) scale(0.68);
+  opacity: 0;
 }
 
 .story-media.is-pushing .story-photo-secondary {
   opacity: 0;
-  transform: translateX(-42%) scale(0.92);
 }
 
-.story-media.is-swapping .story-photo {
-  transition: none;
+.story-photo-ghost {
+  position: absolute;
+  z-index: 2;
+  min-height: 0;
+  pointer-events: none;
+  transform-origin: center center;
+  transition:
+    transform 650ms cubic-bezier(0.23, 1, 0.32, 1),
+    opacity 650ms ease;
+  will-change: transform, opacity;
 }
 
-.story-media.is-swapping .story-photo-main {
+.story-photo-ghost.is-settling {
   opacity: 0;
-  transform: translateX(0) scale(1);
-}
-
-.story-media.is-swapping .story-photo-secondary {
-  opacity: 1;
-  transform: translateX(0) scale(1);
 }
 
 .story-photo-main {
@@ -962,8 +963,8 @@ p {
   background-image:
     linear-gradient(rgba(41, 53, 31, 0.06), rgba(239, 229, 210, 0.08)),
     var(--prep-image);
-  background-position: center;
-  background-size: cover;
+  background-position: var(--prep-position, center);
+  background-size: var(--prep-size, cover);
   border-bottom: 1px solid rgba(79, 93, 58, 0.22);
 }
 
@@ -990,7 +991,7 @@ p {
 }
 
 .prep-first-aid {
-  --prep-image: url("https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=900&q=82");
+  --prep-image: url("../images/products-gallery/WhatsApp%20Image%202026-06-10%20at%2011.23.58%20%281%29.jpeg");
 }
 
 .prep-muscles {
@@ -1014,11 +1015,22 @@ p {
 }
 
 .prep-roots {
-  --prep-image: url("../images/ashwagandha-roots-500x500.webp");
+  --prep-image: url("../images/products-gallery/ashwagandha-roots-500x500.webp");
+}
+
+.prep-perfume {
+  --prep-image: url("../images/products-gallery/Myrrh.jpeg");
+  --prep-position: center 64%;
+  --prep-size: 128%;
+}
+
+.prep-perfume .preparation-image {
+  filter: brightness(1.08) saturate(1.16) contrast(1.04);
 }
 
 .prep-lettuce {
-  --prep-image: url("https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=900&q=82");
+  --prep-image: url("../images/products-gallery/Lactuca-serriola.jpeg");
+  --prep-position: center 42%;
 }
 
 .prep-valerian {
@@ -1413,14 +1425,6 @@ p {
 
   .story-media {
     grid-template-columns: 1fr;
-  }
-
-  .story-media.is-pushing .story-photo-main {
-    transform: translateY(calc(100% + clamp(0.85rem, 2vw, 1.25rem))) scale(0.76);
-  }
-
-  .story-media.is-pushing .story-photo-secondary {
-    transform: translateY(34%) scale(0.92);
   }
 
   .story-photo-secondary {
