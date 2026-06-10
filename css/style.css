@@ -362,6 +362,20 @@ p {
   transform: translateX(-42%) scale(0.92);
 }
 
+.story-media.is-swapping .story-photo {
+  transition: none;
+}
+
+.story-media.is-swapping .story-photo-main {
+  opacity: 0;
+  transform: translateX(0) scale(1);
+}
+
+.story-media.is-swapping .story-photo-secondary {
+  opacity: 1;
+  transform: translateX(0) scale(1);
+}
+
 .story-photo-main {
   min-height: 520px;
   background-image:

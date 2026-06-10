@@ -76,8 +76,12 @@ if (storyMedia) {
     storyMedia.classList.add("is-pushing");
 
     window.setTimeout(() => {
+      storyMedia.classList.add("is-swapping");
       swapImages();
       storyMedia.classList.remove("is-pushing");
+      // Paint the snapped swap state before the new main image fades in.
+      void storyMedia.offsetHeight;
+      storyMedia.classList.remove("is-swapping");
     }, pushMs);
   };
 
