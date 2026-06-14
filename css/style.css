@@ -459,8 +459,7 @@ p {
   color: var(--muted);
 }
 
-.cards-grid,
-.product-grid {
+.cards-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1.2rem;
@@ -469,7 +468,6 @@ p {
 }
 
 .simple-card,
-.product-card,
 .workshop-item,
 .contact-details article {
   border: 1px solid rgba(79, 93, 58, 0.34);
@@ -490,7 +488,6 @@ p {
 }
 
 .simple-card p,
-.product-card p,
 .workshop-item p,
 .contact-details p {
   color: var(--muted);
@@ -894,28 +891,6 @@ p {
   color: var(--muted);
 }
 
-.product-card {
-  overflow: hidden;
-  background: var(--white-soft);
-}
-
-.product-card > div:last-child {
-  display: grid;
-  gap: 0.75rem;
-  padding: 1.35rem;
-}
-
-.product-card span {
-  color: var(--clay-dark);
-  font-weight: 700;
-}
-
-.product-image {
-  aspect-ratio: 4 / 3;
-  background-position: center;
-  background-size: cover;
-}
-
 .products-intro {
   display: grid;
   grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
@@ -1011,7 +986,9 @@ p {
 }
 
 .prep-hawthorn {
-  --prep-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Hawthorn_Blossom._%2822710198028%29.jpg/1024px-Hawthorn_Blossom._%2822710198028%29.jpg");
+  --prep-image: url("../images/products-gallery/Uzrar.jpeg");
+  --prep-position: 38% center;
+  --prep-size: auto 112%;
 }
 
 .prep-roots {
@@ -1035,18 +1012,6 @@ p {
 
 .prep-valerian {
   --prep-image: url("https://images.unsplash.com/photo-1515150144380-bca9f1650ed9?auto=format&fit=crop&w=900&q=82");
-}
-
-.tea-photo {
-  background-image: url("https://images.unsplash.com/photo-1597481499666-130f8eb7c9b1?auto=format&fit=crop&w=900&q=82");
-}
-
-.oil-photo {
-  background-image: url("https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=900&q=82");
-}
-
-.tincture-photo {
-  background-image: url("https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&w=900&q=82");
 }
 
 .quiet-cta {
@@ -1333,7 +1298,6 @@ p {
   }
 
   .cards-grid,
-  .product-grid,
   .preparation-grid,
   .contact-details {
     grid-template-columns: 1fr;

@@ -102,16 +102,16 @@ if (storyMedia) {
     return ghost;
   };
 
-  const rotateStoryImages = () => {
-    const swapImages = () => {
-      smallIndex = mainIndex;
-      mainIndex = nextIndex;
-      nextIndex = (nextIndex + 1) % storyImages.length;
-      setStoryImages();
-    };
+  const advanceStoryImages = () => {
+    smallIndex = mainIndex;
+    mainIndex = nextIndex;
+    nextIndex = (nextIndex + 1) % storyImages.length;
+    setStoryImages();
+  };
 
+  const rotateStoryImages = () => {
     if (reduceMotion) {
-      swapImages();
+      advanceStoryImages();
       return;
     }
 
@@ -119,7 +119,7 @@ if (storyMedia) {
     storyMedia.classList.add("is-pushing");
 
     window.setTimeout(() => {
-      swapImages();
+      advanceStoryImages();
       storyMedia.classList.remove("is-pushing");
       ghost?.classList.add("is-settling");
 
