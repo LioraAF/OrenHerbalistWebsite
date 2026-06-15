@@ -132,3 +132,52 @@ if (storyMedia) {
   setStoryImages();
   window.setInterval(rotateStoryImages, rotateEveryMs);
 }
+
+const productRotationFrame = document.querySelector(".product-rotation-frame");
+
+if (productRotationFrame instanceof HTMLElement) {
+  const productRotationImages = [
+    "WhatsApp Image 2026-06-10 at 11.22.43 (1).jpeg",
+    "WhatsApp Image 2026-06-10 at 11.22.43 (2).jpeg",
+    "WhatsApp Image 2026-06-10 at 11.22.43.jpeg",
+  ];
+  const rotationMs = 4200;
+  const enterDelayMs = 680;
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let productImageIndex = 0;
+
+  productRotationImages.forEach((src) => {
+    const image = new Image();
+    image.src = `images/products-gallery/${src}`;
+  });
+
+  const setProductRotationImage = () => {
+    productRotationFrame.style.setProperty(
+      "--product-rotation-image",
+      `url("../images/products-gallery/${productRotationImages[productImageIndex]}")`
+    );
+  };
+
+  const rotateProductImage = () => {
+    productImageIndex = (productImageIndex + 1) % productRotationImages.length;
+
+    if (reduceMotion) {
+      setProductRotationImage();
+      return;
+    }
+
+    productRotationFrame.classList.add("is-leaving");
+
+    window.setTimeout(() => {
+      productRotationFrame.classList.add("is-entering");
+      productRotationFrame.classList.remove("is-leaving");
+      setProductRotationImage();
+
+      void productRotationFrame.offsetHeight;
+      productRotationFrame.classList.remove("is-entering");
+    }, enterDelayMs);
+  };
+
+  setProductRotationImage();
+  window.setInterval(rotateProductImage, rotationMs);
+}
