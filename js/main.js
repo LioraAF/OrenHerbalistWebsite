@@ -181,3 +181,194 @@ if (productRotationFrame instanceof HTMLElement) {
   setProductRotationImage();
   window.setInterval(rotateProductImage, rotationMs);
 }
+
+const workshopRotationSets = {
+  adults: [
+    "workshops-adults/WhatsApp Image 2026-06-15 at 15.52.36 (2).jpeg",
+    "workshops-adults/WhatsApp Image 2026-06-15 at 15.52.31 (1).jpeg",
+    "workshops-adults/WhatsApp Image 2026-06-15 at 15.52.35 (2).jpeg",
+    "workshops-adults/WhatsApp Image 2026-06-15 at 15.52.36 (1).jpeg",
+    "workshops-adults/WhatsApp Image 2026-06-22 at 16.36.31.jpeg",
+  ],
+  kids: [
+    "workshops-kids/WhatsApp Image 2026-06-15 at 15.52.27.jpeg",
+    "workshops-kids/WhatsApp Image 2026-06-15 at 15.52.30.jpeg",
+    "workshops-kids/WhatsApp Image 2026-06-22 at 16.31.47.jpeg",
+    "workshops-kids/WhatsApp Image 2026-06-22 at 16.32.24.jpeg",
+    "workshops-kids/WhatsApp Image 2026-06-22 at 16.32.43.jpeg",
+  ],
+};
+
+document.querySelectorAll("[data-workshop-rotation]").forEach((frame) => {
+  if (!(frame instanceof HTMLElement)) {
+    return;
+  }
+
+  const rotationName = frame.dataset.workshopRotation;
+  const rotationImages = workshopRotationSets[rotationName] || [];
+
+  if (!rotationImages.length) {
+    return;
+  }
+
+  const rotationMs = 4600;
+  const enterDelayMs = 520;
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let imageIndex = 0;
+
+  rotationImages.forEach((src) => {
+    const image = new Image();
+    image.src = `images/workshops-gallery/${src}`;
+  });
+
+  const setWorkshopRotationImage = () => {
+    frame.style.setProperty(
+      "--workshop-rotation-image",
+      `url("../images/workshops-gallery/${rotationImages[imageIndex]}")`
+    );
+  };
+
+  const rotateWorkshopImage = () => {
+    imageIndex = (imageIndex + 1) % rotationImages.length;
+
+    if (reduceMotion) {
+      setWorkshopRotationImage();
+      return;
+    }
+
+    frame.classList.add("is-leaving");
+
+    window.setTimeout(() => {
+      frame.classList.add("is-entering");
+      frame.classList.remove("is-leaving");
+      setWorkshopRotationImage();
+
+      void frame.offsetHeight;
+      frame.classList.remove("is-entering");
+    }, enterDelayMs);
+  };
+
+  setWorkshopRotationImage();
+  window.setInterval(rotateWorkshopImage, rotationMs);
+});
+
+const workshopAdultGalleryImages = [
+  "workshops-adults/WhatsApp Image 2026-06-10 at 11.23.57 copy.jpeg",
+  "workshops-adults/WhatsApp Image 2026-06-10 at 11.23.57.jpeg",
+  "workshops-adults/WhatsApp Image 2026-06-15 at 15.52.31 (1).jpeg",
+  "workshops-adults/WhatsApp Image 2026-06-15 at 15.52.31.jpeg",
+  "workshops-adults/WhatsApp Image 2026-06-15 at 15.52.32 (1).jpeg",
+  "workshops-adults/WhatsApp Image 2026-06-15 at 15.52.32 (2).jpeg",
+  "workshops-adults/WhatsApp Image 2026-06-15 at 15.52.32 (3).jpeg",
+  "workshops-adults/WhatsApp Image 2026-06-15 at 15.52.32.jpeg",
+  "workshops-adults/WhatsApp Image 2026-06-15 at 15.52.33.jpeg",
+  "workshops-adults/WhatsApp Image 2026-06-15 at 15.52.34 (1).jpeg",
+  "workshops-adults/WhatsApp Image 2026-06-15 at 15.52.34 (2).jpeg",
+  "workshops-adults/WhatsApp Image 2026-06-15 at 15.52.34.jpeg",
+  "workshops-adults/WhatsApp Image 2026-06-15 at 15.52.35 (1).jpeg",
+  "workshops-adults/WhatsApp Image 2026-06-15 at 15.52.35 (2).jpeg",
+  "workshops-adults/WhatsApp Image 2026-06-15 at 15.52.35 (3).jpeg",
+  "workshops-adults/WhatsApp Image 2026-06-15 at 15.52.35.jpeg",
+  "workshops-adults/WhatsApp Image 2026-06-15 at 15.52.36 (1).jpeg",
+  "workshops-adults/WhatsApp Image 2026-06-15 at 15.52.36 (2).jpeg",
+  "workshops-adults/WhatsApp Image 2026-06-15 at 15.52.36 (3).jpeg",
+  "workshops-adults/WhatsApp Image 2026-06-15 at 15.52.36.jpeg",
+  "workshops-adults/WhatsApp Image 2026-06-22 at 16.36.31.jpeg",
+];
+
+const workshopKidsGalleryImages = [
+  "workshops-kids/WhatsApp Image 2026-06-15 at 15.52.27.jpeg",
+  "workshops-kids/WhatsApp Image 2026-06-15 at 15.52.30.jpeg",
+  "workshops-kids/WhatsApp Image 2026-06-22 at 16.31.47.jpeg",
+  "workshops-kids/WhatsApp Image 2026-06-22 at 16.32.24.jpeg",
+  "workshops-kids/WhatsApp Image 2026-06-22 at 16.32.43.jpeg",
+];
+
+const workshopGallerySets = {
+  adults: workshopAdultGalleryImages,
+  kids: workshopKidsGalleryImages,
+};
+
+const shuffleImages = (images) => {
+  const shuffled = [...images];
+
+  for (let index = shuffled.length - 1; index > 0; index -= 1) {
+    const randomIndex = Math.floor(Math.random() * (index + 1));
+    [shuffled[index], shuffled[randomIndex]] = [shuffled[randomIndex], shuffled[index]];
+  }
+
+  return shuffled;
+};
+
+const createGalleryImage = (src) => {
+  const image = document.createElement("img");
+  image.src = `images/workshops-gallery/${src}`;
+  image.alt = "";
+  image.loading = "lazy";
+  return image;
+};
+
+const getTrackGap = (track) => {
+  const trackStyle = window.getComputedStyle(track);
+  const columnGap = parseFloat(trackStyle.columnGap);
+  return Number.isFinite(columnGap) ? columnGap : parseFloat(trackStyle.gap) || 0;
+};
+
+document.querySelectorAll("[data-gallery-strip]").forEach((track) => {
+  if (!(track instanceof HTMLElement)) {
+    return;
+  }
+
+  const source = track.dataset.galleryStrip || "adults";
+  const sourceImages = workshopGallerySets[source] || workshopAdultGalleryImages;
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let movingImage = null;
+  let fallbackTimer = 0;
+
+  shuffleImages(sourceImages).forEach((src) => {
+    track.append(createGalleryImage(src));
+  });
+
+  if (reduceMotion || sourceImages.length < 2) {
+    return;
+  }
+
+  const finishMove = () => {
+    if (!movingImage) {
+      return;
+    }
+
+    window.clearTimeout(fallbackTimer);
+    track.classList.add("is-resetting");
+    track.append(movingImage);
+    track.classList.remove("is-gliding");
+
+    void track.offsetHeight;
+    track.classList.remove("is-resetting");
+    movingImage = null;
+  };
+
+  track.addEventListener("transitionend", (event) => {
+    if (event.target === track && event.propertyName === "transform") {
+      finishMove();
+    }
+  });
+
+  window.setInterval(() => {
+    if (movingImage) {
+      return;
+    }
+
+    const firstImage = track.firstElementChild;
+
+    if (!(firstImage instanceof HTMLElement)) {
+      return;
+    }
+
+    const stepDistance = firstImage.getBoundingClientRect().width + getTrackGap(track);
+    movingImage = firstImage;
+    track.style.setProperty("--gallery-step-distance", `${stepDistance}px`);
+    track.classList.add("is-gliding");
+    fallbackTimer = window.setTimeout(finishMove, 1200);
+  }, 4000);
+});
