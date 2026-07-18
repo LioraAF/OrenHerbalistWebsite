@@ -9,10 +9,10 @@
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="index.html" aria-label="דף הבית של אורן שושנה">
+    <a class="brand" href="index.html" aria-label="דף הבית של אורן עמנואל שושנה">
       <span class="brand-mark"><img src="images/brand-mark.png" alt="" aria-hidden="true"></span>
       <span>
-        <strong>אורן שושנה</strong>
+        <strong>אורן עמנואל שושנה</strong>
         <small>הרבליסט קליני</small>
       </span>
     </a>
@@ -35,7 +35,7 @@
 
   <main>
     <section class="contact-hero">
-      <div class="contact-photo" role="img" aria-label="שביל בגינה ירוקה ליד בית שקט"></div>
+      <div class="contact-photo" role="img" aria-label="ציפורים על ענף בשיחה שקטה"></div>
       <div class="contact-panel">
         <p class="eyebrow">יצירת קשר</p>
         <h1>נעים להתחיל בשיחה קצרה.</h1>
@@ -44,7 +44,11 @@
           בהקדם.
         </p>
 
-        <form class="contact-form" action="#" method="post">
+        <form class="contact-form" action="https://formsubmit.co/liora1018@gmail.com" method="post" data-email-form data-email-endpoint="https://formsubmit.co/ajax/liora1018@gmail.com">
+          <input type="hidden" name="_subject" value="פנייה חדשה מאתר אורן הרבליסט">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+
           <label for="name">שם מלא</label>
           <input id="name" name="name" type="text" autocomplete="name">
 
@@ -58,7 +62,7 @@
           <textarea id="message" name="message" rows="5"></textarea>
 
           <button class="button primary" type="submit">שליחת פרטים</button>
-          <p class="form-note">הטופס סטטי כרגע. ניתן לחבר אותו בהמשך לשירות שליחה.</p>
+          <p class="form-note" aria-live="polite" data-form-status>הפרטים יישלחו לליאור במייל.</p>
         </form>
       </div>
     </section>

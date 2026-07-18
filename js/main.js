@@ -32,6 +32,72 @@ if (navToggle && siteNav) {
   });
 }
 
+const emailContactForm = document.querySelector("[data-email-form]");
+
+if (emailContactForm instanceof HTMLFormElement) {
+  const formStatus = emailContactForm.querySelector("[data-form-status]");
+  const submitButton = emailContactForm.querySelector('button[type="submit"]');
+  const defaultStatus = formStatus?.textContent || "";
+
+  const setFormStatus = (message) => {
+    if (formStatus instanceof HTMLElement) {
+      formStatus.textContent = message;
+    }
+  };
+
+  const submitWithPageFallback = () => {
+    setFormStatus("מעבירים לשליחה מאובטחת...");
+    window.setTimeout(() => {
+      emailContactForm.submit();
+    }, 600);
+  };
+
+  emailContactForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    const endpoint = emailContactForm.dataset.emailEndpoint || emailContactForm.action;
+
+    if (submitButton instanceof HTMLButtonElement) {
+      submitButton.disabled = true;
+      submitButton.textContent = "שולח...";
+    }
+
+    setFormStatus("שולח את הפרטים...");
+
+    try {
+      const formData = new FormData(emailContactForm);
+
+      const response = await fetch(endpoint, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(Object.fromEntries(formData.entries())),
+      });
+      const result = await response.json().catch(() => null);
+
+      if (!response.ok || result?.success === false || result?.success === "false") {
+        throw new Error(`Form submission failed with ${response.status}`);
+      }
+
+      emailContactForm.reset();
+      setFormStatus("תודה, הפרטים נשלחו ונחזור אליך בהקדם.");
+    } catch (error) {
+      submitWithPageFallback();
+    } finally {
+      if (submitButton instanceof HTMLButtonElement) {
+        submitButton.disabled = false;
+        submitButton.textContent = "שליחת פרטים";
+      }
+
+      window.setTimeout(() => {
+        setFormStatus(defaultStatus);
+      }, 7000);
+    }
+  });
+}
+
 const storyMedia = document.querySelector(".story-media");
 
 if (storyMedia) {
@@ -322,14 +388,23 @@ document.querySelectorAll("[data-gallery-strip]").forEach((track) => {
   const source = track.dataset.galleryStrip || "adults";
   const sourceImages = workshopGallerySets[source] || workshopAdultGalleryImages;
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const gallery = track.closest(".gallery-strip");
+  const controls = gallery ? gallery.querySelectorAll("[data-gallery-control]") : [];
   let movingImage = null;
+  let movingDirection = null;
   let fallbackTimer = 0;
 
   shuffleImages(sourceImages).forEach((src) => {
     track.append(createGalleryImage(src));
   });
 
-  if (reduceMotion || sourceImages.length < 2) {
+  if (sourceImages.length < 2) {
+    controls.forEach((control) => {
+      if (control instanceof HTMLButtonElement) {
+        control.disabled = true;
+      }
+    });
+
     return;
   }
 
@@ -339,13 +414,61 @@ document.querySelectorAll("[data-gallery-strip]").forEach((track) => {
     }
 
     window.clearTimeout(fallbackTimer);
-    track.classList.add("is-resetting");
-    track.append(movingImage);
-    track.classList.remove("is-gliding");
 
-    void track.offsetHeight;
-    track.classList.remove("is-resetting");
+    if (movingDirection === "next") {
+      track.classList.add("is-resetting");
+      track.append(movingImage);
+      track.classList.remove("is-gliding");
+
+      void track.offsetHeight;
+      track.classList.remove("is-resetting");
+    }
+
     movingImage = null;
+    movingDirection = null;
+  };
+
+  const moveGallery = (direction = "next") => {
+    if (movingImage) {
+      return;
+    }
+
+    const edgeImage = direction === "prev" ? track.lastElementChild : track.firstElementChild;
+
+    if (!(edgeImage instanceof HTMLElement)) {
+      return;
+    }
+
+    if (reduceMotion) {
+      if (direction === "prev") {
+        track.prepend(edgeImage);
+      } else {
+        track.append(edgeImage);
+      }
+
+      return;
+    }
+
+    const stepDistance = edgeImage.getBoundingClientRect().width + getTrackGap(track);
+    movingImage = edgeImage;
+    movingDirection = direction;
+    track.style.setProperty("--gallery-step-distance", `${stepDistance}px`);
+
+    if (direction === "prev") {
+      track.classList.add("is-resetting", "is-gliding");
+      track.prepend(edgeImage);
+
+      void track.offsetHeight;
+      track.classList.remove("is-resetting");
+
+      window.requestAnimationFrame(() => {
+        track.classList.remove("is-gliding");
+      });
+    } else {
+      track.classList.add("is-gliding");
+    }
+
+    fallbackTimer = window.setTimeout(finishMove, 1200);
   };
 
   track.addEventListener("transitionend", (event) => {
@@ -354,21 +477,17 @@ document.querySelectorAll("[data-gallery-strip]").forEach((track) => {
     }
   });
 
-  window.setInterval(() => {
-    if (movingImage) {
+  controls.forEach((control) => {
+    if (!(control instanceof HTMLButtonElement)) {
       return;
     }
 
-    const firstImage = track.firstElementChild;
+    control.addEventListener("click", () => {
+      moveGallery(control.dataset.galleryControl === "prev" ? "prev" : "next");
+    });
+  });
 
-    if (!(firstImage instanceof HTMLElement)) {
-      return;
-    }
-
-    const stepDistance = firstImage.getBoundingClientRect().width + getTrackGap(track);
-    movingImage = firstImage;
-    track.style.setProperty("--gallery-step-distance", `${stepDistance}px`);
-    track.classList.add("is-gliding");
-    fallbackTimer = window.setTimeout(finishMove, 1200);
-  }, 4000);
+  if (!reduceMotion) {
+    window.setInterval(() => moveGallery("next"), 4000);
+  }
 });
