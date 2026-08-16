@@ -1,0 +1,51 @@
+// Paste each Reel's full Instagram URL between the quotation marks.
+// Leave a value empty until its link is ready; the site will use the profile link meanwhile.
+window.REEL_LINKS = {
+  // צמחי מרפא — 30 videos
+  "medicinal-plants-01": "",
+  "medicinal-plants-02": "",
+  "medicinal-plants-03": "",
+  "medicinal-plants-04": "",
+  "medicinal-plants-05": "",
+  "medicinal-plants-06": "",
+  "medicinal-plants-07": "",
+  "medicinal-plants-08": "",
+  "medicinal-plants-09": "",
+  "medicinal-plants-10": "",
+  "medicinal-plants-11": "",
+  "medicinal-plants-12": "",
+  "medicinal-plants-13": "",
+  "medicinal-plants-14": "",
+  "medicinal-plants-15": "",
+  "medicinal-plants-16": "",
+  "medicinal-plants-17": "",
+  "medicinal-plants-18": "",
+  "medicinal-plants-19": "",
+  "medicinal-plants-20": "",
+  "medicinal-plants-21": "",
+  "medicinal-plants-22": "",
+  "medicinal-plants-23": "",
+  "medicinal-plants-24": "",
+  "medicinal-plants-25": "",
+  "medicinal-plants-26": "",
+  "medicinal-plants-27": "",
+  "medicinal-plants-28": "",
+  "medicinal-plants-29": "",
+  "medicinal-plants-30": "",
+
+  // ליקוט — 10 videos
+  "foraging-01": "",
+  "foraging-02": "",
+  "foraging-03": "",
+  "foraging-04": "",
+  "foraging-05": "",
+  "foraging-06": "",
+  "foraging-07": "",
+  "foraging-08": "",
+  "foraging-09": "",
+  "foraging-10": "",
+
+  // רוקחות טבעית — 2 videos
+  "natural-pharmacy-01": "",
+  "natural-pharmacy-02": "",
+};

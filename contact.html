@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>יצירת קשר | אורן שושנה</title>
-  <meta name="description" content="יצירת קשר עם אורן שושנה, הרבליסט קליני.">
+  <title>מאמרים וסרטונים | אורן שושנה</title>
+  <meta name="description" content="מאמרים, מדריכים וסרטונים קצרים של אורן שושנה על צמחי מרפא, ליקוט ורוקחות טבעית.">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -29,58 +29,65 @@
       <a href="about.html">טיפול</a>
       <a href="products.html">מוצרים</a>
       <a href="workshops.html">סדנאות</a>
-      <a href="contact.html" aria-current="page">יצירת קשר</a>
+      <a href="contact.html" aria-current="page">סרטונים</a>
     </nav>
   </header>
 
   <main>
-    <section class="contact-hero">
-      <div class="contact-photo" role="img" aria-label="ציפורים על ענף בשיחה שקטה"></div>
-      <div class="contact-panel">
-        <p class="eyebrow">יצירת קשר</p>
-        <h1>נעים להתחיל בשיחה קצרה.</h1>
+    <div class="page-hero-image videos-photo">
+      <div class="videos-photo-stage">
+        <img class="videos-photo-image" src="images/Videos-header.jpeg" alt="יד מחזיקה פרחי בר צהובים בשטח">
+      </div>
+    </div>
+
+    <section class="library-hero section-pad">
+      <div class="library-heading">
+        <div>
+          <p class="eyebrow">ידע מהאדמה ומהקליניקה</p>
+          <h1>מאמרים וסרטונים</h1>
+        </div>
         <p>
-          לתיאום מפגש, בירור לגבי מוצר או הזמנת סדנה, אפשר להשאיר פרטים ואחזור
-          בהקדם.
+          מדריכים שימושיים והדרכות קצרות על צמחי מרפא, ליקוט ורוקחות ביתית — לצד סיפורי צמחים, רגעים מן השטח ומפגשים עם אנשים שעוסקים בטבע, בריאות ומלאכות מסורתיות.
         </p>
+      </div>
 
-        <form class="contact-form" action="https://formsubmit.co/liora1018@gmail.com" method="post" data-email-form data-email-endpoint="https://formsubmit.co/ajax/liora1018@gmail.com">
-          <input type="hidden" name="_subject" value="פנייה חדשה מאתר אורן הרבליסט">
-          <input type="hidden" name="_template" value="table">
-          <input type="hidden" name="_captcha" value="false">
+      <div class="library-filters" role="group" aria-label="סינון התוכן">
+        <button class="library-filter is-active" type="button" data-library-filter="all" aria-pressed="true">הכול</button>
+        <button class="library-filter" type="button" data-library-filter="medicinal-plants" aria-pressed="false">צמחי מרפא</button>
+        <button class="library-filter" type="button" data-library-filter="foraging" aria-pressed="false">ליקוט</button>
+        <button class="library-filter" type="button" data-library-filter="natural-pharmacy" aria-pressed="false">רוקחות טבעית</button>
+        <button class="library-filter" type="button" data-library-filter="reels" aria-pressed="false">Reels</button>
+      </div>
 
-          <label for="name">שם מלא</label>
-          <input id="name" name="name" type="text" autocomplete="name">
+      <div class="library-status" aria-live="polite">
+        <p data-library-count></p>
+      </div>
 
-          <label for="phone">טלפון</label>
-          <input id="phone" name="phone" type="tel" autocomplete="tel">
+      <div class="reels-grid" data-reels-grid aria-label="ספריית הסרטונים"></div>
 
-          <label for="email">אימייל</label>
-          <input id="email" name="email" type="email" autocomplete="email">
-
-          <label for="message">כמה מילים</label>
-          <textarea id="message" name="message" rows="5"></textarea>
-
-          <button class="button primary" type="submit">שליחת פרטים</button>
-          <p class="form-note" aria-live="polite" data-form-status>הפרטים יישלחו לליאור במייל.</p>
-        </form>
+      <div class="library-load-more">
+        <button class="button secondary" type="button" data-library-load-more>לטעינת סרטונים נוספים</button>
       </div>
     </section>
 
-    <section class="contact-details section-pad">
-      <article>
-        <h2>טלפון</h2>
-        <p><a href="tel:+972545984128">054-598-4128</a></p>
-      </article>
-      <article>
-        <h2>וואטסאפ</h2>
-        <p><a href="https://wa.link/xmjq0i">שליחת הודעה</a></p>
-      </article>
-      <article>
-        <h2>קליניקה</h2>
-        <p>מפגשים בקליניקה בקדיתא או בבית הלקוח, בתיאום מראש.</p>
-      </article>
-    </section>
+    <dialog class="reel-modal" data-reel-modal aria-labelledby="reel-modal-title">
+      <button class="reel-modal-close" type="button" data-reel-modal-close aria-label="סגירת הסרטון">×</button>
+      <div class="reel-modal-layout">
+        <div class="reel-modal-media">
+          <video controls playsinline preload="none" data-reel-modal-video hidden></video>
+          <div class="reel-modal-placeholder" data-reel-modal-placeholder>
+            <span class="reel-play" aria-hidden="true">▶</span>
+            <span>מקום לסרטון</span>
+          </div>
+        </div>
+        <div class="reel-modal-copy">
+          <p class="eyebrow" data-reel-modal-topic></p>
+          <h2 id="reel-modal-title" data-reel-modal-title></h2>
+          <p data-reel-modal-description></p>
+          <a class="button primary" href="https://www.instagram.com/orenherbalist/" target="_blank" rel="noopener noreferrer" data-reel-modal-instagram>לצפייה ב־Instagram</a>
+        </div>
+      </div>
+    </dialog>
   </main>
 
   <footer class="site-footer" aria-label="מידע תחתון">
@@ -99,7 +106,7 @@
         <a href="about.html">טיפול</a>
         <a href="products.html">מוצרים</a>
         <a href="workshops.html">סדנאות</a>
-        <a href="contact.html">יצירת קשר</a>
+        <a href="contact.html">סרטונים</a>
       </div>
     </nav>
     <address class="footer-contact">
@@ -116,6 +123,7 @@
     </p>
   </footer>
 
+  <script src="videos/reel-links.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

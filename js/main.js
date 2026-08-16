@@ -112,7 +112,7 @@ if (storyMedia) {
     "lavender-basket.jpg",
   ];
   const rotateEveryMs = 4000;
-  const pushMs = 650;
+  const pushMs = 1000;
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   let mainIndex = 0;
   let smallIndex = 1;
@@ -187,11 +187,7 @@ if (storyMedia) {
     window.setTimeout(() => {
       advanceStoryImages();
       storyMedia.classList.remove("is-pushing");
-      ghost?.classList.add("is-settling");
-
-      window.setTimeout(() => {
-        ghost?.remove();
-      }, pushMs);
+      ghost?.remove();
     }, pushMs);
   };
 
@@ -317,6 +313,134 @@ document.querySelectorAll("[data-workshop-rotation]").forEach((frame) => {
   setWorkshopRotationImage();
   window.setInterval(rotateWorkshopImage, rotationMs);
 });
+
+const workshopModal = document.getElementById("workshop-modal");
+const workshopModalClose = document.querySelector("[data-workshop-modal-close]");
+const workshopModalLabel = document.querySelector("[data-workshop-modal-label]");
+const workshopModalTitle = document.querySelector("[data-workshop-modal-title]");
+const workshopModalContent = document.querySelector("[data-workshop-modal-content]");
+
+const workshopModalDetails = {
+  resin: {
+    label: "סדנה מעשית",
+    title: "ליקוט שרפים ביער",
+    transition: "pop",
+    paragraphs: [
+      "סדנה שמתחילה ביציאה איטית ליער והיכרות עם האורן, השרף, הריח והמרקם שלו. לומדים להסתכל על העץ, להבין איפה השרף מופיע, ומה ההבדל בין איסוף אחראי לבין פגיעה מיותרת בעץ.",
+      "במהלך המפגש מכירים שימושים מסורתיים של שרפים, מדברים על בטיחות ועל מינונים פשוטים, ואז עוברים לרקיחה מעשית.",
+      "בסוף מכינים יחד משחת עזרה ראשונה ביתית, שמתאימה לשימוש חיצוני סביב יובש, שפשופים, עור מגורה וכוויות קלות.",
+      "מתאים במיוחד לקבוצות שרוצות חוויה בטבע עם תוצר קטן ביד, הרבה ריח, והרבה תחושה של יער.",
+    ],
+  },
+  oils: {
+    label: "סדנה מעשית",
+    title: "שמנים אתריים וארומתרפיה",
+    transition: "pop",
+    paragraphs: [
+      "מפגש חושי עם עולם השמנים האתריים: מריחים, משווים, לומדים איך שמן אתרי מרגיש בגוף ואיך משתמשים בו בזהירות.",
+      "מדברים על זיקוק, על משפחות ריח, על דילול נכון ועל התאמה אישית: מתי נרצה ריח מרגיע, מתי ריח שמרים אנרגיה, ומתי עדיף לבחור משהו עדין יותר.",
+      "הסדנה יכולה להסתיים בהכנת תערובת אישית קטנה, כמו שמן גוף, רול־און או תרסיס פשוט, לפי אופי הקבוצה והזמן שיש.",
+      "מתאימה למפגש indoor או outdoor, לימי חברה, קבוצות חברים וסדנאות שבהן רוצים הרבה חושים בלי לצאת בהכרח למסלול ליקוט.",
+    ],
+  },
+  mushrooms: {
+    label: "סדנה מעשית",
+    title: "היכרות עם ליקוט פטריות למאכל",
+    transition: "pop",
+    paragraphs: [
+      "יציאה משותפת לטבע ללמידה חווייתית על פטריות בר, עם דגש גדול על זהירות, סבלנות ואחריות.",
+      "לומדים איך בכלל מסתכלים על פטרייה: בית גידול, עונה, צבע, ריח, מבנה, סימני זיהוי ומה חשוב לצלם או לבדוק לפני שמחליטים משהו.",
+      "המפגש לא נועד לעודד אכילה חסרת זהירות מהטבע, אלא לבנות שפה בסיסית ובטוחה יותר סביב פטריות, סקרנות והיכרות עם הסביבה.",
+      "אפשר לשלב שיחה על מטבח, מסורות מקומיות, ייבוש ושימור, בהתאם לעונה ולמה שפוגשים בשטח.",
+    ],
+  },
+  roots: {
+    label: "סדנה מעשית",
+    title: "ליקוט שורשי מרפא",
+    transition: "pop",
+    paragraphs: [
+      "סדנה עונתית ושקטה יותר, סביב צמחים שהכוח שלהם נמצא גם מתחת לפני האדמה. לומדים לזהות את הצמח, להבין מתי נכון לעבוד עם שורשים, ומה המשמעות של איסוף אחראי.",
+      "הדגש הוא לא רק על מה אפשר לקחת, אלא גם על מה משאירים: איפה מלקטים, כמה, מתי, ואיך מאפשרים לצמחייה להתחדש.",
+      "לפי העונה והקבוצה אפשר לדבר על מרתחים, תמציות, חיזוק, עיכול, שורשיות וקשר לאדמה.",
+      "מתאים לקבוצות שמבקשות מפגש קצת יותר מעמיק, איטי ומחובר לעונה.",
+    ],
+  },
+  lecture: {
+    label: "הרצאה",
+    title: "צמחי מרפא, טבע ובריאות יומיומית",
+    transition: "pop",
+    paragraphs: [
+      "אפשרות טובה לקבוצה שרוצה לפתוח חלון לעולם צמחי המרפא בלי סדנה מעשית מלאה. ההרצאה יכולה להתקיים במשרד, במרחב קהילתי, בבית אירוח או כחלק מיום העשרה.",
+      "מדברים על צמחי מרפא מקומיים, עונות השנה, שימושים ביתיים פשוטים, בטיחות, מתי כדאי להיזהר, ואיך משלבים צמחים בחיי היומיום בלי להפוך את זה למורכב מדי.",
+      "אפשר לשלב טעימה, הרחה או הדגמות קטנות, אבל המרכז הוא הסיפור, הידע והחיבור בין אדם, אדמה ובריאות.",
+      "מתאים במיוחד לחברות, קהילות וקבוצות שרוצות תוכן עשיר ונגיש בזמן קצר יחסית.",
+    ],
+  },
+};
+
+if (
+  workshopModal instanceof HTMLDialogElement &&
+  workshopModalLabel instanceof HTMLElement &&
+  workshopModalTitle instanceof HTMLElement &&
+  workshopModalContent instanceof HTMLElement
+) {
+  let lastWorkshopTrigger = null;
+
+  const closeWorkshopModal = () => {
+    if (workshopModal.open) {
+      workshopModal.close();
+    }
+  };
+
+  const openWorkshopModal = (trigger) => {
+    const detailKey = trigger.dataset.workshopModal || "";
+    const detail = workshopModalDetails[detailKey];
+
+    if (!detail) {
+      return;
+    }
+
+    lastWorkshopTrigger = trigger;
+    workshopModalLabel.textContent = detail.label;
+    workshopModalTitle.textContent = detail.title;
+    workshopModal.dataset.transition = detail.transition;
+    workshopModalContent.replaceChildren(
+      ...detail.paragraphs.map((paragraph) => {
+        const node = document.createElement("p");
+        node.textContent = paragraph;
+        return node;
+      })
+    );
+
+    workshopModal.showModal();
+  };
+
+  document.querySelectorAll("[data-workshop-modal]").forEach((trigger) => {
+    if (!(trigger instanceof HTMLElement)) {
+      return;
+    }
+
+    trigger.addEventListener("click", () => openWorkshopModal(trigger));
+    trigger.addEventListener("keydown", (event) => {
+      if (event.key !== "Enter" && event.key !== " ") {
+        return;
+      }
+
+      event.preventDefault();
+      openWorkshopModal(trigger);
+    });
+  });
+
+  workshopModalClose?.addEventListener("click", closeWorkshopModal);
+  workshopModal.addEventListener("click", (event) => {
+    if (event.target === workshopModal) {
+      closeWorkshopModal();
+    }
+  });
+  workshopModal.addEventListener("close", () => {
+    lastWorkshopTrigger?.focus();
+  });
+}
 
 const workshopAdultGalleryImages = [
   "workshops-adults/WhatsApp Image 2026-06-10 at 11.23.57 copy.jpeg",
@@ -491,3 +615,234 @@ document.querySelectorAll("[data-gallery-strip]").forEach((track) => {
     window.setInterval(() => moveGallery("next"), 4000);
   }
 });
+
+const reelsGrid = document.querySelector("[data-reels-grid]");
+
+if (reelsGrid instanceof HTMLElement) {
+  const filters = Array.from(document.querySelectorAll("[data-library-filter]"));
+  const loadMoreButton = document.querySelector("[data-library-load-more]");
+  const countLabel = document.querySelector("[data-library-count]");
+  const modal = document.querySelector("[data-reel-modal]");
+  const modalClose = document.querySelector("[data-reel-modal-close]");
+  const modalVideo = document.querySelector("[data-reel-modal-video]");
+  const modalPlaceholder = document.querySelector("[data-reel-modal-placeholder]");
+  const modalTopic = document.querySelector("[data-reel-modal-topic]");
+  const modalTitle = document.querySelector("[data-reel-modal-title]");
+  const modalDescription = document.querySelector("[data-reel-modal-description]");
+  const modalInstagram = document.querySelector("[data-reel-modal-instagram]");
+  const pageSize = 12;
+  const instagramProfile = "https://www.instagram.com/orenherbalist/";
+  const reelLinks = window.REEL_LINKS || {};
+
+  // These placeholders mirror the real topic folders under /videos.
+  // Add Instagram URLs in /videos/reel-links.js as real Reels are added.
+  const topicDefinitions = [
+    {
+      key: "medicinal-plants",
+      label: "צמחי מרפא",
+      folder: "videos/medicinal-plants",
+      count: 30,
+      description: "היכרות קצרה עם צמח מרפא, איכויותיו והשימושים המסורתיים שלו.",
+    },
+    {
+      key: "foraging",
+      label: "ליקוט",
+      folder: "videos/foraging",
+      count: 10,
+      description: "רגע מן השטח על זיהוי, עונה וליקוט אחראי שמכבד את המקום.",
+    },
+    {
+      key: "natural-pharmacy",
+      label: "רוקחות טבעית",
+      folder: "videos/natural-pharmacy",
+      count: 2,
+      description: "הדגמה קצרה של הכנה צמחית שאפשר להכיר ולתרגל בבית.",
+    },
+  ];
+
+  const reelItems = topicDefinitions.flatMap((topic, topicIndex) =>
+    Array.from({ length: topic.count }, (_, itemIndex) => {
+      const number = itemIndex + 1;
+      const paddedNumber = String(number).padStart(2, "0");
+      const seconds = 24 + ((number * 7 + topicIndex * 5) % 31);
+      const id = `${topic.key}-${paddedNumber}`;
+
+      return {
+        id,
+        topic: topic.key,
+        topicLabel: topic.label,
+        folder: topic.folder,
+        title: `${topic.label} — סרטון ${paddedNumber}`,
+        description: topic.description,
+        duration: `00:${String(seconds).padStart(2, "0")}`,
+        tone: (number + topicIndex * 2) % 6,
+        videoSrc: "",
+        instagramUrl: reelLinks[id] || instagramProfile,
+      };
+    })
+  );
+
+  let activeFilter = "all";
+  let visibleCount = pageSize;
+
+  const getFilteredItems = () => {
+    if (activeFilter === "all" || activeFilter === "reels") {
+      return reelItems;
+    }
+
+    return reelItems.filter((item) => item.topic === activeFilter);
+  };
+
+  const createReelCard = (item) => {
+    const card = document.createElement("button");
+    card.className = "reel-library-card";
+    card.type = "button";
+    card.dataset.reelId = item.id;
+    card.setAttribute("aria-label", `פתיחת ${item.title}`);
+
+    const media = document.createElement("span");
+    media.className = `reel-card-media reel-tone-${item.tone}`;
+
+    const play = document.createElement("span");
+    play.className = "reel-play";
+    play.setAttribute("aria-hidden", "true");
+    play.textContent = "▶";
+
+    const duration = document.createElement("span");
+    duration.className = "reel-duration";
+    duration.textContent = item.duration;
+
+    const placeholder = document.createElement("span");
+    placeholder.className = "reel-placeholder-label";
+    placeholder.textContent = "מקום לסרטון";
+
+    const copy = document.createElement("span");
+    copy.className = "reel-card-copy";
+
+    const topic = document.createElement("span");
+    topic.className = "reel-card-topic";
+    topic.textContent = item.topicLabel;
+
+    const title = document.createElement("span");
+    title.className = "reel-card-title";
+    title.textContent = item.title;
+
+    media.append(play, duration, placeholder);
+    copy.append(topic, title);
+    card.append(media, copy);
+    return card;
+  };
+
+  const renderReels = () => {
+    const filteredItems = getFilteredItems();
+    const shownItems = filteredItems.slice(0, visibleCount);
+    reelsGrid.replaceChildren(...shownItems.map(createReelCard));
+
+    if (countLabel instanceof HTMLElement) {
+      countLabel.textContent = `מציגים ${shownItems.length} מתוך ${filteredItems.length} סרטונים`;
+    }
+
+    if (loadMoreButton instanceof HTMLButtonElement) {
+      loadMoreButton.hidden = shownItems.length >= filteredItems.length;
+    }
+  };
+
+  const stopModalVideo = () => {
+    if (modalVideo instanceof HTMLVideoElement) {
+      modalVideo.pause();
+      modalVideo.removeAttribute("src");
+      modalVideo.load();
+      modalVideo.hidden = true;
+    }
+  };
+
+  const closeModal = () => {
+    stopModalVideo();
+
+    if (modal instanceof HTMLDialogElement && modal.open) {
+      modal.close();
+    }
+  };
+
+  const openModal = (item) => {
+    if (!(modal instanceof HTMLDialogElement)) {
+      return;
+    }
+
+    if (modalTopic instanceof HTMLElement) {
+      modalTopic.textContent = item.topicLabel;
+    }
+
+    if (modalTitle instanceof HTMLElement) {
+      modalTitle.textContent = item.title;
+    }
+
+    if (modalDescription instanceof HTMLElement) {
+      modalDescription.textContent = item.description;
+    }
+
+    if (modalInstagram instanceof HTMLAnchorElement) {
+      modalInstagram.href = item.instagramUrl;
+    }
+
+    if (modalPlaceholder instanceof HTMLElement) {
+      modalPlaceholder.className = `reel-modal-placeholder reel-tone-${item.tone}`;
+      modalPlaceholder.hidden = Boolean(item.videoSrc);
+    }
+
+    if (modalVideo instanceof HTMLVideoElement && item.videoSrc) {
+      modalVideo.src = item.videoSrc;
+      modalVideo.hidden = false;
+      modalVideo.load();
+    }
+
+    modal.showModal();
+  };
+
+  filters.forEach((filter) => {
+    if (!(filter instanceof HTMLButtonElement)) {
+      return;
+    }
+
+    filter.addEventListener("click", () => {
+      activeFilter = filter.dataset.libraryFilter || "all";
+      visibleCount = pageSize;
+
+      filters.forEach((option) => {
+        const isActive = option === filter;
+        option.classList.toggle("is-active", isActive);
+        option.setAttribute("aria-pressed", String(isActive));
+      });
+
+      renderReels();
+    });
+  });
+
+  loadMoreButton?.addEventListener("click", () => {
+    visibleCount += pageSize;
+    renderReels();
+  });
+
+  reelsGrid.addEventListener("click", (event) => {
+    if (!(event.target instanceof Element)) {
+      return;
+    }
+
+    const card = event.target.closest("[data-reel-id]");
+    const item = reelItems.find((candidate) => candidate.id === card?.dataset.reelId);
+
+    if (item) {
+      openModal(item);
+    }
+  });
+
+  modalClose?.addEventListener("click", closeModal);
+  modal?.addEventListener("cancel", stopModalVideo);
+  modal?.addEventListener("click", (event) => {
+    if (event.target === modal) {
+      closeModal();
+    }
+  });
+
+  renderReels();
+}

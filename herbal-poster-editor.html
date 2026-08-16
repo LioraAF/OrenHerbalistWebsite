@@ -1,0 +1,697 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>עורך דפי מוצר | אורן הרבליסט</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #273427;
+      --moss: #526449;
+      --paper: #e9dec2;
+      --panel: #f6f2e8;
+      --line: #c9bea5;
+      --accent: #7b4f32;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 12% 8%, rgba(255,255,255,.72), transparent 24rem),
+        #d8d0be;
+      font-family: Arial, "Noto Sans Hebrew", sans-serif;
+    }
+
+    button, input, textarea { font: inherit; }
+
+    .app {
+      display: grid;
+      grid-template-columns: minmax(290px, 370px) minmax(0, 1fr);
+      min-height: 100vh;
+      direction: ltr;
+    }
+
+    .controls {
+      direction: rtl;
+      padding: 24px;
+      background: rgba(246,242,232,.97);
+      border-left: 1px solid var(--line);
+      box-shadow: 8px 0 30px rgba(48,39,23,.08);
+      overflow-y: auto;
+      z-index: 2;
+    }
+
+    .controls h1 {
+      margin: 0 0 6px;
+      font: 700 27px/1.2 Georgia, "Times New Roman", serif;
+    }
+
+    .intro {
+      margin: 0 0 20px;
+      color: #5d6157;
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    .field {
+      display: grid;
+      gap: 6px;
+      margin: 0 0 14px;
+    }
+
+    .field label,
+    .group-title {
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .field input,
+    .field textarea,
+    .field select {
+      width: 100%;
+      padding: 9px 10px;
+      color: var(--ink);
+      background: #fffefa;
+      border: 1px solid #cfc6b3;
+      border-radius: 7px;
+      outline: none;
+    }
+
+    .field textarea {
+      min-height: 72px;
+      resize: vertical;
+      line-height: 1.45;
+    }
+
+    .field input:focus,
+    .field textarea:focus {
+      border-color: var(--moss);
+      box-shadow: 0 0 0 3px rgba(82,100,73,.12);
+    }
+
+    details {
+      margin: 0 0 12px;
+      border: 1px solid var(--line);
+      border-radius: 9px;
+      background: rgba(255,255,255,.42);
+    }
+
+    summary {
+      padding: 11px 12px;
+      cursor: pointer;
+      font-weight: 700;
+    }
+
+    .plant-fields {
+      padding: 0 12px 4px;
+    }
+
+    .button-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-top: 18px;
+    }
+
+    button {
+      min-height: 42px;
+      padding: 8px 12px;
+      color: white;
+      background: var(--moss);
+      border: 0;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 700;
+    }
+
+    button.secondary {
+      color: var(--ink);
+      background: #ded5c1;
+    }
+
+    button:hover { filter: brightness(.95); }
+
+    .tip {
+      margin: 15px 0 0;
+      padding: 10px 12px;
+      color: #5b584f;
+      background: #ebe4d5;
+      border-radius: 8px;
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    .stage {
+      display: grid;
+      place-items: start center;
+      min-width: 0;
+      padding: 32px;
+      overflow: auto;
+    }
+
+    .poster-shell {
+      width: min(780px, 100%);
+      filter: drop-shadow(0 22px 28px rgba(50,40,24,.22));
+    }
+
+    #poster {
+      display: block;
+      width: 100%;
+      height: auto;
+      background: var(--paper);
+      user-select: none;
+      touch-action: none;
+    }
+
+    .movable { cursor: grab; }
+    .movable:active { cursor: grabbing; }
+    .movable.selected > .selection-ring { opacity: 1; }
+    .selection-ring {
+      opacity: 0;
+      fill: none;
+      stroke: #8d603f;
+      stroke-width: 3;
+      stroke-dasharray: 10 9;
+      vector-effect: non-scaling-stroke;
+      pointer-events: none;
+    }
+
+    .poster-title {
+      font-family: Georgia, "Times New Roman", "Noto Serif Hebrew", serif;
+      font-weight: 700;
+      fill: #34391f;
+      letter-spacing: 2px;
+      paint-order: stroke;
+      stroke: rgba(52,57,31,.16);
+      stroke-width: 1.2px;
+    }
+
+    .poster-subtitle,
+    .plant-name,
+    .plant-description,
+    .footer-note {
+      font-family: Arial, "Noto Sans Hebrew", sans-serif;
+      fill: #344235;
+    }
+
+    .plant-name {
+      font-family: Georgia, "Times New Roman", "Noto Serif Hebrew", serif;
+      font-weight: 700;
+      fill: #414927;
+      letter-spacing: 1px;
+    }
+
+    .plant-latin {
+      font: italic 22px Georgia, "Times New Roman", serif;
+      fill: #6e654e;
+    }
+
+    .sketch {
+      fill: none;
+      stroke: #40583f;
+      stroke-width: 5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .sketch-thin {
+      fill: none;
+      stroke: #526950;
+      stroke-width: 2.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .wash-purple { fill: #82718a; opacity: .45; }
+    .wash-yellow { fill: #b99634; opacity: .55; }
+    .wash-brown { fill: #805940; opacity: .48; }
+
+    .archive-rule {
+      fill: none;
+      stroke: #57492f;
+      stroke-width: 3;
+      stroke-linecap: round;
+      opacity: .84;
+    }
+
+    .field-note {
+      font: italic 24px/1.25 "Bradley Hand", "Segoe Print", cursive;
+      fill: #514936;
+      opacity: .9;
+    }
+
+    .section-label {
+      font: 700 26px Georgia, "Times New Roman", "Noto Serif Hebrew", serif;
+      fill: #414927;
+      letter-spacing: 1px;
+    }
+
+    @media (max-width: 900px) {
+      .app { grid-template-columns: 1fr; }
+      .controls {
+        border-left: 0;
+        border-bottom: 1px solid var(--line);
+      }
+      .stage { padding: 18px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="app">
+    <aside class="controls">
+      <h1>עורך דף מוצר</h1>
+      <p class="intro">ערכו את המלל, ואז גררו כל אזור ישירות על גבי הדף. אפשר לשמור את העבודה ולהמשיך מאוחר יותר.</p>
+
+      <div class="field">
+        <label for="titleInput">שם המוצר</label>
+        <input id="titleInput" value="משחת עזרה ראשונה">
+      </div>
+
+      <div class="field">
+        <label for="subtitleInput">שורת הסבר</label>
+        <textarea id="subtitleInput">רקיחה צמחית לשימוש חיצוני, שנועדה לתמוך בעור ברגעים הקטנים של היום.</textarea>
+      </div>
+
+      <details open>
+        <summary>לבנדר</summary>
+        <div class="plant-fields">
+          <div class="field">
+            <label for="plant1Name">שם הצמח</label>
+            <input id="plant1Name" value="לבנדר">
+          </div>
+          <div class="field">
+            <label for="plant1Latin">שם לטיני / שורה קטנה</label>
+            <input id="plant1Latin" value="Lavandula angustifolia">
+          </div>
+          <div class="field">
+            <label for="plant1Description">איכויות הצמח במוצר</label>
+            <textarea id="plant1Description">מרגיע את העור ומביא לרקיחה איכות עדינה, ארומטית ומאזנת.</textarea>
+          </div>
+        </div>
+      </details>
+
+      <details>
+        <summary>שרף אורנים</summary>
+        <div class="plant-fields">
+          <div class="field">
+            <label for="plant2Name">שם הצמח</label>
+            <input id="plant2Name" value="שרף אורנים">
+          </div>
+          <div class="field">
+            <label for="plant2Latin">שם לטיני / שורה קטנה</label>
+            <input id="plant2Latin" value="Pinus spp.">
+          </div>
+          <div class="field">
+            <label for="plant2Description">איכויות הצמח במוצר</label>
+            <textarea id="plant2Description">שרף מסורתי בעל אופי מחמם, שומר ועוטף; מעניק למשחה גוף וניחוח יער.</textarea>
+          </div>
+        </div>
+      </details>
+
+      <details>
+        <summary>היפריקום</summary>
+        <div class="plant-fields">
+          <div class="field">
+            <label for="plant3Name">שם הצמח</label>
+            <input id="plant3Name" value="היפריקום">
+          </div>
+          <div class="field">
+            <label for="plant3Latin">שם לטיני / שורה קטנה</label>
+            <input id="plant3Latin" value="Hypericum perforatum">
+          </div>
+          <div class="field">
+            <label for="plant3Description">איכויות הצמח במוצר</label>
+            <textarea id="plant3Description">השמן האדמדם שלו מזוהה עם טיפוח עור רגיש ותמיכה מקומית לאחר עומס.</textarea>
+          </div>
+        </div>
+      </details>
+
+      <div class="field">
+        <label for="footerInput">הערה בתחתית הדף</label>
+        <textarea id="footerInput">לשימוש חיצוני בלבד · המידע נועד להיכרות ואינו מחליף ייעוץ אישי</textarea>
+      </div>
+
+      <div class="button-row">
+        <button id="downloadPng" type="button">הורדת PNG</button>
+        <button id="downloadSvg" type="button">הורדת SVG</button>
+        <button id="saveLayout" class="secondary" type="button">שמירת עבודה</button>
+        <button id="loadLayout" class="secondary" type="button">טעינת עבודה</button>
+        <button id="resetLayout" class="secondary" type="button">איפוס מיקום</button>
+      </div>
+
+      <p class="tip">טיפ: לחצו וגררו את הכותרת, ההסבר, כל אחד משלושת הצמחים או ההערה התחתונה. קובץ SVG נשאר חד ומתאים גם להדפסה.</p>
+      <input id="loadFile" type="file" accept=".json,application/json" hidden>
+    </aside>
+
+    <section class="stage" aria-label="תצוגה מקדימה">
+      <div class="poster-shell">
+        <svg id="poster" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 1754" role="img" aria-labelledby="posterA11yTitle">
+          <title id="posterA11yTitle">דף מידע בסגנון מחברת צמחי מרפא עתיקה</title>
+          <defs>
+            <filter id="paperNoise" x="-10%" y="-10%" width="120%" height="120%">
+              <feTurbulence type="fractalNoise" baseFrequency=".65" numOctaves="4" seed="7" result="noise"/>
+              <feColorMatrix in="noise" type="saturate" values="0" result="grayNoise"/>
+              <feComponentTransfer in="grayNoise" result="faintNoise">
+                <feFuncA type="table" tableValues="0 .10"/>
+              </feComponentTransfer>
+              <feBlend in="SourceGraphic" in2="faintNoise" mode="multiply"/>
+            </filter>
+            <filter id="roughen" x="-15%" y="-15%" width="130%" height="130%">
+              <feTurbulence type="fractalNoise" baseFrequency=".012" numOctaves="2" seed="11" result="warp"/>
+              <feDisplacementMap in="SourceGraphic" in2="warp" scale="2.2"/>
+            </filter>
+            <pattern id="rulePattern" width="1240" height="70" patternUnits="userSpaceOnUse">
+              <path d="M0 69.5H1240" stroke="#536c5a" stroke-width="1" opacity=".13"/>
+            </pattern>
+          </defs>
+
+          <rect width="1240" height="1754" fill="#b29a72"/>
+          <path d="M33 25L1193 18L1218 43L1225 1699L1196 1734L45 1728L17 1695L23 54Z" fill="#d7c39a" stroke="#4a3a24" stroke-width="9" opacity=".72"/>
+          <path d="M43 36L1179 29L1203 52L1211 1685L1186 1718L55 1714L32 1685L35 62Z" fill="#ecddb9" stroke="#7c6240" stroke-width="3" filter="url(#paperNoise)"/>
+          <path d="M61 58C292 43 478 66 696 52C893 40 1046 64 1181 51M53 1692C275 1677 506 1704 735 1687C924 1674 1087 1700 1191 1684" class="archive-rule" opacity=".38"/>
+          <path d="M58 66C39 380 65 705 47 1016C37 1258 57 1493 49 1677M1182 61C1200 390 1177 704 1193 1022C1204 1270 1184 1488 1190 1674" class="archive-rule" opacity=".33"/>
+          <rect x="53" y="48" width="1135" height="1656" rx="22" fill="url(#rulePattern)" opacity=".34"/>
+          <circle cx="100" cy="318" r="5" fill="#5c462d" opacity=".45"/><circle cx="111" cy="334" r="2.5" fill="#5c462d" opacity=".42"/>
+          <circle cx="1138" cy="252" r="4" fill="#5c462d" opacity=".4"/><circle cx="1124" cy="265" r="2.5" fill="#5c462d" opacity=".35"/>
+
+          <text class="field-note" x="87" y="95" transform="rotate(-7 87 95)">Herbal notes</text>
+          <text class="field-note" x="91" y="125" transform="rotate(-7 91 125)">batch · 01</text>
+          <text class="field-note" x="94" y="155" transform="rotate(-7 94 155)">made by hand</text>
+          <path d="M93 169l65-24M1085 75c30 14 49 44 58 81M1100 91l-30-16M1113 111l35-21M1125 133l-34 1" class="sketch-thin"/>
+
+          <g id="titleGroup" class="movable" data-x="650" data-y="180" transform="translate(650 180)">
+            <rect class="selection-ring" x="-470" y="-96" width="930" height="225" rx="18"/>
+            <text id="posterTitle" class="poster-title" text-anchor="middle" direction="rtl" font-size="82" y="0">משחת עזרה ראשונה</text>
+            <path d="M-390 54H-44M44 54H390M-28 54c18-18 39-18 56 0c-17 18-38 18-56 0Z" class="archive-rule" filter="url(#roughen)"/>
+            <path d="M-15 54c-29-29-55-25-78-8M15 54c29-29 55-25 78-8M-75 47l-16-19M-54 41l-3-23M75 47l16-19M54 41l3-23" class="sketch-thin"/>
+            <text id="posterSubtitle" class="poster-subtitle" text-anchor="middle" direction="rtl" font-family="Georgia, serif" font-style="italic" font-size="28" y="116"></text>
+          </g>
+
+          <path d="M104 386h429l18 20v762l-18 20H104l-18-20V406Z" fill="rgba(246,233,199,.27)" stroke="#55452d" stroke-width="5" filter="url(#roughen)"/>
+          <path d="M119 402h399l17 17v736l-17 17H119l-17-17V419Z" fill="none" stroke="#806b49" stroke-width="2" opacity=".75"/>
+          <text class="field-note" x="122" y="1225" transform="rotate(-5 122 1225)">three plants · one careful remedy</text>
+
+          <g id="plant1Group" class="movable" data-x="255" data-y="610" transform="translate(255 610)">
+            <rect class="selection-ring" x="-145" y="-245" width="880" height="390" rx="18"/>
+            <g aria-label="איור לבנדר" transform="translate(0 -20) rotate(-7) scale(1.15)" filter="url(#roughen)">
+              <path class="sketch" d="M8 220C12 142 4 59 17-154"/>
+              <path class="sketch-thin" d="M8 143C-25 120-53 95-72 62M9 102C38 81 58 53 73 21M12 55C-18 32-35 7-48-24"/>
+              <path class="sketch-thin" d="M-72 62C-45 67-26 73 2 93M73 21C50 28 33 43 13 65M-48-24C-25-18-7-2 14 15"/>
+              <g>
+                <ellipse class="wash-purple" cx="17" cy="-164" rx="22" ry="35"/>
+                <ellipse class="wash-purple" cx="-8" cy="-127" rx="20" ry="31"/>
+                <ellipse class="wash-purple" cx="30" cy="-113" rx="21" ry="32"/>
+                <ellipse class="wash-purple" cx="0" cy="-81" rx="19" ry="29"/>
+                <ellipse class="wash-purple" cx="34" cy="-70" rx="18" ry="28"/>
+                <path class="sketch-thin" d="M17-200C7-181 2-167 17-151M-8-158C4-145 5-134-7-116M30-144C18-128 19-116 31-101M0-110C12-97 13-84 1-68M34-98C23-83 24-72 35-58"/>
+              </g>
+            </g>
+            <text id="plant1NameText" class="plant-name" x="650" y="-150" text-anchor="start" direction="rtl" font-size="39">לבנדר</text>
+            <text id="plant1LatinText" class="plant-latin" x="650" y="-112" text-anchor="start">Lavandula angustifolia</text>
+            <path d="M455-85H650" class="archive-rule" opacity=".7"/>
+            <text id="plant1DescriptionText" class="plant-description" x="650" y="-42" text-anchor="start" direction="rtl" font-family="'Courier New', monospace" font-size="25"></text>
+          </g>
+
+          <g id="plant2Group" class="movable" data-x="285" data-y="850" transform="translate(285 850)">
+            <rect class="selection-ring" x="-175" y="-240" width="850" height="385" rx="18"/>
+            <g aria-label="איור ענף אורן ושרף" transform="translate(0 -30) rotate(8) scale(1.02)" filter="url(#roughen)">
+              <path class="sketch" d="M-130 174C-71 83-26 4 58-174"/>
+              <path class="sketch-thin" d="M-83 96L-157 22M-65 62L-131-35M-43 22L-94-75M-22-18L-57-116M2-63L-19-146M23-106L17-169"/>
+              <path class="sketch-thin" d="M-83 96L-63-8M-65 62L-35-53M-43 22L-4-91M-22-18L24-125M2-63L50-156M23-106L70-188"/>
+              <path class="sketch-thin" d="M-158 22L-93 76M-132-35L-70 31M-95-75L-44-14M-58-116L-20-53M-20-146L4-93M17-169L27-137"/>
+              <path class="sketch-thin" d="M-62-8L-78 79M-35-53L-56 43M-4-91L-30 3M24-125L-10-37M50-156L12-73M70-188L28-119"/>
+              <path class="wash-brown" d="M47 5C78-16 111 5 105 42C101 69 76 96 54 85C30 74 22 22 47 5Z"/>
+              <path class="sketch-thin" d="M47 5C78-16 111 5 105 42C101 69 76 96 54 85C30 74 22 22 47 5Z"/>
+            </g>
+            <text id="plant2NameText" class="plant-name" x="620" y="-145" text-anchor="start" direction="rtl" font-size="39">שרף אורנים</text>
+            <text id="plant2LatinText" class="plant-latin" x="620" y="-107" text-anchor="start">Pinus spp.</text>
+            <path d="M425-80H620" class="archive-rule" opacity=".7"/>
+            <text id="plant2DescriptionText" class="plant-description" x="620" y="-37" text-anchor="start" direction="rtl" font-family="'Courier New', monospace" font-size="25"></text>
+          </g>
+
+          <g id="plant3Group" class="movable" data-x="250" data-y="1095" transform="translate(250 1095)">
+            <rect class="selection-ring" x="-140" y="-240" width="885" height="390" rx="18"/>
+            <g aria-label="איור היפריקום" transform="translate(15 -25) rotate(-6) scale(1.05)" filter="url(#roughen)">
+              <path class="sketch" d="M11 220C-2 128 9 13 6-112"/>
+              <path class="sketch-thin" d="M5 83C-32 54-66 17-91-24M7 35C47 12 81-25 101-59M6-20C-23-47-45-74-58-108"/>
+              <path class="sketch-thin" d="M-53 33C-75 51-87 64-91 82M-28 60C-45 81-53 101-56 119M53 7C77 18 93 34 102 54M74-25C96-15 111 0 121 20"/>
+              <g transform="translate(5 -129)">
+                <circle class="wash-yellow" r="38"/>
+                <path class="sketch-thin" d="M0 0L0-49M0 0L46-16M0 0L29 41M0 0L-30 40M0 0L-46-15"/>
+                <circle cx="0" cy="0" r="9" fill="#755536" opacity=".7"/>
+                <circle cx="8" cy="-9" r="2.8" fill="#6c4d36"/><circle cx="-11" cy="5" r="2.8" fill="#6c4d36"/>
+              </g>
+              <g transform="translate(-67 -43) scale(.72)">
+                <circle class="wash-yellow" r="35"/>
+                <path class="sketch-thin" d="M0 0L0-45M0 0L43-14M0 0L27 38M0 0L-27 38M0 0L-43-14"/>
+              </g>
+            </g>
+            <text id="plant3NameText" class="plant-name" x="655" y="-145" text-anchor="start" direction="rtl" font-size="39">היפריקום</text>
+            <text id="plant3LatinText" class="plant-latin" x="655" y="-107" text-anchor="start">Hypericum perforatum</text>
+            <path d="M460-80H655" class="archive-rule" opacity=".7"/>
+            <text id="plant3DescriptionText" class="plant-description" x="655" y="-37" text-anchor="start" direction="rtl" font-family="'Courier New', monospace" font-size="25"></text>
+          </g>
+
+          <path d="M91 1305H1148M92 1312H1147" class="archive-rule" opacity=".74"/>
+          <path d="M102 1308l14-10l14 10l-14 10ZM1138 1308l-14-10l-14 10l14 10Z" fill="#594a31"/>
+          <g transform="translate(128 1360)" opacity=".83">
+            <path d="M0 55h102M16 47c7-31 75-31 83 0M33 13c9 11 9 21 0 31M56 5c9 11 9 22 0 33M78 13c9 11 9 21 0 31" class="sketch-thin"/>
+          </g>
+          <text class="section-label" x="900" y="1398" text-anchor="start" direction="rtl">שימוש מסורתי ואופי הרקיחה</text>
+
+          <g id="footerGroup" class="movable" data-x="675" data-y="1485" transform="translate(675 1485)">
+            <rect class="selection-ring" x="-535" y="-95" width="980" height="210" rx="18"/>
+            <path d="M-515-86H425L440-71V98H-530V-71Z" fill="rgba(247,234,201,.36)" stroke="#58472e" stroke-width="3" filter="url(#roughen)"/>
+            <text class="section-label" x="190" y="-42" text-anchor="start" direction="rtl">הערה</text>
+            <text id="footerText" class="footer-note" text-anchor="start" direction="rtl" font-family="'Courier New', monospace" font-size="23" x="190" y="12"></text>
+          </g>
+
+          <g transform="translate(1040 1590) rotate(10)" opacity=".67">
+            <path d="M0 95C28 52 40 16 52-45M33 25C5 17-12 0-24-20M42-4C69-10 86-25 99-44M21 56C-1 49-17 34-29 16M50-31C70-37 83-48 94-63" class="sketch-thin"/>
+            <path d="M-24-20C-5-20 11-12 33 25M99-44C77-42 62-29 42-4M-29 16C-9 16 4 29 21 56M94-63C76-61 63-50 50-31" fill="#6f6841" opacity=".25"/>
+          </g>
+          <text x="1128" y="1681" text-anchor="end" font-family="Georgia, serif" font-size="18" fill="#554b36" opacity=".82">OREN · HERBAL NOTES · GALILEE</text>
+        </svg>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const svg = document.getElementById("poster");
+    const defaultPositions = {
+      titleGroup: [650, 180],
+      plant1Group: [255, 610],
+      plant2Group: [285, 850],
+      plant3Group: [250, 1095],
+      footerGroup: [675, 1485]
+    };
+
+    const fieldMap = {
+      titleInput: "posterTitle",
+      plant1Name: "plant1NameText",
+      plant1Latin: "plant1LatinText",
+      plant2Name: "plant2NameText",
+      plant2Latin: "plant2LatinText",
+      plant3Name: "plant3NameText",
+      plant3Latin: "plant3LatinText"
+    };
+
+    const wrapMap = {
+      subtitleInput: { id: "posterSubtitle", width: 790, lineHeight: 37, maxLines: 2 },
+      plant1Description: { id: "plant1DescriptionText", width: 395, lineHeight: 34, maxLines: 4 },
+      plant2Description: { id: "plant2DescriptionText", width: 395, lineHeight: 34, maxLines: 4 },
+      plant3Description: { id: "plant3DescriptionText", width: 395, lineHeight: 34, maxLines: 4 },
+      footerInput: { id: "footerText", width: 790, lineHeight: 31, maxLines: 3 }
+    };
+
+    function setSimpleText(inputId, textId) {
+      document.getElementById(textId).textContent = document.getElementById(inputId).value;
+    }
+
+    function wrapSvgText(inputId, config) {
+      const input = document.getElementById(inputId);
+      const textEl = document.getElementById(config.id);
+      const words = input.value.trim().split(/\s+/).filter(Boolean);
+      const originalY = Number(textEl.getAttribute("y") || 0);
+      textEl.textContent = "";
+
+      let line = [];
+      let lineNumber = 0;
+      let tspan = document.createElementNS("http://www.w3.org/2000/svg", "tspan");
+      tspan.setAttribute("x", textEl.getAttribute("x") || 0);
+      tspan.setAttribute("y", originalY);
+      textEl.appendChild(tspan);
+
+      for (const word of words) {
+        line.push(word);
+        tspan.textContent = line.join(" ");
+        if (tspan.getComputedTextLength() > config.width && line.length > 1) {
+          line.pop();
+          tspan.textContent = line.join(" ");
+          lineNumber += 1;
+          if (lineNumber >= config.maxLines) break;
+          line = [word];
+          tspan = document.createElementNS("http://www.w3.org/2000/svg", "tspan");
+          tspan.setAttribute("x", textEl.getAttribute("x") || 0);
+          tspan.setAttribute("dy", config.lineHeight);
+          tspan.textContent = word;
+          textEl.appendChild(tspan);
+        }
+      }
+    }
+
+    function refreshText() {
+      Object.entries(fieldMap).forEach(([inputId, textId]) => setSimpleText(inputId, textId));
+      Object.entries(wrapMap).forEach(([inputId, config]) => wrapSvgText(inputId, config));
+    }
+
+    document.querySelectorAll("input, textarea").forEach((input) => {
+      if (input.type !== "file") input.addEventListener("input", refreshText);
+    });
+
+    let active = null;
+    let pointerOffset = { x: 0, y: 0 };
+
+    function clientToSvg(event) {
+      const point = svg.createSVGPoint();
+      point.x = event.clientX;
+      point.y = event.clientY;
+      return point.matrixTransform(svg.getScreenCTM().inverse());
+    }
+
+    svg.querySelectorAll(".movable").forEach((group) => {
+      group.addEventListener("pointerdown", (event) => {
+        event.preventDefault();
+        svg.querySelectorAll(".movable").forEach((item) => item.classList.remove("selected"));
+        active = group;
+        active.classList.add("selected");
+        const point = clientToSvg(event);
+        pointerOffset.x = point.x - Number(active.dataset.x);
+        pointerOffset.y = point.y - Number(active.dataset.y);
+        active.setPointerCapture(event.pointerId);
+      });
+
+      group.addEventListener("pointermove", (event) => {
+        if (active !== group) return;
+        const point = clientToSvg(event);
+        const x = Math.max(40, Math.min(1200, point.x - pointerOffset.x));
+        const y = Math.max(40, Math.min(1714, point.y - pointerOffset.y));
+        active.dataset.x = x.toFixed(1);
+        active.dataset.y = y.toFixed(1);
+        active.setAttribute("transform", `translate(${x} ${y})`);
+      });
+
+      const finishDrag = () => { active = null; };
+      group.addEventListener("pointerup", finishDrag);
+      group.addEventListener("pointercancel", finishDrag);
+    });
+
+    function getState() {
+      const fields = {};
+      document.querySelectorAll(".controls input:not([type=file]), .controls textarea").forEach((field) => {
+        fields[field.id] = field.value;
+      });
+      const positions = {};
+      svg.querySelectorAll(".movable").forEach((group) => {
+        positions[group.id] = [Number(group.dataset.x), Number(group.dataset.y)];
+      });
+      return { version: 1, fields, positions };
+    }
+
+    function applyState(state) {
+      Object.entries(state.fields || {}).forEach(([id, value]) => {
+        const field = document.getElementById(id);
+        if (field) field.value = value;
+      });
+      Object.entries(state.positions || {}).forEach(([id, position]) => {
+        const group = document.getElementById(id);
+        if (!group || !Array.isArray(position)) return;
+        group.dataset.x = position[0];
+        group.dataset.y = position[1];
+        group.setAttribute("transform", `translate(${position[0]} ${position[1]})`);
+      });
+      refreshText();
+    }
+
+    function downloadBlob(blob, filename) {
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = filename;
+      link.click();
+      setTimeout(() => URL.revokeObjectURL(url), 1000);
+    }
+
+    function cleanSvgClone() {
+      const clone = svg.cloneNode(true);
+      clone.querySelectorAll(".movable").forEach((item) => item.classList.remove("selected"));
+      clone.setAttribute("width", "1240");
+      clone.setAttribute("height", "1754");
+      const style = document.querySelector("style").textContent;
+      const defs = clone.querySelector("defs");
+      const styleNode = document.createElementNS("http://www.w3.org/2000/svg", "style");
+      styleNode.textContent = style;
+      defs.appendChild(styleNode);
+      return new XMLSerializer().serializeToString(clone);
+    }
+
+    document.getElementById("downloadSvg").addEventListener("click", () => {
+      const source = cleanSvgClone();
+      downloadBlob(new Blob([source], { type: "image/svg+xml;charset=utf-8" }), "herbal-product-poster.svg");
+    });
+
+    document.getElementById("downloadPng").addEventListener("click", () => {
+      const source = cleanSvgClone();
+      const blob = new Blob([source], { type: "image/svg+xml;charset=utf-8" });
+      const url = URL.createObjectURL(blob);
+      const image = new Image();
+      image.onload = () => {
+        const canvas = document.createElement("canvas");
+        canvas.width = 1240;
+        canvas.height = 1754;
+        const context = canvas.getContext("2d");
+        context.drawImage(image, 0, 0);
+        canvas.toBlob((png) => downloadBlob(png, "herbal-product-poster.png"), "image/png");
+        URL.revokeObjectURL(url);
+      };
+      image.src = url;
+    });
+
+    document.getElementById("saveLayout").addEventListener("click", () => {
+      const json = JSON.stringify(getState(), null, 2);
+      downloadBlob(new Blob([json], { type: "application/json" }), "herbal-product-poster-work.json");
+    });
+
+    document.getElementById("loadLayout").addEventListener("click", () => {
+      document.getElementById("loadFile").click();
+    });
+
+    document.getElementById("loadFile").addEventListener("change", async (event) => {
+      const [file] = event.target.files;
+      if (!file) return;
+      try {
+        applyState(JSON.parse(await file.text()));
+      } catch {
+        alert("לא ניתן לקרוא את קובץ העבודה.");
+      }
+      event.target.value = "";
+    });
+
+    document.getElementById("resetLayout").addEventListener("click", () => {
+      Object.entries(defaultPositions).forEach(([id, position]) => {
+        const group = document.getElementById(id);
+        group.dataset.x = position[0];
+        group.dataset.y = position[1];
+        group.setAttribute("transform", `translate(${position[0]} ${position[1]})`);
+      });
+    });
+
+    refreshText();
+  </script>
+</body>
+</html>

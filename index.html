@@ -29,7 +29,7 @@
       <a href="about.html">טיפול</a>
       <a href="products.html">מוצרים</a>
       <a href="workshops.html">סדנאות</a>
-      <a href="contact.html">יצירת קשר</a>
+      <a href="contact.html">סרטונים</a>
     </nav>
   </header>
 
@@ -44,7 +44,7 @@
           מקום להאט, להקשיב לגוף, ולבנות דרך טיפולית שניתן לחיות איתה.
         </p>
         <div class="hero-actions">
-          <a class="button primary" href="contact.html">לתיאום שיחה</a>
+          <a class="button primary" href="#contact">לתיאום שיחה</a>
           <a class="button secondary" href="about.html">על הטיפול</a>
         </div>
       </div>
@@ -101,7 +101,7 @@
             מי שסקרן ללמוד זיהוי צמחים, ליקוט ועבודה בשטח מוזמן ליצור קשר לגבי
             ימי ליקוט משותפים כעוזר.
           </p>
-          <a href="contact.html">לשאול על יום ליקוט</a>
+          <a href="#contact">לשאול על יום ליקוט</a>
         </div>
       </div>
     </section>
@@ -124,9 +124,9 @@
       </div>
       <div class="cards-grid">
         <article class="simple-card">
-          <h3>ליווי אישי</h3>
+          <h3>ליווי אישי וטיפול</h3>
           <p>מפגשי קליניקה לבניית תהליך טיפולי מדורג, עם פורמולה מותאמת והמשך מעקב.</p>
-          <a href="contact.html">לתיאום</a>
+          <a href="#contact">לתיאום</a>
         </article>
         <article class="simple-card">
           <h3>מוצרים צמחיים</h3>
@@ -138,6 +138,41 @@
           <p>מפגשי למידה חווייתיים על צמחים מקומיים, רקיחה ביתית וטיפול עונתי.</p>
           <a href="workshops.html">לסדנאות</a>
         </article>
+      </div>
+    </section>
+
+    <section class="home-contact" id="contact" aria-labelledby="contact-heading">
+      <div class="contact-hero">
+        <div class="contact-photo" role="img" aria-label="שתי ציפורים משוחחות על ענף"></div>
+        <div class="contact-panel">
+          <p class="eyebrow">יצירת קשר</p>
+          <h2 id="contact-heading">נעים להתחיל בשיחה קצרה.</h2>
+          <p>
+            לתיאום מפגש, בירור לגבי מוצר או הזמנת סדנה, אפשר להשאיר פרטים ואחזור
+            בהקדם.
+          </p>
+
+          <form class="contact-form" action="https://formsubmit.co/liora1018@gmail.com" method="post" data-email-form data-email-endpoint="https://formsubmit.co/ajax/liora1018@gmail.com">
+            <input type="hidden" name="_subject" value="פנייה חדשה מאתר אורן הרבליסט">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="false">
+
+            <label for="contact-name">שם מלא</label>
+            <input id="contact-name" name="name" type="text" autocomplete="name">
+
+            <label for="contact-phone">טלפון</label>
+            <input id="contact-phone" name="phone" type="tel" autocomplete="tel">
+
+            <label for="contact-email">אימייל</label>
+            <input id="contact-email" name="email" type="email" autocomplete="email">
+
+            <label for="contact-message">כמה מילים</label>
+            <textarea id="contact-message" name="message" rows="5"></textarea>
+
+            <button class="button primary" type="submit">שליחת פרטים</button>
+            <p class="form-note" aria-live="polite" data-form-status>הפרטים יישלחו לליאור במייל.</p>
+          </form>
+        </div>
       </div>
     </section>
   </main>
@@ -158,7 +193,7 @@
         <a href="about.html">טיפול</a>
         <a href="products.html">מוצרים</a>
         <a href="workshops.html">סדנאות</a>
-        <a href="contact.html">יצירת קשר</a>
+        <a href="contact.html">סרטונים</a>
       </div>
     </nav>
     <address class="footer-contact">

@@ -29,7 +29,7 @@
       <a href="about.html">טיפול</a>
       <a href="products.html">מוצרים</a>
       <a href="workshops.html" aria-current="page">סדנאות</a>
-      <a href="contact.html">יצירת קשר</a>
+      <a href="contact.html">סרטונים</a>
     </nav>
   </header>
 
@@ -44,7 +44,7 @@
           המקום והאנשים שמגיעים.
         </p>
         <div class="hero-actions">
-          <a class="button primary" href="contact.html">לתיאום סדנה</a>
+          <a class="button primary" href="index.html#contact">לתיאום סדנה</a>
           <a class="button secondary" href="#workshop-options">לראות אפשרויות</a>
         </div>
       </div>
@@ -93,7 +93,7 @@
       </div>
 
       <div class="workshop-program-grid">
-        <article class="workshop-program workshop-resin">
+        <article class="workshop-program workshop-resin" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="workshop-modal" data-workshop-modal="resin">
           <p class="workshop-label">סדנה מעשית</p>
           <h3>ליקוט שרפים ביער</h3>
           <p>
@@ -102,7 +102,7 @@
           </p>
         </article>
 
-        <article class="workshop-program workshop-oils">
+        <article class="workshop-program workshop-oils" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="workshop-modal" data-workshop-modal="oils">
           <p class="workshop-label">סדנה מעשית</p>
           <h3>שמנים אתריים וארומתרפיה</h3>
           <p>
@@ -111,7 +111,7 @@
           </p>
         </article>
 
-        <article class="workshop-program workshop-mushrooms">
+        <article class="workshop-program workshop-mushrooms" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="workshop-modal" data-workshop-modal="mushrooms">
           <p class="workshop-label">סדנה מעשית</p>
           <h3>היכרות עם ליקוט פטריות למאכל</h3>
           <p>
@@ -120,7 +120,7 @@
           </p>
         </article>
 
-        <article class="workshop-program workshop-roots">
+        <article class="workshop-program workshop-roots" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="workshop-modal" data-workshop-modal="roots">
           <p class="workshop-label">סדנה מעשית</p>
           <h3>ליקוט שורשי מרפא</h3>
           <p>
@@ -129,7 +129,7 @@
           </p>
         </article>
 
-        <article class="workshop-program workshop-program-wide workshop-lecture">
+        <article class="workshop-program workshop-program-wide workshop-lecture" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="workshop-modal" data-workshop-modal="lecture">
           <p class="workshop-label">הרצאה</p>
           <h3>צמחי מרפא, טבע ובריאות יומיומית</h3>
           <p>
@@ -139,6 +139,15 @@
           </p>
         </article>
       </div>
+
+      <dialog class="workshop-modal" id="workshop-modal" aria-labelledby="workshop-modal-title">
+        <div class="workshop-modal-card">
+          <button class="workshop-modal-close" type="button" data-workshop-modal-close>סגירה</button>
+          <p class="eyebrow" data-workshop-modal-label></p>
+          <h2 id="workshop-modal-title" data-workshop-modal-title></h2>
+          <div class="workshop-modal-content" data-workshop-modal-content></div>
+        </div>
+      </dialog>
     </section>
 
     <section class="workshop-faq section-pad" aria-label="איך זה עובד">
@@ -215,7 +224,7 @@
         אפשר להתחיל משיחה קצרה על תאריך, מקום, מספר משתתפים וסוג החוויה שתרצו
         ליצור.
       </p>
-      <a class="button primary" href="contact.html">ליצירת קשר</a>
+      <a class="button primary" href="index.html#contact">ליצירת קשר</a>
     </section>
   </main>
 
@@ -235,7 +244,7 @@
         <a href="about.html">טיפול</a>
         <a href="products.html">מוצרים</a>
         <a href="workshops.html">סדנאות</a>
-        <a href="contact.html">יצירת קשר</a>
+        <a href="contact.html">סרטונים</a>
       </div>
     </nav>
     <address class="footer-contact">
