@@ -407,16 +407,26 @@ p {
   display: grid;
   grid-template-columns: minmax(0, 1.35fr) minmax(320px, 0.65fr);
   min-height: 620px;
-  background: var(--olive-dark);
+  background: #3e3f17;
   color: #fff8eb;
 }
 
 .image-band-photo {
+  position: relative;
+  overflow: hidden;
+}
+
+.image-band-photo::before {
+  position: absolute;
+  inset: 0;
+  content: "";
   background-image:
     linear-gradient(rgba(35, 42, 26, 0.08), rgba(35, 42, 26, 0.08)),
-    url("../images/products-gallery/WhatsApp%20Image%202026-06-10%20at%2011.22.43%20%282%29.jpeg");
-  background-position: center;
+    url("../images/main-gallery/products_main2.jpeg");
+  background-position: center top;
   background-size: cover;
+  transform: scale(1.08);
+  transform-origin: center top;
 }
 
 .image-band-copy {
