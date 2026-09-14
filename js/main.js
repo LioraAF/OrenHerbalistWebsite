@@ -331,6 +331,7 @@ const workshopModalDetails = {
       "בסוף מכינים יחד משחת עזרה ראשונה ביתית, שמתאימה לשימוש חיצוני סביב יובש, שפשופים, עור מגורה וכוויות קלות.",
       "מתאים במיוחד לקבוצות שרוצות חוויה בטבע עם תוצר קטן ביד, הרבה ריח, והרבה תחושה של יער.",
     ],
+    where: "ביער אורנים מתאים, באזור קדיתא והגליל העליון או ביער אחר שמתאים לקבוצה ולעונה.",
   },
   oils: {
     label: "סדנה מעשית",
@@ -342,6 +343,7 @@ const workshopModalDetails = {
       "הסדנה יכולה להסתיים בהכנת תערובת אישית קטנה, כמו שמן גוף, רול־און או תרסיס פשוט, לפי אופי הקבוצה והזמן שיש.",
       "מתאימה למפגש indoor או outdoor, לימי חברה, קבוצות חברים וסדנאות שבהן רוצים הרבה חושים בלי לצאת בהכרח למסלול ליקוט.",
     ],
+    where: "במשרד, בבית אירוח, במרחב קהילתי, בבית פרטי או בחוץ במקום מוצל ונוח לעבודה.",
   },
   mushrooms: {
     label: "סדנה מעשית",
@@ -353,6 +355,7 @@ const workshopModalDetails = {
       "המפגש לא נועד לעודד אכילה חסרת זהירות מהטבע, אלא לבנות שפה בסיסית ובטוחה יותר סביב פטריות, סקרנות והיכרות עם הסביבה.",
       "אפשר לשלב שיחה על מטבח, מסורות מקומיות, ייבוש ושימור, בהתאם לעונה ולמה שפוגשים בשטח.",
     ],
+    where: "ביער ובשטחים טבעיים שבהם יש תנאים מתאימים לפטריות. המיקום נקבע סמוך למועד לפי העונה, הגשם ומה שקורה בשטח.",
   },
   roots: {
     label: "סדנה מעשית",
@@ -364,6 +367,7 @@ const workshopModalDetails = {
       "לפי העונה והקבוצה אפשר לדבר על מרתחים, תמציות, חיזוק, עיכול, שורשיות וקשר לאדמה.",
       "מתאים לקבוצות שמבקשות מפגש קצת יותר מעמיק, איטי ומחובר לעונה.",
     ],
+    where: "בטבע, באזור קדיתא והגליל העליון או בבית גידול מתאים אחר שנבחר לפי העונה והצמחים המקומיים.",
   },
   lecture: {
     label: "הרצאה",
@@ -375,6 +379,7 @@ const workshopModalDetails = {
       "אפשר לשלב טעימה, הרחה או הדגמות קטנות, אבל המרכז הוא הסיפור, הידע והחיבור בין אדם, אדמה ובריאות.",
       "מתאים במיוחד לחברות, קהילות וקבוצות שרוצות תוכן עשיר ונגיש בזמן קצר יחסית.",
     ],
+    where: "במשרד, במרחב קהילתי, בבית אירוח, באולם קטן או בכל מקום שקט ונוח לישיבה ולהקשבה.",
   },
 };
 
@@ -404,12 +409,23 @@ if (
     workshopModalLabel.textContent = detail.label;
     workshopModalTitle.textContent = detail.title;
     workshopModal.dataset.transition = detail.transition;
+
+    const whereSection = document.createElement("section");
+    const whereTitle = document.createElement("h3");
+    const whereDescription = document.createElement("p");
+
+    whereSection.className = "workshop-modal-where workshop-modal-where-soft-note";
+    whereTitle.textContent = "איפה:";
+    whereDescription.textContent = detail.where;
+    whereSection.append(whereTitle, whereDescription);
+
     workshopModalContent.replaceChildren(
       ...detail.paragraphs.map((paragraph) => {
         const node = document.createElement("p");
         node.textContent = paragraph;
         return node;
-      })
+      }),
+      whereSection
     );
 
     workshopModal.showModal();
