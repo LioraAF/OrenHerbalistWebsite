@@ -862,3 +862,16 @@ if (reelsGrid instanceof HTMLElement) {
 
   renderReels();
 }
+
+const feedbackMode = new URLSearchParams(window.location.search).get("feedback") === "1";
+
+if (feedbackMode) {
+  const feedbackStyles = document.createElement("link");
+  feedbackStyles.rel = "stylesheet";
+  feedbackStyles.href = "css/feedback.css?v=20261029";
+  document.head.append(feedbackStyles);
+
+  const feedbackScript = document.createElement("script");
+  feedbackScript.src = "js/feedback.js?v=20261029";
+  document.body.append(feedbackScript);
+}
