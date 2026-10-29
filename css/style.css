@@ -363,6 +363,7 @@ p {
 
 .text-flow {
   display: grid;
+  align-content: center;
   gap: 1.15rem;
   color: var(--muted);
   font-size: 1.08rem;
@@ -1010,8 +1011,8 @@ p {
 .values-photo {
   position: relative;
   min-height: 680px;
-  background-image: url("https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=1600&q=82");
-  background-position: center;
+  background-image: url("../images/treatment-gallery/purple_flower.jpeg");
+  background-position: center 68%;
   background-size: cover;
 }
 
@@ -1270,7 +1271,7 @@ p {
   border-radius: 8px;
   background-image:
     linear-gradient(rgba(41, 53, 31, 0.05), rgba(239, 229, 210, 0.07)),
-    url("../images/products-gallery/PHOTO-2026-09-15-01-11-36.jpg");
+    url("../images/products-gallery/gifts/PHOTO-2026-09-15-01-11-36.jpg");
   background-position: center 58%;
   background-size: 120%;
   background-repeat: no-repeat;
