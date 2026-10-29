@@ -636,73 +636,82 @@ const reelsGrid = document.querySelector("[data-reels-grid]");
 
 if (reelsGrid instanceof HTMLElement) {
   const filters = Array.from(document.querySelectorAll("[data-library-filter]"));
-  const loadMoreButton = document.querySelector("[data-library-load-more]");
   const countLabel = document.querySelector("[data-library-count]");
   const modal = document.querySelector("[data-reel-modal]");
   const modalClose = document.querySelector("[data-reel-modal-close]");
   const modalVideo = document.querySelector("[data-reel-modal-video]");
-  const modalPlaceholder = document.querySelector("[data-reel-modal-placeholder]");
   const modalTopic = document.querySelector("[data-reel-modal-topic]");
   const modalTitle = document.querySelector("[data-reel-modal-title]");
   const modalDescription = document.querySelector("[data-reel-modal-description]");
-  const modalInstagram = document.querySelector("[data-reel-modal-instagram]");
-  const pageSize = 12;
-  const instagramProfile = "https://www.instagram.com/orenherbalist/";
-  const reelLinks = window.REEL_LINKS || {};
+  const modalLink = document.querySelector("[data-reel-modal-link]");
+  const reelTopics = {
+    "medicinal-plants": "צמחי מרפא",
+    foraging: "ליקוט",
+  };
 
-  // These placeholders mirror the real topic folders under /videos.
-  // Add Instagram URLs in /videos/reel-links.js as real Reels are added.
-  const topicDefinitions = [
+  const reelItems = [
     {
-      key: "medicinal-plants",
-      label: "צמחי מרפא",
-      folder: "videos/medicinal-plants",
-      count: 30,
-      description: "היכרות קצרה עם צמח מרפא, איכויותיו והשימושים המסורתיים שלו.",
+      id: "5XaKIqrVzQs",
+      topic: "medicinal-plants",
+      title: "סמבוק שחור",
+      description: "פרץ מעלעלים ואורן מציגים את הסמבוק השחור ומספרים על השימושים המסורתיים המיוחסים לו.",
     },
     {
-      key: "foraging",
-      label: "ליקוט",
-      folder: "videos/foraging",
-      count: 10,
-      description: "רגע מן השטח על זיהוי, עונה וליקוט אחראי שמכבד את המקום.",
+      id: "baCel93LGAM",
+      topic: "medicinal-plants",
+      title: "בוצין מפורץ",
+      description: "היכרות מן השטח עם הבוצין המפורץ והשימושים המסורתיים שנקשרו לצמח.",
+      thumbnail: "https://i.ytimg.com/vi/baCel93LGAM/2.jpg",
     },
     {
-      key: "natural-pharmacy",
-      label: "רוקחות טבעית",
-      folder: "videos/natural-pharmacy",
-      count: 2,
-      description: "הדגמה קצרה של הכנה צמחית שאפשר להכיר ולתרגל בבית.",
+      id: "A0LhLF-EHwU",
+      topic: "medicinal-plants",
+      title: "אזוב — הזעתר המקומי",
+      description: "אורן מספר על האזוב, המוכר גם כזעתר, ועל מקומו במסורת הצמחים המקומית.",
     },
-  ];
-
-  const reelItems = topicDefinitions.flatMap((topic, topicIndex) =>
-    Array.from({ length: topic.count }, (_, itemIndex) => {
-      const number = itemIndex + 1;
-      const paddedNumber = String(number).padStart(2, "0");
-      const seconds = 24 + ((number * 7 + topicIndex * 5) % 31);
-      const id = `${topic.key}-${paddedNumber}`;
-
-      return {
-        id,
-        topic: topic.key,
-        topicLabel: topic.label,
-        folder: topic.folder,
-        title: `${topic.label} — סרטון ${paddedNumber}`,
-        description: topic.description,
-        duration: `00:${String(seconds).padStart(2, "0")}`,
-        tone: (number + topicIndex * 2) % 6,
-        videoSrc: "",
-        instagramUrl: reelLinks[id] || instagramProfile,
-      };
-    })
-  );
+    {
+      id: "1dSl-rc-K5Y",
+      topic: "medicinal-plants",
+      title: "ולריאנה",
+      description: "אורן מציג את צמח הוולריאנה ומשתף בידע מסורתי על איכויותיו והשימוש בו.",
+    },
+    {
+      id: "ie1XCKPkTT4",
+      topic: "foraging",
+      title: "שרף האורן",
+      description: "מפגש ביער עם שרף האורן ועם הידע המסורתי שנאסף סביבו.",
+    },
+    {
+      id: "77K_0Jfd-wk",
+      topic: "foraging",
+      title: "חרחבינה מכחילה",
+      description: "אורן יוצא לליקוט חורפי ומציג את החרחבינה המכחילה בסביבתה הטבעית.",
+    },
+    {
+      id: "dW3hDGr-1T8",
+      topic: "foraging",
+      title: "קומפרי ביער",
+      description: "מפגש עם צמח הקומפרי במהלך יציאה ליער וסיפור על השימוש המסורתי בו.",
+    },
+    {
+      id: "9LLRsOUS_Cs",
+      topic: "foraging",
+      title: "כוכבית",
+      description: "ליקוט כוכבית בקדיתא והיכרות עם הצמח ועם סביבת הגידול שלו.",
+    },
+  ].map((item, index) => ({
+    ...item,
+    topicLabel: reelTopics[item.topic],
+    tone: index % 6,
+    thumbnail: item.thumbnail || `https://i.ytimg.com/vi/${item.id}/hqdefault.jpg`,
+    embedUrl: `https://www.youtube-nocookie.com/embed/${item.id}?autoplay=1&rel=0`,
+    youtubeUrl: `https://www.youtube.com/watch?v=${item.id}`,
+  }));
 
   let activeFilter = "all";
-  let visibleCount = pageSize;
 
   const getFilteredItems = () => {
-    if (activeFilter === "all" || activeFilter === "reels") {
+    if (activeFilter === "all") {
       return reelItems;
     }
 
@@ -719,18 +728,16 @@ if (reelsGrid instanceof HTMLElement) {
     const media = document.createElement("span");
     media.className = `reel-card-media reel-tone-${item.tone}`;
 
+    const thumbnail = document.createElement("img");
+    thumbnail.className = "reel-card-thumbnail";
+    thumbnail.src = item.thumbnail;
+    thumbnail.alt = "";
+    thumbnail.loading = "lazy";
+
     const play = document.createElement("span");
     play.className = "reel-play";
     play.setAttribute("aria-hidden", "true");
     play.textContent = "▶";
-
-    const duration = document.createElement("span");
-    duration.className = "reel-duration";
-    duration.textContent = item.duration;
-
-    const placeholder = document.createElement("span");
-    placeholder.className = "reel-placeholder-label";
-    placeholder.textContent = "מקום לסרטון";
 
     const copy = document.createElement("span");
     copy.className = "reel-card-copy";
@@ -743,7 +750,7 @@ if (reelsGrid instanceof HTMLElement) {
     title.className = "reel-card-title";
     title.textContent = item.title;
 
-    media.append(play, duration, placeholder);
+    media.append(thumbnail, play);
     copy.append(topic, title);
     card.append(media, copy);
     return card;
@@ -751,23 +758,17 @@ if (reelsGrid instanceof HTMLElement) {
 
   const renderReels = () => {
     const filteredItems = getFilteredItems();
-    const shownItems = filteredItems.slice(0, visibleCount);
-    reelsGrid.replaceChildren(...shownItems.map(createReelCard));
+    reelsGrid.replaceChildren(...filteredItems.map(createReelCard));
 
     if (countLabel instanceof HTMLElement) {
-      countLabel.textContent = `מציגים ${shownItems.length} מתוך ${filteredItems.length} סרטונים`;
-    }
-
-    if (loadMoreButton instanceof HTMLButtonElement) {
-      loadMoreButton.hidden = shownItems.length >= filteredItems.length;
+      countLabel.textContent = `${filteredItems.length} סרטונים`;
     }
   };
 
   const stopModalVideo = () => {
-    if (modalVideo instanceof HTMLVideoElement) {
-      modalVideo.pause();
+    if (modalVideo instanceof HTMLIFrameElement) {
       modalVideo.removeAttribute("src");
-      modalVideo.load();
+      modalVideo.title = "";
       modalVideo.hidden = true;
     }
   };
@@ -797,19 +798,14 @@ if (reelsGrid instanceof HTMLElement) {
       modalDescription.textContent = item.description;
     }
 
-    if (modalInstagram instanceof HTMLAnchorElement) {
-      modalInstagram.href = item.instagramUrl;
+    if (modalLink instanceof HTMLAnchorElement) {
+      modalLink.href = item.youtubeUrl;
     }
 
-    if (modalPlaceholder instanceof HTMLElement) {
-      modalPlaceholder.className = `reel-modal-placeholder reel-tone-${item.tone}`;
-      modalPlaceholder.hidden = Boolean(item.videoSrc);
-    }
-
-    if (modalVideo instanceof HTMLVideoElement && item.videoSrc) {
-      modalVideo.src = item.videoSrc;
+    if (modalVideo instanceof HTMLIFrameElement) {
+      modalVideo.src = item.embedUrl;
+      modalVideo.title = item.title;
       modalVideo.hidden = false;
-      modalVideo.load();
     }
 
     modal.showModal();
@@ -822,7 +818,6 @@ if (reelsGrid instanceof HTMLElement) {
 
     filter.addEventListener("click", () => {
       activeFilter = filter.dataset.libraryFilter || "all";
-      visibleCount = pageSize;
 
       filters.forEach((option) => {
         const isActive = option === filter;
@@ -832,11 +827,6 @@ if (reelsGrid instanceof HTMLElement) {
 
       renderReels();
     });
-  });
-
-  loadMoreButton?.addEventListener("click", () => {
-    visibleCount += pageSize;
-    renderReels();
   });
 
   reelsGrid.addEventListener("click", (event) => {

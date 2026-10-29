@@ -2135,6 +2135,13 @@ p {
   font-size: 0.94rem;
 }
 
+.library-note {
+  max-width: 68ch;
+  margin-top: 1rem;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
 .reels-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -2178,8 +2185,20 @@ p {
   border-bottom: 1px solid rgba(79, 93, 58, 0.22);
 }
 
-.reel-card-media::before,
-.reel-modal-placeholder::before {
+.reel-card-thumbnail {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 240ms ease;
+}
+
+.reel-library-card:hover .reel-card-thumbnail {
+  transform: scale(1.035);
+}
+
+.reel-card-media::before {
   position: absolute;
   left: -12%;
   bottom: -9%;
@@ -2226,34 +2245,14 @@ p {
   color: var(--olive-dark);
   background: rgba(255, 250, 240, 0.92);
   border-radius: 50%;
-}
-
-.reel-duration {
-  position: absolute;
-  right: 0.75rem;
-  bottom: 0.75rem;
-  z-index: 1;
-  padding: 0.22rem 0.55rem;
-  color: #fffaf0;
-  font-size: 0.78rem;
-  background: rgba(41, 53, 31, 0.78);
-  border-radius: 999px;
-}
-
-.reel-placeholder-label {
-  position: absolute;
-  left: 0.75rem;
-  bottom: 0.75rem;
-  z-index: 1;
-  color: rgba(255, 250, 240, 0.78);
-  font-size: 0.76rem;
+  box-shadow: 0 8px 24px rgba(34, 31, 23, 0.22);
 }
 
 .reel-card-copy {
   display: grid;
   align-content: start;
   gap: 0.35rem;
-  min-height: 112px;
+  min-height: 104px;
   padding: 1rem;
 }
 
@@ -2268,16 +2267,6 @@ p {
   font-family: Georgia, "Times New Roman", serif;
   font-size: clamp(1.15rem, 2vw, 1.5rem);
   line-height: 1.3;
-}
-
-.library-load-more {
-  display: flex;
-  justify-content: center;
-  padding-top: clamp(2rem, 5vw, 3.5rem);
-}
-
-.library-load-more .button[hidden] {
-  display: none;
 }
 
 .reel-modal {
@@ -2334,34 +2323,15 @@ p {
   border-radius: 8px;
 }
 
-.reel-modal-media video,
-.reel-modal-placeholder {
+.reel-modal-media iframe {
   width: 100%;
   height: 100%;
 }
 
-.reel-modal-media video {
-  object-fit: contain;
+.reel-modal-media iframe {
+  display: block;
   background: #171b12;
-}
-
-.reel-modal-placeholder {
-  position: relative;
-  display: grid;
-  place-items: center;
-  align-content: center;
-  gap: 1rem;
-  overflow: hidden;
-  color: rgba(255, 250, 240, 0.8);
-}
-
-.reel-modal-placeholder[hidden] {
-  display: none;
-}
-
-.reel-modal-placeholder > * {
-  position: relative;
-  z-index: 1;
+  border: 0;
 }
 
 .reel-modal-copy {
@@ -2681,10 +2651,6 @@ p {
 
   .reel-card-title {
     font-size: 1rem;
-  }
-
-  .reel-placeholder-label {
-    display: none;
   }
 
   .reel-modal-layout {

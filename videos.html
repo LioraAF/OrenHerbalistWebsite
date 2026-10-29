@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>מאמרים וסרטונים | אורן שושנה</title>
-  <meta name="description" content="מאמרים, מדריכים וסרטונים קצרים של אורן שושנה על צמחי מרפא, ליקוט ורוקחות טבעית.">
-  <link rel="stylesheet" href="css/style.css?v=20261029">
+  <title>סרטונים | אורן שושנה</title>
+  <meta name="description" content="סרטונים קצרים של אורן שושנה על צמחי מרפא, ליקוט וידע מסורתי מן השטח.">
+  <link rel="stylesheet" href="css/style.css?v=20261029-cleanup">
 </head>
 <body>
   <header class="site-header">
@@ -26,10 +26,10 @@
 
     <nav class="site-nav" id="site-nav" aria-label="ניווט ראשי">
       <a href="index.html">בית</a>
-      <a href="about.html">טיפול</a>
+      <a href="treatment.html">טיפול</a>
       <a href="products.html">מוצרים</a>
       <a href="workshops.html">סדנאות</a>
-      <a href="contact.html" aria-current="page">סרטונים</a>
+      <a href="videos.html" aria-current="page">סרטונים</a>
     </nav>
   </header>
 
@@ -44,10 +44,11 @@
       <div class="library-heading">
         <div>
           <p class="eyebrow">ידע מהאדמה ומהקליניקה</p>
-          <h1>מאמרים וסרטונים</h1>
+          <h1>סרטונים</h1>
           <p class="library-intro">
             מדריכים שימושיים והדרכות קצרות על צמחי מרפא, ליקוט ורוקחות ביתית — לצד סיפורי צמחים, רגעים מן השטח ומפגשים עם אנשים שעוסקים בטבע, בריאות ומלאכות מסורתיות.
           </p>
+          <p class="library-note">המידע בסרטונים נועד להעשרה בלבד ואינו מהווה ייעוץ רפואי או תחליף לאבחון ולטיפול מקצועי.</p>
         </div>
       </div>
 
@@ -55,8 +56,6 @@
         <button class="library-filter is-active" type="button" data-library-filter="all" aria-pressed="true">הכול</button>
         <button class="library-filter" type="button" data-library-filter="medicinal-plants" aria-pressed="false">צמחי מרפא</button>
         <button class="library-filter" type="button" data-library-filter="foraging" aria-pressed="false">ליקוט</button>
-        <button class="library-filter" type="button" data-library-filter="natural-pharmacy" aria-pressed="false">רוקחות טבעית</button>
-        <button class="library-filter" type="button" data-library-filter="reels" aria-pressed="false">Reels</button>
       </div>
 
       <div class="library-status" aria-live="polite">
@@ -64,27 +63,19 @@
       </div>
 
       <div class="reels-grid" data-reels-grid aria-label="ספריית הסרטונים"></div>
-
-      <div class="library-load-more">
-        <button class="button secondary" type="button" data-library-load-more>לטעינת סרטונים נוספים</button>
-      </div>
     </section>
 
     <dialog class="reel-modal" data-reel-modal aria-labelledby="reel-modal-title">
       <button class="reel-modal-close" type="button" data-reel-modal-close aria-label="סגירת הסרטון">×</button>
       <div class="reel-modal-layout">
         <div class="reel-modal-media">
-          <video controls playsinline preload="none" data-reel-modal-video hidden></video>
-          <div class="reel-modal-placeholder" data-reel-modal-placeholder>
-            <span class="reel-play" aria-hidden="true">▶</span>
-            <span>מקום לסרטון</span>
-          </div>
+          <iframe data-reel-modal-video title="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen hidden></iframe>
         </div>
         <div class="reel-modal-copy">
           <p class="eyebrow" data-reel-modal-topic></p>
           <h2 id="reel-modal-title" data-reel-modal-title></h2>
           <p data-reel-modal-description></p>
-          <a class="button primary" href="https://www.instagram.com/orenherbalist/" target="_blank" rel="noopener noreferrer" data-reel-modal-instagram>לצפייה ב־Instagram</a>
+          <a class="button primary" href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" data-reel-modal-link>לצפייה ב־YouTube</a>
         </div>
       </div>
     </dialog>
@@ -103,10 +94,10 @@
       <p class="footer-heading">עמודים</p>
       <div class="footer-link-row">
         <a href="index.html">בית</a>
-        <a href="about.html">טיפול</a>
+        <a href="treatment.html">טיפול</a>
         <a href="products.html">מוצרים</a>
         <a href="workshops.html">סדנאות</a>
-        <a href="contact.html">סרטונים</a>
+        <a href="videos.html">סרטונים</a>
       </div>
     </nav>
     <address class="footer-contact">
@@ -123,7 +114,6 @@
     </p>
   </footer>
 
-  <script src="videos/reel-links.js"></script>
-  <script src="js/main.js?v=20261029-feedback"></script>
+  <script src="js/main.js?v=20261029-cleanup"></script>
 </body>
 </html>
