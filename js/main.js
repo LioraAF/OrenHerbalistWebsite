@@ -655,19 +655,21 @@ if (reelsGrid instanceof HTMLElement) {
       topic: "medicinal-plants",
       title: "סמבוק שחור",
       description: "פרץ מעלעלים ואורן מציגים את הסמבוק השחור ומספרים על השימושים המסורתיים המיוחסים לו.",
+      thumbnail: "https://i.ytimg.com/vi/5XaKIqrVzQs/maxres1.jpg",
     },
     {
       id: "baCel93LGAM",
       topic: "medicinal-plants",
       title: "בוצין מפורץ",
       description: "היכרות מן השטח עם הבוצין המפורץ והשימושים המסורתיים שנקשרו לצמח.",
-      thumbnail: "https://i.ytimg.com/vi/baCel93LGAM/2.jpg",
+      thumbnail: "https://i.ytimg.com/vi/baCel93LGAM/maxres2.jpg",
     },
     {
       id: "A0LhLF-EHwU",
       topic: "medicinal-plants",
       title: "אזוב — הזעתר המקומי",
       description: "אורן מספר על האזוב, המוכר גם כזעתר, ועל מקומו במסורת הצמחים המקומית.",
+      thumbnail: "https://i.ytimg.com/vi/A0LhLF-EHwU/maxres2.jpg",
     },
     {
       id: "1dSl-rc-K5Y",
