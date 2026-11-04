@@ -8,7 +8,7 @@
   let token = "";
   let widget;
   let requestId = null;
-  const unavailable = "השליחה דרך הטופס אינה זמינה כרגע. אפשר לשלוח מייל ישירות לכתובת שמתחת לטופס.";
+  const unavailable = "השליחה דרך הטופס אינה זמינה כרגע. אפשר לנסות שוב מאוחר יותר או לפנות דרך כפתור הוואטסאפ.";
   const setStatus = (message) => { status.textContent = message; };
   const updateButton = () => { button.disabled = sending || !token; };
   const resetVerification = () => {
@@ -98,7 +98,7 @@
       requestId = null;
       setStatus("תודה, הפנייה נשלחה ונחזור אליך בהקדם. עותק נשלח גם לכתובת האימייל שלך. אם לא הגיע, כדאי לבדוק בתיקיית הספאם.");
     } catch {
-      setStatus("לא התקבל אישור שהפנייה נשלחה. הפרטים נשמרו בטופס. אפשר לנסות שוב לאחר אימות נוסף או לשלוח מייל ישירות לכתובת שלמטה.");
+      setStatus("לא התקבל אישור שהפנייה נשלחה. הפרטים נשמרו בטופס. אפשר לנסות שוב לאחר אימות נוסף או לפנות דרך כפתור הוואטסאפ.");
     } finally {
       sending = false;
       form.removeAttribute("aria-busy");

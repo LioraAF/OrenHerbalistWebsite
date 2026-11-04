@@ -7,8 +7,7 @@ products, workshops, and educational videos, plus a Vercel contact endpoint.
 
 Run `python3 -m http.server 8000 --bind 127.0.0.1`, then open
 `http://localhost:8000/index.html`. This previews static pages only; it cannot run
-`/api/contact`. Until the endpoint is available, the form shows a direct email
-fallback. Add `?feedback=1` to any page URL for the private feedback interface.
+`/api/contact`. Until the endpoint is available, the form suggests contacting via the WhatsApp button. Add `?feedback=1` to any page URL for the private feedback interface.
 
 ## Contact email setup: Resend and Vercel
 
@@ -74,7 +73,7 @@ Add these for **Production** (and Preview only if intentionally testing there):
 The environment variable names and placeholders are also in `.env.example`.
 Real `.env` files and `.vercel` configuration are ignored by Git. The endpoint
 returns only the public site key to the browser. Missing configuration disables
-sending and leaves the direct email link available.
+sending and suggests contacting via the WhatsApp button.
 
 Production requests are accepted only from `https://orenherbalist.com` and
 `https://www.orenherbalist.com`. For a trusted preview or local Vercel dev server,
@@ -113,5 +112,4 @@ The page stays in place and clears fields only after Resend accepts both emails.
 On a failure it retains the message and asks the visitor to verify again before
 retrying. During sending, fields cannot be edited and duplicate clicks are blocked.
 Retries reuse an idempotency key for the same enquiry within Resend's 24-hour
-window; there are no automatic retries. The direct `mailto:` link bypasses this
-flow and does not send an automatic confirmation.
+window; there are no automatic retries. The floating WhatsApp button remains available as another way to get in touch.
