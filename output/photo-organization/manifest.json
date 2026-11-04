@@ -82,7 +82,7 @@
     "source": "images/to_be_organized/photo_6001345064287801797_y.jpg",
     "sha256_original": "43052979545b182ef94fe1a6c4434d0f162019d73c4cbc88277bec07698b60bb",
     "destinations": [
-      "images/products-gallery/handwritten-market-sign-1797.jpg"
+      "images/products/gallery/handwritten-market-sign-1797.jpg"
     ],
     "correction": {
       "rotation_degrees_counterclockwise": 0,
@@ -95,7 +95,7 @@
     "source": "images/to_be_organized/photo_6001345064287801798_y.jpg",
     "sha256_original": "968f3ed75b5b87ec580f1e1b0d051f92c9c6cfcbbaf3d7fd7d078b54f00278af",
     "destinations": [
-      "images/products-gallery/herbal-products-overhead-display-1798.jpg"
+      "images/products/gallery/herbal-products-overhead-display-1798.jpg"
     ],
     "correction": {
       "rotation_degrees_counterclockwise": 0,
@@ -128,8 +128,8 @@
     "source": "images/to_be_organized/photo_6001345064287801800_y (1).jpg",
     "sha256_original": "5ea562ae65d5f81e71e2ed1a77532d7bcaeabcef4efc1a9ac153ad65ff6c6c12",
     "destinations": [
-      "images/gifts/herbal-gift-basket-with-price-1800.jpg",
-      "images/products-gallery/herbal-gift-basket-with-price-1800.jpg"
+      "images/products/gifts/herbal-gift-basket-with-price-1800.jpg",
+      "images/products/gifts/herbal-gift-basket-with-price-1800.jpg"
     ],
     "correction": {
       "rotation_degrees_counterclockwise": 0,
@@ -147,8 +147,8 @@
     "sha256_original": "5ea562ae65d5f81e71e2ed1a77532d7bcaeabcef4efc1a9ac153ad65ff6c6c12",
     "duplicate_of": "images/to_be_organized/photo_6001345064287801800_y (1).jpg",
     "destinations": [
-      "images/gifts/herbal-gift-basket-with-price-1800.jpg",
-      "images/products-gallery/herbal-gift-basket-with-price-1800.jpg"
+      "images/products/gifts/herbal-gift-basket-with-price-1800.jpg",
+      "images/products/gifts/herbal-gift-basket-with-price-1800.jpg"
     ],
     "correction": {
       "rotation_degrees_counterclockwise": 0,
@@ -165,7 +165,7 @@
     "source": "images/to_be_organized/photo_6001345064287801801_y.jpg",
     "sha256_original": "0ccc60519ce6684ab91bd20627a665206298daa259e19f7db082bfb7a8dc4cf1",
     "destinations": [
-      "images/products-gallery/herbal-market-stall-wide-1801.jpg"
+      "images/products/gallery/herbal-market-stall-wide-1801.jpg"
     ],
     "correction": {
       "rotation_degrees_counterclockwise": 0,
@@ -182,7 +182,7 @@
     "source": "images/to_be_organized/photo_6001345064287801802_y.jpg",
     "sha256_original": "c38ee072e760444b81940410584778a534f41cf1ac3c9483202fbb5c7de35569",
     "destinations": [
-      "images/products-gallery/herbal-market-stall-close-1802.jpg"
+      "images/products/gallery/herbal-market-stall-close-1802.jpg"
     ],
     "correction": {
       "rotation_degrees_counterclockwise": 0,
@@ -199,7 +199,7 @@
     "source": "images/to_be_organized/photo_6001345064287801803_y.jpg",
     "sha256_original": "45b51416e03ef6d00fe8d3f3a6a2647404ec3e961d2532038746cd4e49a2983d",
     "destinations": [
-      "images/products-gallery/herbal-oils-and-jars-display-1803.jpg"
+      "images/products/gallery/herbal-oils-and-jars-display-1803.jpg"
     ],
     "correction": {
       "rotation_degrees_counterclockwise": 0,
@@ -216,7 +216,7 @@
     "source": "images/to_be_organized/photo_6001345064287801804_y.jpg",
     "sha256_original": "3298f770ee936ce40d74dec537e5dc4429b315c48e1fac6719d83708c0008da1",
     "destinations": [
-      "images/products-gallery/herbal-balm-jar-closeup-1804.jpg"
+      "images/products/gallery/herbal-balm-jar-closeup-1804.jpg"
     ],
     "correction": {
       "rotation_degrees_counterclockwise": 0,
@@ -233,7 +233,7 @@
     "source": "images/to_be_organized/photo_6001345064287801805_y.jpg",
     "sha256_original": "d552a2d4261ba46ce8cfe0244c6913c1e83b43ee61f0a5cfaa6ff088b36c0895",
     "destinations": [
-      "images/products-gallery/herbal-oil-and-spray-bottles-1805.jpg"
+      "images/products/hover/facial-hydrosol-bottle-display.jpg"
     ],
     "correction": {
       "rotation_degrees_counterclockwise": 0,
@@ -250,7 +250,7 @@
     "source": "images/to_be_organized/photo_6001345064287801806_y.jpg",
     "sha256_original": "18fa391831fbe3727214a6a8e11bffd9be063339bec9bc1ae56187cc3c013b83",
     "destinations": [
-      "images/products-gallery/herbal-balms-and-extracts-display-1806.jpg"
+      "images/products/hover/muscle-and-joint-balm-display.jpg"
     ],
     "correction": {
       "rotation_degrees_counterclockwise": 0,
@@ -333,7 +333,7 @@
     "source": "images/to_be_organized/photo_6001345064287801813_y.jpg",
     "sha256_original": "bdf42039cfdcc6e36b6ee6077ecb84982bfd584a5e371861e1f887cec77db02e",
     "destinations": [
-      "images/products-gallery/herbal-bottles-at-outdoor-market-1813.jpg"
+      "images/products/gallery/herbal-bottles-at-outdoor-market-1813.jpg"
     ],
     "correction": {
       "rotation_degrees_counterclockwise": 0,
@@ -346,7 +346,7 @@
     "source": "images/to_be_organized/photo_6001345064287801814_y.jpg",
     "sha256_original": "ab818f27a3c04984d9d17f3a5ad45391225a1a5fe9b95e948704e801145cb56b",
     "destinations": [
-      "images/products-gallery/herbal-balm-jars-at-market-1814.jpg"
+      "images/products/gallery/herbal-balm-jars-at-market-1814.jpg"
     ],
     "correction": {
       "rotation_degrees_counterclockwise": 0,
@@ -359,7 +359,7 @@
     "source": "images/to_be_organized/photo_6001345064287801815_y.jpg",
     "sha256_original": "c4f5e9b29256a937908e76cb61e0e026a9f8359584de08af3af2c0e58c5049d3",
     "destinations": [
-      "images/products-gallery/herbal-extract-bottle-selection-1815.jpg"
+      "images/products/gallery/herbal-extract-bottle-selection-1815.jpg"
     ],
     "correction": {
       "rotation_degrees_counterclockwise": 0,
@@ -373,7 +373,7 @@
     "sha256_original": "db21fbc9136dd162bafa3f163e1afd527a5c99112fb9fa4ed80d0109219b3af9",
     "destinations": [
       "images/home-gallery/oren-at-herbal-market-stall-1816.jpg",
-      "images/products-gallery/oren-at-herbal-market-stall-1816.jpg"
+      "images/products/gallery/oren-at-herbal-market-stall-1816.jpg"
     ],
     "correction": {
       "rotation_degrees_counterclockwise": 0,
@@ -1071,7 +1071,7 @@
     "source": "images/to_be_organized/photo_6001345064287801947_y.jpg",
     "sha256_original": "d1e019f4af9dd055376542f0c8fa8af87b5e5dcbaac5804922f5dd2cdc085933",
     "destinations": [
-      "images/products-gallery/herbal-extract-bottles-on-shelf-1947.jpg"
+      "images/products/gallery/herbal-extract-bottles-on-shelf-1947.jpg"
     ],
     "correction": {
       "rotation_degrees_counterclockwise": 0,
@@ -1085,7 +1085,7 @@
     "sha256_original": "b575f9dadd429f0a662a2ab42a87e5f52bfdcbdbb3fa1cb713359b3828edd67b",
     "destinations": [
       "images/home-gallery/herbal-distillation-glassware-1948.jpg",
-      "images/products-gallery/herbal-distillation-glassware-1948.jpg",
+      "images/products/gallery/herbal-distillation-glassware-1948.jpg",
       "images/workshops/herbal-distillation-glassware-1948.jpg"
     ],
     "correction": {
@@ -1099,7 +1099,7 @@
     "source": "images/to_be_organized/photo_6001345064287801949_y.jpg",
     "sha256_original": "8684bbd45d7e330ce570cc34abb4f7377de808dc13b5df0b1ccefa1e370bc8a7",
     "destinations": [
-      "images/products-gallery/outdoor-herbal-preparation-pot-1949.jpg",
+      "images/products/gallery/outdoor-herbal-preparation-pot-1949.jpg",
       "images/workshops/outdoor-herbal-preparation-pot-1949.jpg"
     ],
     "correction": {
@@ -1113,8 +1113,8 @@
     "source": "images/to_be_organized/photo_6001345064287801950_y.jpg",
     "sha256_original": "3ae25c958a49a796b791f0a1b2082b7aeb83a6c631a13d7d88887c888612f5dc",
     "destinations": [
-      "images/gifts/herbal-gift-set-on-bench-1950.jpg",
-      "images/products-gallery/herbal-gift-set-on-bench-1950.jpg"
+      "images/products/gifts/herbal-gift-set-on-bench-1950.jpg",
+      "images/products/gifts/herbal-gift-set-on-bench-1950.jpg"
     ],
     "correction": {
       "rotation_degrees_counterclockwise": 0,
@@ -1127,8 +1127,8 @@
     "source": "images/to_be_organized/photo_6001345064287801951_y.jpg",
     "sha256_original": "01c28bf71a6aef484307bdb39e1d6ee9b2991aca996837cc410c8318d8fcb0f3",
     "destinations": [
-      "images/gifts/herbal-gift-box-overhead-1951.jpg",
-      "images/products-gallery/herbal-gift-box-overhead-1951.jpg"
+      "images/products/gifts/herbal-gift-box-overhead-1951.jpg",
+      "images/products/gifts/herbal-gift-box-overhead-1951.jpg"
     ],
     "correction": {
       "rotation_degrees_counterclockwise": 0,
@@ -1141,8 +1141,8 @@
     "source": "images/to_be_organized/photo_6001345064287801952_y.jpg",
     "sha256_original": "8a15726adec839610d798a5e96ed7512f1aa2b27c2d470e5be4bb27a14ddfa76",
     "destinations": [
-      "images/gifts/wrapped-herbal-gift-basket-1952.jpg",
-      "images/products-gallery/wrapped-herbal-gift-basket-1952.jpg"
+      "images/products/gifts/wrapped-herbal-gift-basket-1952.jpg",
+      "images/products/gifts/wrapped-herbal-gift-basket-1952.jpg"
     ],
     "correction": {
       "rotation_degrees_counterclockwise": 0,
@@ -1207,7 +1207,7 @@
     "source": "images/to_be_organized/photo_6001345064287801957_y.jpg",
     "sha256_original": "fc0454f58b622c484786505947052624ab4d3b639b8582a2b1fe749e390ebca3",
     "destinations": [
-      "images/products-gallery/herbal-balm-jar-with-berries-1957.jpg"
+      "images/products/gallery/herbal-balm-jar-with-berries-1957.jpg"
     ],
     "correction": {
       "rotation_degrees_counterclockwise": 0,
@@ -1274,7 +1274,7 @@
     "source": "images/products-gallery/Citronela.png",
     "sha256_original": "6934166d0b0253602755fbce4906535a4ff5962349b7c51cdd596a547a570cb8",
     "destinations": [
-      "images/products-gallery/scented-geranium.png",
+      "images/products/main/scented-geranium.png",
       "images/home-gallery/scented-geranium.png"
     ],
     "correction": null
@@ -1283,7 +1283,7 @@
     "source": "images/products-gallery/Lactuca-serriola.jpeg",
     "sha256_original": "e4f896358a7df054280d68a17234063f0e0b197a94efa26112683a1388c5fc95",
     "destinations": [
-      "images/products-gallery/wild-lettuce.jpeg",
+      "images/products/main/wild-lettuce.jpeg",
       "images/home-gallery/wild-lettuce.jpeg"
     ],
     "correction": null
@@ -1292,7 +1292,7 @@
     "source": "images/products-gallery/Myrrh.jpeg",
     "sha256_original": "21c7254af41e3ec7147901afe42c17595bc973671a21eecaa260ca57358e92e8",
     "destinations": [
-      "images/products-gallery/myrrh.jpeg",
+      "images/products/main/myrrh.jpeg",
       "images/home-gallery/myrrh.jpeg"
     ],
     "correction": null
@@ -1301,7 +1301,7 @@
     "source": "images/products-gallery/Uzrar.jpeg",
     "sha256_original": "5628bd76aae38bac08d8f22e7320e1088b22cf7010cd7a1064a82aa58fed0a16",
     "destinations": [
-      "images/products-gallery/hawthorn.jpeg",
+      "images/products/main/hawthorn.jpeg",
       "images/home-gallery/hawthorn.jpeg"
     ],
     "correction": null
@@ -1310,7 +1310,7 @@
     "source": "images/products-gallery/Valerian.webp",
     "sha256_original": "03046148f7ec065b077d2b433876b2487891c0e4babcb7657d1d8f6d2f3655cc",
     "destinations": [
-      "images/products-gallery/valerian.webp",
+      "images/products/main/valerian.webp",
       "images/home-gallery/valerian.webp"
     ],
     "correction": null
@@ -1319,7 +1319,7 @@
     "source": "images/products-gallery/WhatsApp Image 2026-06-10 at 11.22.43 (1).jpeg",
     "sha256_original": "0b1e0f09a3f5dbda3726edfec0f967aac0e866e0e70d9377dd3648b4f156097c",
     "destinations": [
-      "images/products-gallery/herbal-bottles-at-market.jpeg"
+      "images/products/gallery/herbal-bottles-at-market.jpeg"
     ],
     "correction": null
   },
@@ -1327,7 +1327,7 @@
     "source": "images/products-gallery/WhatsApp Image 2026-06-10 at 11.22.43 (2).jpeg",
     "sha256_original": "99ffca4e62ce3e851feef2fdaafc8d07ae39fc1d1693f965ae3804f9235f5cde",
     "destinations": [
-      "images/products-gallery/herbal-extract-bottle-display.jpeg"
+      "images/products/hover/herbal-extract-bottle-display.jpeg"
     ],
     "correction": null
   },
@@ -1335,7 +1335,7 @@
     "source": "images/products-gallery/WhatsApp Image 2026-06-10 at 11.22.43.jpeg",
     "sha256_original": "76ecbc8e5d299ad63734d473924d152eb316d4dbce2c4105bdbe82f593dd4628",
     "destinations": [
-      "images/products-gallery/herbal-balm-jar-display.jpeg"
+      "images/products/gallery/herbal-balm-jar-display.jpeg"
     ],
     "correction": null
   },
@@ -1343,7 +1343,7 @@
     "source": "images/products-gallery/WhatsApp Image 2026-06-10 at 11.23.58 (1).jpeg",
     "sha256_original": "0e02047775a5d35bfa41adb062690bfeca8f7ec012e2f4c34352e2db25f45567",
     "destinations": [
-      "images/products-gallery/herbal-balm-with-berries.jpeg"
+      "images/products/hover/herbal-balm-with-berries.jpeg"
     ],
     "correction": null
   },
@@ -1351,7 +1351,7 @@
     "source": "images/products-gallery/ashwagandha-roots-500x500.webp",
     "sha256_original": "2c2d04277b9fcafcbd2eb87475989f5c9ebc9ce4570f5cbc90b7c824253bc14f",
     "destinations": [
-      "images/products-gallery/ashwagandha-roots.webp",
+      "images/products/main/ashwagandha-roots.webp",
       "images/home-gallery/ashwagandha-roots.webp"
     ],
     "correction": null
@@ -1360,7 +1360,7 @@
     "source": "images/products-gallery/gifts/PHOTO-2026-09-15-01-11-36.jpg",
     "sha256_original": "20760b99e5ef5f893dd3ff5dcf266bcfa5e87cd540a1ba90707ab789961d479b",
     "destinations": [
-      "images/gifts/herbal-gift-set-in-dappled-light.jpg"
+      "images/products/gifts/herbal-gift-set-in-dappled-light.jpg"
     ],
     "correction": null
   },

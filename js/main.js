@@ -209,17 +209,17 @@ const productRotationFrame = document.querySelector(".product-rotation-frame");
 
 if (productRotationFrame instanceof HTMLElement) {
   const productRotationImages = [
-    "herbal-bottles-at-market.jpeg",
-    "herbal-extract-bottle-display.jpeg",
-    "herbal-balm-jar-display.jpeg",
-    "herbal-products-overhead-display-1798.jpg",
-    "herbal-gift-basket-with-price-1800.jpg",
-    "herbal-market-stall-wide-1801.jpg",
-    "herbal-market-stall-close-1802.jpg",
-    "herbal-oils-and-jars-display-1803.jpg",
-    "herbal-balm-jar-closeup-1804.jpg",
-    "herbal-oil-and-spray-bottles-1805.jpg",
-    "herbal-balms-and-extracts-display-1806.jpg",
+    "gallery/herbal-bottles-at-market.jpeg",
+    "hover/herbal-extract-bottle-display.jpeg",
+    "gallery/herbal-balm-jar-display.jpeg",
+    "gallery/herbal-products-overhead-display-1798.jpg",
+    "gifts/herbal-gift-basket-with-price-1800.jpg",
+    "gallery/herbal-market-stall-wide-1801.jpg",
+    "gallery/herbal-market-stall-close-1802.jpg",
+    "gallery/herbal-oils-and-jars-display-1803.jpg",
+    "gallery/herbal-balm-jar-closeup-1804.jpg",
+    "hover/facial-hydrosol-bottle-display.jpg",
+    "hover/muscle-and-joint-balm-display.jpg",
   ];
   const rotationMs = 4200;
   const fadeMs = 1500;
@@ -230,13 +230,13 @@ if (productRotationFrame instanceof HTMLElement) {
 
   productRotationImages.forEach((src) => {
     const image = new Image();
-    image.src = `images/products-gallery/${src}`;
+    image.src = `images/products/${src}`;
   });
 
   const setProductRotationImage = () => {
     productRotationFrame.style.setProperty(
       "--product-rotation-image",
-      `url("../images/products-gallery/${productRotationImages[productImageIndex]}")`
+      `url("../images/products/${productRotationImages[productImageIndex]}")`
     );
   };
 
@@ -1005,7 +1005,7 @@ if (giftPhoto) {
       const outgoing = giftSlideLayer();
       giftPhotoIndex = (giftPhotoIndex + Number(button.dataset.giftStep) + giftPhotos.length) % giftPhotos.length;
       giftPhoto.dataset.photo = giftPhotos[giftPhotoIndex];
-      giftPhoto.style.backgroundImage = `linear-gradient(rgba(41, 53, 31, 0.05), rgba(239, 229, 210, 0.07)), url("images/gifts/${giftPhotos[giftPhotoIndex]}")`;
+      giftPhoto.style.backgroundImage = `linear-gradient(rgba(41, 53, 31, 0.05), rgba(239, 229, 210, 0.07)), url("images/products/gifts/${giftPhotos[giftPhotoIndex]}")`;
       giftPhoto.querySelector('.gift-photo-status').textContent = `תמונה ${giftPhotoIndex + 1} מתוך ${giftPhotos.length}`;
       if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
       const incoming = giftSlideLayer();

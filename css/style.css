@@ -1270,7 +1270,7 @@ p {
   border-radius: 8px;
   background-image:
     linear-gradient(rgba(41, 53, 31, 0.05), rgba(239, 229, 210, 0.08)),
-    var(--product-rotation-image, url("../images/products-gallery/herbal-bottles-at-market.jpeg"));
+    var(--product-rotation-image, url("../images/products/gallery/herbal-bottles-at-market.jpeg"));
   background-position: center;
   background-size: 100% 100%, cover;
   background-repeat: no-repeat;
@@ -1461,27 +1461,28 @@ p {
   border-bottom: 1px solid rgba(79, 93, 58, 0.22);
 }
 
-.prep-skin { --prep-image: url("../images/products/main/calendula.webp"); }
-.prep-immune { --prep-image: url("../images/treatment-gallery/wild-korean-ginseng-root--936566428-ec02dc167b5c4469a5b80f6bd54ac45d.jpg"); }
-.prep-throat { --prep-image: url("../images/products/main/Propolis_in_beehives.jpg"); }
-.prep-winter { --prep-image: url("../images/products/main/Origanum_dayi_full2.jpg"); }
-.prep-breathing { --prep-image: url("../images/products/main/mint-tincture.jpg"); }
+.prep-skin { --prep-image: url("../images/products/main/calendula.png"); }
+.prep-immune { --prep-image: url("../images/products/main/ashwagandha-roots.webp"); }
+.prep-throat { --prep-image: url("../images/products/main/propolis-in-beehives.jpg"); }
+.prep-winter { --prep-image: url("../images/products/main/origanum-dayi.jpg"); }
+.prep-breathing { --prep-image: url("../images/products/main/mint.jpg"); }
 .prep-warming-oil { --prep-image: url("../images/products/main/cinnamon.jpg"); }
+.prep-warming-oil .preparation-image { filter: saturate(1.15); }
 .prep-ears { --prep-image: url("../images/products/main/rue.jpg"); }
-.prep-hormonal { --prep-image: url("../images/products/main/wild-lettuce.jpeg"); }
+.prep-hormonal { --prep-image: url("../images/products/main/chaste-tree.jpg"); }
 
 .preparation-image::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: var(--prep-bottle-image, url("../images/products/hover/herbal-extract-bottle-display.jpeg")) center 55% / cover no-repeat;
+  background: var(--prep-bottle-image, url("../images/products/hover/herbal-extract-bottle-display.jpeg")) var(--prep-bottle-position, center 55%) / var(--prep-bottle-size, cover) no-repeat;
   transform: translateY(101%);
   transition: transform 825ms cubic-bezier(.22,.61,.36,1);
   pointer-events: none;
 }
 
 .prep-mouth { --prep-image: url("../images/products/main/carob.jpg"); }
-.prep-calming { --prep-image: url("../images/products/main/valerian.webp"); }
+.prep-calming { --prep-image: url("../images/products/main/prickly-lettuce.png"); }
 .product-roller:has(+ .internal-products-note) { margin-bottom: 2.5rem; }
 .internal-products-note { color: var(--muted); font-weight: 900; -webkit-text-stroke: 0.3px currentColor; text-align: center; margin: 0.75rem auto 2rem; }
 .internal-products-note + .winter-kit { margin-top: calc(6rem + 29px); }
@@ -1537,11 +1538,16 @@ p {
 
 .prep-first-aid {
   --prep-image: url("https://images.unsplash.com/photo-1714254258098-05246ccb6cbc?auto=format&fit=crop&w=1600&q=82");
-  --prep-bottle-image: url("../images/products/hover/herbal-balm-with-berries.jpeg");
+  --prep-bottle-image: url("../images/products/gallery/herbal-balm-jar-display.jpeg");
+  --prep-bottle-position: 16.07% 66.43%;
+  --prep-bottle-size: 207.69% auto;
 }
 
 .prep-muscles {
-  --prep-image: url("../images/products/main/C-camphora1-fred-nation-scaled.jpg");
+  --prep-image: url("../images/products/main/camphor-tree.jpg");
+  --prep-bottle-image: url("../images/products/hover/muscle-and-joint-balm-display.jpg");
+  --prep-bottle-position: 59.63% 22.36%;
+  --prep-bottle-size: 313.73% auto;
 }
 
 .prep-cycle {
@@ -1550,6 +1556,9 @@ p {
 
 .prep-hydrosol {
   --prep-image: url("../images/products/main/myrtle.jpg");
+  --prep-bottle-image: url("../images/products/hover/facial-hydrosol-bottle-display.jpg");
+  --prep-bottle-position: 57% 40%;
+  --prep-bottle-size: 213.33% auto;
 }
 
 .prep-repellent {
@@ -1560,20 +1569,31 @@ p {
   --prep-image: url("../images/products/main/hawthorn.jpeg");
   --prep-position: 38% center;
   --prep-size: auto 112%;
+  --prep-bottle-image: url("../images/products/hover/facial-hydrosol-bottle-display.jpg");
+  --prep-bottle-position: 0% 50%;
+  --prep-bottle-size: 185.5% auto;
 }
 
 .prep-roots {
-  --prep-image: url("../images/products/main/ashwagandha-roots.webp");
+  --prep-image: url("../images/products/main/valerian.webp");
 }
 
 .prep-perfume {
   --prep-image: url("../images/products/main/myrrh.jpeg");
   --prep-position: center 64%;
   --prep-size: 128%;
+  --prep-bottle-image: url("../images/products/hover/herbal-extract-bottle-display.jpeg");
+  --prep-bottle-position: 98% 50.5%;
+  --prep-bottle-size: 290% auto;
 }
 
 .prep-perfume .preparation-image {
   filter: brightness(1.08) saturate(1.16) contrast(1.04);
+}
+
+.prep-perfume .preparation-image::before {
+  inset: -8%;
+  rotate: -6deg;
 }
 
 .prep-lettuce {
@@ -1602,7 +1622,7 @@ p {
   border-radius: 8px;
   background-image:
     linear-gradient(rgba(41, 53, 31, 0.05), rgba(239, 229, 210, 0.07)),
-    url("../images/gifts/herbal-gift-set-in-dappled-light.jpg");
+    url("../images/products/gifts/herbal-gift-set-in-dappled-light.jpg");
   background-position: center 58%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1617,7 +1637,7 @@ p {
   position: absolute;
   inset: 0;
   border-radius: inherit;
-  background: url("../images/gifts/herbal-gift-box-overhead-1951.jpg") 57% center / auto 120% no-repeat;
+  background: url("../images/products/gifts/herbal-gift-box-overhead-1951.jpg") 57% center / auto 120% no-repeat;
   filter: brightness(1.1) saturate(1.12);
   pointer-events: none;
 }
