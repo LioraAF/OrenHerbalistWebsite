@@ -93,7 +93,15 @@ test("sends two private messages with exact visitor copy and correct reply addre
   assert.ok(emails.every((email) => email.from.includes("contact@orenherbalist.com")));
   assert.ok(emails[1].text.endsWith(emails[0].text));
   assert.ok(emails[0].text.includes(body.message));
-  assert.ok(emails.every((email) => !email.html && !email.cc));
+  assert.ok(emails.every((email) => !email.cc));
+  for (const email of emails) {
+    assert.ok(email.html.includes('https://www.orenherbalist.com/images/Logo%20_full.png'));
+    assert.ok(email.html.includes('dir="rtl"'));
+    assert.ok(email.html.includes('&lt;script&gt;plain text&lt;/script&gt;'));
+    assert.ok(!email.html.includes('<script>'));
+    assert.ok(email.html.includes('<br>'));
+    assert.ok(email.text);
+  }
   assert.equal(calls[1].options.headers.Authorization, "Bearer test-private-key");
 });
 test("retries retain the Resend idempotency key; changed enquiries receive a new key", async () => {

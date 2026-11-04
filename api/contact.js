@@ -4,6 +4,24 @@ const EMAIL = /^[^\s<>@,;\r\n]+@[^\s<>@,;\r\n]+\.[^\s<>@,;\r\n]+$/;
 const UUID = /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
 const RECIPIENT = "liora1018@gmail.com";
 
+const escapeHtml = (value) => value.replace(/[&<>"']/g, (character) => ({
+  "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;",
+})[character]);
+
+function brandedEmail(title, text) {
+  return `<!doctype html>
+<html lang="he" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"></head>
+<body style="margin:0;padding:0;background-color:#f5f1e8;color:#33392a;font-family:Arial,sans-serif;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#f5f1e8;"><tr><td align="center" style="padding:24px 12px;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" dir="rtl" style="max-width:600px;background-color:#fffdf7;text-align:right;">
+<tr><td style="padding:28px 24px 12px;"><h1 style="margin:0;font-size:22px;line-height:1.5;color:#39472d;">${escapeHtml(title)}</h1></td></tr>
+<tr><td style="padding:12px 24px 28px;font-size:16px;line-height:1.8;overflow-wrap:anywhere;word-break:break-word;">${escapeHtml(text).replace(/\r?\n/g, "<br>")}</td></tr>
+<tr><td align="center" style="padding:24px;background-color:#eee7d8;border-top:1px solid #d8d1c0;">
+<a href="https://www.orenherbalist.com/" style="text-decoration:none;"><img src="https://www.orenherbalist.com/images/Logo%20_full.png" width="200" height="112" alt="אמת מארץ תצמח — אורן הרבליסט" style="display:block;width:200px;max-width:100%;height:auto;border:0;"></a>
+<p style="margin:12px 0 0;font-size:14px;color:#39472d;">אורן עמנואל שושנה | הרבליסט קליני</p>
+</td></tr></table></td></tr></table></body></html>`;
+}
+
 module.exports = async function handler(req, res) {
   res.setHeader("Cache-Control", "no-store");
   const reply = (status, body) => {
@@ -82,15 +100,17 @@ module.exports = async function handler(req, res) {
     }
 
     const details = `שם: ${name}\nאימייל: ${email}\nטלפון: ${phone || "לא צוין"}\n\nהודעה:\n${message}`;
+    const confirmation = `תודה שפנית לאורן הרבליסט. נחזור אליך בהקדם.\n\nזהו עותק הפרטים ששלחת דרך טופס יצירת הקשר:\n\n${details}`;
     const fromAddress = `אורן הרבליסט <${from}>`;
     // Separate messages keep the owner's address out of the visitor's To field.
-    // Plain text prevents submitted markup from becoming email HTML.
+    // Escape submitted text in HTML and retain a plain-text alternative.
     const emails = [
       { from: fromAddress, to: [RECIPIENT], reply_to: email,
-        subject: "פנייה חדשה מאתר אורן הרבליסט", text: details },
+        subject: "פנייה חדשה מאתר אורן הרבליסט", text: details,
+        html: brandedEmail("פנייה חדשה מאתר אורן הרבליסט", details) },
       { from: fromAddress, to: [email], reply_to: RECIPIENT,
         subject: "עותק הפנייה שלך לאורן הרבליסט",
-        text: `תודה שפנית לאורן הרבליסט. נחזור אליך בהקדם.\n\nזהו עותק הפרטים ששלחת דרך טופס יצירת הקשר:\n\n${details}` },
+        text: confirmation, html: brandedEmail("תודה על הפנייה לאורן הרבליסט", confirmation) },
     ];
     // Retrying the same enquiry within Resend's 24-hour window avoids duplicates.
     const key = createHash("sha256").update(JSON.stringify([requestId, emails])).digest("hex");
