@@ -1462,12 +1462,12 @@ p {
 }
 
 .prep-skin { --prep-image: url("../images/products/main/yellow-flowers-in-white-bowl-1942.jpg"); }
-.prep-immune { --prep-image: url("../images/products/main/ashwagandha-roots.webp"); }
-.prep-throat { --prep-image: url("../images/products/main/myrrh.jpeg"); }
-.prep-winter { --prep-image: url("../images/products/main/hawthorn.jpeg"); }
-.prep-breathing { --prep-image: url("../images/products/main/scented-geranium.png"); }
-.prep-warming-oil { --prep-image: url("../images/products/main/ashwagandha-roots.webp"); }
-.prep-ears { --prep-image: url("../images/products/main/valerian.webp"); }
+.prep-immune { --prep-image: url("https://images.unsplash.com/photo-1714254258098-05246ccb6cbc?auto=format&fit=crop&w=1600&q=82"); }
+.prep-throat { --prep-image: url("../images/products/main/Propolis_in_beehives.jpg"); }
+.prep-winter { --prep-image: url("../images/products/main/Origanum_dayi_full2.jpg"); }
+.prep-breathing { --prep-image: url("../images/products/main/mint-tincture.jpg"); }
+.prep-warming-oil { --prep-image: url("../images/products/main/cinnamon.jpg"); }
+.prep-ears { --prep-image: url("../images/products/main/rue.jpg"); }
 .prep-hormonal { --prep-image: url("../images/products/main/wild-lettuce.jpeg"); }
 
 .preparation-image::before {
@@ -1480,7 +1480,7 @@ p {
   pointer-events: none;
 }
 
-.prep-mouth { --prep-image: url("../images/products/main/myrrh.jpeg"); }
+.prep-mouth { --prep-image: url("../images/products/main/carob.jpg"); }
 .prep-calming { --prep-image: url("../images/products/main/valerian.webp"); }
 .product-roller:has(+ .internal-products-note) { margin-bottom: 2.5rem; }
 .internal-products-note { color: var(--muted); font-weight: 900; -webkit-text-stroke: 0.3px currentColor; text-align: center; margin: 0.75rem auto 2rem; }
@@ -1545,11 +1545,11 @@ p {
 }
 
 .prep-cycle {
-  --prep-image: url("https://images.unsplash.com/photo-1516714435131-44d6b64dc6a2?auto=format&fit=crop&w=900&q=82");
+  --prep-image: url("../images/products/main/rosemary.jpg");
 }
 
 .prep-hydrosol {
-  --prep-image: url("https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&w=900&q=82");
+  --prep-image: url("../images/products/main/myrtle.jpg");
 }
 
 .prep-repellent {

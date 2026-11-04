@@ -37,7 +37,8 @@ const emailContactForm = document.querySelector("[data-email-form]");
 if (emailContactForm instanceof HTMLFormElement) {
   const formStatus = emailContactForm.querySelector("[data-form-status]");
   const submitButton = emailContactForm.querySelector('button[type="submit"]');
-  const defaultStatus = formStatus?.textContent || "";
+  const defaultButtonText = submitButton?.textContent || "שליחת פרטים";
+  let isSubmitting = false;
 
   const setFormStatus = (message) => {
     if (formStatus instanceof HTMLElement) {
@@ -45,56 +46,51 @@ if (emailContactForm instanceof HTMLFormElement) {
     }
   };
 
-  const submitWithPageFallback = () => {
-    setFormStatus("מעבירים לשליחה מאובטחת...");
-    window.setTimeout(() => {
-      emailContactForm.submit();
-    }, 600);
-  };
+  // Restore the form when returning from verification, including the back cache.
+  window.addEventListener("pageshow", () => {
+    isSubmitting = false;
+    emailContactForm.removeAttribute("aria-busy");
+    if (submitButton instanceof HTMLButtonElement) {
+      submitButton.disabled = false;
+      submitButton.textContent = defaultButtonText;
+    }
+    setFormStatus("");
+  });
 
-  emailContactForm.addEventListener("submit", async (event) => {
-    event.preventDefault();
+  const requiredFields = emailContactForm.querySelectorAll("[required]");
+  requiredFields.forEach((field) => {
+    field.addEventListener("input", () => field.setCustomValidity(""));
+  });
 
-    const endpoint = emailContactForm.dataset.emailEndpoint || emailContactForm.action;
+  emailContactForm.addEventListener("submit", (event) => {
+    if (isSubmitting) {
+      event.preventDefault();
+      return;
+    }
 
+    requiredFields.forEach((field) => {
+      field.value = field.value.trim();
+      field.setCustomValidity(field.value ? "" : "נא למלא את השדה.");
+    });
+    if (!emailContactForm.reportValidity()) {
+      event.preventDefault();
+      return;
+    }
+
+    if (emailContactForm.elements.namedItem("_honey")?.value) {
+      event.preventDefault();
+      return;
+    }
+
+    // FormSubmit sender copies require a normal POST with CAPTCHA enabled.
+    // The provider confirms success after verification; keep the entered fields.
+    isSubmitting = true;
+    emailContactForm.setAttribute("aria-busy", "true");
     if (submitButton instanceof HTMLButtonElement) {
       submitButton.disabled = true;
-      submitButton.textContent = "שולח...";
+      submitButton.textContent = "מעבירים לאימות...";
     }
-
-    setFormStatus("שולח את הפרטים...");
-
-    try {
-      const formData = new FormData(emailContactForm);
-
-      const response = await fetch(endpoint, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify(Object.fromEntries(formData.entries())),
-      });
-      const result = await response.json().catch(() => null);
-
-      if (!response.ok || result?.success === false || result?.success === "false") {
-        throw new Error(`Form submission failed with ${response.status}`);
-      }
-
-      emailContactForm.reset();
-      setFormStatus("תודה, הפרטים נשלחו ונחזור אליך בהקדם.");
-    } catch (error) {
-      submitWithPageFallback();
-    } finally {
-      if (submitButton instanceof HTMLButtonElement) {
-        submitButton.disabled = false;
-        submitButton.textContent = "שליחת פרטים";
-      }
-
-      window.setTimeout(() => {
-        setFormStatus(defaultStatus);
-      }, 7000);
-    }
+    setFormStatus("מעבירים לאימות ולשליחה. יש להשלים את האימות בעמוד הבא.");
   });
 }
 
