@@ -1,0 +1,1675 @@
+[
+  {
+    "source": "images/to_be_organized/photo_6001345064287801791_y.jpg",
+    "sha256_original": "93c53376395fc8ab342d6f395c9ac9151f2c064c22946910d9effd577ef84037",
+    "destinations": [
+      "images/home-gallery/wild-herb-on-rocky-path-1791.jpg"
+    ],
+    "correction": {
+      "rotation_degrees_counterclockwise": 0,
+      "brightness": 1.035,
+      "contrast": 1.035,
+      "color": 1.05
+    }
+  },
+  {
+    "source": "images/to_be_organized/photo_6001345064287801792_y.jpg",
+    "sha256_original": "b880929f0cc4c1d71d2cb04a39c3a04515f3302ae82e21d2f8d57ebc66fe144c",
+    "destinations": [
+      "images/home-gallery/desert-herb-and-hills-1792.jpg"
+    ],
+    "correction": {
+      "rotation_degrees_counterclockwise": 0,
+      "brightness": 1.035,
+      "contrast": 1.035,
+      "color": 1.05
+    }
+  },
+  {
+    "source": "images/to_be_organized/photo_6001345064287801793_y.jpg",
+    "sha256_original": "c9df4eedd3b69f0a463f8e0b4f8de6c8e0e0bc1b32d498b126e4ff80c54fa263",
+    "destinations": [
+      "images/home-gallery/desert-herb-landscape-1793.jpg"
+    ],
+    "correction": {
+      "rotation_degrees_counterclockwise": 0,
+      "brightness": 1.035,
+      "contrast": 1.035,
+      "color": 1.05
+    }
+  },
+  {
+    "source": "images/to_be_organized/photo_6001345064287801794_y.jpg",
+    "sha256_original": "2207235bbae20d050903875d5d37359c0acf9a76c3febde77c91239680cd4ab5",
+    "destinations": [
+      "images/home-gallery/fresh-herb-harvest-basket-1794.jpg"
+    ],
+    "correction": {
+      "rotation_degrees_counterclockwise": 0,
+      "brightness": 1.035,
+      "contrast": 1.035,
+      "color": 1.05
+    }
+  },
+  {
+    "source": "images/to_be_organized/photo_6001345064287801795_y.jpg",
+    "sha256_original": "cded46a925638121731a52a84cf1ea67355522db4ab4854695cca1fbb3bed4fe",
+    "destinations": [
+      "images/home-gallery/purple-flower-stems-in-vase-1795.jpg"
+    ],
+    "correction": {
+      "rotation_degrees_counterclockwise": 0,
+      "brightness": 1.0,
+      "contrast": 1.0,
+      "color": 1.0
+    }
+  },
+  {
+    "source": "images/to_be_organized/photo_6001345064287801796_y.jpg",
+    "sha256_original": "37fc4bc16df47ab8bc1fed5f451344d8f2a6706d40dc12f8f6025b525c1d0321",
+    "destinations": [
+      "images/home-gallery/red-berries-in-hand-1796.jpg",
+      "images/workshops/red-berries-in-hand-1796.jpg"
+    ],
+    "correction": {
+      "rotation_degrees_counterclockwise": 0,
+      "brightness": 1.0,
+      "contrast": 1.0,
+      "color": 1.0
+    }
+  },
+  {
+    "source": "images/to_be_organized/photo_6001345064287801797_y.jpg",
+    "sha256_original": "43052979545b182ef94fe1a6c4434d0f162019d73c4cbc88277bec07698b60bb",
+    "destinations": [
+      "images/products-gallery/handwritten-market-sign-1797.jpg"
+    ],
+    "correction": {
+      "rotation_degrees_counterclockwise": 0,
+      "brightness": 1.0,
+      "contrast": 1.0,
+      "color": 1.0
+    }
+  },
+  {
+    "source": "images/to_be_organized/photo_6001345064287801798_y.jpg",
+    "sha256_original": "968f3ed75b5b87ec580f1e1b0d051f92c9c6cfcbbaf3d7fd7d078b54f00278af",
+    "destinations": [
+      "images/products-gallery/herbal-products-overhead-display-1798.jpg"
+    ],
+    "correction": {
+      "rotation_degrees_counterclockwise": 0,
+      "brightness": 1.0,
+      "contrast": 1.0,
+      "color": 1.0
+    },
+    "latest_adjustment": {
+      "brightness_multiplier": 1.07,
+      "additional_rotation_degrees": 0
+    }
+  },
+  {
+    "source": "images/to_be_organized/photo_6001345064287801799_y.jpg",
+    "sha256_original": "cf6fb9e31404f4c4078c82816e4c013018ad4aa1eee41908738f8a3ca60b34e2",
+    "destinations": [],
+    "correction": {
+      "rotation_degrees_counterclockwise": 0,
+      "brightness": 1.0,
+      "contrast": 1.0,
+      "color": 1.0
+    },
+    "latest_adjustment": {
+      "brightness_multiplier": 1.07,
+      "additional_rotation_degrees": 180
+    },
+    "note": "Gift-tray photo deleted at user request."
+  },
+  {
+    "source": "images/to_be_organized/photo_6001345064287801800_y (1).jpg",
+    "sha256_original": "5ea562ae65d5f81e71e2ed1a77532d7bcaeabcef4efc1a9ac153ad65ff6c6c12",
+    "destinations": [
+      "images/gifts/herbal-gift-basket-with-price-1800.jpg",
+      "images/products-gallery/herbal-gift-basket-with-price-1800.jpg"
+    ],
+    "correction": {
+      "rotation_degrees_counterclockwise": 0,
+      "brightness": 1.0,
+      "contrast": 1.0,
+      "color": 1.0
+    },
+    "latest_adjustment": {
+      "brightness_multiplier": 1.07,
+      "additional_rotation_degrees": 0
+    }
+  },
+  {
+    "source": "images/to_be_organized/photo_6001345064287801800_y.jpg",
+    "sha256_original": "5ea562ae65d5f81e71e2ed1a77532d7bcaeabcef4efc1a9ac153ad65ff6c6c12",
+    "duplicate_of": "images/to_be_organized/photo_6001345064287801800_y (1).jpg",
+    "destinations": [
+      "images/gifts/herbal-gift-basket-with-price-1800.jpg",
+      "images/products-gallery/herbal-gift-basket-with-price-1800.jpg"
+    ],
+    "correction": {
+      "rotation_degrees_counterclockwise": 0,
+      "brightness": 1.0,
+      "contrast": 1.0,
+      "color": 1.0
+    },
+    "latest_adjustment": {
+      "brightness_multiplier": 1.07,
+      "additional_rotation_degrees": 0
+    }
+  },
+  {
+    "source": "images/to_be_organized/photo_6001345064287801801_y.jpg",
+    "sha256_original": "0ccc60519ce6684ab91bd20627a665206298daa259e19f7db082bfb7a8dc4cf1",
+    "destinations": [
+      "images/products-gallery/herbal-market-stall-wide-1801.jpg"
+    ],
+    "correction": {
+      "rotation_degrees_counterclockwise": 0,
+      "brightness": 1.0,
+      "contrast": 1.0,
+      "color": 1.0
+    },
+    "latest_adjustment": {
+      "brightness_multiplier": 1.07,
+      "additional_rotation_degrees": 0
+    }
+  },
+  {
+    "source": "images/to_be_organized/photo_6001345064287801802_y.jpg",
+    "sha256_original": "c38ee072e760444b81940410584778a534f41cf1ac3c9483202fbb5c7de35569",
+    "destinations": [
+      "images/products-gallery/herbal-market-stall-close-1802.jpg"
+    ],
+    "correction": {
+      "rotation_degrees_counterclockwise": 0,
+      "brightness": 1.0,
+      "contrast": 1.0,
+      "color": 1.0
+    },
+    "latest_adjustment": {
+      "brightness_multiplier": 1.07,
+      "additional_rotation_degrees": 0
+    }
+  },
+  {
+    "source": "images/to_be_organized/photo_6001345064287801803_y.jpg",
+    "sha256_original": "45b51416e03ef6d00fe8d3f3a6a2647404ec3e961d2532038746cd4e49a2983d",
+    "destinations": [
+      "images/products-gallery/herbal-oils-and-jars-display-1803.jpg"
+    ],
+    "correction": {
+      "rotation_degrees_counterclockwise": 0,
+      "brightness": 1.0,
+      "contrast": 1.0,
+      "color": 1.0
+    },
+    "latest_adjustment": {
+      "brightness_multiplier": 1.07,
+      "additional_rotation_degrees": 0
+    }
+  },
+  {
+    "source": "images/to_be_organized/photo_6001345064287801804_y.jpg",
+    "sha256_original": "3298f770ee936ce40d74dec537e5dc4429b315c48e1fac6719d83708c0008da1",
+    "destinations": [
+      "images/products-gallery/herbal-balm-jar-closeup-1804.jpg"
+    ],
+    "correction": {
+      "rotation_degrees_counterclockwise": 0,
+      "brightness": 1.0,
+      "contrast": 1.0,
+      "color": 1.0
+    },
+    "latest_adjustment": {
+      "brightness_multiplier": 1.07,
+      "additional_rotation_degrees": 0
+    }
+  },
+  {
+    "source": "images/to_be_organized/photo_6001345064287801805_y.jpg",
+    "sha256_original": "d552a2d4261ba46ce8cfe0244c6913c1e83b43ee61f0a5cfaa6ff088b36c0895",
+    "destinations": [
+      "images/products-gallery/herbal-oil-and-spray-bottles-1805.jpg"
+    ],
+    "correction": {
+      "rotation_degrees_counterclockwise": 0,
+      "brightness": 1.0,
+      "contrast": 1.0,
+      "color": 1.0
+    },
+    "latest_adjustment": {
+      "brightness_multiplier": 1.07,
+      "additional_rotation_degrees": 0
+    }
+  },
+  {
+    "source": "images/to_be_organized/photo_6001345064287801806_y.jpg",
+    "sha256_original": "18fa391831fbe3727214a6a8e11bffd9be063339bec9bc1ae56187cc3c013b83",
+    "destinations": [
+      "images/products-gallery/herbal-balms-and-extracts-display-1806.jpg"
+    ],
+    "correction": {
+      "rotation_degrees_counterclockwise": 0,
+      "brightness": 1.0,
+      "contrast": 1.0,
+      "color": 1.0
+    },
+    "latest_adjustment": {
+      "brightness_multiplier": 1.07,
+      "additional_rotation_degrees": 0
+    }
+  },
+  {
+    "source": "images/to_be_organized/photo_6001345064287801807_y.jpg",
+    "sha256_original": "9554fca2da1d9ddaf39f85c4286edca0840679603a9b7072177a8cbc894cc4bb",
+    "destinations": [
+      "images/home-gallery/yellow-wildflowers-on-path-1807.jpg"
+    ],
+    "correction": {
+      "rotation_degrees_counterclockwise": 0,
+      "brightness": 1.0,
+      "contrast": 1.0,
+      "color": 1.0
+    }
+  },
+  {
+    "source": "images/to_be_organized/photo_6001345064287801808_y.jpg",
+    "sha256_original": "d9e97e7483417d69ed460c72777765c11cd1ca56344b818bac6a1ef93e7036b4",
+    "destinations": [
+      "images/home-gallery/purple-thistles-in-field-1808.jpg"
+    ],
+    "correction": {
+      "rotation_degrees_counterclockwise": 0,
+      "brightness": 1.0,
+      "contrast": 1.0,
+      "color": 1.0
+    }
+  },
+  {
+    "source": "images/to_be_organized/photo_6001345064287801809_y.jpg",
+    "sha256_original": "6f4d25f7eaf5bdf4ea4f5104abc4e5775b82bdfbb1ed26d10096787dfc39ac17",
+    "destinations": [
+      "images/home-gallery/purple-thistle-closeup-1809.jpg"
+    ],
+    "correction": {
+      "rotation_degrees_counterclockwise": 0,
+      "brightness": 1.0,
+      "contrast": 1.0,
+      "color": 1.0
+    }
+  },
+  {
+    "source": "images/to_be_organized/photo_6001345064287801810_y.jpg",
+    "sha256_original": "307fb4c61277450e72e289e92d826ffcdb2560d4d4acb2f2365b86547fc9629a",
+    "destinations": [
+      "images/home-gallery/herb-leaves-and-buds-1810.jpg"
+    ],
+    "correction": {
+      "rotation_degrees_counterclockwise": 0,
+      "brightness": 1.0,
+      "contrast": 1.0,
+      "color": 1.0
+    }
+  },
+  {
+    "source": "images/to_be_organized/photo_6001345064287801812_y.jpg",
+    "sha256_original": "803bc6398c2e385d31cd530b7b846df53600e47d1fb0fa7a4fc4f2a2d8cff5aa",
+    "destinations": [
+      "images/home-gallery/herb-basket-on-harvest-table-1812.jpg",
+      "images/workshops/herb-basket-on-harvest-table-1812.jpg"
+    ],
+    "correction": {
+      "rotation_degrees_counterclockwise": 0,
+      "brightness": 1.035,
+      "contrast": 1.035,
+      "color": 1.05
+    }
+  },
+  {
+    "source": "images/to_be_organized/photo_6001345064287801813_y.jpg",
+    "sha256_original": "bdf42039cfdcc6e36b6ee6077ecb84982bfd584a5e371861e1f887cec77db02e",
+    "destinations": [
+      "images/products-gallery/herbal-bottles-at-outdoor-market-1813.jpg"
+    ],
+    "correction": {
+      "rotation_degrees_counterclockwise": 0,
+      "brightness": 1.0,
+      "contrast": 1.0,
+      "color": 1.0
+    }
+  },
+  {
+    "source": "images/to_be_organized/photo_6001345064287801814_y.jpg",
+    "sha256_original": "ab818f27a3c04984d9d17f3a5ad45391225a1a5fe9b95e948704e801145cb56b",
+    "destinations": [
+      "images/products-gallery/herbal-balm-jars-at-market-1814.jpg"
+    ],
+    "correction": {
+      "rotation_degrees_counterclockwise": 0,
+      "brightness": 1.0,
+      "contrast": 1.0,
+      "color": 1.0
+    }
+  },
+  {
+    "source": "images/to_be_organized/photo_6001345064287801815_y.jpg",
+    "sha256_original": "c4f5e9b29256a937908e76cb61e0e026a9f8359584de08af3af2c0e58c5049d3",
+    "destinations": [
+      "images/products-gallery/herbal-extract-bottle-selection-1815.jpg"
+    ],
+    "correction": {
+      "rotation_degrees_counterclockwise": 0,
+      "brightness": 1.0,
+      "contrast": 1.0,
+      "color": 1.0
+    }
+  },
+  {
+    "source": "images/to_be_organized/photo_6001345064287801816_y.jpg",
+    "sha256_original": "db21fbc9136dd162bafa3f163e1afd527a5c99112fb9fa4ed80d0109219b3af9",
+    "destinations": [
+      "images/home-gallery/oren-at-herbal-market-stall-1816.jpg",
+      "images/products-gallery/oren-at-herbal-market-stall-1816.jpg"
+    ],
+    "correction": {
+      "rotation_degrees_counterclockwise": 0,
+      "brightness": 1.035,
+      "contrast": 1.035,
+      "color": 1.05
+    }
+  },
+  {
+    "source": "images/to_be_organized/photo_6001345064287801817_y.jpg",
+    "sha256_original": "897f5c9a1323e37a4fbdd95923f9b5b4f8e53a307347662307b3e6f1ce796053",
+    "destinations": [
+      "images/workshops/herb-identification-on-picnic-rug-1817.jpg"
+    ],
+    "correction": {
+      "rotation_degrees_counterclockwise": 90,
+      "brightness": 1.035,
+      "contrast": 1.035,
+      "color": 1.05
+    }
+  },
+  {
+    "source": "images/to_be_organized/photo_6001345064287801818_y.jpg",
+    "sha256_original": "c7db2c1d24df08e90f0cd9bb4e60d29bae660d9427d7711b69fb7974ba8f1480",
+    "destinations": [
+      "images/workshops/outdoor-herb-workshop-group-1818.jpg"
+    ],
+    "correction": {
+      "rotation_degrees_counterclockwise": 90,
+      "brightness": 1.035,
+      "contrast": 1.035,
+      "color": 1.05
+    }
+  },
+  {
+    "source": "images/to_be_organized/photo_6001345064287801819_y.jpg",
+    "sha256_original": "6d63d80e3686cea4ded1892f06c6badc3b7c811291e443db84800e0bad03c2c8",
+    "destinations": [
+      "images/workshops/herbs-laid-out-for-workshop-1819.jpg",
+      "images/workshops-kids/herbs-laid-out-for-workshop-1819.jpg"
+    ],
+    "correction": {
+      "rotation_degrees_counterclockwise": 0,
+      "brightness": 1.035,
+      "contrast": 1.035,
+      "color": 1.05
+    }
+  },
+  {
+    "source": "images/to_be_organized/photo_6001345064287801820_y.jpg",
+    "sha256_original": "5d885ad1eb33a308e2be744b0bb5fea6c06c2461c95c8696e2648c1fdac82a2b",
+    "destinations": [
+      "images/workshops/fresh-herbs-on-workshop-rug-1820.jpg",
+      "images/workshops-kids/fresh-herbs-on-workshop-rug-1820.jpg"
+    ],
+    "correction": {
+      "rotation_degrees_counterclockwise": 0,
+      "brightness": 1.035,
+      "contrast": 1.035,
+      "color": 1.05
+    }
+  },
+  {
+    "source": "images/to_be_organized/photo_6001345064287801821_y.jpg",
+    "sha256_original": "f0710f288c2bdeaea691382f71390dfe34fb17fa8be1db3832ddff50d9315b90",
+    "destinations": [
+      "images/workshops/herbal-workshop-discussion-1821.jpg"
+    ],
+    "correction": {
+      "rotation_degrees_counterclockwise": 0,
+      "brightness": 1.035,
+      "contrast": 1.035,
+      "color": 1.05
+    }
+  },
+  {
+    "source": "images/to_be_organized/photo_6001345064287801822_y.jpg",
+    "sha256_original": "08816cd12a78410b3854c78d49bcfe638371d5909e127b6d59e75f014fcb366b",
+    "destinations": [
+      "images/workshops/herbal-workshop-circle-1822.jpg"
+    ],
+    "correction": {
+      "rotation_degrees_counterclockwise": 0,
+      "brightness": 1.035,
+      "contrast": 1.035,
+      "color": 1.05
+    }
+  },
+  {
+    "source": "images/to_be_organized/photo_6001345064287801823_y.jpg",
+    "sha256_original": "2e5b6cce6e429d8f22656dd9ed6c2287350f4d95ddf809556bdbd5e4d6f989eb",
+    "destinations": [
+      "images/workshops/herbal-workshop-group-wide-1823.jpg"
+    ],
+    "correction": {
+      "rotation_degrees_counterclockwise": 90,
+      "brightness": 1.035,
+      "contrast": 1.035,
+      "color": 1.05
+    }
+  },
+  {
+    "source": "images/to_be_organized/photo_6001345064287801824_y.jpg",
+    "sha256_original": "e110a9b02ebe774d3e70b2c96114a9469a44430d8378073a104eac4d1294124d",
+    "destinations": [
+      "images/home-gallery/oren-holding-freshly-harvested-herbs-1824.jpg",
+      "images/workshops/oren-holding-freshly-harvested-herbs-1824.jpg"
+    ],
+    "correction": {
+      "rotation_degrees_counterclockwise": 0,
+      "brightness": 1.035,
+      "contrast": 1.035,
+      "color": 1.05
+    }
+  },
+  {
+    "source": "images/to_be_organized/photo_6001345064287801825_y.jpg",
+    "sha256_original": "2b4c97ca1b5a60127e1af2bf0c7070e8806dffa4a582af1d7b2578a259b92898",
+    "destinations": [
+      "images/home-gallery/hands-harvesting-herb-stems-1825.jpg",
+      "images/workshops/hands-harvesting-herb-stems-1825.jpg"
+    ],
+    "correction": {
+      "rotation_degrees_counterclockwise": 0,
+      "brightness": 1.035,
+      "contrast": 1.035,
+      "color": 1.05
+    }
+  },
+  {
+    "source": "images/to_be_organized/photo_6001345064287801826_y.jpg",
+    "sha256_original": "701743710872a0db735c8423977801eb84c9f69848111d144e74cb7fd37b2cdf",
+    "destinations": [
+      "images/home-gallery/cutting-fresh-herbs-closeup-1826.jpg",
+      "images/workshops/cutting-fresh-herbs-closeup-1826.jpg"
+    ],
+    "correction": {
+      "rotation_degrees_counterclockwise": 0,
+      "brightness": 1.035,
+      "contrast": 1.035,
+      "color": 1.05
+    }
+  },
+  {
+    "source": "images/to_be_organized/photo_6001345064287801827_y.jpg",
+    "sha256_original": "a32c65a0506e954e62d516221899bfef8ac3cae8d7b708ff399f635dff2e4c57",
+    "destinations": [
+      "images/home-gallery/herb-harvesting-with-pruning-shears-1827.jpg",
+      "images/workshops/herb-harvesting-with-pruning-shears-1827.jpg"
+    ],
+    "correction": {
+      "rotation_degrees_counterclockwise": 0,
+      "brightness": 1.035,
+      "contrast": 1.035,
+      "color": 1.05
+    }
+  },
+  {
+    "source": "images/to_be_organized/photo_6001345064287801828_y.jpg",
+    "sha256_original": "4e5c8f35f628fb91369c2865c5cb495f5a6954d2a9052e2943546775ae73f6f7",
+    "destinations": [
+      "images/home-gallery/purple-flower-harvest-upright-1828.jpg",
+      "images/workshops/purple-flower-harvest-upright-1828.jpg"
+    ],
+    "correction": {
+      "rotation_degrees_counterclockwise": 0,
+      "brightness": 1.0,
+      "contrast": 1.0,
+      "color": 1.0
+    }
+  },
+  {
+    "source": "images/to_be_organized/photo_6001345064287801829_y.jpg",
+    "sha256_original": "6c665762fb7fa3641239a3d676c2a6d3cb441ac6232355ae334749d42d803e5f",
+    "destinations": [
+      "images/home-gallery/purple-flower-harvest-on-stone-1829.jpg",
+      "images/workshops/purple-flower-harvest-on-stone-1829.jpg"
+    ],
+    "correction": {
+      "rotation_degrees_counterclockwise": 0,
+      "brightness": 1.0,
+      "contrast": 1.0,
+      "color": 1.0
+    }
+  },
+  {
+    "source": "images/to_be_organized/photo_6001345064287801830_y.jpg",
+    "sha256_original": "cef299e0fe035181d8c972c341dbbbf4161645bab3aa39ffbec05a9459c363a6",
+    "destinations": [
+      "images/home-gallery/fresh-purple-flower-bundle-1830.jpg",
+      "images/workshops/fresh-purple-flower-bundle-1830.jpg"
+    ],
+    "correction": {
+      "rotation_degrees_counterclockwise": 0,
+      "brightness": 1.0,
+      "contrast": 1.0,
+      "color": 1.0
+    }
+  },
+  {
+    "source": "images/to_be_organized/photo_6001345064287801831_y.jpg",
+    "sha256_original": "946f705e79e401ffb63af229b619503e481e4840dcfb9caa578ce3b1d45c3056",
+    "destinations": [
+      "images/home-gallery/herb-harvesting-in-garden-1831.jpg",
+      "images/workshops/herb-harvesting-in-garden-1831.jpg"
+    ],
+    "correction": {
+      "rotation_degrees_counterclockwise": 0,
+      "brightness": 1.035,
+      "contrast": 1.035,
+      "color": 1.05
+    }
+  },
+  {
+    "source": "images/to_be_organized/photo_6001345064287801832_y.jpg",
+    "sha256_original": "a99dc236a99346235a8933dd77dc7cdc8d9f3cace797ef83c415a32060216ec8",
+    "destinations": [
+      "images/home-gallery/purple-flower-bundle-wide-1832.jpg",
+      "images/workshops/purple-flower-bundle-wide-1832.jpg"
+    ],
+    "correction": {
+      "rotation_degrees_counterclockwise": 0,
+      "brightness": 1.0,
+      "contrast": 1.0,
+      "color": 1.0
+    }
+  },
+  {
+    "source": "images/to_be_organized/photo_6001345064287801833_y.jpg",
+    "sha256_original": "742ce7f502fb51ec71d61e4221299dc8de7d2bb038d4f23a7ae0b292644851a4",
+    "destinations": [
+      "images/home-gallery/harvesting-herbs-among-garden-plants-1833.jpg",
+      "images/workshops/harvesting-herbs-among-garden-plants-1833.jpg"
+    ],
+    "correction": {
+      "rotation_degrees_counterclockwise": 0,
+      "brightness": 1.035,
+      "contrast": 1.035,
+      "color": 1.05
+    }
+  },
+  {
+    "source": "images/to_be_organized/photo_6001345064287801834_y.jpg",
+    "sha256_original": "a3febf443b88df6c4f60435858f3eee1cfa31de3b4dd989726e710f2f18567cb",
+    "destinations": [
+      "images/home-gallery/pruning-herb-stems-1834.jpg",
+      "images/workshops/pruning-herb-stems-1834.jpg"
+    ],
+    "correction": {
+      "rotation_degrees_counterclockwise": 0,
+      "brightness": 1.035,
+      "contrast": 1.035,
+      "color": 1.05
+    }
+  },
+  {
+    "source": "images/to_be_organized/photo_6001345064287801835_y.jpg",
+    "sha256_original": "3a9a99186d29164ce1d0f4f30236f9910998328ca1393ed310ade204a4644bb8",
+    "destinations": [
+      "images/home-gallery/herb-harvest-in-garden-closeup-1835.jpg",
+      "images/workshops/herb-harvest-in-garden-closeup-1835.jpg"
+    ],
+    "correction": {
+      "rotation_degrees_counterclockwise": 0,
+      "brightness": 1.035,
+      "contrast": 1.035,
+      "color": 1.05
+    }
+  },
+  {
+    "source": "images/to_be_organized/photo_6001345064287801836_y.jpg",
+    "sha256_original": "7c0e5ced6110de0512f714385af87e5c89c63d61853c604ab87f4cddd721c7ed",
+    "destinations": [
+      "images/home-gallery/hands-gathering-herb-stems-1836.jpg",
+      "images/workshops/hands-gathering-herb-stems-1836.jpg"
+    ],
+    "correction": {
+      "rotation_degrees_counterclockwise": 0,
+      "brightness": 1.035,
+      "contrast": 1.035,
+      "color": 1.05
+    }
+  },
+  {
+    "source": "images/to_be_organized/photo_6001345064287801837_y.jpg",
+    "sha256_original": "c5289e58c97c051b9e16126848bd240e26653de2eddf7378861f36f4baaa4ddc",
+    "destinations": [
+      "images/home-gallery/herb-harvest-hands-detail-1837.jpg",
+      "images/workshops/herb-harvest-hands-detail-1837.jpg"
+    ],
+    "correction": {
+      "rotation_degrees_counterclockwise": 0,
+      "brightness": 1.035,
+      "contrast": 1.035,
+      "color": 1.05
+    }
+  },
+  {
+    "source": "images/to_be_organized/photo_6001345064287801913_y.jpg",
+    "sha256_original": "da9e8801528cf105724035fcbbf5a4b5dacd6c639e4f458eaed8f35710de3d86",
+    "destinations": [
+      "images/home-gallery/wild-herb-beside-pale-boulder-1913.jpg"
+    ],
+    "correction": {
+      "rotation_degrees_counterclockwise": 0,
+      "brightness": 1.035,
+      "contrast": 1.035,
+      "color": 1.05
+    }
+  },
+  {
+    "source": "images/to_be_organized/photo_6001345064287801914_y.jpg",
+    "sha256_original": "aa6914a29cb19bc4120fb8f8b0afafee184193bd14677b1a49a03fcdc698d2f0",
+    "destinations": [
+      "images/home-gallery/wild-herb-and-boulder-in-sunlight-1914.jpg"
+    ],
+    "correction": {
+      "rotation_degrees_counterclockwise": 0,
+      "brightness": 1.035,
+      "contrast": 1.035,
+      "color": 1.05
+    }
+  },
+  {
+    "source": "images/to_be_organized/photo_6001345064287801919_y.jpg",
+    "sha256_original": "a43b4a579d26f47886a85ca8c913f0712777a323499d3ad10e2b3eaa3415c9a4",
+    "destinations": [
+      "images/home-gallery/pale-purple-wildflower-1919.jpg"
+    ],
+    "correction": {
+      "rotation_degrees_counterclockwise": 0,
+      "brightness": 1.0,
+      "contrast": 1.0,
+      "color": 1.0
+    }
+  },
+  {
+    "source": "images/to_be_organized/photo_6001345064287801920_y.jpg",
+    "sha256_original": "dd972d00cd48e701530c46828bd8ed4d697a6defa96576de55a94cc142cb818c",
+    "destinations": [
+      "images/home-gallery/small-wildflower-against-rock-1920.jpg"
+    ],
+    "correction": {
+      "rotation_degrees_counterclockwise": 0,
+      "brightness": 1.0,
+      "contrast": 1.0,
+      "color": 1.0
+    }
+  },
+  {
+    "source": "images/to_be_organized/photo_6001345064287801921_y.jpg",
+    "sha256_original": "371cf1877891b6a73416c23841ab6f27200b245038e1486c885fc9a2bc99fcc2",
+    "destinations": [
+      "images/home-gallery/herbs-growing-in-rocky-valley-1921.jpg"
+    ],
+    "correction": {
+      "rotation_degrees_counterclockwise": 0,
+      "brightness": 1.035,
+      "contrast": 1.035,
+      "color": 1.05
+    }
+  },
+  {
+    "source": "images/to_be_organized/photo_6001345064287801922_y.jpg",
+    "sha256_original": "7435549f0760d293d3ac8c5b3bd9a95a337ecec7ac422232f61d56ed6ec5bb67",
+    "destinations": [
+      "images/home-gallery/wild-herb-beside-valley-rocks-1922.jpg"
+    ],
+    "correction": {
+      "rotation_degrees_counterclockwise": 0,
+      "brightness": 1.0,
+      "contrast": 1.0,
+      "color": 1.0
+    }
+  },
+  {
+    "source": "images/to_be_organized/photo_6001345064287801923_y.jpg",
+    "sha256_original": "392fceda0c777f6e08fe5a4beeae71b5c5fb11952b62278642bc62cd6f5b8fce",
+    "destinations": [
+      "images/home-gallery/herb-on-hillside-trail-1923.jpg"
+    ],
+    "correction": {
+      "rotation_degrees_counterclockwise": 0,
+      "brightness": 1.0,
+      "contrast": 1.0,
+      "color": 1.0
+    }
+  },
+  {
+    "source": "images/to_be_organized/photo_6001345064287801924_y.jpg",
+    "sha256_original": "918d7d7c89d1617bc4c0d790b977c6bff7a4afc64450754fda6380abe8e84d72",
+    "destinations": [
+      "images/home-gallery/pink-thistle-in-valley-1924.jpg"
+    ],
+    "correction": {
+      "rotation_degrees_counterclockwise": 0,
+      "brightness": 1.035,
+      "contrast": 1.035,
+      "color": 1.05
+    }
+  },
+  {
+    "source": "images/to_be_organized/photo_6001345064287801925_y.jpg",
+    "sha256_original": "877068b58b27192bb1cfcfa10ff4d2fbc334cfb0a8973f563b857101f83664fd",
+    "destinations": [
+      "images/home-gallery/pink-thistle-against-rock-1925.jpg"
+    ],
+    "correction": {
+      "rotation_degrees_counterclockwise": 0,
+      "brightness": 1.0,
+      "contrast": 1.0,
+      "color": 1.0
+    }
+  },
+  {
+    "source": "images/to_be_organized/photo_6001345064287801926_y.jpg",
+    "sha256_original": "d793e4631ec06a95f03e2f4cfb7d201635a67461924493c07543fc6548771c72",
+    "destinations": [
+      "images/home-gallery/pink-thistle-in-soft-light-1926.jpg"
+    ],
+    "correction": {
+      "rotation_degrees_counterclockwise": 0,
+      "brightness": 1.035,
+      "contrast": 1.035,
+      "color": 1.05
+    }
+  },
+  {
+    "source": "images/to_be_organized/photo_6001345064287801927_y.jpg",
+    "sha256_original": "50ee257700e542b27f3eb706dd91421a89096ee6a0381c18c501485675e398bd",
+    "destinations": [
+      "images/home-gallery/small-herb-on-rock-face-1927.jpg"
+    ],
+    "correction": {
+      "rotation_degrees_counterclockwise": 0,
+      "brightness": 1.0,
+      "contrast": 1.0,
+      "color": 1.0
+    }
+  },
+  {
+    "source": "images/to_be_organized/photo_6001345064287801928_y.jpg",
+    "sha256_original": "5b4af2bdb2aa47ddb59ccc655b4988102118d49556a41c34af9d2fc3df847cac",
+    "destinations": [
+      "images/home-gallery/green-herb-in-desert-ravine-1928.jpg"
+    ],
+    "correction": {
+      "rotation_degrees_counterclockwise": 0,
+      "brightness": 1.0,
+      "contrast": 1.0,
+      "color": 1.0
+    }
+  },
+  {
+    "source": "images/to_be_organized/photo_6001345064287801929_y.jpg",
+    "sha256_original": "926f194ac252223eb47a5037d122057509cc1c666b8e11e6e357a4b0bcef67c7",
+    "destinations": [
+      "images/home-gallery/rounded-desert-shrub-1929.jpg"
+    ],
+    "correction": {
+      "rotation_degrees_counterclockwise": 0,
+      "brightness": 1.0,
+      "contrast": 1.0,
+      "color": 1.0
+    }
+  },
+  {
+    "source": "images/to_be_organized/photo_6001345064287801930_y.jpg",
+    "sha256_original": "36bcd515f2f686c5e9564f930535ff9278222c9bcec2f1d2c2e49b0af83cd056",
+    "destinations": [
+      "images/home-gallery/trailing-herb-in-sandy-soil-1930.jpg"
+    ],
+    "correction": {
+      "rotation_degrees_counterclockwise": 0,
+      "brightness": 1.0,
+      "contrast": 1.0,
+      "color": 1.0
+    }
+  },
+  {
+    "source": "images/to_be_organized/photo_6001345064287801931_y.jpg",
+    "sha256_original": "6c1c8eabf30157a79ad56cc6aa6e16601531dce65d3241cedbc47a39363fe5c5",
+    "destinations": [
+      "images/home-gallery/herb-growing-in-rock-crevice-1931.jpg"
+    ],
+    "correction": {
+      "rotation_degrees_counterclockwise": 0,
+      "brightness": 1.0,
+      "contrast": 1.0,
+      "color": 1.0
+    }
+  },
+  {
+    "source": "images/to_be_organized/photo_6001345064287801932_y.jpg",
+    "sha256_original": "bb5ebd17e84fe6873ef321e61532df0cb3d63740f2cd2acb664fa9b68242a7f0",
+    "destinations": [
+      "images/home-gallery/tall-herb-beside-rock-wall-1932.jpg"
+    ],
+    "correction": {
+      "rotation_degrees_counterclockwise": 0,
+      "brightness": 1.0,
+      "contrast": 1.0,
+      "color": 1.0
+    }
+  },
+  {
+    "source": "images/to_be_organized/photo_6001345064287801933_y.jpg",
+    "sha256_original": "0e19615875f295ffc6285565efebe2452e3cb45cd702b57942b00dc5acce4281",
+    "destinations": [
+      "images/home-gallery/wild-herb-overlooking-valley-1933.jpg"
+    ],
+    "correction": {
+      "rotation_degrees_counterclockwise": 0,
+      "brightness": 1.035,
+      "contrast": 1.035,
+      "color": 1.05
+    }
+  },
+  {
+    "source": "images/to_be_organized/photo_6001345064287801934_y.jpg",
+    "sha256_original": "8cb9af26924ea4d9e3138740bba54dcbe7d8faee6da9de3a729a84c01dd4d8f2",
+    "destinations": [
+      "images/home-gallery/herbs-on-rocky-slope-1934.jpg"
+    ],
+    "correction": {
+      "rotation_degrees_counterclockwise": 0,
+      "brightness": 1.0,
+      "contrast": 1.0,
+      "color": 1.0
+    }
+  },
+  {
+    "source": "images/to_be_organized/photo_6001345064287801935_y.jpg",
+    "sha256_original": "de3d2bb80b18dd590c029e0bfdf5bdcd4d8c84a703a098880e889567699a57fb",
+    "destinations": [
+      "images/home-gallery/sunlit-herb-and-rock-wall-1935.jpg"
+    ],
+    "correction": {
+      "rotation_degrees_counterclockwise": 0,
+      "brightness": 1.0,
+      "contrast": 1.0,
+      "color": 1.0
+    }
+  },
+  {
+    "source": "images/to_be_organized/photo_6001345064287801936_y.jpg",
+    "sha256_original": "6bbcfb01f4bc16950ce18b273e122d4e1e17b5a0cfbc550452cb4e472a8722f9",
+    "destinations": [
+      "images/home-gallery/purple-wildflowers-in-rocky-valley-1936.jpg"
+    ],
+    "correction": {
+      "rotation_degrees_counterclockwise": 0,
+      "brightness": 1.0,
+      "contrast": 1.0,
+      "color": 1.0
+    }
+  },
+  {
+    "source": "images/to_be_organized/photo_6001345064287801937_y.jpg",
+    "sha256_original": "fef39cdf6ab0278d16abc45ed7a4ffc771b56d265f680215c78dec7605793256",
+    "destinations": [
+      "images/home-gallery/small-herb-against-sunlit-rock-1937.jpg"
+    ],
+    "correction": {
+      "rotation_degrees_counterclockwise": 0,
+      "brightness": 1.0,
+      "contrast": 1.0,
+      "color": 1.0
+    }
+  },
+  {
+    "source": "images/to_be_organized/photo_6001345064287801938_y.jpg",
+    "sha256_original": "f7bd74aa43705c83baa8d03dce8817b7b34042820f655df95d3ac381165a5d25",
+    "destinations": [
+      "images/home-gallery/white-wildflower-cluster-1938.jpg"
+    ],
+    "correction": {
+      "rotation_degrees_counterclockwise": 0,
+      "brightness": 1.035,
+      "contrast": 1.035,
+      "color": 1.05
+    }
+  },
+  {
+    "source": "images/to_be_organized/photo_6001345064287801939_y.jpg",
+    "sha256_original": "50498c9ca8b922e4af8a4dd549fb69b21ef087be41fe0462e4849cf4ca9d84a7",
+    "destinations": [
+      "images/home-gallery/herb-sprig-held-against-landscape-1939.jpg",
+      "images/workshops/herb-sprig-held-against-landscape-1939.jpg",
+      "images/workshops-kids/herb-sprig-held-against-landscape-1939.jpg"
+    ],
+    "correction": {
+      "rotation_degrees_counterclockwise": 0,
+      "brightness": 1.0,
+      "contrast": 1.0,
+      "color": 1.0
+    }
+  },
+  {
+    "source": "images/to_be_organized/photo_6001345064287801940_y.jpg",
+    "sha256_original": "4fc90bf72502f082d5b9ba740a5e45bb85d62ad31cb4d88bb2bd714d89d2d3aa",
+    "destinations": [
+      "images/home-gallery/yellow-flower-harvest-closeup-1940.jpg"
+    ],
+    "correction": {
+      "rotation_degrees_counterclockwise": 0,
+      "brightness": 1.0,
+      "contrast": 1.0,
+      "color": 1.0
+    }
+  },
+  {
+    "source": "images/to_be_organized/photo_6001345064287801941_y.jpg",
+    "sha256_original": "e097974f9e3267d874a7c5a97b41bc504174d62f865b481291f79899d80281ee",
+    "destinations": [
+      "images/home-gallery/yellow-flower-harvest-bowl-1941.jpg"
+    ],
+    "correction": {
+      "rotation_degrees_counterclockwise": 0,
+      "brightness": 1.0,
+      "contrast": 1.0,
+      "color": 1.0
+    }
+  },
+  {
+    "source": "images/to_be_organized/photo_6001345064287801942_y.jpg",
+    "sha256_original": "5cfe096f21955cd7e2ee2f76d4baafcd1a281fa7a59cda7c1f6acf89020590ed",
+    "destinations": [
+      "images/home-gallery/yellow-flowers-in-white-bowl-1942.jpg",
+      "images/workshops/yellow-flowers-in-white-bowl-1942.jpg",
+      "images/workshops-kids/yellow-flowers-in-white-bowl-1942.jpg"
+    ],
+    "correction": {
+      "rotation_degrees_counterclockwise": 0,
+      "brightness": 1.0,
+      "contrast": 1.0,
+      "color": 1.0
+    }
+  },
+  {
+    "source": "images/to_be_organized/photo_6001345064287801943_y.jpg",
+    "sha256_original": "8ed50db91dec1219f8de310d6799e86abedcc6f015b0a28aba298a9815bebad0",
+    "destinations": [
+      "images/home-gallery/freshly-picked-yellow-flowers-1943.jpg",
+      "images/workshops/freshly-picked-yellow-flowers-1943.jpg",
+      "images/workshops-kids/freshly-picked-yellow-flowers-1943.jpg"
+    ],
+    "correction": {
+      "rotation_degrees_counterclockwise": 0,
+      "brightness": 1.0,
+      "contrast": 1.0,
+      "color": 1.0
+    }
+  },
+  {
+    "source": "images/to_be_organized/photo_6001345064287801944_y.jpg",
+    "sha256_original": "30f1485c3079e7fb1bdb5ef855f49668023aef3bdf2b00b2985dbe6ddf34133a",
+    "destinations": [
+      "images/home-gallery/yellow-flowering-herb-in-garden-1944.jpg"
+    ],
+    "correction": {
+      "rotation_degrees_counterclockwise": 0,
+      "brightness": 1.0,
+      "contrast": 1.0,
+      "color": 1.0
+    }
+  },
+  {
+    "source": "images/to_be_organized/photo_6001345064287801945_y.jpg",
+    "sha256_original": "c8faf6f2bfb08b84ae4bb2b325ca5f174a5d033a9052214a4e56a0aa337bdbc0",
+    "destinations": [
+      "images/home-gallery/yellow-flowering-herb-under-tree-1945.jpg"
+    ],
+    "correction": {
+      "rotation_degrees_counterclockwise": 0,
+      "brightness": 1.0,
+      "contrast": 1.0,
+      "color": 1.0
+    }
+  },
+  {
+    "source": "images/to_be_organized/photo_6001345064287801946_y.jpg",
+    "sha256_original": "291d2ad2763462b70acd19f11faab03d0c24decb09824c749b36f442b1c65084",
+    "destinations": [
+      "images/home-gallery/sunlight-through-herb-garden-1946.jpg"
+    ],
+    "correction": {
+      "rotation_degrees_counterclockwise": 0,
+      "brightness": 1.035,
+      "contrast": 1.035,
+      "color": 1.05
+    }
+  },
+  {
+    "source": "images/to_be_organized/photo_6001345064287801947_y.jpg",
+    "sha256_original": "d1e019f4af9dd055376542f0c8fa8af87b5e5dcbaac5804922f5dd2cdc085933",
+    "destinations": [
+      "images/products-gallery/herbal-extract-bottles-on-shelf-1947.jpg"
+    ],
+    "correction": {
+      "rotation_degrees_counterclockwise": 0,
+      "brightness": 1.035,
+      "contrast": 1.035,
+      "color": 1.05
+    }
+  },
+  {
+    "source": "images/to_be_organized/photo_6001345064287801948_y.jpg",
+    "sha256_original": "b575f9dadd429f0a662a2ab42a87e5f52bfdcbdbb3fa1cb713359b3828edd67b",
+    "destinations": [
+      "images/home-gallery/herbal-distillation-glassware-1948.jpg",
+      "images/products-gallery/herbal-distillation-glassware-1948.jpg",
+      "images/workshops/herbal-distillation-glassware-1948.jpg"
+    ],
+    "correction": {
+      "rotation_degrees_counterclockwise": 0,
+      "brightness": 1.035,
+      "contrast": 1.035,
+      "color": 1.05
+    }
+  },
+  {
+    "source": "images/to_be_organized/photo_6001345064287801949_y.jpg",
+    "sha256_original": "8684bbd45d7e330ce570cc34abb4f7377de808dc13b5df0b1ccefa1e370bc8a7",
+    "destinations": [
+      "images/products-gallery/outdoor-herbal-preparation-pot-1949.jpg",
+      "images/workshops/outdoor-herbal-preparation-pot-1949.jpg"
+    ],
+    "correction": {
+      "rotation_degrees_counterclockwise": 0,
+      "brightness": 1.0,
+      "contrast": 1.0,
+      "color": 1.0
+    }
+  },
+  {
+    "source": "images/to_be_organized/photo_6001345064287801950_y.jpg",
+    "sha256_original": "3ae25c958a49a796b791f0a1b2082b7aeb83a6c631a13d7d88887c888612f5dc",
+    "destinations": [
+      "images/gifts/herbal-gift-set-on-bench-1950.jpg",
+      "images/products-gallery/herbal-gift-set-on-bench-1950.jpg"
+    ],
+    "correction": {
+      "rotation_degrees_counterclockwise": 0,
+      "brightness": 1.035,
+      "contrast": 1.035,
+      "color": 1.05
+    }
+  },
+  {
+    "source": "images/to_be_organized/photo_6001345064287801951_y.jpg",
+    "sha256_original": "01c28bf71a6aef484307bdb39e1d6ee9b2991aca996837cc410c8318d8fcb0f3",
+    "destinations": [
+      "images/gifts/herbal-gift-box-overhead-1951.jpg",
+      "images/products-gallery/herbal-gift-box-overhead-1951.jpg"
+    ],
+    "correction": {
+      "rotation_degrees_counterclockwise": 0,
+      "brightness": 1.035,
+      "contrast": 1.035,
+      "color": 1.05
+    }
+  },
+  {
+    "source": "images/to_be_organized/photo_6001345064287801952_y.jpg",
+    "sha256_original": "8a15726adec839610d798a5e96ed7512f1aa2b27c2d470e5be4bb27a14ddfa76",
+    "destinations": [
+      "images/gifts/wrapped-herbal-gift-basket-1952.jpg",
+      "images/products-gallery/wrapped-herbal-gift-basket-1952.jpg"
+    ],
+    "correction": {
+      "rotation_degrees_counterclockwise": 0,
+      "brightness": 1.035,
+      "contrast": 1.035,
+      "color": 1.05
+    }
+  },
+  {
+    "source": "images/to_be_organized/photo_6001345064287801953_y.jpg",
+    "sha256_original": "9533a25bda4ee07b34f834ef60ce2be3c97fc76e39bf12e93651f8f8a732d181",
+    "destinations": [
+      "images/workshops/oren-collecting-pine-resin-1953.jpg"
+    ],
+    "correction": {
+      "rotation_degrees_counterclockwise": 0,
+      "brightness": 1.035,
+      "contrast": 1.035,
+      "color": 1.05
+    }
+  },
+  {
+    "source": "images/to_be_organized/photo_6001345064287801954_y.jpg",
+    "sha256_original": "46db7f6656a5ed05c69b17dbe14dda13a3d399f6cfcba43b8caf8cb17b1467d1",
+    "destinations": [
+      "images/workshops/forest-workshop-herbal-preparation-1954.jpg"
+    ],
+    "correction": {
+      "rotation_degrees_counterclockwise": 0,
+      "brightness": 1.035,
+      "contrast": 1.035,
+      "color": 1.05
+    }
+  },
+  {
+    "source": "images/to_be_organized/photo_6001345064287801955_y.jpg",
+    "sha256_original": "cd9defd7abbe25fd73646658c0559cf54b3a8c7c4aa1725f8fef472f0332da2e",
+    "destinations": [
+      "images/workshops/forest-workshop-group-circle-1955.jpg"
+    ],
+    "correction": {
+      "rotation_degrees_counterclockwise": 0,
+      "brightness": 1.035,
+      "contrast": 1.035,
+      "color": 1.05
+    }
+  },
+  {
+    "source": "images/to_be_organized/photo_6001345064287801956_y.jpg",
+    "sha256_original": "51ed1dff7c5de1dbe2af012bd3e2d89573a3f7d82438c864e3934a238f4722b6",
+    "destinations": [
+      "images/workshops/forest-workshop-pine-resin-collection-1956.jpg"
+    ],
+    "correction": {
+      "rotation_degrees_counterclockwise": 0,
+      "brightness": 1.035,
+      "contrast": 1.035,
+      "color": 1.05
+    }
+  },
+  {
+    "source": "images/to_be_organized/photo_6001345064287801957_y.jpg",
+    "sha256_original": "fc0454f58b622c484786505947052624ab4d3b639b8582a2b1fe749e390ebca3",
+    "destinations": [
+      "images/products-gallery/herbal-balm-jar-with-berries-1957.jpg"
+    ],
+    "correction": {
+      "rotation_degrees_counterclockwise": 0,
+      "brightness": 1.0,
+      "contrast": 1.0,
+      "color": 1.0
+    }
+  },
+  {
+    "source": "images/to_be_organized/photo_6001345064287801958_y.jpg",
+    "sha256_original": "dfbc63654fc80bf73a2cd8c28368799239b81de648fa425db524c9dfaaf2d34c",
+    "destinations": [
+      "images/workshops/oren-teaching-with-herb-sprig-1958.jpg"
+    ],
+    "correction": {
+      "rotation_degrees_counterclockwise": 0,
+      "brightness": 1.035,
+      "contrast": 1.035,
+      "color": 1.05
+    }
+  },
+  {
+    "source": "images/to_be_organized/photo_6001345064287801959_y.jpg",
+    "sha256_original": "0c30a50bd34fabda97b3c9e5a25620c9b891a01abb483033ff0fc29e210cd787",
+    "destinations": [
+      "images/workshops/oren-explaining-fresh-herbs-1959.jpg"
+    ],
+    "correction": {
+      "rotation_degrees_counterclockwise": 0,
+      "brightness": 1.035,
+      "contrast": 1.035,
+      "color": 1.05
+    }
+  },
+  {
+    "source": "images/to_be_organized/photo_6001345064287801960_y.jpg",
+    "sha256_original": "674c3bc8e6ea804b888e665dbb9c59ce81f43ed0202c8be6951d0e1f17e1c896",
+    "destinations": [
+      "images/workshops/oren-demonstrating-herb-harvest-1960.jpg"
+    ],
+    "correction": {
+      "rotation_degrees_counterclockwise": 0,
+      "brightness": 1.035,
+      "contrast": 1.035,
+      "color": 1.05
+    }
+  },
+  {
+    "source": "images/to_be_organized/photo_6001345064287801961_y.jpg",
+    "sha256_original": "76f8e52a8a4b26713552c3518c1dce9d3ca3bb795c0e6dce8e9e26a7cab92a67",
+    "destinations": [
+      "images/home-gallery/dried-herbs-in-open-bags-1961.jpg",
+      "images/workshops/dried-herbs-in-open-bags-1961.jpg",
+      "images/workshops-kids/dried-herbs-in-open-bags-1961.jpg"
+    ],
+    "correction": {
+      "rotation_degrees_counterclockwise": 0,
+      "brightness": 1.035,
+      "contrast": 1.035,
+      "color": 1.05
+    }
+  },
+  {
+    "source": "images/products-gallery/Citronela.png",
+    "sha256_original": "6934166d0b0253602755fbce4906535a4ff5962349b7c51cdd596a547a570cb8",
+    "destinations": [
+      "images/products-gallery/scented-geranium.png",
+      "images/home-gallery/scented-geranium.png"
+    ],
+    "correction": null
+  },
+  {
+    "source": "images/products-gallery/Lactuca-serriola.jpeg",
+    "sha256_original": "e4f896358a7df054280d68a17234063f0e0b197a94efa26112683a1388c5fc95",
+    "destinations": [
+      "images/products-gallery/wild-lettuce.jpeg",
+      "images/home-gallery/wild-lettuce.jpeg"
+    ],
+    "correction": null
+  },
+  {
+    "source": "images/products-gallery/Myrrh.jpeg",
+    "sha256_original": "21c7254af41e3ec7147901afe42c17595bc973671a21eecaa260ca57358e92e8",
+    "destinations": [
+      "images/products-gallery/myrrh.jpeg",
+      "images/home-gallery/myrrh.jpeg"
+    ],
+    "correction": null
+  },
+  {
+    "source": "images/products-gallery/Uzrar.jpeg",
+    "sha256_original": "5628bd76aae38bac08d8f22e7320e1088b22cf7010cd7a1064a82aa58fed0a16",
+    "destinations": [
+      "images/products-gallery/hawthorn.jpeg",
+      "images/home-gallery/hawthorn.jpeg"
+    ],
+    "correction": null
+  },
+  {
+    "source": "images/products-gallery/Valerian.webp",
+    "sha256_original": "03046148f7ec065b077d2b433876b2487891c0e4babcb7657d1d8f6d2f3655cc",
+    "destinations": [
+      "images/products-gallery/valerian.webp",
+      "images/home-gallery/valerian.webp"
+    ],
+    "correction": null
+  },
+  {
+    "source": "images/products-gallery/WhatsApp Image 2026-06-10 at 11.22.43 (1).jpeg",
+    "sha256_original": "0b1e0f09a3f5dbda3726edfec0f967aac0e866e0e70d9377dd3648b4f156097c",
+    "destinations": [
+      "images/products-gallery/herbal-bottles-at-market.jpeg"
+    ],
+    "correction": null
+  },
+  {
+    "source": "images/products-gallery/WhatsApp Image 2026-06-10 at 11.22.43 (2).jpeg",
+    "sha256_original": "99ffca4e62ce3e851feef2fdaafc8d07ae39fc1d1693f965ae3804f9235f5cde",
+    "destinations": [
+      "images/products-gallery/herbal-extract-bottle-display.jpeg"
+    ],
+    "correction": null
+  },
+  {
+    "source": "images/products-gallery/WhatsApp Image 2026-06-10 at 11.22.43.jpeg",
+    "sha256_original": "76ecbc8e5d299ad63734d473924d152eb316d4dbce2c4105bdbe82f593dd4628",
+    "destinations": [
+      "images/products-gallery/herbal-balm-jar-display.jpeg"
+    ],
+    "correction": null
+  },
+  {
+    "source": "images/products-gallery/WhatsApp Image 2026-06-10 at 11.23.58 (1).jpeg",
+    "sha256_original": "0e02047775a5d35bfa41adb062690bfeca8f7ec012e2f4c34352e2db25f45567",
+    "destinations": [
+      "images/products-gallery/herbal-balm-with-berries.jpeg"
+    ],
+    "correction": null
+  },
+  {
+    "source": "images/products-gallery/ashwagandha-roots-500x500.webp",
+    "sha256_original": "2c2d04277b9fcafcbd2eb87475989f5c9ebc9ce4570f5cbc90b7c824253bc14f",
+    "destinations": [
+      "images/products-gallery/ashwagandha-roots.webp",
+      "images/home-gallery/ashwagandha-roots.webp"
+    ],
+    "correction": null
+  },
+  {
+    "source": "images/products-gallery/gifts/PHOTO-2026-09-15-01-11-36.jpg",
+    "sha256_original": "20760b99e5ef5f893dd3ff5dcf266bcfa5e87cd540a1ba90707ab789961d479b",
+    "destinations": [
+      "images/gifts/herbal-gift-set-in-dappled-light.jpg"
+    ],
+    "correction": null
+  },
+  {
+    "source": "images/story-gallery/basket-green-herbs.jpg",
+    "sha256_original": "d6f231d641ec9c1ce4a7411bb43ce9e29664634d8a10fd306f3d697f3b050f6b",
+    "destinations": [],
+    "correction": null,
+    "note": "Filler photo removed at user request; original retained in originals.zip."
+  },
+  {
+    "source": "images/story-gallery/hand-herb.jpg",
+    "sha256_original": "9d052c520b9d37fae74e17c57951684b49c7f97f6d05163a8fe6efa558539c2a",
+    "destinations": [],
+    "correction": null,
+    "note": "Filler photo removed at user request; original retained in originals.zip."
+  },
+  {
+    "source": "images/story-gallery/herb-basket-steps.jpg",
+    "sha256_original": "226a1866fc51f7ffb8abbd350094808c66982b87f174e98f53291ce02694b129",
+    "destinations": [],
+    "correction": null,
+    "note": "Filler photo removed at user request; original retained in originals.zip."
+  },
+  {
+    "source": "images/story-gallery/herb-trimming.jpg",
+    "sha256_original": "16efd10ee446121f8f280a53f486f6c1ed72cc77996e834d5b31d33674b33f51",
+    "destinations": [],
+    "correction": null,
+    "note": "Filler photo removed at user request; original retained in originals.zip."
+  },
+  {
+    "source": "images/story-gallery/herbs-hands.jpg",
+    "sha256_original": "216157e20f5ef803c989ea0a835e3acba9b9a667fddba51db1880f9616fdb39b",
+    "destinations": [],
+    "correction": null,
+    "note": "Filler photo removed at user request; original retained in originals.zip."
+  },
+  {
+    "source": "images/story-gallery/lavender-basket.jpg",
+    "sha256_original": "045083b1d3901ac9cc23ad3b3f64db5b78d9e301d0b5bc4bdaaa7dfe554b4a37",
+    "destinations": [],
+    "correction": null,
+    "note": "Filler photo removed at user request; original retained in originals.zip."
+  },
+  {
+    "source": "images/workshops-gallery/WhatsApp Image 2026-06-10 at 11.23.57 copy.jpeg",
+    "sha256_original": "60aea59ebd70bc475fd71af0e38e7a6f44794af7ea4fc5e9f076706f53f6756f",
+    "destinations": [
+      "images/workshops/forest-workshop-herbal-preparation.jpeg"
+    ],
+    "correction": null
+  },
+  {
+    "source": "images/workshops-gallery/WhatsApp Image 2026-06-10 at 11.23.57.jpeg",
+    "sha256_original": "5ffc466dc8bad357d8a9d223ac1e2e7c1ec1510c34bcfba64f5f4f19a88ebdec",
+    "destinations": [
+      "images/workshops/forest-workshop-group-circle.jpeg"
+    ],
+    "correction": null
+  },
+  {
+    "source": "images/workshops-gallery/icons/essebtial_oil.png",
+    "sha256_original": "2d9ffd93b93421843dbe08bec91564d96c274b3b9b1b27214b67a888c7c34801",
+    "destinations": [
+      "images/icons/workshops/essential-oil.png"
+    ],
+    "correction": null
+  },
+  {
+    "source": "images/workshops-gallery/icons/image-removebg-preview (2).png",
+    "sha256_original": "9565f31826812a1bd875b4f1722d9ce04cd738f0f2b2dcd6caca78987e22eb1b",
+    "destinations": [
+      "images/icons/workshops/mushrooms.png"
+    ],
+    "correction": null
+  },
+  {
+    "source": "images/workshops-gallery/icons/lavender_thin.png",
+    "sha256_original": "31b938d788496f63c4ca4b8a62bd080640921e45a5ea7e7a3819bda7b800a362",
+    "destinations": [
+      "images/icons/workshops/lavender.png"
+    ],
+    "correction": null
+  },
+  {
+    "source": "images/workshops-gallery/icons/pine_tree.png",
+    "sha256_original": "c6ee201b9a812507fe5b5144f3898141eae637fc8c06bbee68a1e82602802fb6",
+    "destinations": [
+      "images/icons/workshops/pine-cone.png"
+    ],
+    "correction": null
+  },
+  {
+    "source": "images/workshops-gallery/icons/roots.png",
+    "sha256_original": "05483616923a75fd17dc8205204301a62715ffd00d9ac26a5fc16adee60fc13e",
+    "destinations": [
+      "images/icons/workshops/roots.png"
+    ],
+    "correction": null
+  },
+  {
+    "source": "images/workshops-gallery/workshops-adults/WhatsApp Image 2026-06-10 at 11.23.57 copy.jpeg",
+    "sha256_original": "60aea59ebd70bc475fd71af0e38e7a6f44794af7ea4fc5e9f076706f53f6756f",
+    "destinations": [
+      "images/workshops/forest-workshop-herbal-preparation.jpeg"
+    ],
+    "correction": null
+  },
+  {
+    "source": "images/workshops-gallery/workshops-adults/WhatsApp Image 2026-06-10 at 11.23.57.jpeg",
+    "sha256_original": "5ffc466dc8bad357d8a9d223ac1e2e7c1ec1510c34bcfba64f5f4f19a88ebdec",
+    "destinations": [
+      "images/workshops/forest-workshop-group-circle.jpeg"
+    ],
+    "correction": null
+  },
+  {
+    "source": "images/workshops-gallery/workshops-adults/WhatsApp Image 2026-06-15 at 15.52.31 (1).jpeg",
+    "sha256_original": "a0e7f0f931cb17ffbfea978f0cac8ea6ba3506cee18acc4ac0dba1ad378ca1fe",
+    "destinations": [
+      "images/workshops/mushroom-caps-in-hand.jpeg"
+    ],
+    "correction": null
+  },
+  {
+    "source": "images/workshops-gallery/workshops-adults/WhatsApp Image 2026-06-15 at 15.52.31.jpeg",
+    "sha256_original": "f9641eb149f7faa9fa100a866b269ecb83948ea89841f8773b21adc5090c29e2",
+    "destinations": [
+      "images/workshops/oren-explaining-forest-mushrooms.jpeg"
+    ],
+    "correction": null
+  },
+  {
+    "source": "images/workshops-gallery/workshops-adults/WhatsApp Image 2026-06-15 at 15.52.32 (1).jpeg",
+    "sha256_original": "2890bcb5fcde3ffaa12c410fbc85f87f5898b79e2b1ce48a6ed18b721bfac7a9",
+    "destinations": [
+      "images/workshops/mushroom-in-hand.jpeg"
+    ],
+    "correction": null
+  },
+  {
+    "source": "images/workshops-gallery/workshops-adults/WhatsApp Image 2026-06-15 at 15.52.32 (2).jpeg",
+    "sha256_original": "ee69235cd42400f4c1be11bef8bbf3d0c89c9260c580550f118ac7aaaf1a841b",
+    "destinations": [
+      "images/workshops/mushroom-growing-in-pine-needles.jpeg"
+    ],
+    "correction": null
+  },
+  {
+    "source": "images/workshops-gallery/workshops-adults/WhatsApp Image 2026-06-15 at 15.52.32 (3).jpeg",
+    "sha256_original": "3d2338904f3f7b1fd6dc426b321341edf720f5e1485a97f05ec043f7142aba81",
+    "destinations": [
+      "images/workshops/forest-mushroom-closeup.jpeg"
+    ],
+    "correction": null
+  },
+  {
+    "source": "images/workshops-gallery/workshops-adults/WhatsApp Image 2026-06-15 at 15.52.32.jpeg",
+    "sha256_original": "5141668feef7ddf77a3fdaac886e1b7daaea82f791f33a860c02bcff9710311c",
+    "destinations": [
+      "images/workshops/oren-with-mushroom-basket.jpeg"
+    ],
+    "correction": null
+  },
+  {
+    "source": "images/workshops-gallery/workshops-adults/WhatsApp Image 2026-06-15 at 15.52.33.jpeg",
+    "sha256_original": "92e126efd6a4479487314ff8545471dec2a0360c6cb026eb2ff7ad2231bf5cb8",
+    "destinations": [
+      "images/workshops/mushroom-stem-in-hand.jpeg"
+    ],
+    "correction": null
+  },
+  {
+    "source": "images/workshops-gallery/workshops-adults/WhatsApp Image 2026-06-15 at 15.52.34 (1).jpeg",
+    "sha256_original": "670b0e180dfaffb76850bb9f62ec97ae135b1aa841fc46f8684e288368dafb44",
+    "destinations": [
+      "images/workshops/hands-holding-foraged-mushrooms.jpeg"
+    ],
+    "correction": null
+  },
+  {
+    "source": "images/workshops-gallery/workshops-adults/WhatsApp Image 2026-06-15 at 15.52.34 (2).jpeg",
+    "sha256_original": "46bc8d7a19fbfe58bcab66f40fcb9fa6431d1539d788efc5c75ddc3915d7e89b",
+    "destinations": [
+      "images/workshops/oren-presenting-foraged-mushrooms.jpeg"
+    ],
+    "correction": null
+  },
+  {
+    "source": "images/workshops-gallery/workshops-adults/WhatsApp Image 2026-06-15 at 15.52.34.jpeg",
+    "sha256_original": "1cb63d221400b9df9b7dca1818546c45d80a170e94375748ce0a378b9c1784c3",
+    "destinations": [
+      "images/workshops/foraged-mushrooms-in-hands.jpeg"
+    ],
+    "correction": null
+  },
+  {
+    "source": "images/workshops-gallery/workshops-adults/WhatsApp Image 2026-06-15 at 15.52.35 (1).jpeg",
+    "sha256_original": "42c28b302c29709b5ebe8af053c39f619a6d9245e3fa8e10b09f5b594940edb6",
+    "destinations": [
+      "images/workshops/wild-herb-on-rock.jpeg",
+      "images/home-gallery/wild-herb-on-rock.jpeg"
+    ],
+    "correction": null
+  },
+  {
+    "source": "images/workshops-gallery/workshops-adults/WhatsApp Image 2026-06-15 at 15.52.35 (2).jpeg",
+    "sha256_original": "a7df6bcd17eb8cda2fc4263b55ab2405b6cd6ce0bf70c49d426d4a3285ae4098",
+    "destinations": [
+      "images/workshops/mushroom-cluster-in-hand.jpeg"
+    ],
+    "correction": null
+  },
+  {
+    "source": "images/workshops-gallery/workshops-adults/WhatsApp Image 2026-06-15 at 15.52.35 (3).jpeg",
+    "sha256_original": "009b0ec62ec86e9f42c2511e5c5e6260ab42a7739dc5adc17343e0568d26c76b",
+    "destinations": [
+      "images/workshops/herbal-extracts-in-basket.jpeg"
+    ],
+    "correction": null
+  },
+  {
+    "source": "images/workshops-gallery/workshops-adults/WhatsApp Image 2026-06-15 at 15.52.35.jpeg",
+    "sha256_original": "2a33ad2889f16a68a9a7af0aa29ded3645daf11a4725700cbb8258a456024679",
+    "destinations": [
+      "images/workshops/oren-foraging-with-basket.jpeg"
+    ],
+    "correction": null
+  },
+  {
+    "source": "images/workshops-gallery/workshops-adults/WhatsApp Image 2026-06-15 at 15.52.36 (1).jpeg",
+    "sha256_original": "9b8bfbba02f6eafc196310097dd58a8fd81293f6b5598842bdddd9681352b799",
+    "destinations": [
+      "images/workshops/outdoor-workshop-circle.jpeg"
+    ],
+    "correction": null
+  },
+  {
+    "source": "images/workshops-gallery/workshops-adults/WhatsApp Image 2026-06-15 at 15.52.36 (2).jpeg",
+    "sha256_original": "11a06247dbbacf44734c0d3e383b33e0ec85fcd267b68283b59b4d10bd294507",
+    "destinations": [
+      "images/workshops/herbal-workshop-in-meadow.jpeg"
+    ],
+    "correction": null
+  },
+  {
+    "source": "images/workshops-gallery/workshops-adults/WhatsApp Image 2026-06-15 at 15.52.36 (3).jpeg",
+    "sha256_original": "a9a9eb3a0b22836a14fb4865f846fcfce6efccf3cb6fd41483211a3918fdc45c",
+    "destinations": [
+      "images/workshops/oren-foraging-in-forest.jpeg"
+    ],
+    "correction": null
+  },
+  {
+    "source": "images/workshops-gallery/workshops-adults/WhatsApp Image 2026-06-15 at 15.52.36.jpeg",
+    "sha256_original": "0725434789deb5abd4abe84a4a4fa12107f2c0d40aebb238e48ae541e6d929da",
+    "destinations": [
+      "images/workshops/oren-leading-outdoor-workshop.jpeg"
+    ],
+    "correction": null
+  },
+  {
+    "source": "images/workshops-gallery/workshops-adults/WhatsApp Image 2026-06-22 at 16.36.31.jpeg",
+    "sha256_original": "5520d2ba95a96f5ac91c1b40dff722eba5790243b3df32a0da577cad0c78128a",
+    "destinations": [
+      "images/workshops/harvesting-herbs-in-garden.jpeg",
+      "images/home-gallery/harvesting-herbs-in-garden.jpeg"
+    ],
+    "correction": null
+  },
+  {
+    "source": "images/workshops-gallery/workshops-kids/WhatsApp Image 2026-06-15 at 15.52.27.jpeg",
+    "sha256_original": "072bcfd95ac565ce7c2a30c226f09f4969286a95f8e05049890a2a09e7d13de3",
+    "destinations": [
+      "images/workshops-kids/children-herb-workshop-circle.jpeg"
+    ],
+    "correction": null
+  },
+  {
+    "source": "images/workshops-gallery/workshops-kids/WhatsApp Image 2026-06-15 at 15.52.30.jpeg",
+    "sha256_original": "2442197aa5cbeb981047e6e128f8264ad3bd22910d3526c3d2e65f900b36a330",
+    "destinations": [
+      "images/workshops-kids/children-outdoor-herbal-activity.jpeg"
+    ],
+    "correction": null
+  },
+  {
+    "source": "images/workshops-gallery/workshops-kids/WhatsApp Image 2026-06-22 at 16.31.47.jpeg",
+    "sha256_original": "034ec0f866c3e662e35876fe52ca24ef6315ed943036a0581ed6ca07cdfdde9a",
+    "destinations": [
+      "images/workshops-kids/children-plant-identification-game.jpeg"
+    ],
+    "correction": null
+  },
+  {
+    "source": "images/workshops-gallery/workshops-kids/WhatsApp Image 2026-06-22 at 16.32.24.jpeg",
+    "sha256_original": "94d2d07fd32c60f1022c0c31a48306c4aada0594f931c0045bcfdbf5d42b4300",
+    "destinations": [
+      "images/workshops-kids/children-planting-herb-garden.jpeg"
+    ],
+    "correction": null
+  },
+  {
+    "source": "images/workshops-gallery/workshops-kids/WhatsApp Image 2026-06-22 at 16.32.43.jpeg",
+    "sha256_original": "4a4d63fba5d22f23d8e8d7f8d78e47124cfb359e3eb0410c1e1ed215a47c4845",
+    "destinations": [
+      "images/workshops-kids/child-arranging-flowers.jpeg"
+    ],
+    "correction": null
+  }
+]

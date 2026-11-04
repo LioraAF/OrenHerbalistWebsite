@@ -24,6 +24,7 @@
     <div class="feedback-actions">
       <button class="feedback-button feedback-button-primary" type="button" data-feedback-select>הוספת הערה</button>
       <button class="feedback-button" type="button" data-feedback-export>ייצוא JSON</button>
+      <button class="feedback-button feedback-button-danger" type="button" data-feedback-clear-all>מחיקת כל ההערות</button>
       <button class="feedback-button" type="button" data-feedback-exit>יציאה ממצב הערות</button>
     </div>
     <form class="feedback-form" data-feedback-form hidden>
@@ -68,6 +69,7 @@
   panel.querySelector(".feedback-close").addEventListener("click", () => panel.classList.remove("is-open"));
   panel.querySelector("[data-feedback-select]").addEventListener("click", startSelecting);
   panel.querySelector("[data-feedback-export]").addEventListener("click", exportNotes);
+  panel.querySelector("[data-feedback-clear-all]").addEventListener("click", clearAllNotes);
   panel.querySelector("[data-feedback-exit]").addEventListener("click", exitFeedbackMode);
   panel.querySelector("[data-feedback-cancel]").addEventListener("click", closeForm);
   form.addEventListener("submit", saveNote);
@@ -206,7 +208,22 @@
     }
   }
 
+  function clearAllNotes() {
+    if (!notes.length || !window.confirm("האם למחוק את כל ההערות מכל עמודי האתר השמורות בדפדפן הזה? לא ניתן לבטל את המחיקה.")) {
+      return;
+    }
+
+    notes = [];
+    selecting = false;
+    document.body.classList.remove("feedback-selecting");
+    closeForm();
+    persistNotes();
+    renderNotes();
+    showToast("כל ההערות נמחקו");
+  }
+
   function renderNotes() {
+    panel.querySelector("[data-feedback-clear-all]").disabled = notes.length === 0;
     const pageNotes = notes.filter((note) => note.page === page);
 
     if (!pageNotes.length) {
@@ -273,7 +290,7 @@
       if (current.id) {
         part += `#${CSS.escape(current.id)}`;
         parts.unshift(part);
-        break;
+        return parts.join(" > ");
       }
 
       const classes = [...current.classList].filter((name) => !name.startsWith("feedback-"));

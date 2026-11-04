@@ -95,6 +95,11 @@
   font-weight: 700;
 }
 
+.feedback-button:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+
 .feedback-button-primary {
   background: #26351f;
   color: #fff;

@@ -130,7 +130,7 @@ p {
   min-height: 82px;
   padding: 1rem clamp(1.25rem, 4vw, 4rem);
   background: linear-gradient(0deg, rgba(239, 229, 210, 0.98), rgba(var(--soil-brown-rgb), 0.36));
-  border-bottom: 1.5px solid var(--olive-dark);
+  border-bottom: 1.5px solid var(--muted);
   backdrop-filter: blur(14px);
 }
 
@@ -265,9 +265,16 @@ p {
 
 .hero-home {
   position: relative;
+  background-position: center, center top;
+  background-repeat: no-repeat;
   background-image:
     linear-gradient(rgba(26, 31, 18, 0.08), rgba(239, 229, 210, 0.12)),
     url("../images/Lavender.webp");
+}
+
+.hero-home,
+.page-hero-image {
+  border-bottom: 1.5px solid var(--muted);
 }
 
 .hero-content {
@@ -281,6 +288,13 @@ p {
   margin-top: 1.4rem;
   color: #4b4237;
   font-size: clamp(1.05rem, 2vw, 1.3rem);
+}
+
+@media (min-width: 921px) {
+  .home-page .hero-content p:not(.eyebrow) {
+    max-width: 1100px;
+    text-wrap: balance;
+  }
 }
 
 .eyebrow {
@@ -302,39 +316,46 @@ p {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 48px;
-  padding: 0.75rem 1.45rem;
-  border: 1px solid var(--olive);
+  min-height: 46px;
+  padding: 10px 19px;
+  border: 0;
   border-radius: 999px;
-  font-weight: 700;
-  transition: background 180ms ease, color 180ms ease, border-color 180ms ease, transform 180ms ease;
-}
-
-.button:hover {
-  transform: translateY(-1px);
+  color: var(--olive);
+  background: transparent;
+  font-weight: 400;
+  transition: background 180ms ease;
 }
 
 .button.primary {
-  background: var(--olive);
-  color: #fffaf0;
+  background: rgba(79, 93, 58, 0.063);
 }
 
-.button.primary:hover {
-  background: var(--olive-dark);
-  border-color: var(--olive-dark);
+.button:hover {
+  background: rgba(79, 93, 58, 0.1);
 }
 
-.button.secondary {
-  background: rgba(255, 252, 245, 0.55);
-  color: var(--olive-dark);
+.button:focus-visible {
+  outline: 2px solid var(--olive);
+  outline-offset: 3px;
 }
 
-.button.secondary:hover {
-  background: var(--cream-deep);
+.hero-actions {
+  gap: 4px;
+  padding-block: 6px;
 }
 
 .section-pad {
   padding: clamp(4rem, 9vw, 8rem) clamp(1.25rem, 5vw, 5rem);
+}
+
+@media (min-width: 921px) {
+  .home-page main > .section-pad {
+    padding-block: clamp(2rem, 4.5vw, 4rem);
+  }
+
+  .home-page main > .intro-section {
+    padding-bottom: clamp(4rem, 9vw, 8rem);
+  }
 }
 
 .intro-section,
@@ -370,17 +391,14 @@ p {
 }
 
 .story-section {
-  display: grid;
-  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
-  align-items: center;
-  gap: clamp(2rem, 6vw, 6rem);
+  display: flow-root;
   max-width: 1240px;
   margin: 0 auto;
 }
 
 .story-media {
-  --story-main-image: url("../images/story-gallery/herbs-hands.jpg");
-  --story-small-image: url("../images/story-gallery/herb-basket-steps.jpg");
+  --story-main-image: url("../images/home-gallery/oren-holding-freshly-harvested-herbs-1824.jpg");
+  --story-small-image: url("../images/home-gallery/fresh-herb-harvest-basket-1794.jpg");
   position: relative;
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 0.72fr);
@@ -399,7 +417,7 @@ p {
   opacity: 1;
   transform: translateX(0) scale(1);
   transform-origin: center bottom;
-  transition: transform 1000ms cubic-bezier(0.23, 1, 0.32, 1);
+  transition: transform 1500ms cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .story-media.is-pushing .story-photo-main {
@@ -412,14 +430,14 @@ p {
   min-height: 0;
   pointer-events: none;
   transform-origin: center center;
-  transition: transform 1000ms cubic-bezier(0.23, 1, 0.32, 1);
+  transition: transform 1500ms cubic-bezier(0.23, 1, 0.32, 1);
   will-change: transform;
 }
 
 .story-photo-main {
   transition:
-    transform 1000ms cubic-bezier(0.23, 1, 0.32, 1),
-    opacity 1000ms ease;
+    transform 1500ms cubic-bezier(0.23, 1, 0.32, 1),
+    opacity 1500ms ease;
   background-image:
     linear-gradient(rgba(41, 53, 31, 0.08), rgba(239, 229, 210, 0.08)),
     var(--story-main-image);
@@ -432,25 +450,121 @@ p {
 }
 
 .story-copy {
-  display: grid;
-  gap: 1.35rem;
+  display: flow-root;
+}
+
+.story-copy > .story-media + div {
+  margin-bottom: 1.35rem;
+}
+
+.story-text {
+  display: block;
+  align-content: normal;
+}
+
+.story-text > p + p,
+.story-text > h3 {
+  margin-top: 1.15rem;
+}
+
+.story-text > h3 {
+  margin-bottom: 1.15rem;
+  color: var(--olive-dark);
+}
+
+.story-copy > .story-media {
+  --story-photo-offset: 104px;
+  float: left;
+  width: calc((100% - clamp(2rem, 6vw, 6rem)) * 0.475);
+  margin: calc(0.4rem + var(--story-photo-offset)) clamp(2rem, 6vw, 6rem) 1.5rem 0;
+}
+
+@media (max-width: 920px) {
+  .story-copy {
+    display: flex;
+    flex-direction: column;
+    gap: 1.35rem;
+  }
+
+  .story-copy > .story-media + div {
+    order: 0;
+    margin-bottom: 0;
+  }
+
+  .story-text {
+    display: contents;
+  }
+
+  .story-text > p,
+  .story-text > h3 {
+    order: 3;
+    margin: 0;
+  }
+
+  .story-text > p:first-child,
+  .story-text > p:nth-of-type(2),
+  .story-text > .story-video-invitation {
+    order: 1;
+  }
+
+  .story-copy > .story-media {
+    order: 2;
+    float: none;
+    width: 100%;
+    margin: 0 0 1.35rem;
+  }
+
+  .story-copy > .story-callout {
+    order: 4;
+  }
 }
 
 .story-callout {
+  position: relative;
+  clear: both;
   display: grid;
+  justify-items: center;
+  text-align: center;
   gap: 0.7rem;
   padding-block: 1.35rem;
-  border-block: 1px solid rgba(79, 93, 58, 0.28);
+  margin-top: calc(1.35rem + 8px);
+}
+
+.story-callout::before,
+.story-callout::after {
+  position: absolute;
+  left: 50%;
+  width: 75%;
+  height: 1px;
+  content: "";
+  background: linear-gradient(to right, transparent, rgba(79, 93, 58, 0.28) 10%, rgba(79, 93, 58, 0.28) 90%, transparent);
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.story-callout::before {
+  top: 0;
+}
+
+.story-callout::after {
+  bottom: 0;
 }
 
 .story-callout p {
   color: var(--muted);
 }
 
-.story-callout a {
+.story-callout a,
+.story-video-link,
+.clinic-link {
   width: fit-content;
   color: var(--clay-dark);
   font-weight: 700;
+}
+
+.clinic-link {
+  justify-self: center;
+  text-align: center;
 }
 
 .whatsapp-invitation {
@@ -464,7 +578,16 @@ p {
   border-block: 1px solid rgba(79, 93, 58, 0.28);
 }
 
-.whatsapp-invitation p {
+.whatsapp-invitation ul {
+  display: grid;
+  gap: 0.35rem;
+  padding-inline-start: 1.3rem;
+  margin: 0;
+  text-align: start;
+}
+
+.whatsapp-invitation p,
+.whatsapp-invitation li {
   color: var(--muted);
 }
 
@@ -515,6 +638,27 @@ p {
 .image-band-copy p {
   color: rgba(255, 248, 235, 0.78);
   font-size: 1.05rem;
+}
+
+.image-band-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  min-height: 48px;
+  padding: 0.75rem 2.375rem;
+  border: 1px solid rgba(255, 248, 235, 0.4);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.094);
+  color: #fff8eb;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 180ms ease, transform 180ms ease;
+}
+
+.image-band-link:hover {
+  background: rgba(255, 255, 255, 0.17);
+  transform: translateY(-1px);
 }
 
 .section-heading {
@@ -717,17 +861,6 @@ p {
   transform: translateY(-50%);
 }
 
-.footer-link-row a:last-of-type::after {
-  position: absolute;
-  inset-inline-end: 0;
-  top: 50%;
-  width: 1px;
-  height: 1rem;
-  content: "";
-  background: rgba(79, 93, 58, 0.46);
-  transform: translateY(-50%);
-}
-
 .footer-link-row a:hover,
 .footer-contact a:hover {
   color: var(--clay-dark);
@@ -737,11 +870,11 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: clamp(1.1rem, 2.5vw, 1.8rem);
+  gap: 16px;
 }
 
 .footer-sign {
-  --footer-sign-size: clamp(38px, 4vw, 52px);
+  --footer-sign-size: 46px;
   display: grid;
   place-items: center;
   width: var(--footer-sign-size);
@@ -753,34 +886,18 @@ p {
 
 .footer-icon {
   display: block;
-  width: 100%;
-  height: 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  clip-path: circle(41% at 50% 50%);
-  opacity: 0.9;
+  width: 30px;
+  height: 30px;
+  background: #4b4237;
+  mask: var(--footer-icon-image) center / contain no-repeat;
+  -webkit-mask: var(--footer-icon-image) center / contain no-repeat;
 }
 
-.footer-sign-facebook .footer-icon {
-  background-image: url("../images/icons/facebook.png");
-}
-
-.footer-sign-whatsapp .footer-icon {
-  background-image: url("../images/icons/whatsapp.png");
-}
-
-.footer-sign-phone .footer-icon {
-  width: 86%;
-  height: 86%;
-  background-image: url("../images/icons/phone.png");
-  background-size: 124% auto;
-  clip-path: circle(46% at 50% 50%);
-}
-
-.footer-sign-instagram .footer-icon {
-  background-image: url("../images/icons/instagram.png");
-}
+.footer-sign-facebook { --footer-icon-image: url("../images/icons/facebook-footer-thin.svg?v=16"); }
+.footer-sign-whatsapp { --footer-icon-image: url("../images/icons/whatsapp-footer-thin.svg?v=balanced"); }
+.footer-sign-whatsapp .footer-icon { width: 28px; height: 28px; }
+.footer-sign-phone { --footer-icon-image: url("../images/icons/phone-footer-thin.svg?v=16"); }
+.footer-sign-instagram { --footer-icon-image: url("../images/icons/instagram-footer-thin.svg?v=16"); }
 
 .footer-sign:hover {
   transform: translateY(-2px);
@@ -818,7 +935,7 @@ p {
   }
 
   .footer-sign {
-    --footer-sign-size: clamp(34px, 3.5vw, 48px);
+    --footer-sign-size: 46px;
   }
 }
 
@@ -843,11 +960,11 @@ p {
   }
 
   .footer-signs {
-    gap: clamp(0.8rem, 1.6vw, 1.2rem);
+    gap: 16px;
   }
 
   .footer-sign {
-    --footer-sign-size: clamp(30px, 3vw, 42px);
+    --footer-sign-size: 46px;
   }
 }
 
@@ -902,7 +1019,8 @@ p {
   padding: clamp(3rem, 8vw, 7rem) clamp(1.25rem, 6vw, 5rem);
 }
 
-.page-hero-copy h1 {
+.page-hero-copy h1,
+.home-page .hero-content h1 {
   font-size: clamp(3rem, 7vw, 6.5rem);
 }
 
@@ -941,7 +1059,7 @@ p {
 .workshops-photo {
   background-image:
     linear-gradient(rgba(41, 53, 31, 0.08), rgba(239, 229, 210, 0.1)),
-    url("../images/workshops-gallery/workshops-adults/WhatsApp%20Image%202026-06-15%20at%2015.52.35%20%281%29.jpeg");
+    url("../images/workshops/wild-herb-on-rock.jpeg");
   background-position: center 36%;
 }
 
@@ -974,16 +1092,6 @@ p {
   left: 0;
   width: max(100%, var(--videos-header-min-width));
   height: 100%;
-}
-
-.workshops-hero .button.primary {
-  background: var(--clay-dark);
-  border-color: var(--clay-dark);
-}
-
-.workshops-hero .button.primary:hover {
-  background: var(--clay);
-  border-color: var(--clay);
 }
 
 @media (max-width: 1180px) {
@@ -1032,6 +1140,104 @@ p {
   color: var(--muted);
 }
 
+.treatment-packages.section-pad {
+  padding-top: clamp(2.75rem, 5vw, 4.5rem);
+  padding-bottom: 0;
+}
+
+.treatment-packages + .section-pad {
+  padding-top: clamp(4rem, 7vw, 6.5rem);
+}
+
+.treatment-packages-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.25rem;
+  max-width: 900px;
+  margin-inline: auto;
+}
+
+.treatment-packages-layout > h2 {
+  text-align: center;
+  font-size: clamp(1.65rem, 2.5vw, 2.1rem);
+}
+
+.treatment-package-plans {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  padding-block: 1.25rem;
+  border-block: 1px solid var(--line);
+}
+
+.treatment-package {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 1rem;
+  padding: 0 clamp(1rem, 2.5vw, 2rem);
+}
+
+.treatment-package:first-child {
+  padding-top: 0;
+}
+
+.treatment-package + .treatment-package {
+  border-inline-start: 1px solid var(--line);
+}
+
+.treatment-package h3 {
+  margin-bottom: 0.2rem;
+}
+
+.treatment-package p,
+.treatment-packages-notes p {
+  color: var(--muted);
+}
+
+.treatment-package-price {
+  color: var(--olive-dark);
+  font-family: var(--font-heading);
+  font-size: clamp(1.45rem, 2vw, 1.7rem);
+  white-space: nowrap;
+}
+
+.treatment-packages-notes {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  gap: 0.35rem 1.5rem;
+  padding-top: 0;
+}
+
+.treatment-packages-notes .treatment-packages-discount {
+  color: var(--olive-dark);
+  font-family: var(--font-heading);
+}
+
+@media (max-width: 650px) {
+  .treatment-packages-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1rem;
+  }
+
+  .treatment-package-plans {
+    grid-template-columns: 1fr;
+    padding-block: 0;
+  }
+
+  .treatment-package,
+  .treatment-package:first-child {
+    padding: 0.85rem 0;
+  }
+
+  .treatment-package + .treatment-package {
+    border-inline-start: 0;
+    border-top: 1px solid var(--line);
+  }
+}
+
 .products-intro {
   display: grid;
   grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
@@ -1064,9 +1270,11 @@ p {
   border-radius: 8px;
   background-image:
     linear-gradient(rgba(41, 53, 31, 0.05), rgba(239, 229, 210, 0.08)),
-    var(--product-rotation-image, url("../images/products-gallery/WhatsApp%20Image%202026-06-10%20at%2011.22.43%20%281%29.jpeg"));
+    var(--product-rotation-image, url("../images/products-gallery/herbal-bottles-at-market.jpeg"));
   background-position: center;
-  background-size: cover;
+  background-size: 100% 100%, cover;
+  background-repeat: no-repeat;
+  background-color: var(--cream);
   opacity: 1;
   transform: translateX(0);
   transition:
@@ -1087,7 +1295,8 @@ p {
 
 @media (min-width: 1061px) {
   .products-intro {
-    grid-template-columns: minmax(0, 0.72fr) minmax(0, 1.6fr);
+    grid-template-columns: minmax(0, 0.58fr) minmax(0, 1.74fr);
+    gap: clamp(0.375rem, 0.75vw, 0.75rem);
     max-width: min(1480px, calc(100vw - 8rem));
   }
 
@@ -1102,9 +1311,9 @@ p {
 
 @media (min-width: 1061px) and (max-width: 1500px) {
   .products-intro {
-    grid-template-columns: minmax(210px, 0.46fr) minmax(0, 2.05fr);
+    grid-template-columns: minmax(190px, 0.38fr) minmax(0, 2.13fr);
     align-items: start;
-    gap: clamp(0.9rem, 2vw, 2.25rem);
+    gap: clamp(0.25rem, 0.5vw, 0.5625rem);
     max-width: min(1360px, calc(100vw - 2.5rem));
   }
 
@@ -1142,8 +1351,73 @@ p {
 }
 
 .apothecary-section {
+  --products-section-gap: clamp(7rem, 10vw, 10rem);
+  padding-bottom: 30px;
+  --apothecary-heading-space: clamp(2.667rem, 6vw, 5.333rem);
+  padding-top: var(--apothecary-heading-space);
   background: linear-gradient(180deg, rgba(226, 211, 189, 0.54), rgba(239, 229, 210, 0));
+  overflow-x: clip;
 }
+
+.apothecary-section > .section-heading {
+  margin-bottom: calc(var(--apothecary-heading-space) + 18px);
+}
+
+.product-roller {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+  max-width: 1180px;
+  margin: 0 auto calc(4.5rem + 29px);
+  isolation: isolate;
+  padding-inline: clamp(48px, 5vw, 74px);
+}
+.product-roller::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -42px;
+  bottom: -30px;
+  left: 50%;
+  width: 100vw;
+  transform: translateX(-50%);
+  background: linear-gradient(to bottom, transparent, rgba(117, 107, 92, 0.2) 3rem, rgba(117, 107, 92, 0.2) calc(100% - 3rem), transparent);
+  pointer-events: none;
+}
+.product-roller-heading { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 0; }
+.product-roller-heading h3 { font-size: clamp(1.4rem, 2.5vw, 2rem); }
+.product-roller-controls { display: flex; gap: 0.5rem; }
+.product-roller-controls button { position: absolute; top: 3.5rem; bottom: 1rem; z-index: 2; width: clamp(40px, 4vw, 64px); border: 0; border-radius: 0; color: var(--muted); background: transparent; font: inherit; font-size: 3rem; font-weight: 400; cursor: pointer; transition: background 180ms ease; }
+.product-roller-controls button { color: var(--muted); }
+.product-roller-controls button { transition: transform 180ms ease; }
+.product-roller-controls button:hover, .product-roller-controls button:focus-visible { transform: scale(1.12); }
+@media (prefers-reduced-motion: reduce) { .product-roller-controls button { transition: none; } }
+.product-roller-controls [data-product-step="-1"] { right: 0; }
+.product-roller-controls [data-product-step="1"] { left: 0; }
+.product-roller-track { display: grid; grid-auto-flow: column; grid-auto-columns: 240px; gap: 1.5rem; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 1rem; }
+.product-roller-track .preparation-card { scroll-snap-align: start; min-width: 0; }
+.product-roller-track {
+  width: min(100%, calc(960px + 4.5rem));
+  margin-inline: auto;
+  scrollbar-width: none;
+  padding-block: 1rem;
+}
+.product-roller-track::-webkit-scrollbar { display: none; }
+.product-scrollbar { position: relative; width: 65%; height: 28px; margin: -8px auto 0; touch-action: none; cursor: pointer; }
+.product-scrollbar::before { content: ""; position: absolute; inset: 11px 0 12px; background: rgba(117, 107, 92, 0.2); border-radius: 10px; }
+.product-scrollbar-thumb { position: absolute; top: 11px; height: 5px; border-radius: 10px; background: var(--muted); cursor: grab; }
+.product-scrollbar:active .product-scrollbar-thumb { cursor: grabbing; }
+.product-scrollbar[aria-disabled="true"] { opacity: 0.45; cursor: default; }
+.product-roller-track .preparation-card,
+.product-roller-track .preparation-card:hover { border: 2px solid rgb(var(--soil-brown-rgb)); box-shadow: none; }
+.product-roller-track .preparation-card h3 { font-size: clamp(1.3rem, 2vw, 1.65rem); }
+.apothecary-section > .preparation-grid { display: block; }
+.apothecary-section .product-roller:last-child { margin-bottom: 0; }
+@media (min-width: 601px) {
+  .product-roller-track .preparation-card h3 { font-size: 1.65rem; }
+  .product-roller-track .preparation-copy { padding: 1.2rem; }
+}
+@media (max-width: 600px) { .product-roller-track { grid-auto-columns: 100%; } }
 
 .preparation-grid {
   display: grid;
@@ -1176,6 +1450,8 @@ p {
 }
 
 .preparation-image {
+  position: relative;
+  overflow: hidden;
   aspect-ratio: 1 / 1;
   background-image:
     linear-gradient(rgba(41, 53, 31, 0.06), rgba(239, 229, 210, 0.08)),
@@ -1185,9 +1461,61 @@ p {
   border-bottom: 1px solid rgba(79, 93, 58, 0.22);
 }
 
+.prep-skin { --prep-image: url("../images/products/main/yellow-flowers-in-white-bowl-1942.jpg"); }
+.prep-immune { --prep-image: url("../images/products/main/ashwagandha-roots.webp"); }
+.prep-throat { --prep-image: url("../images/products/main/myrrh.jpeg"); }
+.prep-winter { --prep-image: url("../images/products/main/hawthorn.jpeg"); }
+.prep-breathing { --prep-image: url("../images/products/main/scented-geranium.png"); }
+.prep-warming-oil { --prep-image: url("../images/products/main/ashwagandha-roots.webp"); }
+.prep-ears { --prep-image: url("../images/products/main/valerian.webp"); }
+.prep-hormonal { --prep-image: url("../images/products/main/wild-lettuce.jpeg"); }
+
+.preparation-image::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--prep-bottle-image, url("../images/products/hover/herbal-extract-bottle-display.jpeg")) center 55% / cover no-repeat;
+  transform: translateY(101%);
+  transition: transform 825ms cubic-bezier(.22,.61,.36,1);
+  pointer-events: none;
+}
+
+.prep-mouth { --prep-image: url("../images/products/main/myrrh.jpeg"); }
+.prep-calming { --prep-image: url("../images/products/main/valerian.webp"); }
+.product-roller:has(+ .internal-products-note) { margin-bottom: 2.5rem; }
+.internal-products-note { color: var(--muted); font-weight: 900; -webkit-text-stroke: 0.3px currentColor; text-align: center; margin: 0.75rem auto 2rem; }
+.internal-products-note + .winter-kit { margin-top: calc(6rem + 29px); }
+.winter-kit { max-width: 760px; margin: 2rem auto 0; padding: 1.5rem; border-block: 1px solid var(--line); background: rgba(117, 107, 92, 0.07); }
+.winter-kit summary { cursor: pointer; color: var(--olive-dark); font-size: 1.5rem; }
+.winter-kit summary span { display: inline-block; margin-inline-start: 1rem; color: var(--clay-dark); font-size: 1rem; }
+.winter-kit ul { margin-block: 1.5rem; padding-inline-start: 1.5rem; }
+.winter-kit p { color: var(--muted); margin-bottom: 1rem; }
+.preparation-card:hover .preparation-image::before,
+.preparation-card:focus-within .preparation-image::before {
+  transform: translateY(0);
+}
+.preparation-card:focus-visible { outline: 2px solid var(--olive); outline-offset: 3px; }
+@media (prefers-reduced-motion: reduce) {
+  .preparation-image::before { transition: none; }
+}
+
 .preparation-copy {
   padding: clamp(1.2rem, 3vw, 1.55rem);
 }
+
+.product-roller-track .preparation-card { display: flex; flex-direction: column; }
+.product-roller-track .preparation-image { flex-shrink: 0; }
+.product-roller-track .preparation-copy { display: flex; flex-direction: column; flex: 1; }
+.preparation-price {
+  margin-top: auto;
+  padding-block: 8px;
+  border-block: 1px solid rgba(117, 107, 92, 0.22);
+  color: var(--muted);
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: center;
+}
+.preparation-copy > p:last-of-type { margin-bottom: 18px; }
 
 .preparation-type {
   margin-bottom: 0.6rem;
@@ -1208,11 +1536,12 @@ p {
 }
 
 .prep-first-aid {
-  --prep-image: url("../images/products-gallery/WhatsApp%20Image%202026-06-10%20at%2011.23.58%20%281%29.jpeg");
+  --prep-image: url("https://images.unsplash.com/photo-1714254258098-05246ccb6cbc?auto=format&fit=crop&w=1600&q=82");
+  --prep-bottle-image: url("../images/products/hover/herbal-balm-with-berries.jpeg");
 }
 
 .prep-muscles {
-  --prep-image: url("https://images.unsplash.com/photo-1525577288853-c6f0a020a162?auto=format&fit=crop&w=900&q=82");
+  --prep-image: url("../images/products/main/C-camphora1-fred-nation-scaled.jpg");
 }
 
 .prep-cycle {
@@ -1224,21 +1553,21 @@ p {
 }
 
 .prep-repellent {
-  --prep-image: url("../images/products-gallery/Citronela.png");
+  --prep-image: url("../images/products/main/scented-geranium.png");
 }
 
 .prep-hawthorn {
-  --prep-image: url("../images/products-gallery/Uzrar.jpeg");
+  --prep-image: url("../images/products/main/hawthorn.jpeg");
   --prep-position: 38% center;
   --prep-size: auto 112%;
 }
 
 .prep-roots {
-  --prep-image: url("../images/products-gallery/ashwagandha-roots-500x500.webp");
+  --prep-image: url("../images/products/main/ashwagandha-roots.webp");
 }
 
 .prep-perfume {
-  --prep-image: url("../images/products-gallery/Myrrh.jpeg");
+  --prep-image: url("../images/products/main/myrrh.jpeg");
   --prep-position: center 64%;
   --prep-size: 128%;
 }
@@ -1248,39 +1577,96 @@ p {
 }
 
 .prep-lettuce {
-  --prep-image: url("../images/products-gallery/Lactuca-serriola.jpeg");
+  --prep-image: url("../images/products/main/wild-lettuce.jpeg");
   --prep-position: center 42%;
 }
 
 .prep-valerian {
-  --prep-image: url("../images/products-gallery/Valerian.webp");
+  --prep-image: url("../images/products/main/valerian.webp");
 }
 
 .gift-section {
   display: grid;
   grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
-  align-items: center;
+  align-items: start;
   gap: clamp(2rem, 6vw, 5rem);
   max-width: 1180px;
   margin: 0 auto;
 }
 
 .gift-image {
-  min-height: clamp(320px, 42vw, 520px);
+  position: relative;
+  min-height: 0;
+  aspect-ratio: 1.25 / 1;
   border: 1px solid rgba(79, 93, 58, 0.32);
   border-radius: 8px;
   background-image:
     linear-gradient(rgba(41, 53, 31, 0.05), rgba(239, 229, 210, 0.07)),
-    url("../images/products-gallery/gifts/PHOTO-2026-09-15-01-11-36.jpg");
+    url("../images/gifts/herbal-gift-set-in-dappled-light.jpg");
   background-position: center 58%;
-  background-size: 120%;
+  background-size: cover;
   background-repeat: no-repeat;
   box-shadow: 0 28px 68px rgba(55, 45, 30, 0.16);
+}
+
+.gift-photo-arrow { position: absolute; z-index: 2; top: 50%; transform: translateY(-50%); width: 36px; height: 66px; padding: 0; border: 0; background: transparent; color: var(--muted); font: inherit; font-size: 0; cursor: pointer; transition: scale 180ms ease; }
+.gift-photo-arrow::before { content: ""; display: block; width: 10px; height: 10px; margin: auto; border-top: 1px solid currentColor; border-right: 1px solid currentColor; transform: scaleY(2.5) rotate(-135deg); }
+.gift-photo-arrow-right::before { transform: scaleY(2.5) rotate(45deg); }
+.gift-image[data-photo="herbal-gift-box-overhead-1951.jpg"]::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: url("../images/gifts/herbal-gift-box-overhead-1951.jpg") 57% center / auto 120% no-repeat;
+  filter: brightness(1.1) saturate(1.12);
+  pointer-events: none;
+}
+
+.gift-image[data-photo="wrapped-herbal-gift-basket-1952.jpg"] {
+  background-position: center 10%;
+}
+.gift-photo-arrow:hover { scale: 1.12; }
+.gift-photo-arrow-right { right: -36px; }
+.gift-photo-arrow-left { left: -36px; }
+.gift-photo-status { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+@media (max-width: 600px) {
+  .gift-photo-arrow-right { right: 0; }
+  .gift-photo-arrow-left { left: 0; }
+  .gift-photo-arrow { color: var(--cream); }
 }
 
 .gift-copy {
   display: grid;
   gap: 1rem;
+}
+
+@media (min-width: 921px) {
+  .gift-section {
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.008fr);
+    gap: clamp(1rem, 3vw, 2.5rem);
+  }
+
+  .gift-copy {
+    position: relative;
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .gift-copy > .eyebrow {
+    position: absolute;
+    bottom: calc(100% + 1rem);
+    right: 0;
+    margin: 0;
+  }
+
+  .gift-image {
+    grid-column: 2;
+    grid-row: 1;
+    margin-top: 0;
+    width: 100%;
+    justify-self: start;
+    transform: none;
+  }
 }
 
 .gift-copy p:not(.eyebrow) {
@@ -1290,6 +1676,13 @@ p {
 
 .gift-copy .button {
   width: fit-content;
+  margin-top: 0.4rem;
+}
+
+.gift-inquiry-link {
+  justify-self: start;
+  margin-inline-start: 33.333%;
+  transform: translateX(33.333%);
   margin-top: 0.4rem;
 }
 
@@ -1306,8 +1699,55 @@ p {
   color: var(--muted);
 }
 
+.product-stockists {
+  max-width: 960px;
+  margin: 0 auto;
+  padding-top: clamp(7rem, 10vw, 10rem);
+  padding-bottom: 0;
+}
+.product-stockists + .gift-section {
+  padding-top: clamp(7rem, 10vw, 10rem);
+  padding-bottom: clamp(7rem, 10vw, 10rem);
+}
+@media (min-width: 921px) {
+  .product-stockists + .gift-section {
+    padding-top: calc(clamp(7rem, 10vw, 10rem) + 3rem);
+  }
+}
+.stockists-eyebrow { text-align: center; }
+.product-stockists h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); margin-bottom: 1rem; text-align: center; }
+.stockists-list { list-style: none; padding: 0; margin: 0; }
+.stockists-list li { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-block: 0.9rem; border-bottom: 1px solid var(--line); }
+.stockists-list h3 { font-size: 1.2rem; }
+.stockists-list p { color: var(--muted); margin: 0; }
+.stockists-list > li > a { text-decoration: underline; }
+.stockists-actions { display: flex; flex-shrink: 0; gap: 0.4rem; }
+.stockists-actions a { display: grid; place-items: center; width: 44px; height: 44px; }
+.stockists-actions img { width: 21px; height: 21px; object-fit: contain; }
+.stockists-actions a { color: var(--muted); }
+.stockists-actions a::before { content: ""; width: 21px; height: 21px; background: currentColor; mask: var(--stockist-icon) center / contain no-repeat; -webkit-mask: var(--stockist-icon) center / contain no-repeat; }
+.stockists-actions a:has(img[src$="message-circle-outline.svg"]) { --stockist-icon: url("../images/icons/message-circle-outline.svg"); }
+.stockists-actions a:has(img[src$="phone-outline.svg"]) { --stockist-icon: url("../images/icons/phone-outline.svg"); }
+.stockists-actions a:has(img[src$="instagram-outline.svg"]) { --stockist-icon: url("../images/icons/instagram-outline.svg"); }
+.stockists-actions img { display: none; }
+@media (max-width: 600px) { .stockists-list li { flex-wrap: wrap; } }
+
 .products-note {
-  padding-top: clamp(4rem, 8vw, 7rem);
+  padding-top: 4rem;
+  text-align: center;
+}
+
+.products-note p {
+  text-align: right;
+  max-width: none;
+  margin: 0 auto 1.25rem;
+  color: var(--muted);
+}
+
+.products-treatment-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .workshop-showcase,
@@ -1375,7 +1815,7 @@ p {
   border-radius: 8px;
   background-image:
     linear-gradient(rgba(41, 53, 31, 0.06), rgba(239, 229, 210, 0.08)),
-    var(--workshop-rotation-image, url("../images/workshops-gallery/workshops-adults/WhatsApp%20Image%202026-06-15%20at%2015.52.36%20%282%29.jpeg"));
+    var(--workshop-rotation-image, url("../images/workshops/herbal-workshop-in-meadow.jpeg"));
   background-position: center;
   background-size: cover;
   box-shadow: 0 28px 68px rgba(55, 45, 30, 0.14);
@@ -1397,6 +1837,10 @@ p {
   transition: none;
 }
 
+.kids-workshops-copy h2 {
+  margin-bottom: clamp(1.5rem, 3vw, 2.5rem);
+}
+
 .kids-workshops {
   grid-template-columns: minmax(360px, 0.9fr) minmax(0, 0.95fr);
 }
@@ -1404,7 +1848,7 @@ p {
 .kids-rotation .workshop-rotation-frame {
   background-image:
     linear-gradient(rgba(41, 53, 31, 0.06), rgba(239, 229, 210, 0.08)),
-    var(--workshop-rotation-image, url("../images/workshops-gallery/workshops-kids/WhatsApp%20Image%202026-06-15%20at%2015.52.27.jpeg"));
+    var(--workshop-rotation-image, url("../images/workshops-kids/children-herb-workshop-circle.jpeg"));
 }
 
 .kids-wide-section {
@@ -1422,7 +1866,7 @@ p {
   border-radius: 8px;
   background-image:
     linear-gradient(rgba(41, 53, 31, 0.04), rgba(239, 229, 210, 0.08)),
-    url("../images/workshops-gallery/workshops-kids/WhatsApp%20Image%202026-06-22%20at%2016.32.43.jpeg");
+    url("../images/workshops-kids/child-arranging-flowers.jpeg");
   background-position: center;
   background-size: cover;
   box-shadow: 0 28px 68px rgba(55, 45, 30, 0.14);
@@ -1446,6 +1890,7 @@ p {
 }
 
 .workshop-offerings {
+  overflow-x: clip;
   background: linear-gradient(180deg, rgba(226, 211, 189, 0.52), rgba(239, 229, 210, 0));
 }
 
@@ -1523,7 +1968,7 @@ p {
 }
 
 .workshop-resin::before {
-  background-image: url("../images/workshops-gallery/icons/pine_tree.png");
+  background-image: url("../images/icons/workshops/pine-cone.png");
   background-position: center;
   background-size: contain;
   opacity: 0.8;
@@ -1535,7 +1980,7 @@ p {
   right: auto;
   left: clamp(-8.8rem, -9.2vw, -6.2rem);
   width: clamp(130px, 12.6vw, 185px);
-  background-image: url("../images/workshops-gallery/icons/essebtial_oil.png");
+  background-image: url("../images/icons/workshops/essential-oil.png");
   background-size: contain;
   opacity: 0.75;
   transform: translateY(-50%) scaleX(-1) scaleY(1.15);
@@ -1544,7 +1989,7 @@ p {
 .workshop-mushrooms::before {
   right: clamp(-6.8rem, -7.1vw, -4.8rem);
   width: clamp(116px, 11.2vw, 164px);
-  background-image: url("../images/workshops-gallery/icons/image-removebg-preview%20%282%29.png");
+  background-image: url("../images/icons/workshops/mushrooms.png");
   background-size: 106% auto;
 }
 
@@ -1556,7 +2001,7 @@ p {
   width: clamp(208px, 20.8vw, 299px);
   height: clamp(160px, 16vw, 230px);
   aspect-ratio: auto;
-  background-image: url("../images/workshops-gallery/icons/roots.png");
+  background-image: url("../images/icons/workshops/roots.png");
   background-position: center;
   background-size: 100% 100%;
   opacity: 0.7;
@@ -1567,12 +2012,27 @@ p {
   grid-column: 1 / -1;
 }
 
+@media (max-width: 600px) {
+  .workshop-program {
+    min-width: 0;
+    margin-inline: 0.75rem;
+  }
+
+  .workshop-resin::before {
+    translate: -24px 0;
+  }
+
+  .workshop-roots::before {
+    translate: 24px 0;
+  }
+}
+
 .workshop-lecture::before {
   right: clamp(-8rem, -8.5vw, -5.6rem);
   width: clamp(145px, 13vw, 205px);
   height: clamp(200px, 18vw, 280px);
   aspect-ratio: auto;
-  background-image: url("../images/workshops-gallery/icons/lavender_thin.png");
+  background-image: url("../images/icons/workshops/lavender.png");
   background-position: center;
   background-size: contain;
   opacity: 0.65;
@@ -1799,6 +2259,8 @@ p {
 }
 
 .gallery-strip {
+  min-width: 0;
+  max-width: 100%;
   position: relative;
   grid-column: 1 / -1;
   width: 100%;
@@ -1815,6 +2277,22 @@ p {
   cursor: pointer;
   opacity: 0.7;
   transition: opacity 180ms ease, background 180ms ease;
+}
+
+.gallery-strip-button::after {
+  content: "";
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  margin: auto;
+  border-top: 2px solid var(--cream);
+  border-right: 2px solid var(--cream);
+  filter: drop-shadow(0 0 3px var(--cream));
+  transform: rotate(45deg);
+}
+
+.gallery-strip-button-prev::after {
+  transform: rotate(-135deg);
 }
 
 .gallery-strip-button:hover,
@@ -1882,7 +2360,7 @@ p {
 
 .gallery-strip-kids {
   justify-self: center;
-  width: min(1320px, calc(100vw - 2rem));
+  width: min(1320px, 100%);
   margin-top: clamp(0.75rem, 2.5vw, 1.8rem);
 }
 
@@ -1976,7 +2454,7 @@ p {
 }
 
 .home-contact .contact-hero {
-  max-width: 1440px;
+  width: 100%;
   margin: 0 auto;
   border-bottom: 0;
 }
@@ -2039,7 +2517,10 @@ p {
 }
 
 .contact-form button {
-  justify-self: start;
+  font: inherit;
+  font-weight: 400;
+  justify-self: end;
+  width: fit-content;
   margin-top: 0.7rem;
   cursor: pointer;
 }
@@ -2094,38 +2575,30 @@ p {
 .library-filters {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.75rem;
+  gap: 4px;
   margin-bottom: 1.2rem;
 }
 
 .library-filter {
-  min-height: 48px;
-  padding: 0.7rem 1.45rem;
+  min-height: 46px;
+  padding: 10px 19px;
   color: var(--olive);
   font: inherit;
-  font-weight: 700;
-  background: rgba(255, 252, 245, 0.55);
-  border: 1px solid rgba(79, 93, 58, 0.28);
+  font-weight: 400;
+  background: transparent;
+  border: 0;
   border-radius: 999px;
   cursor: pointer;
-  transition: background 180ms ease, color 180ms ease, border-color 180ms ease, transform 180ms ease;
+  transition: background 180ms ease;
 }
 
 .library-filter:hover {
-  transform: translateY(-1px);
-  border-color: var(--olive);
+  background: rgba(79, 93, 58, 0.1);
 }
 
 .library-filter.is-active {
-  color: #fffaf0;
-  background: var(--olive);
-  border-color: var(--olive);
-}
-
-.library-filter[data-library-filter="all"] {
-  min-height: 56px;
-  padding-inline: 1.75rem;
-  font-size: 1.08rem;
+  color: var(--olive);
+  background: rgba(79, 93, 58, 0.063);
 }
 
 .library-status {
@@ -2457,6 +2930,7 @@ p {
 
   .hero-home {
     position: relative;
+    background-position: center, center top;
     height: var(--hero-photo-height);
     min-height: 0;
     background-image:
@@ -2489,6 +2963,26 @@ p {
 
   .reel-modal-layout {
     grid-template-columns: 1fr;
+  }
+
+  .image-band {
+    min-height: 0;
+  }
+
+  .image-band-photo {
+    aspect-ratio: 4 / 3;
+    max-height: 420px;
+  }
+
+  .image-band-copy {
+    gap: 1rem;
+    padding: 2rem 1.25rem;
+  }
+
+  .image-band-copy h2 {
+    font-size: clamp(1.75rem, 5vw, 2.25rem);
+    line-height: 1.3;
+    text-wrap: balance;
   }
 
   .reels-grid {
@@ -2625,19 +3119,13 @@ p {
   }
 
   .library-filters {
-    gap: 0.55rem;
+    gap: 4px;
   }
 
   .library-filter {
     min-height: 44px;
     padding: 0.55rem 1rem;
     font-size: 0.9rem;
-  }
-
-  .library-filter[data-library-filter="all"] {
-    min-height: 50px;
-    padding-inline: 1.35rem;
-    font-size: 1rem;
   }
 
   .reels-grid {
@@ -2681,5 +3169,151 @@ p {
   .kids-wide-photo {
     height: clamp(220px, 42vw, 300px);
     min-height: 0;
+  }
+}
+
+/* A restrained vignette keeps photo centers clear and edges softly shaded. */
+:root {
+  --photo-vignette: radial-gradient(ellipse at center, transparent 42%, rgba(24, 21, 16, 0.07) 75%, rgba(24, 21, 16, 0.18) 100%);
+}
+
+/* Keep animated frames' existing absolute positioning intact. */
+:where(.story-photo, .product-rotation-frame, .workshop-rotation-frame,
+       .preparation-image, .gift-image, .kids-wide-photo, .gallery-photo) {
+  position: relative;
+}
+
+.gallery-photo {
+  display: flex;
+  flex: 0 0 auto;
+}
+
+.hero-image::after,
+.page-hero-image::after,
+.contact-photo::after,
+.values-photo::after,
+.wide-photo::after,
+.story-photo::after,
+.product-rotation-frame::after,
+.workshop-rotation-frame::after,
+.preparation-image::after,
+.gift-image::after,
+.kids-wide-photo::after,
+.gallery-photo::after,
+.image-band-photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: var(--photo-vignette);
+  pointer-events: none;
+}
+
+.gallery-photo::after {
+  border-radius: 8px;
+}
+
+/* Keep direct contact available throughout every public page. */
+.floating-whatsapp {
+  position: fixed;
+  left: max(20px, env(safe-area-inset-left));
+  bottom: calc(44px + env(safe-area-inset-bottom));
+  z-index: 30;
+  display: grid;
+  place-items: center;
+  width: 60px;
+  height: 60px;
+  border: 1px solid rgba(79, 93, 58, 0.35);
+  border-radius: 50%;
+  background: #737f59;
+  box-shadow: 0 4px 16px rgba(20, 45, 25, 0.18);
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.floating-whatsapp img {
+  display: block;
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+.whatsapp-bubble {
+  position: absolute;
+  bottom: calc(100% + 12px);
+  left: 0;
+  width: max-content;
+  max-width: calc(100vw - 40px);
+  padding: 12px 16px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: #fffaf1;
+  color: var(--olive-dark);
+  box-shadow: 0 4px 18px rgba(20, 45, 25, 0.12);
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: right;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(6px);
+  transition: opacity 220ms ease, transform 220ms ease, visibility 220ms;
+}
+
+.whatsapp-bubble::after {
+  content: "";
+  position: absolute;
+  bottom: -7px;
+  left: 21px;
+  width: 12px;
+  height: 12px;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: #fffaf1;
+  transform: rotate(45deg);
+}
+
+/* Bridge the gap so the bubble stays open when the pointer moves onto it. */
+.whatsapp-bubble::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 16px;
+}
+
+@media (hover: hover) {
+  .floating-whatsapp:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 9px 22px rgba(20, 45, 25, 0.22);
+  }
+
+  .floating-whatsapp:hover .whatsapp-bubble {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+
+.floating-whatsapp:focus-visible {
+  outline: 3px solid var(--olive-dark);
+  outline-offset: 4px;
+}
+
+.floating-whatsapp:focus-visible .whatsapp-bubble {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .floating-whatsapp,
+  .whatsapp-bubble {
+    transition: none;
+  }
+
+  .floating-whatsapp:hover,
+  .whatsapp-bubble {
+    transform: none;
   }
 }
