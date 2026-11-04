@@ -93,7 +93,13 @@
         signal: AbortSignal.timeout(25000),
       });
       const result = await response.json();
-      if (!response.ok || result.success !== true) throw new Error();
+      if (!response.ok || result.success !== true) {
+        if (["verification", "verification_unavailable"].includes(result.code)) {
+          setStatus("לא ניתן היה לאשר את האימות. הפרטים נשמרו בטופס. יש להשלים את האימות מחדש ולנסות שוב.");
+          return;
+        }
+        throw new Error();
+      }
       form.reset();
       requestId = null;
       setStatus("תודה, הפנייה נשלחה ונחזור אליך בהקדם. עותק נשלח גם לכתובת האימייל שלך. אם לא הגיע, כדאי לבדוק בתיקיית הספאם.");

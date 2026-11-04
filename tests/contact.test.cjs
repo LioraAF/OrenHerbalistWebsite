@@ -2,10 +2,10 @@ const { test, beforeEach, afterEach } = require("node:test");
 const assert = require("node:assert/strict");
 const handler = require("../api/contact.js");
 const keys = ["RESEND_API_KEY", "TURNSTILE_SITE_KEY", "TURNSTILE_SECRET_KEY", "CONTACT_FROM_EMAIL", "CONTACT_ALLOWED_ORIGINS"];
-let saved, originalFetch, calls, verification, sendResult, sendStatus;
+let saved, originalFetch, originalWarn, warnings, calls, verification, sendResult, sendStatus;
 const valid = () => ({ name: "בדיקה", email: "visitor@example.com", phone: "0541234567",
   message: "שלום\n<script>plain text</script>", requestId: "d834b236-f73a-43a9-a7fb-47378aecddf1", token: "verified-token", _honey: "" });
-const upstream = (body, status = 200) => ({ ok: status < 300, json: async () => body });
+const upstream = (body, status = 200) => ({ ok: status < 300, status, json: async () => body });
 
 beforeEach(() => {
   saved = Object.fromEntries(keys.map((key) => [key, process.env[key]]));
@@ -15,6 +15,9 @@ beforeEach(() => {
   delete process.env.CONTACT_FROM_EMAIL;
   delete process.env.CONTACT_ALLOWED_ORIGINS;
   originalFetch = global.fetch;
+  originalWarn = console.warn;
+  warnings = [];
+  console.warn = (...args) => warnings.push(args);
   calls = [];
   verification = { success: true, hostname: "orenherbalist.com", action: "contact" };
   sendResult = { data: [{ id: "owner-id" }, { id: "visitor-id" }] };
@@ -28,6 +31,7 @@ beforeEach(() => {
 });
 afterEach(() => {
   global.fetch = originalFetch;
+  console.warn = originalWarn;
   keys.forEach((key) => saved[key] === undefined ? delete process.env[key] : process.env[key] = saved[key]);
 });
 async function invoke(body = valid(), headers = {}, method = "POST") {
@@ -112,5 +116,27 @@ test("network errors and timeouts return a generic failure without exposing secr
   global.fetch = async () => { throw new Error("test-private-key: timeout"); };
   const res = await invoke();
   assert.equal(res.code, 502);
-  assert.deepEqual(res.body, { success: false, code: "send_failed" });
+  assert.deepEqual(res.body, { success: false, code: "verification_unavailable" });
+  assert.deepEqual(warnings[0], ["contact_upstream_failed", { stage: "verification", type: "Error" }]);
+  assert.ok(!JSON.stringify(warnings).includes("test-private-key"));
+});
+
+test("verification diagnostics retain only recognized codes, with no token or secret", async () => {
+  verification = { success: false, "error-codes": ["invalid-input-secret", "test-private-key"] };
+  await invoke();
+  assert.deepEqual(warnings[0], ["contact_verification_failed", {
+    httpStatus: 200, errors: ["invalid-input-secret"], hostnameMatches: false, actionMatches: false,
+  }]);
+  const logged = JSON.stringify(warnings);
+  for (const value of ["test-private-key", "test-verification-secret", "verified-token", "visitor@example.com"]) {
+    assert.ok(!logged.includes(value));
+  }
+});
+
+test("sending diagnostics distinguish provider rejection from verification failures", async () => {
+  sendStatus = 401;
+  sendResult = { name: "validation_error", message: "test-private-key" };
+  assert.equal((await invoke()).body.code, "send_failed");
+  assert.deepEqual(warnings[0], ["contact_send_failed", { httpStatus: 401, providerCode: "validation_error" }]);
+  assert.ok(!JSON.stringify(warnings).includes("test-private-key"));
 });

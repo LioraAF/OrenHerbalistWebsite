@@ -6,7 +6,12 @@ const RECIPIENT = "liora1018@gmail.com";
 
 module.exports = async function handler(req, res) {
   res.setHeader("Cache-Control", "no-store");
-  const reply = (status, body) => res.status(status).json(body);
+  const reply = (status, body) => {
+    if (req.method === "POST" && status >= 400) {
+      console.warn("contact_failed", { status, code: body.code || "request_rejected" });
+    }
+    return res.status(status).json(body);
+  };
   if (!["GET", "POST"].includes(req.method)) {
     res.setHeader("Allow", "GET, POST");
     return reply(405, { success: false });
@@ -53,6 +58,7 @@ module.exports = async function handler(req, res) {
     return reply(400, { success: false, code: "invalid" });
   }
 
+  let stage = "verification";
   try {
     const verification = await fetch("https://challenges.cloudflare.com/turnstile/v0/siteverify", {
       method: "POST",
@@ -63,6 +69,15 @@ module.exports = async function handler(req, res) {
     const verified = await verification.json();
     if (!verification.ok || verified.success !== true || verified.action !== "contact" ||
         verified.hostname !== new URL(req.headers.origin).hostname) {
+      const knownErrors = new Set(["missing-input-secret", "invalid-input-secret", "missing-input-response",
+        "invalid-input-response", "bad-request", "timeout-or-duplicate", "internal-error"]);
+      console.warn("contact_verification_failed", {
+        httpStatus: verification.status,
+        errors: Array.isArray(verified["error-codes"])
+          ? verified["error-codes"].filter((code) => knownErrors.has(code)) : [],
+        hostnameMatches: verified.hostname === new URL(req.headers.origin).hostname,
+        actionMatches: verified.action === "contact",
+      });
       return reply(400, { success: false, code: "verification" });
     }
 
@@ -79,6 +94,7 @@ module.exports = async function handler(req, res) {
     ];
     // Retrying the same enquiry within Resend's 24-hour window avoids duplicates.
     const key = createHash("sha256").update(JSON.stringify([requestId, emails])).digest("hex");
+    stage = "sending";
     const sent = await fetch("https://api.resend.com/emails/batch", {
       method: "POST",
       headers: {
@@ -92,12 +108,24 @@ module.exports = async function handler(req, res) {
     const result = await sent.json();
     if (!sent.ok || !Array.isArray(result.data) || result.data.length !== 2 ||
         !result.data.every((entry) => typeof entry.id === "string" && entry.id)) {
+      const knownErrors = new Set(["validation_error", "missing_api_key", "restricted_api_key",
+        "invalid_permission", "suspended_api_key", "daily_quota_exceeded", "monthly_quota_exceeded",
+        "rate_limit_exceeded", "application_error", "service_unavailable", "invalid_idempotent_request"]);
+      console.warn("contact_send_failed", {
+        httpStatus: sent.status,
+        providerCode: knownErrors.has(result.name) ? result.name : "unexpected_response",
+      });
       return reply(502, { success: false, code: "send_failed" });
     }
     // Provider acceptance is confirmed here; inbox delivery must be checked live.
     return reply(200, { success: true });
-  } catch {
-    // Do not expose provider responses, keys, or visitor data in logs/errors.
-    return reply(502, { success: false, code: "send_failed" });
+  } catch (error) {
+    // Log only fixed stage/type values, never provider messages or visitor data.
+    console.warn("contact_upstream_failed", {
+      stage,
+      type: ["TimeoutError", "AbortError", "TypeError", "SyntaxError"].includes(error?.name)
+        ? error.name : "Error",
+    });
+    return reply(502, { success: false, code: stage === "verification" ? "verification_unavailable" : "send_failed" });
   }
 };
