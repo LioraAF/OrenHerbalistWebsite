@@ -32,68 +32,6 @@ if (navToggle && siteNav) {
   });
 }
 
-const emailContactForm = document.querySelector("[data-email-form]");
-
-if (emailContactForm instanceof HTMLFormElement) {
-  const formStatus = emailContactForm.querySelector("[data-form-status]");
-  const submitButton = emailContactForm.querySelector('button[type="submit"]');
-  const defaultButtonText = submitButton?.textContent || "שליחת פרטים";
-  let isSubmitting = false;
-
-  const setFormStatus = (message) => {
-    if (formStatus instanceof HTMLElement) {
-      formStatus.textContent = message;
-    }
-  };
-
-  // Restore the form when returning from verification, including the back cache.
-  window.addEventListener("pageshow", () => {
-    isSubmitting = false;
-    emailContactForm.removeAttribute("aria-busy");
-    if (submitButton instanceof HTMLButtonElement) {
-      submitButton.disabled = false;
-      submitButton.textContent = defaultButtonText;
-    }
-    setFormStatus("");
-  });
-
-  const requiredFields = emailContactForm.querySelectorAll("[required]");
-  requiredFields.forEach((field) => {
-    field.addEventListener("input", () => field.setCustomValidity(""));
-  });
-
-  emailContactForm.addEventListener("submit", (event) => {
-    if (isSubmitting) {
-      event.preventDefault();
-      return;
-    }
-
-    requiredFields.forEach((field) => {
-      field.value = field.value.trim();
-      field.setCustomValidity(field.value ? "" : "נא למלא את השדה.");
-    });
-    if (!emailContactForm.reportValidity()) {
-      event.preventDefault();
-      return;
-    }
-
-    if (emailContactForm.elements.namedItem("_honey")?.value) {
-      event.preventDefault();
-      return;
-    }
-
-    // FormSubmit sender copies require a normal POST with CAPTCHA enabled.
-    // The provider confirms success after verification; keep the entered fields.
-    isSubmitting = true;
-    emailContactForm.setAttribute("aria-busy", "true");
-    if (submitButton instanceof HTMLButtonElement) {
-      submitButton.disabled = true;
-      submitButton.textContent = "מעבירים לאימות...";
-    }
-    setFormStatus("מעבירים לאימות ולשליחה. יש להשלים את האימות בעמוד הבא.");
-  });
-}
-
 const storyMedia = document.querySelector(".story-media");
 
 if (storyMedia) {

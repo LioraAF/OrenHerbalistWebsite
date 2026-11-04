@@ -191,11 +191,7 @@
             בהקדם.
           </p>
 
-          <form class="contact-form" action="https://formsubmit.co/liora1018@gmail.com" method="post" data-email-form>
-            <input type="hidden" name="_subject" value="פנייה חדשה מאתר אורן הרבליסט">
-            <input type="hidden" name="_template" value="table">
-            <input type="hidden" name="_captcha" value="true">
-            <input type="hidden" name="_autoresponse" value="תודה שפנית לאורן הרבליסט. הפנייה התקבלה ונחזור אליך בהקדם. עותק של הפרטים ששלחת מצורף להודעה זו.">
+          <form class="contact-form" action="/api/contact" method="post" data-email-form>
             <input type="text" name="_honey" hidden tabindex="-1" autocomplete="off" aria-hidden="true">
 
             <label for="contact-name">שם מלא (חובה)</label>
@@ -210,9 +206,11 @@
             <label for="contact-message">כמה מילים (חובה)</label>
             <textarea id="contact-message" name="message" rows="5" maxlength="5000" required></textarea>
 
-            <p class="form-note">לאחר הלחיצה יש להשלים אימות בעמוד הבא. לאחר השליחה יישלח לכתובת האימייל שלך אישור עם עותק של הפנייה.</p>
-            <button class="button primary" type="submit">שליחת פרטים</button>
+            <p class="form-note">לאחר השליחה יישלח לכתובת האימייל שלך אישור עם עותק של הפנייה.</p>
+            <div data-contact-verification></div>
+            <button class="button primary" type="submit" disabled>שליחת פרטים</button>
             <p class="form-note" aria-live="polite" data-form-status></p>
+            <noscript><p class="form-note">לשליחה דרך הטופס יש להפעיל JavaScript. אפשר גם לשלוח מייל ישירות לכתובת שלמטה.</p></noscript>
             <p class="form-note">אפשר גם לשלוח מייל ישירות ל־<a href="mailto:liora1018@gmail.com" dir="ltr">liora1018@gmail.com</a>.</p>
           </form>
         </div>
@@ -258,6 +256,7 @@
     <span class="whatsapp-bubble" dir="rtl" aria-hidden="true">להתייעצות ולפרטים, אני כאן</span>
   </a>
 
-  <script src="js/main.js?v=20261103-story-quick-first-switch"></script>
+  <script src="js/main.js?v=20261104-contact-resend"></script>
+  <script src="js/contact.js?v=20261104-resend"></script>
 </body>
 </html>
