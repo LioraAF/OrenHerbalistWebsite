@@ -1244,6 +1244,8 @@ p {
   gap: clamp(2rem, 7vw, 7rem);
   max-width: 1240px;
   margin: 0 auto;
+  /* Keep the rotating photo's slide animation from widening the page. */
+  overflow-x: clip;
 }
 
 .products-intro-body {
