@@ -533,11 +533,6 @@ p {
     order: 1;
   }
 
-  .story-text > p {
-    text-align: justify;
-    text-align-last: start;
-  }
-
   .story-portrait {
     --portrait-text-gap: clamp(1.25rem, 5vw, 5rem);
     width: clamp(130px, 34vw, 180px);
