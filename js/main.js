@@ -1,3 +1,26 @@
+const siteGalleryImages = window.siteGalleryImages || {};
+const galleryImages = (name) => siteGalleryImages[name] || [];
+const galleryImageUrl = (src) => new URL(`images/${src.split("/").map(encodeURIComponent).join("/")}`, document.baseURI).href;
+const galleryBackground = (src) => src ? `url("${galleryImageUrl(src)}")` : "none";
+
+// Folder-backed photo sections, including sections that previously showed a single photo.
+[
+  [".image-band-photo", "main"],
+  [".about-photo", "treatment"],
+  [".values-photo", "treatment"],
+].forEach(([selector, name], offset) => {
+  const images = galleryImages(name);
+  document.querySelectorAll(selector).forEach((frame) => {
+    let index = images.length ? offset % images.length : 0;
+    const show = () => { frame.style.backgroundImage = galleryBackground(images[index]); };
+    show();
+    if (images.length > 1) window.setInterval(() => {
+      index = (index + 1) % images.length;
+      show();
+    }, 6000);
+  });
+});
+
 const navToggle = document.querySelector(".nav-toggle");
 const siteNav = document.querySelector(".site-nav");
 
@@ -33,78 +56,15 @@ if (navToggle && siteNav) {
 }
 
 const storyMedia = document.querySelector(".story-media");
+if (storyMedia && !galleryImages("home").length) {
+  storyMedia.style.setProperty("--story-main-image", "none");
+  storyMedia.style.setProperty("--story-small-image", "none");
+}
 
-if (storyMedia) {
+if (storyMedia && galleryImages("home").length) {
   const mainPhoto = storyMedia.querySelector(".story-photo-main");
   const smallPhoto = storyMedia.querySelector(".story-photo-secondary");
-  const storyImages = [
-    "ashwagandha-roots.webp",
-    "cutting-fresh-herbs-closeup-1826.jpg",
-    "desert-herb-and-hills-1792.jpg",
-    "desert-herb-landscape-1793.jpg",
-    "dried-herbs-in-open-bags-1961.jpg",
-    "fresh-herb-harvest-basket-1794.jpg",
-    "fresh-purple-flower-bundle-1830.jpg",
-    "freshly-picked-yellow-flowers-1943.jpg",
-    "green-herb-in-desert-ravine-1928.jpg",
-    "hands-gathering-herb-stems-1836.jpg",
-    "hands-harvesting-herb-stems-1825.jpg",
-    "harvesting-herbs-among-garden-plants-1833.jpg",
-    "harvesting-herbs-in-garden.jpeg",
-    "hawthorn.jpeg",
-    "herb-basket-on-harvest-table-1812.jpg",
-    "herb-growing-in-rock-crevice-1931.jpg",
-    "herb-harvest-hands-detail-1837.jpg",
-    "herb-harvest-in-garden-closeup-1835.jpg",
-    "herb-harvesting-in-garden-1831.jpg",
-    "herb-harvesting-with-pruning-shears-1827.jpg",
-    "herb-leaves-and-buds-1810.jpg",
-    "herb-on-hillside-trail-1923.jpg",
-    "herb-sprig-held-against-landscape-1939.jpg",
-    "herbal-distillation-glassware-1948.jpg",
-    "herbs-growing-in-rocky-valley-1921.jpg",
-    "herbs-on-rocky-slope-1934.jpg",
-    "myrrh.jpeg",
-    "oren-at-herbal-market-stall-1816.jpg",
-    "oren-holding-freshly-harvested-herbs-1824.jpg",
-    "pale-purple-wildflower-1919.jpg",
-    "pink-thistle-against-rock-1925.jpg",
-    "pink-thistle-in-soft-light-1926.jpg",
-    "pink-thistle-in-valley-1924.jpg",
-    "pruning-herb-stems-1834.jpg",
-    "purple-flower-bundle-wide-1832.jpg",
-    "purple-flower-harvest-on-stone-1829.jpg",
-    "purple-flower-harvest-upright-1828.jpg",
-    "purple-flower-stems-in-vase-1795.jpg",
-    "purple-thistle-closeup-1809.jpg",
-    "purple-thistles-in-field-1808.jpg",
-    "purple-wildflowers-in-rocky-valley-1936.jpg",
-    "red-berries-in-hand-1796.jpg",
-    "rounded-desert-shrub-1929.jpg",
-    "scented-geranium.png",
-    "small-herb-against-sunlit-rock-1937.jpg",
-    "small-herb-on-rock-face-1927.jpg",
-    "small-wildflower-against-rock-1920.jpg",
-    "sunlight-through-herb-garden-1946.jpg",
-    "sunlit-herb-and-rock-wall-1935.jpg",
-    "tall-herb-beside-rock-wall-1932.jpg",
-    "trailing-herb-in-sandy-soil-1930.jpg",
-    "valerian.webp",
-    "white-wildflower-cluster-1938.jpg",
-    "wild-herb-and-boulder-in-sunlight-1914.jpg",
-    "wild-herb-beside-pale-boulder-1913.jpg",
-    "wild-herb-beside-valley-rocks-1922.jpg",
-    "wild-herb-on-rock.jpeg",
-    "wild-herb-on-rocky-path-1791.jpg",
-    "wild-herb-overlooking-valley-1933.jpg",
-    "wild-lettuce.jpeg",
-    "yellow-flower-harvest-bowl-1941.jpg",
-    "yellow-flower-harvest-closeup-1940.jpg",
-    "yellow-flowering-herb-in-garden-1944.jpg",
-    "yellow-flowering-herb-under-tree-1945.jpg",
-    "yellow-flowers-in-white-bowl-1942.jpg",
-    "yellow-wildflowers-on-path-1807.jpg",
-  ];
+  const storyImages = [...galleryImages("home")];
   for (let index = storyImages.length - 1; index > 0; index -= 1) {
     const randomIndex = Math.floor(Math.random() * (index + 1));
     [storyImages[index], storyImages[randomIndex]] = [storyImages[randomIndex], storyImages[index]];
@@ -114,17 +74,17 @@ if (storyMedia) {
   const pushMs = 1500;
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   let mainIndex = 0;
-  let smallIndex = 1;
-  let nextIndex = 2;
+  let smallIndex = 1 % storyImages.length;
+  let nextIndex = 2 % storyImages.length;
 
   storyImages.forEach((src) => {
     const image = new Image();
-    image.src = `images/home-gallery/${src}`;
+    image.src = galleryImageUrl(src);
   });
 
   const setStoryImages = () => {
-    storyMedia.style.setProperty("--story-main-image", `url("../images/home-gallery/${storyImages[mainIndex]}")`);
-    storyMedia.style.setProperty("--story-small-image", `url("../images/home-gallery/${storyImages[smallIndex]}")`);
+    storyMedia.style.setProperty("--story-main-image", galleryBackground(storyImages[mainIndex]));
+    storyMedia.style.setProperty("--story-small-image", galleryBackground(storyImages[smallIndex]));
   };
 
   const createStoryGhost = () => {
@@ -144,7 +104,7 @@ if (storyMedia) {
     ghost.className = "story-photo story-photo-ghost";
     ghost.style.backgroundImage = `
       linear-gradient(rgba(41, 53, 31, 0.08), rgba(239, 229, 210, 0.08)),
-      url("images/home-gallery/${storyImages[mainIndex]}")
+      ${galleryBackground(storyImages[mainIndex])}
     `;
     ghost.style.left = `${mainRect.left - mediaRect.left}px`;
     ghost.style.top = `${mainRect.top - mediaRect.top}px`;
@@ -206,21 +166,12 @@ if (storyMedia) {
 }
 
 const productRotationFrame = document.querySelector(".product-rotation-frame");
+if (productRotationFrame && !galleryImages("products").length) {
+  productRotationFrame.style.setProperty("--product-rotation-image", "none");
+}
 
-if (productRotationFrame instanceof HTMLElement) {
-  const productRotationImages = [
-    "gallery/herbal-bottles-at-market.jpeg",
-    "hover/herbal-extract-bottle-display.jpeg",
-    "gallery/herbal-balm-jar-display.jpeg",
-    "gallery/herbal-products-overhead-display-1798.jpg",
-    "gifts/herbal-gift-basket-with-price-1800.jpg",
-    "gallery/herbal-market-stall-wide-1801.jpg",
-    "gallery/herbal-market-stall-close-1802.jpg",
-    "gallery/herbal-oils-and-jars-display-1803.jpg",
-    "gallery/herbal-balm-jar-closeup-1804.jpg",
-    "hover/facial-hydrosol-bottle-display.jpg",
-    "hover/muscle-and-joint-balm-display.jpg",
-  ];
+if (productRotationFrame instanceof HTMLElement && galleryImages("products").length) {
+  const productRotationImages = galleryImages("products");
   const rotationMs = 4200;
   const fadeMs = 1500;
   const overlapMs = 600;
@@ -230,13 +181,13 @@ if (productRotationFrame instanceof HTMLElement) {
 
   productRotationImages.forEach((src) => {
     const image = new Image();
-    image.src = `images/products/${src}`;
+    image.src = galleryImageUrl(src);
   });
 
   const setProductRotationImage = () => {
     productRotationFrame.style.setProperty(
       "--product-rotation-image",
-      `url("../images/products/${productRotationImages[productImageIndex]}")`
+      galleryBackground(productRotationImages[productImageIndex])
     );
   };
 
@@ -276,20 +227,8 @@ if (productRotationFrame instanceof HTMLElement) {
 }
 
 const workshopRotationSets = {
-  adults: [
-    "workshops/herbal-workshop-in-meadow.jpeg",
-    "workshops/mushroom-caps-in-hand.jpeg",
-    "workshops/mushroom-cluster-in-hand.jpeg",
-    "workshops/outdoor-workshop-circle.jpeg",
-    "workshops/harvesting-herbs-in-garden.jpeg",
-  ],
-  kids: [
-    "workshops-kids/children-herb-workshop-circle.jpeg",
-    "workshops-kids/children-outdoor-herbal-activity.jpeg",
-    "workshops-kids/children-plant-identification-game.jpeg",
-    "workshops-kids/children-planting-herb-garden.jpeg",
-    "workshops-kids/child-arranging-flowers.jpeg",
-  ],
+  adults: galleryImages("adults"),
+  kids: galleryImages("kids"),
 };
 
 document.querySelectorAll("[data-workshop-rotation]").forEach((frame) => {
@@ -301,6 +240,7 @@ document.querySelectorAll("[data-workshop-rotation]").forEach((frame) => {
   const rotationImages = workshopRotationSets[rotationName] || [];
 
   if (!rotationImages.length) {
+    frame.style.setProperty("--workshop-rotation-image", "none");
     return;
   }
 
@@ -311,13 +251,13 @@ document.querySelectorAll("[data-workshop-rotation]").forEach((frame) => {
 
   rotationImages.forEach((src) => {
     const image = new Image();
-    image.src = `images/${src}`;
+    image.src = galleryImageUrl(src);
   });
 
   const setWorkshopRotationImage = () => {
     frame.style.setProperty(
       "--workshop-rotation-image",
-      `url("../images/${rotationImages[imageIndex]}")`
+      galleryBackground(rotationImages[imageIndex])
     );
   };
 
@@ -501,41 +441,8 @@ if (
   });
 }
 
-const workshopAdultGalleryImages = [
-  "workshops/forest-workshop-herbal-preparation.jpeg",
-  "workshops/forest-workshop-group-circle.jpeg",
-  "workshops/mushroom-caps-in-hand.jpeg",
-  "workshops/oren-explaining-forest-mushrooms.jpeg",
-  "workshops/mushroom-in-hand.jpeg",
-  "workshops/mushroom-growing-in-pine-needles.jpeg",
-  "workshops/forest-mushroom-closeup.jpeg",
-  "workshops/oren-with-mushroom-basket.jpeg",
-  "workshops/mushroom-stem-in-hand.jpeg",
-  "workshops/hands-holding-foraged-mushrooms.jpeg",
-  "workshops/oren-presenting-foraged-mushrooms.jpeg",
-  "workshops/foraged-mushrooms-in-hands.jpeg",
-  "workshops/wild-herb-on-rock.jpeg",
-  "workshops/mushroom-cluster-in-hand.jpeg",
-  "workshops/herbal-extracts-in-basket.jpeg",
-  "workshops/oren-foraging-with-basket.jpeg",
-  "workshops/outdoor-workshop-circle.jpeg",
-  "workshops/herbal-workshop-in-meadow.jpeg",
-  "workshops/oren-foraging-in-forest.jpeg",
-  "workshops/oren-leading-outdoor-workshop.jpeg",
-  "workshops/harvesting-herbs-in-garden.jpeg",
-];
-
-const workshopKidsGalleryImages = [
-  "workshops-kids/children-herb-workshop-circle.jpeg",
-  "workshops-kids/children-outdoor-herbal-activity.jpeg",
-  "workshops-kids/children-plant-identification-game.jpeg",
-  "workshops-kids/children-planting-herb-garden.jpeg",
-];
-
-const workshopGallerySets = {
-  adults: workshopAdultGalleryImages,
-  kids: workshopKidsGalleryImages,
-};
+const workshopAdultGalleryImages = galleryImages("adults");
+const workshopGallerySets = workshopRotationSets;
 
 const shuffleImages = (images) => {
   const shuffled = [...images];
@@ -550,7 +457,7 @@ const shuffleImages = (images) => {
 
 const createGalleryImage = (src) => {
   const image = document.createElement("img");
-  image.src = `images/${src}`;
+  image.src = galleryImageUrl(src);
   image.alt = "";
   image.loading = "lazy";
   const frame = document.createElement("span");
@@ -982,15 +889,16 @@ document.querySelectorAll('.product-roller').forEach((roller) => {
 
 const giftPhoto = document.querySelector('.gift-image');
 if (giftPhoto) {
-  const giftPhotos = [
-    'herbal-gift-set-in-dappled-light.jpg',
-    'herbal-gift-box-overhead-1951.jpg',
-    'wrapped-herbal-gift-basket-1952.jpg',
-    'herbal-gift-basket-with-price-1800.jpg',
-    'herbal-gift-set-on-bench-1950.jpg',
-  ];
+  const giftPhotos = galleryImages("gifts");
   let giftPhotoIndex = 0;
   let giftSliding = false;
+  const showGiftPhoto = () => {
+    giftPhoto.dataset.photo = giftPhotos[giftPhotoIndex]?.split("/").pop() || "";
+    giftPhoto.style.backgroundImage = galleryBackground(giftPhotos[giftPhotoIndex]);
+    giftPhoto.querySelector('.gift-photo-status').textContent = giftPhotos.length
+      ? `תמונה ${giftPhotoIndex + 1} מתוך ${giftPhotos.length}` : "";
+  };
+  showGiftPhoto();
   const giftSlideLayer = () => {
     const layer = giftPhoto.cloneNode(false);
     layer.removeAttribute('role');
@@ -1000,13 +908,12 @@ if (giftPhoto) {
     return layer;
   };
   giftPhoto.querySelectorAll('[data-gift-step]').forEach((button) => {
+    button.disabled = giftPhotos.length < 2;
     button.addEventListener('click', () => {
-      if (giftSliding) return;
+      if (giftSliding || giftPhotos.length < 2) return;
       const outgoing = giftSlideLayer();
       giftPhotoIndex = (giftPhotoIndex + Number(button.dataset.giftStep) + giftPhotos.length) % giftPhotos.length;
-      giftPhoto.dataset.photo = giftPhotos[giftPhotoIndex];
-      giftPhoto.style.backgroundImage = `linear-gradient(rgba(41, 53, 31, 0.05), rgba(239, 229, 210, 0.07)), url("images/products/gifts/${giftPhotos[giftPhotoIndex]}")`;
-      giftPhoto.querySelector('.gift-photo-status').textContent = `תמונה ${giftPhotoIndex + 1} מתוך ${giftPhotos.length}`;
+      showGiftPhoto();
       if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
       const incoming = giftSlideLayer();
       const viewport = document.createElement('div');

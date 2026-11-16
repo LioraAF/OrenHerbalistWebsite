@@ -6,8 +6,43 @@ products, workshops, and educational videos, plus a Vercel contact endpoint.
 ## Local preview
 
 Run `python3 -m http.server 8000 --bind 127.0.0.1`, then open
-`http://localhost:8000/index.html`. This previews static pages only; it cannot run
-`/api/contact`. Until the endpoint is available, the form suggests contacting via the WhatsApp button. Add `?feedback=1` to any page URL for the private feedback interface.
+<http://127.0.0.1:8000/>. After changing gallery folders, run
+`node scripts/gallery-folders.cjs` and refresh the page.
+
+This previews static pages only; it cannot run `/api/contact`. Until the endpoint
+is available, the form suggests contacting via WhatsApp. Add `?feedback=1` to
+any page URL for the private feedback interface.
+
+## Gallery image folders
+
+| Folder | Where the images appear |
+| --- | --- |
+| `images/home-gallery/` | Home page’s two rotating story photos |
+| `images/main-gallery/` | Home page’s wide product photo section |
+| `images/treatment-gallery/` | Treatment page’s two photo sections |
+| `images/products/gallery/` | Products page’s rotating gallery |
+| `images/products/gifts/` | Products page’s gift gallery |
+| `images/workshops/` | Adult workshops gallery and rotating workshop photo sections; the page header keeps its chosen fixed image |
+| `images/workshops-kids/` | Kids gallery; the large kids section photo keeps its chosen fixed image |
+| `images/backup/` | Storage only; excluded from every gallery |
+
+Every image directly inside each gallery folder is included. Subfolders, hidden
+files, and non-images are ignored. Supported formats: JPG, JPEG, PNG, WebP, AVIF,
+GIF, and SVG. Filenames may include Hebrew and spaces. Empty folders show no
+photos and disable their gallery controls. A missing folder behaves as empty.
+
+Move a photo into `images/backup/` to exclude it without deleting it. A photo
+copied into multiple gallery folders appears in each; removing one copy affects
+only that gallery. No automatic curation or duplicate removal is performed.
+
+`images/products/main/` and `images/products/hover/` contain individually assigned
+product-card photos, rather than galleries; keep their existing filenames when
+replacing a card photo. Branding, icons, backgrounds, profile photos, and video
+thumbnails also retain their individual assignments.
+
+Vercel automatically runs `node scripts/gallery-folders.cjs` before deployment to
+regenerate `js/gallery-images.js`. Folder changes affect the live public site
+after deployment. To refresh the generated file manually, run that same command.
 
 ## Contact email setup: Resend and Vercel
 
@@ -84,8 +119,9 @@ A plain Python static server cannot run the function.
 ### 5. Deploy and verify real delivery
 
 Deploy this code to the existing Vercel website project after configuring the
-variables. Environment variable changes require a new deployment. No build
-command or npm dependencies are required for the Node.js function in `api/`.
+variables. Environment variable changes require a new deployment. The build
+command in `vercel.json` generates the workshop gallery; the Node.js function in
+`api/` requires no npm dependencies.
 
 1. Open the contact form on `https://orenherbalist.com`.
 2. Complete the on-page check, enter a clearly labelled test message using an
