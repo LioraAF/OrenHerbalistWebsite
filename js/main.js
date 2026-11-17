@@ -455,14 +455,15 @@ const shuffleImages = (images) => {
   return shuffled;
 };
 
-const createGalleryImage = (src) => {
+const createGalleryImage = (src, onError) => {
   const image = document.createElement("img");
-  image.src = galleryImageUrl(src);
   image.alt = "";
   image.loading = "lazy";
   const frame = document.createElement("span");
   frame.className = "gallery-photo";
   frame.append(image);
+  image.addEventListener("error", () => onError(frame), { once: true });
+  image.src = galleryImageUrl(src);
   return frame;
 };
 
@@ -472,116 +473,173 @@ const getTrackGap = (track) => {
   return Number.isFinite(columnGap) ? columnGap : parseFloat(trackStyle.gap) || 0;
 };
 
-document.querySelectorAll("[data-gallery-strip]").forEach((track) => {
-  if (!(track instanceof HTMLElement)) {
-    return;
-  }
+document.querySelectorAll("[data-gallery-strip]").forEach(async (track) => {
+  const gallery = track.closest(".gallery-strip");
+  const viewport = track.closest(".gallery-strip-window");
+  if (!gallery || !viewport) return;
 
   const source = track.dataset.galleryStrip || "adults";
   const sourceImages = workshopGallerySets[source] || workshopAdultGalleryImages;
-  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  const gallery = track.closest(".gallery-strip");
-  const controls = gallery ? gallery.querySelectorAll("[data-gallery-control]") : [];
-  let movingImage = null;
-  let movingDirection = null;
-  let fallbackTimer = 0;
+  const sources = new Set(source === "adults" ? shuffleImages(sourceImages) : sourceImages);
+  const controls = gallery.querySelectorAll("[data-gallery-control]");
+  const motionPreference = window.matchMedia("(prefers-reduced-motion: reduce)");
+  const cruiseSpeed = 18; // Pixels per second, independent of photo width and screen refresh rate.
+  const clickDistance = 1000;
+  let direction = 1;
+  let offset = 0;
+  let boost = null;
+  let velocity = cruiseSpeed;
+  let lastTime = null;
+  let animationFrame = 0;
+  let visible = false;
+  let ready = false;
 
-  shuffleImages(sourceImages).forEach((src) => {
-    track.append(createGalleryImage(src));
-  });
+  const updateControls = () => controls.forEach(button => { button.disabled = sources.size < 2; });
+  const render = () => { track.style.transform = `translate3d(${-offset}px, 0, 0)`; };
+  const stepWidth = frame => frame.getBoundingClientRect().width + getTrackGap(track);
 
-  if (sourceImages.length < 2) {
-    controls.forEach((control) => {
-      if (control instanceof HTMLButtonElement) {
-        control.disabled = true;
-      }
-    });
-
-    return;
-  }
-
-  const finishMove = () => {
-    if (!movingImage) {
-      return;
+  const removeMissingImage = frame => {
+    const src = frame.dataset.gallerySrc;
+    const anchor = [...track.children].find(item => item.dataset.gallerySrc !== src);
+    const before = ready && anchor ? anchor.getBoundingClientRect().left : 0;
+    sources.delete(src);
+    [...track.children].filter(item => item.dataset.gallerySrc === src).forEach(item => item.remove());
+    if (ready && anchor) offset += anchor.getBoundingClientRect().left - before;
+    if (sources.size < 2) {
+      boost = null;
+      offset = 0;
     }
-
-    window.clearTimeout(fallbackTimer);
-
-    if (movingDirection === "next") {
-      track.classList.add("is-resetting");
-      track.append(movingImage);
-      track.classList.remove("is-gliding");
-
-      void track.offsetHeight;
-      track.classList.remove("is-resetting");
-    }
-
-    movingImage = null;
-    movingDirection = null;
+    updateControls();
+    render();
   };
 
-  const moveGallery = (direction = "next") => {
-    if (movingImage) {
-      return;
+  const appendPhoto = src => {
+    const frame = createGalleryImage(src, removeMissingImage);
+    frame.dataset.gallerySrc = src;
+    frame.querySelector("img").loading = "eager";
+    track.append(frame);
+    return frame;
+  };
+
+  [...sources].forEach(appendPhoto);
+  updateControls();
+  // Resolve natural photo widths before recycling frames, avoiding layout jumps as images load.
+  await Promise.all([...track.querySelectorAll("img")].map(image => image.decode().catch(() => {})));
+  ready = true;
+
+  const fillTrack = () => {
+    if (sources.size < 2 || !track.children.length) return;
+    const largest = Math.max(...[...track.children].map(frame => stepWidth(frame)));
+    const minimumWidth = viewport.clientWidth + 2 * largest;
+    // Copy complete cycles in their current order. Partial cycles can put the same
+    // photo on both sides of the loop join, especially after moving and resizing.
+    const sequence = [...track.children].slice(0, sources.size).map(frame => frame.dataset.gallerySrc);
+    while (track.getBoundingClientRect().width < minimumWidth) {
+      sequence.forEach(appendPhoto);
     }
+  };
 
-    const edgeImage = direction === "prev" ? track.lastElementChild : track.firstElementChild;
-
-    if (!(edgeImage instanceof HTMLElement)) {
-      return;
+  const recycle = () => {
+    if (sources.size < 2) return;
+    while (offset >= stepWidth(track.firstElementChild)) {
+      offset -= stepWidth(track.firstElementChild);
+      track.append(track.firstElementChild);
     }
+    while (offset < 0) {
+      const last = track.lastElementChild;
+      offset += stepWidth(last);
+      track.prepend(last);
+    }
+  };
 
-    if (reduceMotion) {
-      if (direction === "prev") {
-        track.prepend(edgeImage);
+  // Quintic motion matches the current and cruising velocities with zero acceleration at both ends.
+  // Button clicks can retarget an ongoing move without snapping position or speed.
+  const boostPosition = (t, move) => {
+    const t2 = t * t, t3 = t2 * t, t4 = t3 * t, t5 = t4 * t;
+    return move.distance * (10*t3 - 15*t4 + 6*t5)
+      + move.startSpeed * move.duration * (t - 6*t3 + 8*t4 - 3*t5)
+      + move.endSpeed * move.duration * (-4*t3 + 7*t4 - 3*t5);
+  };
+  const boostVelocity = (t, move) => {
+    const t2 = t * t, t3 = t2 * t, t4 = t3 * t;
+    return move.distance / move.duration * (30*t2 - 60*t3 + 30*t4)
+      + move.startSpeed * (1 - 18*t2 + 32*t3 - 15*t4)
+      + move.endSpeed * (-12*t2 + 28*t3 - 15*t4);
+  };
+
+  const tick = time => {
+    animationFrame = 0;
+    const delta = lastTime === null ? 0 : Math.min((time - lastTime) / 1000, 0.05);
+    lastTime = time;
+    if (sources.size > 1) {
+      if (boost) {
+        boost.elapsed = Math.min(boost.elapsed + delta, boost.duration);
+        const progress = boost.elapsed / boost.duration;
+        const position = boostPosition(progress, boost);
+        offset += position - boost.position;
+        boost.position = position;
+        velocity = boostVelocity(progress, boost);
+        if (progress === 1) boost = null;
       } else {
-        track.append(edgeImage);
+        velocity = direction * cruiseSpeed;
+        offset += velocity * delta;
       }
-
-      return;
+      recycle();
+      render();
     }
-
-    const stepDistance = edgeImage.getBoundingClientRect().width + getTrackGap(track);
-    movingImage = edgeImage;
-    movingDirection = direction;
-    track.style.setProperty("--gallery-step-distance", `${stepDistance}px`);
-
-    if (direction === "prev") {
-      track.classList.add("is-resetting", "is-gliding");
-      track.prepend(edgeImage);
-
-      void track.offsetHeight;
-      track.classList.remove("is-resetting");
-
-      window.requestAnimationFrame(() => {
-        track.classList.remove("is-gliding");
-      });
-    } else {
-      track.classList.add("is-gliding");
-    }
-
-    fallbackTimer = window.setTimeout(finishMove, 1200);
+    startAnimation();
   };
 
-  track.addEventListener("transitionend", (event) => {
-    if (event.target === track && event.propertyName === "transform") {
-      finishMove();
+  const startAnimation = () => {
+    if (!animationFrame && ready && visible && !document.hidden && !motionPreference.matches && sources.size > 1) {
+      animationFrame = window.requestAnimationFrame(tick);
     }
-  });
+  };
+  const pauseAnimation = () => {
+    window.cancelAnimationFrame(animationFrame);
+    animationFrame = 0;
+    lastTime = null;
+  };
 
-  controls.forEach((control) => {
-    if (!(control instanceof HTMLButtonElement)) {
+  controls.forEach(button => button.addEventListener("click", () => {
+    if (sources.size < 2) return;
+    const nextDirection = button.dataset.galleryControl === "prev" ? -1 : 1;
+    if (motionPreference.matches) {
+      offset += nextDirection * clickDistance;
+      recycle();
+      render();
       return;
     }
+    const distance = nextDirection * clickDistance;
+    direction = nextDirection;
+    boost = {
+      distance,
+      duration: Math.max(1.2, Math.min(2.8, Math.abs(distance) / 620 + 0.7)),
+      startSpeed: velocity,
+      endSpeed: direction * cruiseSpeed,
+      elapsed: 0,
+      position: 0,
+    };
+    startAnimation();
+  }));
 
-    control.addEventListener("click", () => {
-      moveGallery(control.dataset.galleryControl === "prev" ? "prev" : "next");
-    });
+  fillTrack();
+  render();
+  new ResizeObserver(() => { fillTrack(); recycle(); render(); }).observe(viewport);
+  new IntersectionObserver(entries => {
+    visible = entries[0].isIntersecting;
+    if (visible) startAnimation();
+    else pauseAnimation();
+  }, { rootMargin: "100px" }).observe(gallery);
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden) pauseAnimation();
+    else startAnimation();
   });
-
-  if (!reduceMotion) {
-    window.setInterval(() => moveGallery("next"), 4000);
-  }
+  motionPreference.addEventListener("change", () => {
+    pauseAnimation();
+    boost = null;
+    startAnimation();
+  });
 });
 
 const reelsGrid = document.querySelector("[data-reels-grid]");
