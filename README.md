@@ -13,6 +13,16 @@ This previews static pages only; it cannot run `/api/contact`. Until the endpoin
 is available, the form suggests contacting via WhatsApp. Add `?feedback=1` to
 any page URL for the private feedback interface.
 
+## Temporary Drive video library
+
+The 37 shared Drive videos are listed in `js/drive-videos.js`; their thumbnails
+are stored in `images/video-thumbnails/`. They appear alongside the existing
+YouTube videos, 12 at a time. Drive playback loads only when a card is opened.
+Keep the Drive files viewable by anyone with the link for public playback.
+Titles and topics are editable working labels based on the visible thumbnails.
+To migrate an entry to YouTube, fill its `youtubeId` with the YouTube video ID;
+the player and external viewing link then switch automatically.
+
 ## Gallery image folders
 
 | Folder | Where the images appear |

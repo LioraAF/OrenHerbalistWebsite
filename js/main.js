@@ -657,6 +657,7 @@ if (reelsGrid instanceof HTMLElement) {
   const reelTopics = {
     "medicinal-plants": "צמחי מרפא",
     foraging: "ליקוט",
+    "natural-pharmacy": "רוקחות ביתית",
   };
 
   const reelItems = [
@@ -725,7 +726,30 @@ if (reelsGrid instanceof HTMLElement) {
     youtubeUrl: `https://www.youtube.com/watch?v=${item.id}`,
   }));
 
+  reelItems.forEach((item) => {
+    item.watchUrl = item.youtubeUrl;
+    item.linkLabel = "לצפייה ב־YouTube";
+  });
+
+  (window.DRIVE_VIDEOS || []).forEach((item) => {
+    const youtubeId = item.youtubeId;
+    reelItems.push({
+      ...item,
+      topicLabel: reelTopics[item.topic],
+      tone: reelItems.length % 6,
+      embedUrl: youtubeId
+        ? `https://www.youtube-nocookie.com/embed/${youtubeId}?autoplay=1&rel=0`
+        : `https://drive.google.com/file/d/${item.driveId}/preview`,
+      watchUrl: youtubeId
+        ? `https://www.youtube.com/watch?v=${youtubeId}`
+        : `https://drive.google.com/file/d/${item.driveId}/view`,
+      linkLabel: youtubeId ? "לצפייה ב־YouTube" : "לצפייה ב־Google Drive",
+    });
+  });
+
   let activeFilter = "all";
+  let visibleCount = 12;
+  const loadMore = document.querySelector("[data-reels-load-more]");
 
   const getFilteredItems = () => {
     if (activeFilter === "all") {
@@ -769,13 +793,24 @@ if (reelsGrid instanceof HTMLElement) {
 
     media.append(thumbnail, play);
     copy.append(topic, title);
+    if (item.description && item.description !== "מפגש עם אורן ועם עולם הצמחים, הליקוט והרוקחות הביתית.") {
+      const description = document.createElement("span");
+      description.className = "reel-card-description";
+      description.textContent = item.description;
+      copy.append(description);
+    }
     card.append(media, copy);
     return card;
   };
 
   const renderReels = () => {
     const filteredItems = getFilteredItems();
-    reelsGrid.replaceChildren(...filteredItems.map(createReelCard));
+    reelsGrid.replaceChildren(...filteredItems.slice(0, visibleCount).map(createReelCard));
+    if (loadMore instanceof HTMLButtonElement) {
+      loadMore.hidden = visibleCount >= filteredItems.length;
+      const nextCount = Math.min(12, Math.max(0, filteredItems.length - visibleCount));
+      loadMore.textContent = `הצגת ${nextCount} סרטונים נוספים`;
+    }
 
     if (countLabel instanceof HTMLElement) {
       countLabel.textContent = `${filteredItems.length} סרטונים`;
@@ -816,7 +851,8 @@ if (reelsGrid instanceof HTMLElement) {
     }
 
     if (modalLink instanceof HTMLAnchorElement) {
-      modalLink.href = item.youtubeUrl;
+      modalLink.href = item.watchUrl;
+      modalLink.textContent = item.linkLabel;
     }
 
     if (modalVideo instanceof HTMLIFrameElement) {
@@ -835,6 +871,7 @@ if (reelsGrid instanceof HTMLElement) {
 
     filter.addEventListener("click", () => {
       activeFilter = filter.dataset.libraryFilter || "all";
+      visibleCount = 12;
 
       filters.forEach((option) => {
         const isActive = option === filter;
@@ -844,6 +881,11 @@ if (reelsGrid instanceof HTMLElement) {
 
       renderReels();
     });
+  });
+
+  loadMore?.addEventListener("click", () => {
+    visibleCount += 12;
+    renderReels();
   });
 
   reelsGrid.addEventListener("click", (event) => {
