@@ -233,3 +233,65 @@ html[lang="en"] .site-nav {
 }
 
 html[lang="en"] .library-disclaimer { max-width: none; }
+
+/* Match the treatment introduction to its page title on phones. */
+@media (max-width: 600px) {
+  html[lang="en"] .page-hero + .split-section > div:first-child > h2 {
+    font-size: clamp(2rem, 4.8vw, 4.5rem);
+  }
+}
+
+@media (max-width: 600px) {
+  html[lang="en"] .values-list > h2 {
+    font-size: 2rem;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 600px) {
+  html[lang="en"] .treatment-packages + .section-pad .simple-card > a {
+    justify-self: center;
+    text-align: center;
+  }
+}
+
+/* Keep the mobile footer in two deliberate rows, without edge separators. */
+@media (max-width: 600px) {
+  html[lang="en"] .footer-link-row::after {
+    content: "";
+    flex-basis: 100%;
+    order: 1;
+  }
+  html[lang="en"] .footer-link-row a:nth-of-type(n + 4) { order: 2; }
+  html[lang="en"] .footer-link-row a:nth-of-type(4) { padding-inline-start: 0; }
+  html[lang="en"] .footer-link-row a:nth-of-type(4)::before { content: none; }
+}
+
+@media (max-width: 600px) {
+  html[lang="en"] .gift-inquiry-link { justify-self: center; }
+}
+
+@media (max-width: 600px) {
+  html[lang="en"] .gallery-strip-adults .gallery-strip-window,
+  html[lang="en"] .gallery-strip-kids .gallery-strip-window {
+    --gallery-card-height: clamp(280px, 78vw, 360px);
+  }
+}
+
+@media (max-width: 600px) {
+  html[lang="en"] .workshop-faq > div:first-child > h2 { font-size: 2rem; }
+}
+
+@media (max-width: 600px) {
+  html[lang="en"] .workshop-qa:first-child {
+    border-top: 0;
+    margin-top: 0.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  html[lang="en"] .reels-grid { grid-template-columns: minmax(0, 1fr); }
+  html[lang="en"] .reel-card-topic,
+  html[lang="en"] .reel-card-description { display: none; }
+  html[lang="en"] .reel-card-copy { min-height: 0; }
+}

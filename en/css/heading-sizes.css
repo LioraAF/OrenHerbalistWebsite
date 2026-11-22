@@ -52,3 +52,12 @@ html[lang="en"] .workshop-faq > div:first-child > h2,
 html[lang="en"] .page-hero + .split-section > div:first-child > h2,
 html[lang="en"] .values-list > h2 { font-size: calc((3.2rem) * 1.21); }
 html[lang="en"] .workshop-qa h3 { font-size: calc((clamp(1rem, 1.45vw, 1.225rem)) * 1.21); }
+@media (max-width: 600px) {
+html[lang="en"] .page-hero + .split-section > div:first-child > h2 { font-size: calc((clamp(2rem, 4.8vw, 4.5rem)) * 1.21); }
+}
+@media (max-width: 600px) {
+html[lang="en"] .values-list > h2 { font-size: calc((2rem) * 1.21); }
+}
+@media (max-width: 600px) {
+html[lang="en"] .workshop-faq > div:first-child > h2 { font-size: calc((2rem) * 1.21); }
+}
