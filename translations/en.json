@@ -455,5 +455,7 @@
   "קומפרי וזהירות בשימוש בו": "Comfrey and precautions for its use",
   "אורן מציג את הקומפרי ביער ומספר על השימוש המסורתי שלו במיצויים לשימוש חיצוני. השיחה מדגישה את האזהרה מפני שימוש פנימי בצמח.": "Oren introduces comfrey in the forest and discusses its traditional use in external preparations. The discussion emphasizes the warning against taking the plant internally.",
   "ליקוט כוכבית בין מחטי האורן": "Gathering chickweed among pine needles",
-  "מפגש עם הכוכבית הגדלה בין מחטי האורן בקדיתא. אורן מציג את המרקם הרך והרירי שלה ומשוחח על מקומה במטבח ובמיצויים מסורתיים לשימוש חיצוני.": "Meet chickweed growing among pine needles in Kadita. Oren describes its soft, mucilaginous texture and discusses its place in cooking and traditional external preparations."
+  "מפגש עם הכוכבית הגדלה בין מחטי האורן בקדיתא. אורן מציג את המרקם הרך והרירי שלה ומשוחח על מקומה במטבח ובמיצויים מסורתיים לשימוש חיצוני.": "Meet chickweed growing among pine needles in Kadita. Oren describes its soft, mucilaginous texture and discusses its place in cooking and traditional external preparations.",
+  "טען עוד": "Load more",
+  "נטענו ${loadedItems.length}/${filteredItems.length} סרטונים": "Loaded ${loadedItems.length}/${filteredItems.length} videos"
 }

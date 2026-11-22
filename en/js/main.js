@@ -23,8 +23,8 @@ fitEnglishBrandName();
 window.addEventListener('resize', fitEnglishBrandName);
 document.fonts.ready.then(fitEnglishBrandName);
 
-// Start the English page scrollbar beneath the responsive, sticky header.
-if (document.documentElement.lang === 'en') {
+// Start the scrollbar beneath the header on English pages and the Hebrew video page.
+if (document.documentElement.lang === 'en' || document.body.classList.contains('videos-page')) {
   const header = document.querySelector('.site-header');
   if (header) {
     const syncHeaderHeight = () => document.documentElement.style.setProperty(
@@ -846,8 +846,7 @@ if (reelsGrid instanceof HTMLElement) {
     reelsGrid.replaceChildren(...loadedItems.map(createReelCard));
     if (loadMore instanceof HTMLButtonElement) {
       loadMore.hidden = visibleCount >= filteredItems.length;
-      const nextCount = Math.min(12, Math.max(0, filteredItems.length - visibleCount));
-      loadMore.textContent = `Load more`;
+      loadMore.textContent = "Load more";
     }
 
     if (countLabel instanceof HTMLElement) {
