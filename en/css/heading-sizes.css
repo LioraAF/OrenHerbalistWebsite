@@ -61,3 +61,4 @@ html[lang="en"] .values-list > h2 { font-size: calc((2rem) * 1.21); }
 @media (max-width: 600px) {
 html[lang="en"] .workshop-faq > div:first-child > h2 { font-size: calc((2rem) * 1.21); }
 }
+html[lang="en"] .treatment-package h3 { font-size: calc((1.325rem) * 1.21); }
