@@ -12,7 +12,8 @@
     "treatment.html",
     "vercel.json",
     "videos.html",
-    "workshops.html"
+    "workshops.html",
+    "images/icons/whatsapp-footer-thin.svg"
   ],
   "english_added_files": [
     "css/english.css",
@@ -56,30 +57,31 @@
     "treatment.html": "82429e227de18849d89d952c77dc05442e40e5c9c34a8c1c5fe0f23fea582e33",
     "vercel.json": "07d1dde0bef27e67f45e8bcca44c289bc8a85abf23c455dda2443b0779a2290b",
     "videos.html": "e5e7b56f3f44e02e024b0b5d2397fe6b2a1656c9fd4e6ca1edafbb00d57e46c8",
-    "workshops.html": "c408bcbc52c52c01a4dd6d38d6156bf2dd4b858b6f1ccb65be9a724866a646b2"
+    "workshops.html": "c408bcbc52c52c01a4dd6d38d6156bf2dd4b858b6f1ccb65be9a724866a646b2",
+    "images/icons/whatsapp-footer-thin.svg": "969c27af5f2a1656ab6fbcd7dda1557a1f83a4cc0726b4e9363535f7cd0a0c56"
   },
   "english_state_sha256": {
     "README.md": "c8a0c7b86a673a3b5aed7df96770cc795d4eda9d26f5f1e621b50f5e402c252b",
     "api/contact.js": "9c42b8d28a2653baa8a5702b6c9512168d7c3a17d7ef3d7a28f4d6ca01201b63",
-    "css/style.css": "823edf73694feb93ae24cd26b96efd552b4b538bc1cee0f96ff5ff6bd5c6a2c6",
-    "index.html": "a7f8ffd4b70a42a19fb2bb53ce7d7b49b77bf7eab308b99fe1d8e986791533c2",
+    "css/style.css": "4a371edc53ce57f1d8ff8e1e1b7d9e290ce58b1f75dee700370f87acd0fb381b",
+    "index.html": "5b72d00f20744ecb942cafd92edf08b14380a4e3706ec44ed9035829ddf76f34",
     "js/contact.js": "701b648e7a48683a230abd5d6fe50ff2505b7db947ff1d96d9c6b38b1dba3ccd",
     "js/main.js": "cff43d6d06721e9b28b167bbc16f3b0bb6bf2520faf1ca4f94bbaa2e70023f9a",
-    "products.html": "1698e456647deaf3297a625d5c18c357e423a8372a94cf22b8286ba13c864015",
+    "products.html": "526dfedd464bdf78c70b4b0715d9a59dbcf9bd1b5ef03d3b070bfba03e22ab99",
     "tests/contact.test.cjs": "52a295e12e91fb81c71ff5fc12f1aa403b7dfb1bcbbf44c6c53ab313d5306ece",
-    "treatment.html": "1344ccdeef070f2e7787eb9c52b287cbab3a3b3687306249e0cfa8c1693aad09",
+    "treatment.html": "b0c25d44c0d0997b3f436c94f0ccb8498eab4080f97f8483e83fe40e1912d4cb",
     "vercel.json": "c5dc32d7f60463c7ce38552897d59e2aa7e77a73350265316e2580e7da5f791f",
-    "videos.html": "2f20d956104b0d4f8a09b387a69e9b22d4b2e155a54c93abceeea1f37076c7ab",
-    "workshops.html": "28896a56355a6d98a5bc3111d84de44995deb6b84e75d98438776e54f92f000d",
-    "css/english.css": "d68b0556ff885a0c416e8b9c0787baca5d5d72c44f8759bdf790e5c5018bafb8",
-    "en/index.html": "b1acb492ed937a4c9f0e529594515db8bcbeb46644847884f3a6d6c98113b139",
+    "videos.html": "5c7df3d443b442baf7257a673e42806a1aeb4887423456eca464756ec9457eb8",
+    "workshops.html": "c69693c63df7a167bbb720bd678085fa01a1a9e56ef1a578d0c704999806815b",
+    "css/english.css": "23c6df1ab0de2f531422c08e4d6e35b23b25c97281b0694ee89148e0b0a0489f",
+    "en/index.html": "15e81d0c83d876dba07a3ed3117092822a490327e825b91b7b02a6555e5b2da4",
     "en/js/contact.js": "5a36d60ebc7f43b646e111b6e2fb981b08da619c016b86849055412eca3b2f4c",
     "en/js/drive-videos.js": "ef204802088e3df865e109541343fa2b0246f847f5d03a234794e8626e04c237",
     "en/js/main.js": "28e794f174f00b0a192bb10df219e80bf418a1b1092097ea4896fc441de356b4",
-    "en/products.html": "5f483be9aeb6ab368d99395395565f84fc72a7ad2bb38a852ba0face03370421",
-    "en/treatment.html": "03d9a7af15789c64dd0b23d24cb25417b83e903453a658f2ad252956b1595c5a",
-    "en/videos.html": "1a5566a110ba7daf0ec512d85365f129d427000b650788b0e2fae861be279574",
-    "en/workshops.html": "a72b39ca4e821bf3ca9d239e2e1fca38d7daa0e44ce65b0433fa70949ae4b4af",
+    "en/products.html": "707575f89736c5a7ccbd042e05b7e8de4b721db5f57d8001d01a382e520f88d3",
+    "en/treatment.html": "f257eadf8850751c46d5921839ee123079248ab5f8b26ecb5c011b6f27cd2306",
+    "en/videos.html": "9211aa765ffe2f4f364e4e288106263a0fbc219717872e30ace05228d4891590",
+    "en/workshops.html": "c1eb2e0f6a85b88d73a58a201641db8d6670daf066304000c0b72e090cd0ea78",
     "scripts/build-english.cjs": "3033aae774fdc4a78cc9cfee54f2e2a603de291a30e968930931c7e5cc35c743",
     "translations/en.json": "aefc7adfaa12b7b47f385cb023e766f4d3548b4f797b7d3448a3588cdd8f313c",
     "english-font-preview.html": "3b50d362b78fedfeb4d4d24df0e31747dda228ca4679b37bd1d635eb3ba1f908",
@@ -97,7 +99,8 @@
     "images/icons/video-vines/vine-7.svg": "80b80701401c7fc55a98de3f69f8c180da7685c70a37c3efc5d87b1ac5666db5",
     "images/icons/video-vines/vine-8.svg": "6f3aaa690d92fc1a511f14974ab7fc40f396211fde7b7495ea5cdd62c5160a89",
     "images/icons/video-vines/vine-tip.svg": "39ba814ec88dab673ca13274024527bd5a6f97d2c83ceba2d85bca83f862efe1",
-    "css/video-mobile.css": "c5e59ccaa60371ca4175239f05b52334822222d4135984ef2b927ad58602de65"
+    "css/video-mobile.css": "c5e59ccaa60371ca4175239f05b52334822222d4135984ef2b927ad58602de65",
+    "images/icons/whatsapp-footer-thin.svg": "9cbb5f457db5af51f3872a81ddd657ce7866ac816cc8957fe878509893208159"
   },
   "rollback_overrides": {
     "README.md": {
