@@ -290,7 +290,16 @@ html[lang="en"] .library-disclaimer { max-width: none; }
 }
 
 @media (max-width: 600px) {
-  html[lang="en"] .reels-grid { grid-template-columns: minmax(0, 1fr); }
+  html[lang="en"] .reels-grid {
+    grid-template-columns: minmax(0, 1fr);
+    padding-inline: 1rem;
+    row-gap: 4.5rem;
+  }
+  html[lang="en"] .reel-library-card {
+    width: 100%;
+    max-width: 360px;
+    justify-self: center;
+  }
   html[lang="en"] .reel-card-topic,
   html[lang="en"] .reel-card-description { display: none; }
   html[lang="en"] .reel-card-copy { min-height: 0; }
