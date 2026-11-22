@@ -39,7 +39,8 @@
     "images/icons/video-vines/vine-5.svg",
     "images/icons/video-vines/vine-6.svg",
     "images/icons/video-vines/vine-7.svg",
-    "images/icons/video-vines/vine-8.svg"
+    "images/icons/video-vines/vine-8.svg",
+    "images/icons/video-vines/vine-tip.svg"
   ],
   "notes": "Byte-for-byte originals from the clean tracked task files at task start. Pre-existing elegant_arrows.webp deletion and all unrelated untracked images/output folders are excluded. restore.py verifies hashes before changing anything and restores only this task. Run without arguments for a read-only check; --apply reverses the English work.",
   "original_sha256": {
@@ -69,15 +70,15 @@
     "vercel.json": "c5dc32d7f60463c7ce38552897d59e2aa7e77a73350265316e2580e7da5f791f",
     "videos.html": "bd8f3972e98f8b2077a64d0fe75c92b440d64d93e27e04d9e7757bfec082dbe8",
     "workshops.html": "28896a56355a6d98a5bc3111d84de44995deb6b84e75d98438776e54f92f000d",
-    "css/english.css": "69bbbcc4bfe2e2a121d734480777f295002c6e7358396665a6bf06958fc85bf9",
-    "en/index.html": "589a168c8140078b010ef5b9e5c8880e8a975b89041e26acd3d24881a7e035aa",
+    "css/english.css": "db674623e174abcf2581cd042a7f3cd513e0d0ecc43a6211e886e22ee8cd0ac0",
+    "en/index.html": "5fd444610ae10d49985484cf4c55521f41cdc494ac6c61d4a33731e93745278a",
     "en/js/contact.js": "5a36d60ebc7f43b646e111b6e2fb981b08da619c016b86849055412eca3b2f4c",
     "en/js/drive-videos.js": "ef204802088e3df865e109541343fa2b0246f847f5d03a234794e8626e04c237",
     "en/js/main.js": "543f0f39bc9df64df66fa16b27464c1feaeba1651baace8e6dd0179d79057d0d",
-    "en/products.html": "c517ca73807dda0954bc9094b9d9e1ebfd3a4471de426ccac893b4ed814b0e66",
-    "en/treatment.html": "05fb928d7f71f2702c8d427274900102b574aa54d1b7b0cfd13191a18d9bceff",
-    "en/videos.html": "78c57952eaa746e3133d7279a31dae011fff4ad97c35ec92c13b9ddf731beca9",
-    "en/workshops.html": "f14c276e40fd90cd28003bf3c78fc081c4d018c2de5719ce1f94021aada95f6d",
+    "en/products.html": "0706e494c8ec2fcc024c33980e7d470917203a9d870ef259b4c997703a9a401d",
+    "en/treatment.html": "da93afe1f0a71ee72e3354b828f6088d3142a5edd0706a2e4792e713d35e7d98",
+    "en/videos.html": "d5bb380f0d86737e4972d2e9682ee7c468e7c9bb07e6b3af7a6b6a6bdf51fdd9",
+    "en/workshops.html": "73f9be20873b07725b5f492024d0fd33db2d46ed97e601c400d591897ae5eaac",
     "scripts/build-english.cjs": "3033aae774fdc4a78cc9cfee54f2e2a603de291a30e968930931c7e5cc35c743",
     "translations/en.json": "cb073d4901c88cb6e360f8036dba208eeda5411a15a161349d8fcc99892d37eb",
     "english-font-preview.html": "3b50d362b78fedfeb4d4d24df0e31747dda228ca4679b37bd1d635eb3ba1f908",
@@ -93,7 +94,8 @@
     "images/icons/video-vines/vine-5.svg": "3cdda26bc89e7e7833dd8d66a197cdb85b213dd47a05b62d6648da06334dcbc4",
     "images/icons/video-vines/vine-6.svg": "2a6a31511f1608cd5f727ba52b7e2e615653c4937a6a3ff9d70aea2c05a8669e",
     "images/icons/video-vines/vine-7.svg": "80b80701401c7fc55a98de3f69f8c180da7685c70a37c3efc5d87b1ac5666db5",
-    "images/icons/video-vines/vine-8.svg": "6f3aaa690d92fc1a511f14974ab7fc40f396211fde7b7495ea5cdd62c5160a89"
+    "images/icons/video-vines/vine-8.svg": "6f3aaa690d92fc1a511f14974ab7fc40f396211fde7b7495ea5cdd62c5160a89",
+    "images/icons/video-vines/vine-tip.svg": "39ba814ec88dab673ca13274024527bd5a6f97d2c83ceba2d85bca83f862efe1"
   },
   "rollback_overrides": {
     "README.md": {

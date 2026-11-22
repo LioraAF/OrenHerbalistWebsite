@@ -346,3 +346,46 @@ html[lang="en"]::-webkit-scrollbar-thumb {
   html[lang="en"] .reel-library-card:nth-child(8n + 7) { --video-vine: url("../images/icons/video-vines/vine-7.svg"); }
   html[lang="en"] .reel-library-card:nth-child(8n + 0) { --video-vine: url("../images/icons/video-vines/vine-8.svg"); }
 }
+
+/* Give the complete mobile video list a growing tip at each end. */
+@media (max-width: 600px) {
+  html[lang="en"] .reels-grid { padding-top: 3rem; }
+  html[lang="en"] .reel-library-card:first-child::before {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    width: 70px;
+    height: 3rem;
+    transform: translateX(-50%);
+    background: url("../images/icons/video-vines/vine-tip.svg") center / 70px 100% no-repeat;
+    pointer-events: none;
+  }
+  html[lang="en"] .library-load-more {
+    position: relative;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+  html[lang="en"] .library-load-more::before,
+  html[lang="en"] .library-load-more::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    width: 70px;
+    height: calc(3rem + 1px);
+    transform: translateX(-50%);
+    pointer-events: none;
+  }
+  html[lang="en"] .library-load-more::before {
+    bottom: 100%;
+    background: url("../images/icons/video-vines/vine-8.svg") center / 70px 100% no-repeat;
+  }
+  html[lang="en"] .library-load-more::after {
+    top: 100%;
+    background: url("../images/icons/video-vines/vine-tip.svg") center / 70px 100% no-repeat;
+    transform: translateX(-50%) rotate(180deg);
+  }
+  html[lang="en"] .library-more-button { min-height: 44px; }
+  html[lang="en"] .library-more-button::before,
+  html[lang="en"] .library-more-button::after { content: none; }
+}
