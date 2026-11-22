@@ -847,7 +847,7 @@ if (reelsGrid instanceof HTMLElement) {
     if (loadMore instanceof HTMLButtonElement) {
       loadMore.hidden = visibleCount >= filteredItems.length;
       const nextCount = Math.min(12, Math.max(0, filteredItems.length - visibleCount));
-      loadMore.textContent = `Show ${nextCount} more videos`;
+      loadMore.textContent = `Load more`;
     }
 
     if (countLabel instanceof HTMLElement) {

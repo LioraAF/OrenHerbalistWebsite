@@ -389,3 +389,32 @@ html[lang="en"]::-webkit-scrollbar-thumb {
   html[lang="en"] .library-more-button::before,
   html[lang="en"] .library-more-button::after { content: none; }
 }
+
+html[lang="en"] .library-more-button {
+  font-family: var(--font-mini);
+  color: var(--clay-dark);
+}
+
+@media (max-width: 600px) {
+  html[lang="en"] .library-more-button {
+    position: relative;
+    isolation: isolate;
+  }
+  html[lang="en"] .library-more-button::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 0 auto 0 50%;
+    width: 70px;
+    height: auto;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+    opacity: 1;
+    transform: translateX(-50%);
+    background: url("../images/icons/video-vines/vine-3.svg") center / 70px 100% no-repeat;
+    -webkit-mask-image: linear-gradient(to bottom, #000 0, #000 calc(50% - 22px), transparent calc(50% - 11px), transparent calc(50% + 11px), #000 calc(50% + 22px), #000 100%);
+    mask-image: linear-gradient(to bottom, #000 0, #000 calc(50% - 22px), transparent calc(50% - 11px), transparent calc(50% + 11px), #000 calc(50% + 22px), #000 100%);
+    pointer-events: none;
+  }
+}
