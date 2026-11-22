@@ -972,7 +972,7 @@ html[lang="he"] .language-switch { font-family: "Bellefair", Georgia, serif; }
 }
 
 .footer-sign-facebook { --footer-icon-image: url("../images/icons/facebook-footer-thin.svg?v=16"); }
-.footer-sign-whatsapp { --footer-icon-image: url("../images/icons/whatsapp-footer-thin.svg?v=soft-round"); }
+.footer-sign-whatsapp { --footer-icon-image: url("../images/icons/whatsapp-footer-thin.svg?v=soft-round-light"); }
 .footer-sign-whatsapp .footer-icon { width: 28px; height: 28px; }
 .footer-sign-phone { --footer-icon-image: url("../images/icons/phone-footer-thin.svg?v=16"); }
 .footer-sign-instagram { --footer-icon-image: url("../images/icons/instagram-footer-thin.svg?v=16"); }
