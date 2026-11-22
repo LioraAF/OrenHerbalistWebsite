@@ -421,3 +421,5 @@ html[lang="en"] .library-more-button {
     pointer-events: none;
   }
 }
+
+html[lang="en"] .treatment-package h3 { font-family: var(--font-mini); }
