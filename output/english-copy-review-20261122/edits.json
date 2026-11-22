@@ -1,0 +1,751 @@
+[
+  {
+    "review_number": 1,
+    "hebrew": "להכיר את הצמח, לחיות את העונות, לרקוח בתשומת לב, לטפל בקשיבות.",
+    "before": "Know the plants. Live with the seasons. Create with care. Listen deeply.",
+    "after": "Know the plants. Live with the seasons. Prepare with care. Treat with compassion.",
+    "status": "Approved by you"
+  },
+  {
+    "review_number": 2,
+    "hebrew": "אורן עמנואל שושנה, מטפל גוף–נפש באמצעות צמחי מרפא, מלקט צמחים מקומיים ויוצר ומוכר מגוון תמציות טבעיות בהתאמה ללקוח, ומנחה סדנאות ליקוט ורוקחות טבעית כחלק מאורח חיים מחובר לטבע.",
+    "before": "I’m Oren Emanuel Shoshana. I offer care for body and mind through medicinal plants, forage local herbs, create and sell personalized natural extracts, and lead foraging and herbal preparation workshops as part of a life connected to nature.",
+    "after": "I’m Oren Emanuel Shoshana. I use medicinal plants to support body and mind, gather local plants, and create and sell a variety of natural extracts tailored to each person’s needs. I lead workshops in foraging and making herbal preparations, sharing a way of life connected to nature.",
+    "status": "Approved by you"
+  },
+  {
+    "review_number": 3,
+    "hebrew": "שמי אורן עמנואל שושנה, הרבליסט קליני במקצועי. אני מטפל באמצעות שיחה טיפולית, תזונה וצמחי מרפא, וחוקר, מלקט ורוקח מן הטבע הישראלי בסקרנות אין־סופית שאותה אני מנסה להעביר הלאה. אני חי ופועל בקדיתא שבהרי הגליל, מתוך קשר יומיומי לאדמה ולצומח המקומי.",
+    "before": "I explore, forage and make herbal preparations from the Israeli landscape with an endless curiosity that I love to share.",
+    "after": "I explore Israel’s plant life, forage and make herbal preparations, bringing an endless curiosity to my work that I hope to share with others.",
+    "status": "Approved by you"
+  },
+  {
+    "review_number": 4,
+    "hebrew": "שמי אורן עמנואל שושנה, הרבליסט קליני במקצועי. אני מטפל באמצעות שיחה טיפולית, תזונה וצמחי מרפא, וחוקר, מלקט ורוקח מן הטבע הישראלי בסקרנות אין־סופית שאותה אני מנסה להעביר הלאה. אני חי ופועל בקדיתא שבהרי הגליל, מתוך קשר יומיומי לאדמה ולצומח המקומי.",
+    "before": "I live and work in Kadita, in the Galilee hills, with a daily connection to the soil and local plants.",
+    "after": "I live and work in Kadita, in the Galilee hills, where daily life keeps me connected to the land and its plants.",
+    "status": "Approved by you"
+  },
+  {
+    "review_number": 5,
+    "hebrew": "למדתי הרבליזם קליני בקמפוס ברושים, והדרך שלי משלבת גם גינון, בוסתנאות ארץ ישראלית והנחיית סדנאות. לצד העבודה היומיומית אני מייעץ ומסייע בהקמת חוות צמחי מרפא ביוון, ותורם מהידע ומהניסיון המעשי שלי למחקר בתחום. אני ממשיך ללמוד בכל מפגש עם צמח, מקום ואדם, ולשתף במה שהדרך הזאת מלמדת אותי.",
+    "before": "My work also includes gardening, traditional local orchards and teaching workshops.",
+    "after": "My work also brings together gardening, traditional orchard cultivation in Israel and leading herbal workshops.",
+    "status": "Approved by you"
+  },
+  {
+    "review_number": 6,
+    "hebrew": "למדתי הרבליזם קליני בקמפוס ברושים, והדרך שלי משלבת גם גינון, בוסתנאות ארץ ישראלית והנחיית סדנאות. לצד העבודה היומיומית אני מייעץ ומסייע בהקמת חוות צמחי מרפא ביוון, ותורם מהידע ומהניסיון המעשי שלי למחקר בתחום. אני ממשיך ללמוד בכל מפגש עם צמח, מקום ואדם, ולשתף במה שהדרך הזאת מלמדת אותי.",
+    "before": "Alongside my daily practice, I advise on and help establish a medicinal herb farm in Greece, contributing practical knowledge and experience to research in the field.",
+    "after": "In addition to my daily practice, I’m helping to set up a medicinal herb farm in Greece in an advisory and practical role. I also share my knowledge and practical experience with researchers in the field.",
+    "status": "Approved by you"
+  },
+  {
+    "review_number": 7,
+    "hebrew": "בואו לפגוש אותי בסרטונים.",
+    "before": "Come meet me in the videos.",
+    "after": "Get to know me through my videos.",
+    "status": "Approved by you"
+  },
+  {
+    "review_number": 8,
+    "hebrew": "החיים לצד הטבע מלמדים אותי לחיות עם העונות ולשים לב למה שכל שינוי במזג האוויר מביא איתו. לכל צמח זמן משלו לצמוח ולפרוח, וגם לשורשים, לעלים, לגבעולים ולפרחים יש תכונות והרכב חומרים שמשתנים בין חלקי הצמח ולאורך השנה. אמנות הליקוט היא להכיר את ההבדלים האלה ולדעת מה ללקט, מתי ואיך, כדי לשמור על איכויות הצמח ועל יכולתו להמשיך לצמוח גם בעונה הבאה.",
+    "before": "Roots, leaves, stems and flowers each have qualities and constituents that vary between plant parts and throughout the year.",
+    "after": "Each part of the plant—roots, leaves, stems and flowers—has its own properties and mix of compounds, which change throughout the year.",
+    "status": "Approved by you"
+  },
+  {
+    "review_number": 9,
+    "hebrew": "החיים לצד הטבע מלמדים אותי לחיות עם העונות ולשים לב למה שכל שינוי במזג האוויר מביא איתו. לכל צמח זמן משלו לצמוח ולפרוח, וגם לשורשים, לעלים, לגבעולים ולפרחים יש תכונות והרכב חומרים שמשתנים בין חלקי הצמח ולאורך השנה. אמנות הליקוט היא להכיר את ההבדלים האלה ולדעת מה ללקט, מתי ואיך, כדי לשמור על איכויות הצמח ועל יכולתו להמשיך לצמוח גם בעונה הבאה.",
+    "before": "The art of foraging is knowing these differences: what to gather, when and how, preserving the plant’s qualities and its ability to grow again next season.",
+    "after": "Foraging is an art of understanding these differences and knowing what, when and how to gather, taking care to preserve the plant’s qualities and allow it to keep growing next season.",
+    "status": "Approved by you"
+  },
+  {
+    "review_number": 10,
+    "hebrew": "אותה תשומת לב ממשיכה גם ברקיחה. הכנת תמציות וזיקוק שמנים אתריים דורשים סבלנות, הקשבה והיכרות עם חומר הגלם. יש משמעות לזמן, לטמפרטורה ולכל שלב בתהליך, כדי לתת לאיכויות של הצמח לבוא לידי ביטוי בתוצר איכותי.",
+    "before": "The same care carries through into preparing herbs.",
+    "after": "I bring the same care to making herbal preparations.",
+    "status": "Edited in your chosen style"
+  },
+  {
+    "review_number": 11,
+    "hebrew": "אותה תשומת לב ממשיכה גם ברקיחה. הכנת תמציות וזיקוק שמנים אתריים דורשים סבלנות, הקשבה והיכרות עם חומר הגלם. יש משמעות לזמן, לטמפרטורה ולכל שלב בתהליך, כדי לתת לאיכויות של הצמח לבוא לידי ביטוי בתוצר איכותי.",
+    "before": "Timing, temperature and every stage of the process matter, allowing the plant’s qualities to shine through in the finished preparation.",
+    "after": "Careful attention to timing, temperature and every stage of the process allows the plant’s qualities to come through in a well-made preparation.",
+    "status": "Edited in your chosen style"
+  },
+  {
+    "review_number": 12,
+    "hebrew": "מההיכרות עם הצמח אל ההיכרות עם האדם.",
+    "before": "Getting to know the plant. Getting to know the person.",
+    "after": "From understanding the plant to understanding the person.",
+    "status": "Edited in your chosen style"
+  },
+  {
+    "review_number": 13,
+    "hebrew": "בקליניקה, הקשר עם הצמחים פוגש את הסיפור האישי של מי שמגיע אליי. אנחנו מתחילים בשיחה ובהיכרות עם הגוף, הרקע הבריאותי, התזונה, השינה והשגרה, כדי להבין מה מבקש תשומת לב ומה רוצים לשנות.",
+    "before": "In the clinic, my connection with plants meets each visitor’s personal story.",
+    "after": "In my clinical practice, my connection with plants comes together with the personal story of each person I work with.",
+    "status": "Edited in your chosen style"
+  },
+  {
+    "review_number": 14,
+    "hebrew": "בקליניקה, הקשר עם הצמחים פוגש את הסיפור האישי של מי שמגיע אליי. אנחנו מתחילים בשיחה ובהיכרות עם הגוף, הרקע הבריאותי, התזונה, השינה והשגרה, כדי להבין מה מבקש תשומת לב ומה רוצים לשנות.",
+    "before": "We begin with a conversation about the body, health history, nutrition, sleep and daily routines, to understand what needs attention and what you would like to change.",
+    "after": "We begin by talking about your body, health history, diet, sleep and daily routine, to understand what needs attention and what you would like to change.",
+    "status": "Edited in your chosen style"
+  },
+  {
+    "review_number": 15,
+    "hebrew": "מתוך ההיכרות הזאת אני בונה פורמולת צמחים אישית, כתמציות, חליטות או רקיחות, לצד המלצות לתזונה ולהרגלי חיים. הבחירה נעשית לפי הצורך, הרגישויות והתרופות הקיימות, ומשלבת ידע מסורתי עם מחקר עדכני.",
+    "before": "From that understanding, I create a personal herbal formula as extracts, teas or other preparations, alongside recommendations for nutrition and daily habits.",
+    "after": "Based on what I learn, I create a personalized herbal formula in the form of extracts, teas, balms or other preparations, along with recommendations for diet and daily habits.",
+    "status": "Approved by you, including balms"
+  },
+  {
+    "review_number": 16,
+    "hebrew": "הטיפול ממשיך במעקב ובהתאמה של הצמחים והמינונים לתגובה האישית. זהו תהליך הדרגתי של הקשבה ותמיכה בכוחות של הגוף, בקצב שמתאים לאדם ולחיים שלו.",
+    "before": "It is a gradual process of listening and supporting the body’s resources, at a pace that fits you and your life.",
+    "after": "Treatment progresses gradually, supporting the body’s natural strengths, with the pace guided by the body’s needs and response.",
+    "status": "Approved by you"
+  },
+  {
+    "review_number": 17,
+    "hebrew": "לכל צמח יש אופי, טמפרטורה, תנועה וסיפור. הבחירה המדויקת שלהם יחד היא לב העבודה ההרבליסטית.",
+    "before": "Choosing how to bring them together is at the heart of herbal practice.",
+    "after": "Choosing the right combination of plants is at the heart of herbal practice.",
+    "status": "Edited in your chosen style"
+  },
+  {
+    "review_number": 18,
+    "hebrew": "מפגשי קליניקה לבניית תהליך טיפולי מדורג, עם פורמולה מותאמת והמשך מעקב.",
+    "before": "Clinic appointments to build a gradual care plan, with a personalized formula and ongoing follow-up.",
+    "after": "Clinic appointments to develop a care plan that progresses step by step, with a personalized herbal formula and ongoing follow-up.",
+    "status": "Edited in your chosen style"
+  },
+  {
+    "review_number": 19,
+    "hebrew": "חליטות, שמנים ותמציות עונתיות לשימוש ביתי יעיל, מחומרים איכותיים.",
+    "before": "Seasonal herbal teas, oils and extracts made with quality ingredients for practical use at home.",
+    "after": "Seasonal herbal teas, oils and extracts made from quality ingredients for effective use at home.",
+    "status": "Edited in your chosen style"
+  },
+  {
+    "review_number": 20,
+    "hebrew": "הצטרפות לקבוצת וואטסאפ שקטה",
+    "before": "Join the quiet WhatsApp group",
+    "after": "Join the quiet WhatsApp group",
+    "status": "Original wording retained at your request"
+  },
+  {
+    "review_number": 21,
+    "hebrew": "תמונות והסברים על צמחי מרפא ופטריות.",
+    "before": "Photos and introductions to medicinal plants and mushrooms.",
+    "after": "Photos and information about medicinal plants and mushrooms.",
+    "status": "Edited in your chosen style"
+  },
+  {
+    "review_number": 22,
+    "hebrew": "",
+    "before": "** Group content is in Hebrew.",
+    "after": "Group content is in Hebrew.",
+    "status": "English-only WhatsApp language note"
+  },
+  {
+    "review_number": 23,
+    "hebrew": "טיפול עמוק וליווי אישי בעזרת צמחי מרפא",
+    "before": "In-depth care and personal support through medicinal plants",
+    "after": "Comprehensive care and personal support with medicinal plants",
+    "status": "Edited in your chosen style"
+  },
+  {
+    "review_number": 24,
+    "hebrew": "טיפול הרבליסטי מתחיל בשיחה קשובה ובהיכרות עם האדם השלם: הגוף, השגרה, ההיסטוריה הבריאותית, העומסים והכוחות שכבר קיימים.",
+    "before": "Herbal care begins with an attentive conversation and getting to know the whole person: your body, daily life, health history, pressures and existing strengths.",
+    "after": "Herbal care begins with a thoughtful conversation to get to know you as a whole person: your body, daily routine, health history, the pressures you face and the strengths you already have.",
+    "status": "Edited in your chosen style"
+  },
+  {
+    "review_number": 25,
+    "hebrew": "צמחי מרפא הם דרך לעבוד עם הגוף ולא במקומו — לתמוך בכוחות הטבעיים שלו, לחזק אותו ולעזור לו לרפא את עצמו.",
+    "before": "Medicinal plants offer a way to work with the body, supporting its natural resources, strengthening it and helping its own healing processes.",
+    "after": "Medicinal plants offer a way to work with the body, supporting its natural strengths and its own healing processes.",
+    "status": "Edited in your chosen style"
+  },
+  {
+    "review_number": 26,
+    "hebrew": "בטיפול בצמחי מרפא בונים פורמולה אישית: תמציות, חליטות או רקיחות שנבחרות לפי הצורך, הרגישויות, התרופות הקיימות והמטרה הטיפולית. הצמחים אינם מוצר מדף קבוע, אלא שפה טיפולית שמותאמת לאדם שמגיע.",
+    "before": "The herbs become part of an approach tailored to the person who comes to the clinic.",
+    "after": "The herbal approach is tailored to each person, rather than relying on a standard, ready-made formula.",
+    "status": "Edited in your chosen style"
+  },
+  {
+    "review_number": 27,
+    "hebrew": "התהליך יכול להתאים למצבים כמו סטרס יומיומי, חרדות ולחצים, דיכאון, קשיי שינה, עייפות, מחלות כרוניות של מערכת העיכול ומחלות עור כרוניות. צמחי מרפא יכולים לסייע גם במצבים של חוסר איזון הורמונלי אצל נשים, ובהם כאבי וסת, מחזור לא סדיר, PMS חמור, אתגרי פוריות ואנדומטריוזיס.",
+    "before": "The process may be suitable for concerns such as daily stress, anxiety, depression, sleep difficulties, fatigue, chronic digestive conditions and chronic skin conditions.",
+    "after": "This approach may be suitable for people experiencing daily stress, anxiety, depression, sleep difficulties, fatigue, chronic digestive conditions or chronic skin conditions.",
+    "status": "Edited in your chosen style"
+  },
+  {
+    "review_number": 28,
+    "hebrew": "התהליך יכול להתאים למצבים כמו סטרס יומיומי, חרדות ולחצים, דיכאון, קשיי שינה, עייפות, מחלות כרוניות של מערכת העיכול ומחלות עור כרוניות. צמחי מרפא יכולים לסייע גם במצבים של חוסר איזון הורמונלי אצל נשים, ובהם כאבי וסת, מחזור לא סדיר, PMS חמור, אתגרי פוריות ואנדומטריוזיס.",
+    "before": "Herbal care may also offer support for hormonal concerns in women, including period pain, irregular cycles, severe PMS, fertility challenges and endometriosis.",
+    "after": "Herbal care may also offer support for women experiencing hormonal imbalances, including period pain, irregular cycles, severe PMS, fertility challenges and endometriosis.",
+    "status": "Edited in your chosen style"
+  },
+  {
+    "review_number": 29,
+    "hebrew": "לעיתים הטיפול בצמחי מרפא דורש יותר זמן מטיפול תרופתי מודרני, משום שמטרתו אינה רק להקל במהירות על סימפטום, אלא לתמוך באופן הדרגתי בתהליכים הטבעיים של הגוף ולחזק את יכולתו להתמודד לאורך זמן, ולרפא בעצמו את מקור הבעיה. הקצב משתנה מאדם לאדם ותלוי במצב, במשך הזמן שהוא קיים ובתגובה האישית לטיפול. הטיפול יכול לעמוד בפני עצמו או להשתלב לצד טיפול רפואי, מתוך זהירות, מעקב ושיקול דעת.",
+    "before": "Herbal care can sometimes take longer than conventional medication, because the aim extends beyond quick symptom relief to gradually supporting the body’s natural processes and its ability to address underlying concerns over time.",
+    "after": "Herbal care can sometimes take longer than treatment with conventional medication. Its aim goes beyond quick symptom relief to gradually support the body’s natural processes and its ability to address underlying concerns over time.",
+    "status": "Edited in your chosen style"
+  },
+  {
+    "review_number": 30,
+    "hebrew": "לעיתים הטיפול בצמחי מרפא דורש יותר זמן מטיפול תרופתי מודרני, משום שמטרתו אינה רק להקל במהירות על סימפטום, אלא לתמוך באופן הדרגתי בתהליכים הטבעיים של הגוף ולחזק את יכולתו להתמודד לאורך זמן, ולרפא בעצמו את מקור הבעיה. הקצב משתנה מאדם לאדם ותלוי במצב, במשך הזמן שהוא קיים ובתגובה האישית לטיפול. הטיפול יכול לעמוד בפני עצמו או להשתלב לצד טיפול רפואי, מתוך זהירות, מעקב ושיקול דעת.",
+    "before": "with care, monitoring and considered judgment.",
+    "after": "with care, monitoring and careful judgment.",
+    "status": "Edited in your chosen style"
+  },
+  {
+    "review_number": 31,
+    "hebrew": "אורן רוקח תערובת צמחים מותאמת, עם הנחיות שימוש פשוטות וברורות להמשך הדרך. עלות הפורמולה נפרדת ונקבעת לפי הצרכים האישיים של כל מטופל.",
+    "before": "The formula is charged separately, according to each person’s needs.",
+    "after": "The herbal formula is charged separately, with the price depending on each person’s needs.",
+    "status": "Edited in your chosen style"
+  },
+  {
+    "review_number": 32,
+    "hebrew": "לאנשים שמתמודדים עם עומס רגשי או גופני, קשיי שינה, עייפות, בעיות עיכול, חוסר איזון הורמונלי או מחלות עור כרוניות, ורוצים לקבל תמיכה טבעית ומותאמת ולבנות תהליך שמתחבר לחיים עצמם.",
+    "before": "who want natural, personalized support and a care process that fits everyday life.",
+    "after": "who want natural, personalized support and an approach to care that fits into everyday life.",
+    "status": "Edited in your chosen style"
+  },
+  {
+    "review_number": 33,
+    "hebrew": "אפשר להיפגש בקליניקה של אורן בקדיתא שבגליל העליון, או בבית הלקוח לפי צורך, נוחות ותיאום מראש.",
+    "before": "Appointments are available at Oren’s clinic in Kadita, in the Upper Galilee, or at your home according to your needs, convenience and prior arrangement.",
+    "after": "Appointments are available at Oren’s clinic in Kadita, in the Upper Galilee. Home visits can also be arranged to suit your needs and convenience.",
+    "status": "Edited in your chosen style"
+  },
+  {
+    "review_number": 34,
+    "hebrew": "שיחה להתייעצות זה חינם. לפעמים כמה דקות מספיקות כדי להבין אם זה הכיוון הנכון.",
+    "before": "An introductory consultation call is free. Sometimes a few minutes are enough to see whether this feels like the right direction.",
+    "after": "An initial consultation call is free. Sometimes a few minutes are enough to see whether this approach feels right for you.",
+    "status": "Edited in your chosen style"
+  },
+  {
+    "review_number": 35,
+    "hebrew": "תמציות, שמנים ומשחות שנרקחים למדף ולפי אדם.",
+    "before": "Extracts, oils and balms, crafted for everyday use and individual needs.",
+    "after": "Extracts, oils and balms, available ready-made or prepared especially for you.",
+    "status": "Edited in your chosen style"
+  },
+  {
+    "review_number": 36,
+    "hebrew": "חלק מהרקיחות הן מוצרי מדף שנעשים בכמויות קטנות לצרכים פשוטים ויומיומיים. אחרות נבנות באופן אישי אחרי מפגש טיפולי, לפי הצורך, הרקע הבריאותי, העונה והתגובה של הגוף.",
+    "before": "Others are created individually after a consultation, taking account of your needs, health history, the season and your body’s response.",
+    "after": "Others are made especially for you after a consultation, taking into account your needs, health history, the season and your body’s response.",
+    "status": "Edited in your chosen style"
+  },
+  {
+    "review_number": 37,
+    "hebrew": "כשהצורך עמוק או מורכב יותר, הרקיחה מתחילה מהטיפול. בפגישה בודקים יחד מה הגוף מבקש: מערכת העיכול, שינה, כאב, מתח, מחזוריות, עור, לב או התאוששות. מתוך זה נבחרים צמחים, צורת הכנה ומינון שמתאימים לאדם הספציפי.",
+    "before": "When a need is deeper or more complex, the preparation begins with a consultation.",
+    "after": "For more complex or underlying concerns, the process of making a preparation begins with a consultation.",
+    "status": "Edited in your chosen style"
+  },
+  {
+    "review_number": 38,
+    "hebrew": "בושם יפה כלבונה",
+    "before": "Beautiful as Frankincense perfume",
+    "after": "“Beautiful as Frankincense” botanical perfume",
+    "status": "Edited in your chosen style"
+  },
+  {
+    "review_number": 39,
+    "hebrew": "בלנד שמנים אתריים לנשימה",
+    "before": "Essential oil blend for breathing",
+    "after": "Essential oil blend for respiratory support",
+    "status": "Edited in your chosen style"
+  },
+  {
+    "review_number": 40,
+    "hebrew": "קרוב אליכם",
+    "before": "Find us nearby",
+    "after": "Where to find the products",
+    "status": "Edited in your chosen style"
+  },
+  {
+    "review_number": 41,
+    "hebrew": "איפה אפשר לקבל צמחי מרפא בהתאמה אישית?",
+    "before": "Where can I get personalized herbal care?",
+    "after": "How can I get herbal preparations tailored to my needs?",
+    "status": "Edited in your chosen style"
+  },
+  {
+    "review_number": 42,
+    "hebrew": "לפרטים על טיפול והתאמת צמחים",
+    "before": "About consultations & personalized herbs",
+    "after": "About consultations and personalized herbal preparations",
+    "status": "Edited in your chosen style"
+  },
+  {
+    "review_number": 43,
+    "hebrew": "מוצרים שונים יכולים להתחבר יחד למארז מתנה אישי: לחתונה, יום הולדת, אירוח, תודה או כל רגע שמבקש משהו טבעי ושימושי.",
+    "before": "Combine products into a personal gift for a wedding, birthday, host, thank-you or any occasion that calls for something natural and useful.",
+    "after": "Combine products into a personalized gift set for a wedding or birthday, to thank a host, to show your appreciation, or for any occasion that calls for something natural and useful.",
+    "status": "Edited in your chosen style"
+  },
+  {
+    "review_number": 44,
+    "hebrew": "זו מתנה שמתאימה במיוחד למי שאוהב פריטים טבעיים לבריאות, לטיפוח ולחיבור פשוט לגוף ולעונה.",
+    "before": "A lovely choice for anyone who enjoys natural products for wellbeing, personal care and a simple connection with the body and the seasons.",
+    "after": "A thoughtful gift for anyone who enjoys natural products for wellbeing and personal care, and values a connection with their body and the seasons.",
+    "status": "Edited in your chosen style"
+  },
+  {
+    "review_number": 45,
+    "hebrew": "סדנאות צמחי מרפא לחברות, ארגונים, קהילות, משפחות וקבוצות חברים, וגם לדייט ייחודי לזוגות. מפגש חי ומעשי עם צמחים, ריחות, ליקוט ורקיחה, שנבנה לפי העונה, המקום והאנשים שמגיעים.",
+    "before": "Herbal workshops for companies, organizations, communities, families and friends, or a special date for two.",
+    "after": "Herbal workshops for companies, organizations, communities, families and groups of friends, as well as couples looking for a special date.",
+    "status": "Edited in your chosen style"
+  },
+  {
+    "review_number": 46,
+    "hebrew": "סדנאות צמחי מרפא לחברות, ארגונים, קהילות, משפחות וקבוצות חברים, וגם לדייט ייחודי לזוגות. מפגש חי ומעשי עם צמחים, ריחות, ליקוט ורקיחה, שנבנה לפי העונה, המקום והאנשים שמגיעים.",
+    "before": "A lively, practical encounter with plants, scents, foraging and herbal preparations, shaped by the season, the place and the people who join.",
+    "after": "A hands-on experience with plants, scents, foraging and herbal preparation, shaped by the season, the location and the people taking part.",
+    "status": "Edited in your chosen style"
+  },
+  {
+    "review_number": 47,
+    "hebrew": "הסדנאות נבנות סביב מפגש מעשי עם עולם הצמחים: ליקוט, ריח, מגע, רקיחה ושיחה פשוטה על דרכים לשלב צמחי מרפא בחיי היומיום.",
+    "before": "Workshops are built around hands-on encounters with plants: foraging, scent, touch, making preparations and simple conversations about bringing medicinal herbs into everyday life.",
+    "after": "Workshops offer a hands-on introduction to plants through foraging, smelling, touching and making herbal preparations, along with informal conversations about using medicinal herbs in everyday life.",
+    "status": "Edited in your chosen style"
+  },
+  {
+    "review_number": 48,
+    "hebrew": "יוצאים מהיומיום ופוגשים את הצמחים דרך הידיים.",
+    "before": "Step out of your routine and get to know plants through your hands.",
+    "after": "Step out of your daily routine and get to know plants through hands-on activities.",
+    "status": "Edited in your chosen style"
+  },
+  {
+    "review_number": 49,
+    "hebrew": "סדנה יכולה להיות שקטה ומעמיקה, או קלילה וחווייתית יותר. לפעמים יוצאים להליכה קצרה, לפעמים יושבים סביב שולחן עם שמנים, שרפים וחליטות, ולפעמים עובדים עם חומרי גלם שכל משתתף לוקח איתו הביתה.",
+    "before": "A workshop can be quiet and in-depth, or light and playful.",
+    "after": "A workshop can be calm and reflective, or lighthearted and informal.",
+    "status": "Edited in your chosen style"
+  },
+  {
+    "review_number": 50,
+    "hebrew": "המטרה היא ליצור חוויה שמחזירה תשומת לב לגוף, לחושים ולטבע המקומי, בלי להפוך את זה לשיעור כבד. יש ידע, יש עשייה, ויש מקום לקבוצה עצמה.",
+    "before": "The aim is an experience that brings attention back to the body, the senses and local nature, with accessible learning, practical activity and room for the group to find its own rhythm.",
+    "after": "The aim is to bring attention back to the body, the senses and the natural surroundings, without making the workshop feel like a formal lesson. There is room for learning, practical activities and the group itself.",
+    "status": "Edited in your chosen style"
+  },
+  {
+    "review_number": 51,
+    "hebrew": "סדנאות מעשיות, הרצאה וסדנה בהתאמה אישית.",
+    "before": "Hands-on workshops, a talk or a session made for you.",
+    "after": "Hands-on workshops, a talk or a workshop tailored to you.",
+    "status": "Edited in your chosen style"
+  },
+  {
+    "review_number": 52,
+    "hebrew": "ליקוט שרפים ביער",
+    "before": "Foraging forest resins",
+    "after": "Gathering resins in the forest",
+    "status": "Edited in your chosen style"
+  },
+  {
+    "review_number": 53,
+    "hebrew": "טיול סביב היכרות מעשית עם שורשי מרפא מקומיים, דרכי זיהוי, איסוף אחראי ושילוב שלהם בפורמולה טבעית לחיזוק.",
+    "before": "An outing to get to know local medicinal roots, learn identification and responsible gathering, and use them in a natural supporting formula.",
+    "after": "An outing to discover local medicinal roots, learn how to identify and gather them responsibly, and use them to make a strengthening herbal formula.",
+    "status": "Edited in your chosen style"
+  },
+  {
+    "review_number": 54,
+    "hebrew": "הרצאה חווייתית עם צמחי מרפא נפוצים בגינות: מכירים את האיכויות שלהם, לומדים להכין תה ולשלב אותו ביומיום, ובסיום מרכיבים חליטה אישית.",
+    "before": "An engaging talk with familiar garden herbs: explore their qualities, learn how to make herbal tea and bring it into daily life, then create your own blend.",
+    "after": "An engaging talk featuring familiar garden herbs: discover their qualities, learn how to prepare herbal teas and use them in everyday life, then create your own blend.",
+    "status": "Edited in your chosen style"
+  },
+  {
+    "review_number": 55,
+    "hebrew": "כל אדם מסתקרן מעולם הצמחים קצת אחרת. נבנה יחד סדנה סביב מה שמעניין אתכם, למפגש אישי, לדייט ייחודי או לקבוצה.",
+    "before": "Everyone is drawn to a different part of the plant world. Together we’ll create a workshop around your interests, for an individual session, a special date or a group.",
+    "after": "Everyone is drawn to something different in the world of plants. Together we’ll create a workshop around your interests, whether it’s a session just for you, a special date for two or a group experience.",
+    "status": "Edited in your chosen style"
+  },
+  {
+    "review_number": 56,
+    "hebrew": "יש בסיס מוכן, ויש התאמה לקבוצה.",
+    "before": "A thoughtful starting point, adapted to your group.",
+    "after": "An established workshop format, adapted to your group.",
+    "status": "Edited in your chosen style"
+  },
+  {
+    "review_number": 57,
+    "hebrew": "לימי חברה, ימי העשרה, קהילות צעירים, משפחות, קבוצות חברים, אירועים פרטיים וגם לדייט ייחודי לזוגות.",
+    "before": "Company outings, enrichment days, young adult communities, families, groups of friends, private events and special dates for couples.",
+    "after": "Company outings, learning days, young adult communities, families, groups of friends, private events and couples looking for a special date.",
+    "status": "Edited in your chosen style"
+  },
+  {
+    "review_number": 58,
+    "hebrew": "סדנה מעשית מתאימה למפגש זוגי או לקבוצה של עד 30 משתתפים. להרצאה אין הגבלה על מספר המשתתפים.",
+    "before": "Hands-on workshops suit couples or groups of up to 30 participants. There is no participant limit for the talk.",
+    "after": "Hands-on workshops are suitable for couples and groups of up to 30 people. The talk has no limit on audience size.",
+    "status": "Edited in your chosen style"
+  },
+  {
+    "review_number": 59,
+    "hebrew": "לפי הקבוצה: מספר משתתפים, מיקום, אורך המפגש, חומרי גלם וסוג הפעילות.",
+    "before": "According to the group: number of participants, location, session length, ingredients and type of activity.",
+    "after": "The price depends on the number of participants, location, session length, materials and type of activity.",
+    "status": "Edited in your chosen style"
+  },
+  {
+    "review_number": 60,
+    "hebrew": "לפני הסדנה מדברים על אופי הקבוצה, הזמן והמטרה: רגיעה, גיבוש, למידה, יציאה לטבע או מוצרים שנרקח יחד וניקח הביתה.",
+    "before": "Before the workshop, we discuss your group, timing and goals: relaxation, connection, learning, time outdoors or preparations to make together and take home.",
+    "after": "Before the workshop, we discuss the group, the time available and what you hope to get from the experience: relaxation, group bonding, learning, time outdoors or making herbal products together to take home.",
+    "status": "Edited in your chosen style"
+  },
+  {
+    "review_number": 61,
+    "hebrew": "פעילות טבע עדינה וסקרנית לילדים.",
+    "before": "Gentle, curious adventures in nature for children.",
+    "after": "Gentle nature activities that encourage children’s curiosity.",
+    "status": "Edited in your chosen style"
+  },
+  {
+    "review_number": 62,
+    "hebrew": "אורן יכול להגיע ליישוב, לאירוע, לקייטנה או למרחב קהילתי, ולהעביר מפגש חד פעמי או כמה מפגשים סביב צמחי מרפא, ריחות, צבעים ועבודה בידיים.",
+    "before": "Oren can visit your community, event, summer camp or shared space for one or several sessions exploring medicinal plants, scents, colors and hands-on activities.",
+    "after": "Oren can lead a single session or a series in your community, at an event, at a summer camp or in a community space, exploring medicinal plants, scents and colors through hands-on activities.",
+    "status": "Edited in your chosen style"
+  },
+  {
+    "review_number": 63,
+    "hebrew": "גם כאן יש תוכן מוכן, אבל אפשר להתאים את הקצב והפעילות לגיל הילדים, לגודל הקבוצה, למקום ולאירוע.",
+    "before": "There is a prepared starting point, with the pace and activities adapted to the children’s ages, group size, venue and occasion.",
+    "after": "The workshops have an established format, with the pace and activities adapted to the children’s ages, group size, venue and occasion.",
+    "status": "Edited in your chosen style"
+  },
+  {
+    "review_number": 64,
+    "hebrew": "ספרו מי הקבוצה, ואני אציע כיוון מתאים.",
+    "before": "Tell me about your group, and I’ll suggest a direction.",
+    "after": "Tell me about your group, and I’ll suggest a workshop to suit you.",
+    "status": "Edited in your chosen style"
+  },
+  {
+    "review_number": 65,
+    "hebrew": "במהלך המפגש מכירים שימושים מסורתיים של שרפים, מדברים על בטיחות ועל מינונים פשוטים, ואז עוברים לרקיחה מעשית.",
+    "before": "We’ll explore traditional uses of resins, discuss safety and simple dosages, then move on to making a preparation together.",
+    "after": "We’ll explore traditional uses of resins, discuss safety and basic dosage guidelines, then make a herbal preparation together.",
+    "status": "Edited in your chosen style"
+  },
+  {
+    "review_number": 66,
+    "hebrew": "בסוף מכינים יחד משחת עזרה ראשונה ביתית, שמתאימה לשימוש חיצוני סביב יובש, חתכים, שפשופים, עור מגורה וכוויות קלות.",
+    "before": "We’ll finish by making a home first aid balm",
+    "after": "We’ll finish by making a first aid balm for home use",
+    "status": "Edited in your chosen style"
+  },
+  {
+    "review_number": 67,
+    "hebrew": "ביער אורנים מתאים, באזור קדיתא והגליל העליון או ביער אחר שמתאים לקבוצה ולעונה.",
+    "before": "In a suitable pine forest near Kadita and the Upper Galilee, or another forest suited to the group and season.",
+    "after": "In a suitable pine forest in the Kadita area or elsewhere in the Upper Galilee, or another forest suited to the group and season.",
+    "status": "Edited in your chosen style"
+  },
+  {
+    "review_number": 67,
+    "hebrew": "באזור קדיתא והגליל העליון, או במקום אחר בארץ בתיאום מראש, עם צמחים לליקוט ומרחב מתאים לזיקוק ולרקיחה.",
+    "before": "Near Kadita and the Upper Galilee, or elsewhere in Israel by arrangement, with plants to gather and a suitable space for distillation and making preparations.",
+    "after": "In the Kadita area and the Upper Galilee, or elsewhere in Israel by arrangement, with plants to gather and a suitable space for distillation and making preparations.",
+    "status": "Edited in your chosen style"
+  },
+  {
+    "review_number": 67,
+    "hebrew": "בטבע, באזור קדיתא והגליל העליון או במקום מתאים אחר בארץ, עם מרחב לעבודה מעשית בשורשים.",
+    "before": "Outdoors near Kadita and the Upper Galilee, or another suitable location in Israel, with space for practical work with roots.",
+    "after": "Outdoors in the Kadita area and the Upper Galilee, or another suitable location in Israel, with space for practical work with roots.",
+    "status": "Edited in your chosen style"
+  },
+  {
+    "review_number": 67,
+    "hebrew": "באזור קדיתא והגליל העליון או במקום אחר בארץ: במרחב קהילתי, בבית אירוח, באולם או במשרד.",
+    "before": "Near Kadita and the Upper Galilee, or elsewhere in Israel: at a community space, guesthouse, hall or office.",
+    "after": "In the Kadita area and the Upper Galilee, or elsewhere in Israel: at a community space, guesthouse, hall or office.",
+    "status": "Edited in your chosen style"
+  },
+  {
+    "review_number": 67,
+    "hebrew": "באזור קדיתא והגליל העליון, או במקום מפגש אחר בארץ שנבחר יחד: בטבע, בבית, בבית אירוח, במרחב קהילתי או במשרד.",
+    "before": "Near Kadita and the Upper Galilee, or another location in Israel that we choose together: outdoors, at home, at a guesthouse, in a community space or at the office.",
+    "after": "In the Kadita area and the Upper Galilee, or another location in Israel that we choose together: outdoors, at home, at a guesthouse, in a community space or at the office.",
+    "status": "Edited in your chosen style"
+  },
+  {
+    "review_number": 68,
+    "hebrew": "מפגש מעשי שמלווה את כל הדרך מהצמח ועד למוצר: מלקטים צמחים ארומטיים, מזקקים אותם לקבלת שמן אתרי והידרוסול, ומשלבים את התוצרים ברוקחות טבעית לשימוש יומיומי.",
+    "before": "A practical session following the journey from plant to product: gather aromatic plants, distill essential oil and hydrosol, and use them in natural preparations for everyday life.",
+    "after": "A practical session covering the journey from plant to product: gather aromatic plants, distill them to produce essential oil and hydrosol, and use these to make natural preparations for everyday use.",
+    "status": "Edited in your chosen style"
+  },
+  {
+    "review_number": 69,
+    "hebrew": "המפגש לא נועד לעודד אכילה חסרת זהירות מהטבע, אלא לבנות שפה בסיסית ובטוחה יותר סביב פטריות, סקרנות והיכרות עם הסביבה.",
+    "before": "The session builds a more careful foundation for learning about mushrooms, encouraging curiosity and familiarity with the environment while emphasizing responsible decisions about wild food.",
+    "after": "The session introduces a cautious, informed approach to mushrooms, encouraging curiosity and familiarity with the natural surroundings. It is not intended to encourage eating wild mushrooms without proper care.",
+    "status": "Edited in your chosen style"
+  },
+  {
+    "review_number": 70,
+    "hebrew": "אפשר להעמיק בצמחי מרפא, ארומתרפיה, ליקוט, גידול, זיקוק, הרכבת פורמולות ורוקחות טבעית, וגם בהיכרות עם עולם הפטריות.",
+    "before": "Explore medicinal plants, aromatherapy, foraging, growing, distillation, blending formulas and natural preparations, or get to know the world of mushrooms.",
+    "after": "Explore medicinal plants, aromatherapy, foraging, growing herbs, distillation, creating herbal formulas and making natural preparations, or get to know the world of mushrooms.",
+    "status": "Edited in your chosen style"
+  },
+  {
+    "review_number": 71,
+    "hebrew": "מדריכים שימושיים והדרכות קצרות על צמחי מרפא, ליקוט ורוקחות ביתית — לצד סיפורי צמחים, רגעים מן השטח ומפגשים עם אנשים שעוסקים בטבע, בריאות ומלאכות מסורתיות.",
+    "before": "Practical guides and short introductions to medicinal plants, foraging and home herbal preparations, alongside plant stories, moments outdoors and encounters with people working with nature, wellbeing and traditional crafts.",
+    "after": "Practical guides and short tutorials on medicinal plants, foraging and making herbal preparations at home, alongside stories about plants, moments outdoors and conversations with people whose work involves nature, wellbeing and traditional crafts.",
+    "status": "Edited in your chosen style"
+  },
+  {
+    "review_number": 72,
+    "hebrew": "",
+    "before": "Videos are spoken in Hebrew. Titles and descriptions are provided in English.",
+    "after": "The videos are in Hebrew, with titles and descriptions in English.",
+    "status": "English-only video language note"
+  },
+  {
+    "review_number": 73,
+    "hebrew": "המידע בסרטונים נועד להעשרה בלבד ואינו מהווה ייעוץ רפואי או תחליף לאבחון ולטיפול מקצועי.",
+    "before": "The videos are for general interest only. They do not provide medical advice or replace professional diagnosis and care.",
+    "after": "The information in these videos is for educational purposes only and does not replace medical advice, professional diagnosis or treatment.",
+    "status": "Edited in your chosen style"
+  },
+  {
+    "review_number": 76,
+    "hebrew": "מבט בתפרחת הצעירה של הגדילן ובהתפתחות הזרעים. אורן מדגים את קילוף הסיבים וחושף את הליבה שטעמה מזכיר ארטישוק.",
+    "before": "Oren peels back the fibres to reveal an artichoke-like centre.",
+    "after": "Oren peels back the fibers to reveal a core that tastes like artichoke.",
+    "status": "Edited in your chosen style"
+  },
+  {
+    "review_number": 77,
+    "hebrew": "פתיחה לסדרת סרטונים על חסת המצפן, קרובת הבר של חסת הגינה. אורן מציג את הצמח ואת מקומו במסורת צמחי ההרגעה.",
+    "before": "An introduction to prickly lettuce, a wild relative of garden lettuce. Oren presents the plant and its place in traditional calming herbal preparations.",
+    "after": "The opening video in a series about prickly lettuce, a wild relative of garden lettuce. Oren introduces the plant and its traditional use as a calming herb.",
+    "status": "Edited in your chosen style"
+  },
+  {
+    "review_number": 78,
+    "hebrew": "אותו הצמח, מראה שונה: עלים שלמים מול עלים מפורצים, וצמחים בגבהים שונים. השוואה בשטח שממחישה את השונות בין פרטים של חסת המצפן.",
+    "before": "One plant, different appearances: entire and deeply lobed leaves, and plants of different heights. A field comparison showing variation within prickly lettuce.",
+    "after": "The same species can look quite different: some plants have unlobed leaves, others have deeply lobed leaves, and their heights vary. A comparison in the field shows the differences between individual prickly lettuce plants.",
+    "status": "Edited in your chosen style"
+  },
+  {
+    "review_number": 79,
+    "hebrew": "היכרות עם פירות האלה הארץ־ישראלית ועם הטעם החמצמץ־ארומטי שלהם. אורן מסביר על ייבוש הפירות, הפרדת הציפה והשימוש בה כתבלין וגם כתוספת לקפה.",
+    "before": "using it as a seasoning or coffee addition.",
+    "after": "using it as a spice and adding it to coffee.",
+    "status": "Edited in your chosen style"
+  },
+  {
+    "review_number": 80,
+    "hebrew": "איסוף ענפי עוזרר בזמן הפריחה",
+    "before": "Gathering hawthorn shoots in blossom",
+    "after": "Gathering hawthorn shoots during flowering",
+    "status": "Edited in your chosen style"
+  },
+  {
+    "review_number": 81,
+    "hebrew": "אורן מציג את עלי הבוצין, את הכסות השעירה שלהם ואת תהליך הניקוי והייבוש. השיחה נוגעת בשימושים מסורתיים בחליטה וגם בעישון, ואינה המלצה לעשן.",
+    "before": "Oren introduces mullein leaves, their fine hairs and the cleaning and drying process. The discussion covers traditional infusions and smoking uses; it is not a recommendation to smoke.",
+    "after": "Oren introduces mullein leaves and their fine covering of hairs, and explains how the leaves are cleaned and dried. He discusses their traditional use in herbal teas and for smoking; this is not a recommendation to smoke.",
+    "status": "Edited in your chosen style"
+  },
+  {
+    "review_number": 82,
+    "hebrew": "מה ההבדל בין התפרחות הזכריות של אורן קנרי ואורן קפריסאי? השוואה במטבח של גודל התפרחות, כמות האבקה ואופן האיסוף.",
+    "before": "A kitchen comparison of their size, pollen yield and collection.",
+    "after": "A comparison in the kitchen of flower cluster size, pollen yield and collection methods.",
+    "status": "Edited in your chosen style"
+  },
+  {
+    "review_number": 83,
+    "hebrew": "אורן מציג את הגעדה בשטח ומתבונן בעלים, בריח הארומטי ובמרירות האופיינית לה. היכרות עם צמח מקומי ועם מקומו במסורת ההרבליסטית.",
+    "before": "Oren introduces germander in the field, looking at its leaves, aromatic scent and characteristic bitterness. Meet a local plant and its place in herbal traditions.",
+    "after": "Oren introduces germander in its natural habitat, exploring its leaves, aromatic scent and characteristic bitterness. Get to know this local plant and its place in herbal traditions.",
+    "status": "Edited in your chosen style"
+  },
+  {
+    "review_number": 84,
+    "hebrew": "מבט על שני עצים סמוכים כדי להבין מתי התפרחות עדיין סגורות ומתי האבקה כבר התפזרה. אורן מראה את סימני התזמון לליקוט ואת ההבדל בין שלבי הפריחה.",
+    "before": "Oren shows the flowering stages used to judge collection timing.",
+    "after": "Oren shows the different flowering stages and the signs that indicate when to gather the pollen.",
+    "status": "Edited in your chosen style"
+  },
+  {
+    "review_number": 85,
+    "hebrew": "מפגש עם פירות הדודא בשלבי הבשלה שונים ועם הסיפורים שנקשרו אליהם במקרא ובמסורת. הסרטון עוסק גם ברעילות הצמח ובצורך בזהירות, ואינו המלצה לאכילה או לשימוש עצמי.",
+    "before": "Meet mandrake fruit at different stages of ripening and the stories associated with it in the Bible and folklore.",
+    "after": "Discover mandrake fruit at different stages of ripening, along with the stories associated with it in the Bible and folklore.",
+    "status": "Edited in your chosen style"
+  },
+  {
+    "review_number": 86,
+    "hebrew": "מפגש עם פירות הדודא בשלבי הבשלה שונים ועם הסיפורים שנקשרו אליהם במקרא ובמסורת. הסרטון עוסק גם ברעילות הצמח ובצורך בזהירות, ואינו המלצה לאכילה או לשימוש עצמי.",
+    "before": "it is not a recommendation to eat or self-administer the plant.",
+    "after": "it is not a recommendation to eat the plant or use it for self-treatment.",
+    "status": "Edited in your chosen style"
+  },
+  {
+    "review_number": 87,
+    "hebrew": "ליד הנחל, אורן משווה בין פירות פטל בשלבי הבשלה שונים. מבט בצבע, במגע ובקלות הניתוק מהאשכול, לצד הדגמה של גישה עדינה בין הקוצים.",
+    "before": "He looks at colour, feel and how easily they detach, while demonstrating a gentle approach among the thorns.",
+    "after": "He looks at their color, feel and how easily they come away from the cluster, while showing how to reach carefully between the thorns.",
+    "status": "Edited in your chosen style"
+  },
+  {
+    "review_number": 89,
+    "hebrew": "היכרות עם הבוצין המפורץ ועם העלים המכוסים שערות עדינות. אורן מדגים את הכנת העלים ומספר על שימושים מסורתיים בחליטה וגם בעישון, ללא המלצה לעשן.",
+    "before": "Meet wavy-leaved mullein and its finely hairy leaves. Oren demonstrates leaf preparation and discusses traditional infusions and smoking uses, without recommending smoking.",
+    "after": "Get to know wavy-leaved mullein and its leaves covered in fine hairs. Oren shows how the leaves are prepared and discusses their traditional use in herbal teas and for smoking, without recommending smoking.",
+    "status": "Edited in your chosen style"
+  },
+  {
+    "review_number": 90,
+    "hebrew": "בין צמחי הבר מסתתרת ולריאנה איטלקית, קרובה של הוולריאנה הרפואית. אורן מראה את העלים ומסביר מדוע השורש, עם ריחו האופייני, הוא החלק שמוזכר בשימוש המסורתי.",
+    "before": "explains why the distinctively scented root features in traditional use.",
+    "after": "explains why the root, with its distinctive smell, is the part traditionally used.",
+    "status": "Edited in your chosen style"
+  },
+  {
+    "review_number": 91,
+    "hebrew": "איך משתנה החרחבינה מעלים צעירים ועגולים לצמח בוגר וקוצני? אורן מציג את שלבי הצמיחה ואת ההבדל בין השימוש הקולינרי בעלים לשימוש המסורתי בשורש.",
+    "before": "How does blue eryngo change from round young leaves to a mature, spiny plant?",
+    "after": "How does blue eryngo develop from a young plant with round leaves into a mature, spiny plant?",
+    "status": "Edited in your chosen style"
+  },
+  {
+    "review_number": 92,
+    "hebrew": "איך משתנה החרחבינה מעלים צעירים ועגולים לצמח בוגר וקוצני? אורן מציג את שלבי הצמיחה ואת ההבדל בין השימוש הקולינרי בעלים לשימוש המסורתי בשורש.",
+    "before": "Oren shows its growth stages and distinguishes culinary leaf use from traditional root use.",
+    "after": "Oren shows its growth stages and explains the difference between using the leaves in cooking and the roots in traditional herbal preparations.",
+    "status": "Edited in your chosen style"
+  },
+  {
+    "review_number": 93,
+    "hebrew": "קומפרי וזהירות בשימוש בו",
+    "before": "Understanding comfrey and its cautions",
+    "after": "Comfrey and precautions for its use",
+    "status": "Edited in your chosen style"
+  },
+  {
+    "review_number": 94,
+    "hebrew": "אורן מציג את הקומפרי ביער ומספר על השימוש המסורתי שלו במיצויים לשימוש חיצוני. השיחה מדגישה את האזהרה מפני שימוש פנימי בצמח.",
+    "before": "The conversation emphasises the warning against internal use.",
+    "after": "The discussion emphasizes the warning against taking the plant internally.",
+    "status": "Edited in your chosen style"
+  },
+  {
+    "review_number": 95,
+    "hebrew": "לאחר השליחה יישלח לכתובת האימייל שלך אישור עם עותק של הפנייה.",
+    "before": "After submitting, you’ll receive an email confirmation with a copy of your message.",
+    "after": "After you submit the form, you’ll receive a confirmation email with a copy of your message.",
+    "status": "Edited in your chosen style"
+  },
+  {
+    "review_number": 96,
+    "hebrew": "שולח את הפנייה ואת העותק לאימייל שלך...",
+    "before": "Sending your message and an email copy...",
+    "after": "Sending your message and a copy to your email address...",
+    "status": "Edited in your chosen style"
+  },
+  {
+    "review_number": 97,
+    "hebrew": "לא ניתן היה לאשר את האימות. הפרטים נשמרו בטופס. יש להשלים את האימות מחדש ולנסות שוב.",
+    "before": "Verification could not be confirmed. Your details are still in the form. Please verify again and try once more.",
+    "after": "We couldn’t verify your submission. Your details are still in the form. Please complete the verification again and try sending your message once more.",
+    "status": "Edited in your chosen style"
+  },
+  {
+    "review_number": 98,
+    "hebrew": "דף הבית של אורן עמנואל שושנה",
+    "before": "Oren Emanuel Shoshana home page",
+    "after": "Oren Emanuel Shoshana’s home page",
+    "status": "Edited in your chosen style"
+  },
+  {
+    "review_number": 99,
+    "hebrew": "פרץ מעלעלים ואורן מציגים את הסמבוק השחור ומספרים על השימושים המסורתיים המיוחסים לו.",
+    "before": "Peretz from Al Alim and Oren",
+    "after": "Peretz from Al-Alim and Oren",
+    "status": "Edited in your chosen style"
+  },
+  {
+    "review_number": 100,
+    "hebrew": "הליבה האכילה של הגדילן",
+    "before": "The edible centre of milk thistle",
+    "after": "The edible center of milk thistle",
+    "status": "Consistent American spelling"
+  },
+  {
+    "review_number": 100,
+    "hebrew": "פרחים לבנים, חליטה אדומה: אורן מציג את שינוי הצבע בכוס. הדגמה של הכנת חליטה מקצות הענפים הצעירים, הפרחים והעלים.",
+    "before": "White flowers, red tea: Oren shows the colour change in the cup. A demonstration using young hawthorn shoot tips, flowers and leaves.",
+    "after": "White flowers, red tea: Oren shows the color change in the cup. A demonstration using young hawthorn shoot tips, flowers and leaves.",
+    "status": "Consistent American spelling"
+  },
+  {
+    "review_number": 100,
+    "hebrew": "היכרות עם פירות האלה הארץ־ישראלית ועם הטעם החמצמץ־ארומטי שלהם. אורן מסביר על ייבוש הפירות, הפרדת הציפה והשימוש בה כתבלין וגם כתוספת לקפה.",
+    "before": "Meet the fruit of the Palestine terebinth and its tangy, aromatic flavour. Oren discusses drying the fruit, separating the pulp and using it as a spice and adding it to coffee.",
+    "after": "Meet the fruit of the Palestine terebinth and its tangy, aromatic flavor. Oren discusses drying the fruit, separating the pulp and using it as a spice and adding it to coffee.",
+    "status": "Consistent American spelling"
+  },
+  {
+    "review_number": 100,
+    "hebrew": "מבט על שני עצים סמוכים כדי להבין מתי התפרחות עדיין סגורות ומתי האבקה כבר התפזרה. אורן מראה את סימני התזמון לליקוט ואת ההבדל בין שלבי הפריחה.",
+    "before": "Two neighbouring trees reveal the difference between closed flower clusters and those that have already released their pollen. Oren shows the different flowering stages and the signs that indicate when to gather the pollen.",
+    "after": "Two neighboring trees reveal the difference between closed flower clusters and those that have already released their pollen. Oren shows the different flowering stages and the signs that indicate when to gather the pollen.",
+    "status": "Consistent American spelling"
+  },
+  {
+    "review_number": 100,
+    "hebrew": "איך מזהים פטל קדוש בשל?",
+    "before": "Recognising ripe wild blackberries",
+    "after": "Recognizing ripe wild blackberries",
+    "status": "Consistent American spelling"
+  },
+  {
+    "review_number": 100,
+    "hebrew": "סיור במרכז צמחי המרפא על־עלים",
+    "before": "A tour of the Al-Alim herbal centre",
+    "after": "A tour of the Al-Alim herbal center",
+    "status": "Consistent American spelling"
+  },
+  {
+    "review_number": 100,
+    "hebrew": "האזוב שמוכר כזעתר, מהעלים הריחניים ועד התוספת לסלט ולמרק. אורן משוחח על טעמו של הצמח ועל מקומו במסורת צמחי המרפא המקומית.",
+    "before": "Meet the aromatic leaves of za’atar, or local hyssop, and their place in salads and soups. Oren discusses the plant’s flavour and role in local herbal traditions.",
+    "after": "Meet the aromatic leaves of za’atar, or local hyssop, and their place in salads and soups. Oren discusses the plant’s flavor and role in local herbal traditions.",
+    "status": "Consistent American spelling"
+  }
+]

@@ -78,7 +78,7 @@
     setStatus("שולח את הפנייה ואת העותק לאימייל שלך...");
     // Keep this ID on a retry, so an uncertain response cannot duplicate emails.
     requestId ||= crypto.randomUUID();
-    const payload = { requestId, token };
+    const payload = { requestId, token, language: document.documentElement.lang === "en" ? "en" : "he" };
     ["name", "phone", "email", "message", "_honey"].forEach((name) => {
       payload[name] = form.elements.namedItem(name).value.trim();
     });

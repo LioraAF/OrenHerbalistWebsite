@@ -1,4 +1,27 @@
 const siteGalleryImages = window.siteGalleryImages || {};
+const languageSwitch = document.querySelector('.language-switch');
+if (languageSwitch) {
+  const destination = new URL(languageSwitch.href);
+  destination.search = window.location.search;
+  destination.hash = window.location.hash;
+  languageSwitch.href = destination.href;
+}
+// Keep the entire English name visible on one line, even in a narrow header.
+const fitEnglishBrandName = () => {
+  if (document.documentElement.lang !== 'en') return;
+  const name = document.querySelector('.brand strong');
+  if (!name) return;
+  name.style.removeProperty('font-size');
+  const available = name.parentElement.clientWidth;
+  const desired = parseFloat(getComputedStyle(name).fontSize);
+  if (available > 0 && name.scrollWidth > available) {
+    name.style.fontSize = `${desired * available / name.scrollWidth}px`;
+  }
+};
+fitEnglishBrandName();
+window.addEventListener('resize', fitEnglishBrandName);
+document.fonts.ready.then(fitEnglishBrandName);
+
 const galleryImages = (name) => siteGalleryImages[name] || [];
 const galleryImageUrl = (src) => new URL(`images/${src.split("/").map(encodeURIComponent).join("/")}`, document.baseURI).href;
 const galleryBackground = (src) => src ? `url("${galleryImageUrl(src)}")` : "none";
@@ -664,57 +687,57 @@ if (reelsGrid instanceof HTMLElement) {
     {
       id: "5XaKIqrVzQs",
       topic: "medicinal-plants",
-      title: "סמבוק שחור",
-      description: "פרץ מעלעלים ואורן מציגים את הסמבוק השחור ומספרים על השימושים המסורתיים המיוחסים לו.",
+      title: "שיחה עם פרץ על סמבוק שחור",
+      description: "פרץ מעל־עלים משוחח עם אורן על גבעולי הסמבוק, על סגולות עממיות ועל מקור שמו של הצמח. תיעוד של מסורות וסיפורים, לא הנחיה לטיפול בתינוקות.",
       thumbnail: "https://i.ytimg.com/vi/5XaKIqrVzQs/maxres1.jpg",
     },
     {
       id: "baCel93LGAM",
       topic: "medicinal-plants",
-      title: "בוצין מפורץ",
-      description: "היכרות מן השטח עם הבוצין המפורץ והשימושים המסורתיים שנקשרו לצמח.",
+      title: "הכנת עלי בוצין מפורץ",
+      description: "היכרות עם הבוצין המפורץ ועם העלים המכוסים שערות עדינות. אורן מדגים את הכנת העלים ומספר על שימושים מסורתיים בחליטה וגם בעישון, ללא המלצה לעשן.",
       thumbnail: "https://i.ytimg.com/vi/baCel93LGAM/maxres3.jpg",
     },
     {
       id: "A0LhLF-EHwU",
       topic: "medicinal-plants",
-      title: "אזוב — הזעתר המקומי",
-      description: "אורן מספר על האזוב, המוכר גם כזעתר, ועל מקומו במסורת הצמחים המקומית.",
+      title: "האזוב במטבח ובמסורת המקומית",
+      description: "האזוב שמוכר כזעתר, מהעלים הריחניים ועד התוספת לסלט ולמרק. אורן משוחח על טעמו של הצמח ועל מקומו במסורת צמחי המרפא המקומית.",
       thumbnail: "https://i.ytimg.com/vi/A0LhLF-EHwU/maxres2.jpg",
     },
     {
       id: "1dSl-rc-K5Y",
       topic: "medicinal-plants",
-      title: "ולריאנה",
-      description: "אורן מציג את צמח הוולריאנה ומשתף בידע מסורתי על איכויותיו והשימוש בו.",
+      title: "היכרות עם ולריאנה איטלקית",
+      description: "בין צמחי הבר מסתתרת ולריאנה איטלקית, קרובה של הוולריאנה הרפואית. אורן מראה את העלים ומסביר מדוע השורש, עם ריחו האופייני, הוא החלק שמוזכר בשימוש המסורתי.",
       thumbnail: "https://i.ytimg.com/vi/1dSl-rc-K5Y/maxres2.jpg",
     },
     {
       id: "ie1XCKPkTT4",
-      topic: "foraging",
-      title: "שרף האורן",
-      description: "מפגש ביער עם שרף האורן ועם הידע המסורתי שנאסף סביבו.",
+      topic: "natural-pharmacy",
+      title: "הכנת שמן משרף אורן",
+      description: "למה עץ האורן מפריש שרף, ומה רואים סביב פצע ישן בגזע? אורן משוחח על איסוף השרף ועל תהליך הכנת שמן בבן־מארי וסינונו.",
       thumbnail: "https://i.ytimg.com/vi/ie1XCKPkTT4/maxres1.jpg",
     },
     {
       id: "77K_0Jfd-wk",
       topic: "foraging",
-      title: "חרחבינה מכחילה",
-      description: "אורן יוצא לליקוט חורפי ומציג את החרחבינה המכחילה בסביבתה הטבעית.",
+      title: "שלבי הצמיחה של חרחבינה מכחילה",
+      description: "איך משתנה החרחבינה מעלים צעירים ועגולים לצמח בוגר וקוצני? אורן מציג את שלבי הצמיחה ואת ההבדל בין השימוש הקולינרי בעלים לשימוש המסורתי בשורש.",
       thumbnail: "https://i.ytimg.com/vi/77K_0Jfd-wk/maxres2.jpg",
     },
     {
       id: "dW3hDGr-1T8",
-      topic: "foraging",
-      title: "קומפרי ביער",
-      description: "מפגש עם צמח הקומפרי במהלך יציאה ליער וסיפור על השימוש המסורתי בו.",
+      topic: "medicinal-plants",
+      title: "קומפרי וזהירות בשימוש בו",
+      description: "אורן מציג את הקומפרי ביער ומספר על השימוש המסורתי שלו במיצויים לשימוש חיצוני. השיחה מדגישה את האזהרה מפני שימוש פנימי בצמח.",
       thumbnail: "https://i.ytimg.com/vi/dW3hDGr-1T8/maxres3.jpg",
     },
     {
       id: "9LLRsOUS_Cs",
       topic: "foraging",
-      title: "כוכבית",
-      description: "ליקוט כוכבית בקדיתא והיכרות עם הצמח ועם סביבת הגידול שלו.",
+      title: "ליקוט כוכבית בין מחטי האורן",
+      description: "מפגש עם הכוכבית הגדלה בין מחטי האורן בקדיתא. אורן מציג את המרקם הרך והרירי שלה ומשוחח על מקומה במטבח ובמיצויים מסורתיים לשימוש חיצוני.",
       thumbnail: "https://i.ytimg.com/vi/9LLRsOUS_Cs/maxres1.jpg",
     },
   ].map((item, index) => ({
@@ -805,7 +828,8 @@ if (reelsGrid instanceof HTMLElement) {
 
   const renderReels = () => {
     const filteredItems = getFilteredItems();
-    reelsGrid.replaceChildren(...filteredItems.slice(0, visibleCount).map(createReelCard));
+    const loadedItems = filteredItems.slice(0, visibleCount);
+    reelsGrid.replaceChildren(...loadedItems.map(createReelCard));
     if (loadMore instanceof HTMLButtonElement) {
       loadMore.hidden = visibleCount >= filteredItems.length;
       const nextCount = Math.min(12, Math.max(0, filteredItems.length - visibleCount));

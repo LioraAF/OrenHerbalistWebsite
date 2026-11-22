@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>סרטונים | אורן שושנה</title>
+  <meta name="description" content="סרטונים קצרים של אורן שושנה על צמחי מרפא, ליקוט וידע מסורתי מן השטח.">
+  <link rel="stylesheet" href="css/style.css?v=20261119-delicate-video-button">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="דף הבית של אורן עמנואל שושנה">
+      <span class="brand-mark"><img src="images/brand-mark.png" alt="" aria-hidden="true"></span>
+      <span>
+        <strong>אורן עמנואל שושנה</strong>
+        <small>הרבליסט קליני</small>
+      </span>
+    </a>
+
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span class="sr-only">פתיחת תפריט</span>
+    </button>
+
+    <nav class="site-nav" id="site-nav" aria-label="ניווט ראשי">
+      <a href="index.html">בית</a>
+      <a href="treatment.html">טיפול</a>
+      <a href="products.html">מוצרים</a>
+      <a href="workshops.html">סדנאות</a>
+      <a href="videos.html" aria-current="page">סרטונים</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="page-hero-image videos-photo">
+      <div class="videos-photo-stage">
+        <img class="videos-photo-image" src="images/Videos-header.jpeg" alt="יד מחזיקה פרחי בר צהובים בשטח">
+      </div>
+    </div>
+
+    <section class="library-hero section-pad">
+      <div class="library-heading">
+        <div>
+          <p class="eyebrow">ידע מהאדמה ומהקליניקה</p>
+          <h1>סרטונים</h1>
+          <p class="library-intro">
+            מדריכים שימושיים והדרכות קצרות על צמחי מרפא, ליקוט ורוקחות ביתית — לצד סיפורי צמחים, רגעים מן השטח ומפגשים עם אנשים שעוסקים בטבע, בריאות ומלאכות מסורתיות.
+          </p>
+          <p class="library-note">המידע בסרטונים נועד להעשרה בלבד ואינו מהווה ייעוץ רפואי או תחליף לאבחון ולטיפול מקצועי.</p>
+        </div>
+      </div>
+
+      <div class="library-filters" role="group" aria-label="סינון התוכן">
+        <button class="library-filter is-active" type="button" data-library-filter="all" aria-pressed="true">הכול</button>
+        <button class="library-filter" type="button" data-library-filter="medicinal-plants" aria-pressed="false">צמחי מרפא</button>
+        <button class="library-filter" type="button" data-library-filter="foraging" aria-pressed="false">ליקוט</button>
+        <button class="library-filter" type="button" data-library-filter="natural-pharmacy" aria-pressed="false">רוקחות ביתית</button>
+      </div>
+
+      <div class="library-status" aria-live="polite">
+        <p data-library-count></p>
+      </div>
+
+      <div class="reels-grid" data-reels-grid aria-label="ספריית הסרטונים"></div>
+      <div class="library-load-more">
+        <button class="library-more-button" type="button" data-reels-load-more hidden>הצגת 12 סרטונים נוספים</button>
+      </div>
+    </section>
+
+    <dialog class="reel-modal" data-reel-modal aria-labelledby="reel-modal-title">
+      <button class="reel-modal-close" type="button" data-reel-modal-close aria-label="סגירת הסרטון">×</button>
+      <div class="reel-modal-layout">
+        <div class="reel-modal-media">
+          <iframe data-reel-modal-video title="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen hidden></iframe>
+        </div>
+        <div class="reel-modal-copy">
+          <p class="eyebrow" data-reel-modal-topic></p>
+          <h2 id="reel-modal-title" data-reel-modal-title></h2>
+          <p data-reel-modal-description></p>
+          <a class="button primary" href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" data-reel-modal-link>לצפייה ב־YouTube</a>
+        </div>
+      </div>
+    </dialog>
+  </main>
+
+  <footer class="site-footer" aria-label="מידע תחתון">
+    <div class="footer-botanical" aria-hidden="true">
+      <img src="images/Leaf_background.png" alt="">
+    </div>
+    <div class="footer-brand">
+      <div class="footer-logo" aria-label="אמת מארץ תצמח - אורן הרבליסט">
+        <img src="images/Logo%20_full.png" alt="אמת מארץ תצמח - אורן הרבליסט">
+      </div>
+    </div>
+    <nav class="footer-links" aria-label="ניווט תחתון">
+      <p class="footer-heading">עמודים</p>
+      <div class="footer-link-row">
+        <a href="index.html">בית</a>
+        <a href="treatment.html">טיפול</a>
+        <a href="products.html">מוצרים</a>
+        <a href="workshops.html">סדנאות</a>
+        <a href="videos.html">סרטונים</a>
+      </div>
+    </nav>
+    <address class="footer-contact">
+      <p class="footer-heading">יצירת קשר</p>
+      <div class="footer-signs">
+        <a class="footer-sign footer-sign-phone" href="tel:+972545984128" aria-label="טלפון 054-598-4128"><span class="footer-icon" aria-hidden="true"></span></a>
+        <a class="footer-sign footer-sign-whatsapp" href="https://wa.link/xmjq0i" aria-label="וואטסאפ"><span class="footer-icon" aria-hidden="true"></span></a>
+        <a class="footer-sign footer-sign-facebook" href="https://www.facebook.com/p/%D7%96%D7%A2%D7%AA%D7%A8-%D7%A7%D7%95%D7%9C%D7%99%D7%A0%D7%A8%D7%99%D7%94-%D7%92%D7%9C%D7%99%D7%9C%D7%99%D7%AA-61554467944748/?locale=he_IL" aria-label="פייסבוק"><span class="footer-icon" aria-hidden="true"></span></a>
+        <a class="footer-sign footer-sign-instagram" href="https://www.instagram.com/orenherbalist/" aria-label="אינסטגרם"><span class="footer-icon" aria-hidden="true"></span></a>
+      </div>
+    </address>
+    <p class="footer-note">
+      מטפל גוף-נפש בעזרת צמחי מרפא, רקיחות טבעיות וסדנאות ליקוט שמחברות בין אדם, אדמה ועונה.
+    </p>
+  </footer>
+
+  <a class="floating-whatsapp" href="https://wa.me/972545984128" target="_blank" rel="noopener noreferrer" aria-label="שליחת הודעה לאורן בוואטסאפ">
+    <img src="images/icons/whatsapp-footer-thin.svg" alt="" width="30" height="30">
+    <span class="whatsapp-bubble" dir="rtl" aria-hidden="true">להתייעצות ולפרטים, אני כאן</span>
+  </a>
+
+  <script src="js/gallery-images.js"></script>
+  <script src="js/drive-videos.js?v=20261119-remove-call"></script>
+  <script src="js/main.js?v=20261119-drive-videos"></script>
+</body>
+</html>

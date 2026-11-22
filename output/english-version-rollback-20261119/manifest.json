@@ -1,0 +1,104 @@
+{
+  "baseline_commit": "b8b8bd2019072c650be9ddd6275eee4df6fac69a",
+  "original_files": [
+    "README.md",
+    "api/contact.js",
+    "css/style.css",
+    "index.html",
+    "js/contact.js",
+    "js/main.js",
+    "products.html",
+    "tests/contact.test.cjs",
+    "treatment.html",
+    "vercel.json",
+    "videos.html",
+    "workshops.html"
+  ],
+  "english_added_files": [
+    "css/english.css",
+    "en/css/heading-sizes.css",
+    "en/index.html",
+    "en/js/contact.js",
+    "en/js/drive-videos.js",
+    "en/js/main.js",
+    "en/products.html",
+    "en/treatment.html",
+    "en/videos.html",
+    "en/workshops.html",
+    "english-font-playground.html",
+    "english-font-preview.html",
+    "english-font-sampler.html",
+    "hebrew-button-font-preview.html",
+    "images/font-preview/home-reference.jpg",
+    "scripts/build-english.cjs",
+    "translations/en.json"
+  ],
+  "notes": "Byte-for-byte originals from the clean tracked task files at task start. Pre-existing elegant_arrows.webp deletion and all unrelated untracked images/output folders are excluded. restore.py verifies hashes before changing anything and restores only this task. Run without arguments for a read-only check; --apply reverses the English work.",
+  "original_sha256": {
+    "README.md": "e717739a485bbba9f970d253be514bbe530a97a41d982e58e244f97d1d76a5e1",
+    "api/contact.js": "2813aa01f59ac0b0d347211aa3f3a7af6e96e1d1a04ddd07aaa9f6b3e86f247c",
+    "css/style.css": "10c0bf936d0ae6db7d8d9c091218fc34e1ff864b52a66aa07d7eb587e7f6b4a1",
+    "index.html": "762d8f16ec5e1e8df58206333bd61551e0c1510eab10c3a35622012f0bcb22e7",
+    "js/contact.js": "91ce8ec7db1ad06bc697d6fccf132183a7e6ce92a69ed861b0d9155c50563fb8",
+    "js/main.js": "91613968c18652c4ed4d7b072d77d012c46c857f9d19438632c1823a6ae5f03c",
+    "products.html": "f1f75a9f1865a53b0fae4686785b1a3754e7b1759730e37e246ce73da5ab2920",
+    "tests/contact.test.cjs": "e45526af8ac07a56f5cb541df9fc4d0ffd0be22109d3a8d0be2e141279033ff0",
+    "treatment.html": "82429e227de18849d89d952c77dc05442e40e5c9c34a8c1c5fe0f23fea582e33",
+    "vercel.json": "07d1dde0bef27e67f45e8bcca44c289bc8a85abf23c455dda2443b0779a2290b",
+    "videos.html": "e5e7b56f3f44e02e024b0b5d2397fe6b2a1656c9fd4e6ca1edafbb00d57e46c8",
+    "workshops.html": "c408bcbc52c52c01a4dd6d38d6156bf2dd4b858b6f1ccb65be9a724866a646b2"
+  },
+  "english_state_sha256": {
+    "README.md": "c8a0c7b86a673a3b5aed7df96770cc795d4eda9d26f5f1e621b50f5e402c252b",
+    "api/contact.js": "9c42b8d28a2653baa8a5702b6c9512168d7c3a17d7ef3d7a28f4d6ca01201b63",
+    "css/style.css": "823edf73694feb93ae24cd26b96efd552b4b538bc1cee0f96ff5ff6bd5c6a2c6",
+    "index.html": "a7f8ffd4b70a42a19fb2bb53ce7d7b49b77bf7eab308b99fe1d8e986791533c2",
+    "js/contact.js": "701b648e7a48683a230abd5d6fe50ff2505b7db947ff1d96d9c6b38b1dba3ccd",
+    "js/main.js": "49fd66ef234568cd82412c99b78647c9b9d104ca71a9f2805e3410087ad230d5",
+    "products.html": "1698e456647deaf3297a625d5c18c357e423a8372a94cf22b8286ba13c864015",
+    "tests/contact.test.cjs": "52a295e12e91fb81c71ff5fc12f1aa403b7dfb1bcbbf44c6c53ab313d5306ece",
+    "treatment.html": "1344ccdeef070f2e7787eb9c52b287cbab3a3b3687306249e0cfa8c1693aad09",
+    "vercel.json": "c5dc32d7f60463c7ce38552897d59e2aa7e77a73350265316e2580e7da5f791f",
+    "videos.html": "bd8f3972e98f8b2077a64d0fe75c92b440d64d93e27e04d9e7757bfec082dbe8",
+    "workshops.html": "28896a56355a6d98a5bc3111d84de44995deb6b84e75d98438776e54f92f000d",
+    "css/english.css": "71c5daed633c7b1d42a87c83a8b83edfe176cd5bbc17741f43dc2d9fbac43526",
+    "en/index.html": "d5171fc04606c1c63c0122629b8157ecc5b176c39d9ed94a3c3c8caf19297204",
+    "en/js/contact.js": "5a36d60ebc7f43b646e111b6e2fb981b08da619c016b86849055412eca3b2f4c",
+    "en/js/drive-videos.js": "ef204802088e3df865e109541343fa2b0246f847f5d03a234794e8626e04c237",
+    "en/js/main.js": "5830dfa7e6857dca8b128785b3c200c911722c78c8fddf24d6a5eed002597379",
+    "en/products.html": "08d176bccc7afec744cbdd06e2b6ae5b4d07c9d71eaa1e54536999dfce445762",
+    "en/treatment.html": "0a9d2b1e8c004ef00d2ac5fc33ece651aea712414aedfddd43682c123ce8caa9",
+    "en/videos.html": "29b2d050f880baa25aa9e2e790e35450fd60442ffdbcbbbc12dd6d58cfa342ec",
+    "en/workshops.html": "b6a8414b12393829d93fc38e03f043ebf00618278305c75db961b40c304d64ad",
+    "scripts/build-english.cjs": "3033aae774fdc4a78cc9cfee54f2e2a603de291a30e968930931c7e5cc35c743",
+    "translations/en.json": "cb073d4901c88cb6e360f8036dba208eeda5411a15a161349d8fcc99892d37eb",
+    "english-font-preview.html": "3b50d362b78fedfeb4d4d24df0e31747dda228ca4679b37bd1d635eb3ba1f908",
+    "english-font-sampler.html": "6c68539abc610b648ede55ec063da75b7f9392d8df3cab0ca9f62c0465c128b0",
+    "images/font-preview/home-reference.jpg": "01d13c27d63c275a3ac41409e054a6c06e5acb71f08ec978608b5632847621d1",
+    "english-font-playground.html": "70d65a1fbe225b4b2e1a912bf925843674c68dd1d845913fe05374b1706a486b",
+    "en/css/heading-sizes.css": "30850899607924988d5b4a08b8dd25ce9f4cb172ac2bf97b9f3ead993b297471",
+    "hebrew-button-font-preview.html": "6ebdc573da1c131ca1cf39b08e02f4402fd9df864a3efe2585fc86fa24f10eee"
+  },
+  "rollback_overrides": {
+    "README.md": {
+      "source": "reviewed-rollback/README.md",
+      "sha256": "41b4517980d9bc0004729da2e081f1d4a2d8b9d5c79e4c2d32fddcecb739848f",
+      "reason": "Preserve independent video-subtitle review edits from 2026-11-22 while removing English-site changes."
+    },
+    "js/main.js": {
+      "source": "reviewed-rollback/js/main.js",
+      "sha256": "1433e7c0813e3ac4372d412d1d93d448e7ae8daaad938447088b325c369c6e7f",
+      "reason": "Preserve independent video-subtitle review edits from 2026-11-22 while removing English-site changes."
+    },
+    "videos.html": {
+      "source": "reviewed-rollback/videos.html",
+      "sha256": "53bb87b2802dd03ede128f6196bc1b555eed11d63d5c47c059992f36f36daa52",
+      "reason": "Preserve independent video-subtitle review edits from 2026-11-22 while removing English-site changes."
+    },
+    "css/style.css": {
+      "source": "reviewed-rollback/css/style.css",
+      "sha256": "1b5cda99ef695d7c8c262dac605599ce9cd1076111c17db4b4f2a42524003a27",
+      "reason": "Preserve independent video-grid spacing while removing English-site changes."
+    }
+  }
+}

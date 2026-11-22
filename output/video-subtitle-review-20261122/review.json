@@ -1,0 +1,826 @@
+{
+  "reviewedOn": "2026-11-22",
+  "entryCount": 45,
+  "driveEntries": 37,
+  "uniqueDriveRecordings": 31,
+  "youtubeEntries": 8,
+  "method": "Read OCR text from 3,539 one-second frame samples, cross-check seven available YouTube Hebrew automatic caption tracks, and visually inspect the silent six-second clip. OCR is used for editorial summaries, not as a verbatim transcript or medical fact-check.",
+  "entries": [
+    {
+      "id": "drive-1ASmCWiAtmyEKnm1C5cOVx3uFFdp1ndu3",
+      "sourceUrl": "https://drive.google.com/file/d/1ASmCWiAtmyEKnm1C5cOVx3uFFdp1ndu3/view",
+      "reviewMethod": "On-screen Hebrew subtitle OCR at one-second intervals, with editorial review",
+      "evidenceSeconds": [
+        [
+          0,
+          5
+        ],
+        [
+          127,
+          170
+        ],
+        [
+          314,
+          403
+        ]
+      ],
+      "title": "הכנת סירופ מאצטרובלים ירוקים",
+      "description": "מליקוט האצטרובלים הירוקים ועד ההשריה בסוכר, החימום והסינון. אורן ואוהד מדגימים את כל שלבי הכנת סירופ האצטרובלים המסורתי.",
+      "topic": "natural-pharmacy"
+    },
+    {
+      "id": "drive-1yHtecEjZnkNa8W2K9KziqVDhxaAhn4DM",
+      "sourceUrl": "https://drive.google.com/file/d/1yHtecEjZnkNa8W2K9KziqVDhxaAhn4DM/view",
+      "reviewMethod": "On-screen Hebrew subtitle OCR at one-second intervals, with editorial review",
+      "evidenceSeconds": [
+        [
+          0,
+          18
+        ],
+        [
+          39,
+          83
+        ]
+      ],
+      "title": "מסורות עממיות על סמבוק שחור",
+      "description": "פרץ מעל־עלים מספר על מסורות עממיות שנקשרו לגבעולי הסמבוק ועל סיפור הגעתן ליודפת. שיחה על פולקלור של צמחי מרפא, לא הנחיה לטיפול בתינוקות.",
+      "topic": "medicinal-plants"
+    },
+    {
+      "id": "drive-1ZoyW0of9Gg9vdKOslUmtctEXyDdcl-1K",
+      "sourceUrl": "https://drive.google.com/file/d/1ZoyW0of9Gg9vdKOslUmtctEXyDdcl-1K/view",
+      "reviewMethod": "On-screen Hebrew subtitle OCR at one-second intervals, with editorial review",
+      "evidenceSeconds": [
+        [
+          1,
+          21
+        ],
+        [
+          21,
+          59
+        ]
+      ],
+      "title": "פרחי העוזרר ופירותיו",
+      "description": "אורן מציג את פריחת העוזרר ואת פירותיו, ומשוחח על הקשר של הצמח ללב במסורת ההרבליסטית. מה ההבדל בין שימוש בפרחים לשימוש בפירות?",
+      "topic": "medicinal-plants"
+    },
+    {
+      "id": "drive-1UWgy4yOePtLnsRb7jat1vYMdIVX8iyeA",
+      "sourceUrl": "https://drive.google.com/file/d/1UWgy4yOePtLnsRb7jat1vYMdIVX8iyeA/view",
+      "reviewMethod": "On-screen Hebrew subtitle OCR at one-second intervals, with editorial review",
+      "evidenceSeconds": [
+        [
+          4,
+          39
+        ],
+        [
+          43,
+          73
+        ]
+      ],
+      "title": "הליבה האכילה של הגדילן",
+      "description": "מבט בתפרחת הצעירה של הגדילן ובהתפתחות הזרעים. אורן מדגים את קילוף הסיבים וחושף את הליבה שטעמה מזכיר ארטישוק.",
+      "topic": "foraging"
+    },
+    {
+      "id": "drive-141_Jtpipw3eE21yAEgyYbKdjgyVTzBf6",
+      "sourceUrl": "https://drive.google.com/file/d/141_Jtpipw3eE21yAEgyYbKdjgyVTzBf6/view",
+      "reviewMethod": "On-screen Hebrew subtitle OCR at one-second intervals, with editorial review",
+      "evidenceSeconds": [
+        [
+          16,
+          32
+        ],
+        [
+          36,
+          44
+        ]
+      ],
+      "title": "היכרות עם חסת המצפן",
+      "description": "פתיחה לסדרת סרטונים על חסת המצפן, קרובת הבר של חסת הגינה. אורן מציג את הצמח ואת מקומו במסורת צמחי ההרגעה.",
+      "topic": "medicinal-plants"
+    },
+    {
+      "id": "drive-1fnuMZ_BFaogoRN3R78rlArDAHjNRuRKi",
+      "sourceUrl": "https://drive.google.com/file/d/1fnuMZ_BFaogoRN3R78rlArDAHjNRuRKi/view",
+      "reviewMethod": "On-screen Hebrew subtitle OCR at one-second intervals, with editorial review",
+      "evidenceSeconds": [
+        [
+          0,
+          24
+        ],
+        [
+          24,
+          63
+        ]
+      ],
+      "title": "חסת המצפן וחלימה צלולה",
+      "description": "מהי חלימה צלולה, ואיך נקשרה לחסת המצפן במסורת ההרבליסטית? אורן משוחח על מודעות בזמן החלום ועל השימוש המסורתי בצמח בהקשר הזה.",
+      "topic": "medicinal-plants"
+    },
+    {
+      "id": "drive-1e-qajmlv-7GLXXVlU1f7PGP4w5blyK-3",
+      "sourceUrl": "https://drive.google.com/file/d/1e-qajmlv-7GLXXVlU1f7PGP4w5blyK-3/view",
+      "reviewMethod": "On-screen Hebrew subtitle OCR at one-second intervals, with editorial review",
+      "evidenceSeconds": [
+        [
+          3,
+          21
+        ],
+        [
+          24,
+          48
+        ]
+      ],
+      "title": "צורות העלים של חסת המצפן",
+      "description": "אותו הצמח, מראה שונה: עלים שלמים מול עלים מפורצים, וצמחים בגבהים שונים. השוואה בשטח שממחישה את השונות בין פרטים של חסת המצפן.",
+      "topic": "medicinal-plants"
+    },
+    {
+      "id": "drive-103CVBIgXGIpCzhp-W10f4nNe52iDwMMp",
+      "sourceUrl": "https://drive.google.com/file/d/103CVBIgXGIpCzhp-W10f4nNe52iDwMMp/view",
+      "reviewMethod": "Visual review of all six seconds, including the on-screen title",
+      "evidenceSeconds": [
+        [
+          0,
+          6
+        ]
+      ],
+      "title": "קליעה לסל עם אצטרובל",
+      "description": "רגע קליל בין עצי האורן: אורן מנסה לקלוע אצטרובל ירוק לסלסלת הליקוט. סרטון קצר של ״כדורסל אצטרובל״ מהיער.",
+      "topic": "foraging"
+    },
+    {
+      "id": "drive-1zXTl-Tn-u19NCPMvKzLER5wVuMoxTXBe",
+      "sourceUrl": "https://drive.google.com/file/d/1zXTl-Tn-u19NCPMvKzLER5wVuMoxTXBe/view",
+      "reviewMethod": "On-screen Hebrew subtitle OCR at one-second intervals, with editorial review",
+      "evidenceSeconds": [
+        [
+          28,
+          60
+        ],
+        [
+          62,
+          78
+        ]
+      ],
+      "title": "מתחילים להבחין בין גדילן לברקן",
+      "description": "שני קוצים דומים צומחים זה לצד זה, אבל איך מתחילים להבחין ביניהם? היכרות ראשונה עם הגדילן והברקן לפני מבט מקרוב בסימני העלים.",
+      "topic": "foraging"
+    },
+    {
+      "id": "drive-1-fffGWPFvgUv0uuZjeRhjLEStbr7_Yfm",
+      "sourceUrl": "https://drive.google.com/file/d/1-fffGWPFvgUv0uuZjeRhjLEStbr7_Yfm/view",
+      "reviewMethod": "On-screen Hebrew subtitle OCR at one-second intervals, with editorial review",
+      "evidenceSeconds": [
+        [
+          0,
+          10
+        ],
+        [
+          21,
+          41
+        ]
+      ],
+      "title": "חליטת פרחי עוזרר",
+      "description": "פרחים לבנים, חליטה אדומה: אורן מציג את שינוי הצבע בכוס. הדגמה של הכנת חליטה מקצות הענפים הצעירים, הפרחים והעלים.",
+      "topic": "natural-pharmacy"
+    },
+    {
+      "id": "drive-1BwL-grrf78vS_ikHhCWg_hvDXaQt7o64",
+      "sourceUrl": "https://drive.google.com/file/d/1BwL-grrf78vS_ikHhCWg_hvDXaQt7o64/view",
+      "reviewMethod": "On-screen Hebrew subtitle OCR at one-second intervals, with editorial review",
+      "evidenceSeconds": [
+        [
+          19,
+          43
+        ],
+        [
+          46,
+          80
+        ]
+      ],
+      "title": "פירות האלה הארץ־ישראלית במטבח",
+      "description": "היכרות עם פירות האלה הארץ־ישראלית ועם הטעם החמצמץ־ארומטי שלהם. אורן מסביר על ייבוש הפירות, הפרדת הציפה והשימוש בה כתבלין וגם כתוספת לקפה.",
+      "topic": "foraging"
+    },
+    {
+      "id": "drive-1SipwpvGyzdTMnnIr0MIKctueNHh6WJcg",
+      "sourceUrl": "https://drive.google.com/file/d/1SipwpvGyzdTMnnIr0MIKctueNHh6WJcg/view",
+      "reviewMethod": "On-screen Hebrew subtitle OCR at one-second intervals, with editorial review",
+      "evidenceSeconds": [
+        [
+          1,
+          20
+        ]
+      ],
+      "title": "איסוף ענפי עוזרר בזמן הפריחה",
+      "description": "מבט מקרוב בענף העוזרר כדי להבדיל בין הצמיחה הישנה לצימוח הירוק של השנה. אורן מראה איזה חלק מקצות הענפים נאסף יחד עם הפרחים והעלים.",
+      "topic": "foraging"
+    },
+    {
+      "id": "drive-1JoMDlinBbZgtqn3wLtkUxAju6M-t2bHC",
+      "sourceUrl": "https://drive.google.com/file/d/1JoMDlinBbZgtqn3wLtkUxAju6M-t2bHC/view",
+      "reviewMethod": "On-screen Hebrew subtitle OCR at one-second intervals, with editorial review",
+      "evidenceSeconds": [
+        [
+          5,
+          38
+        ],
+        [
+          41,
+          80
+        ]
+      ],
+      "title": "הנוזל הלבן שבחסת המצפן",
+      "description": "מהו הנוזל הלבן שמופיע בגבעול הפצוע? אורן מדגים את המוהל של חסת המצפן בזמן הפריחה ומספר על דרך איסופו במסורת ההרבליסטית.",
+      "topic": "medicinal-plants"
+    },
+    {
+      "id": "drive-1fGa_74qmgiSyAYgB4GXMr9OHTDfGiFPI",
+      "sourceUrl": "https://drive.google.com/file/d/1fGa_74qmgiSyAYgB4GXMr9OHTDfGiFPI/view",
+      "reviewMethod": "On-screen Hebrew subtitle OCR at one-second intervals, with editorial review",
+      "evidenceSeconds": [
+        [
+          0,
+          25
+        ],
+        [
+          42,
+          81
+        ]
+      ],
+      "title": "אגדות על סמבוק שחור",
+      "description": "מי גרה, לפי האגדה, בין גזעי הסמבוק? פרץ מעל־עלים מספר על המכשפה שבשיח ועל הקשר בין סיפורי אזהרה לסיפורי ריפוי בפולקלור האירופי.",
+      "topic": "medicinal-plants"
+    },
+    {
+      "id": "drive-1YRU0Gv2SqAj0YK0KUgJcIrGUkMOIv5B9",
+      "sourceUrl": "https://drive.google.com/file/d/1YRU0Gv2SqAj0YK0KUgJcIrGUkMOIv5B9/view",
+      "reviewMethod": "On-screen Hebrew subtitle OCR at one-second intervals, with editorial review",
+      "evidenceSeconds": [
+        [
+          0,
+          19
+        ],
+        [
+          54,
+          64
+        ]
+      ],
+      "title": "ניסיון בהכנת ריבת דודאים",
+      "description": "צמח רעיל: הסרטון מתעד ניסיון של אורן ואוהד בהכנת ריבת דודאים ואת האזהרות שנלוות אליו. זהו תיעוד בלבד, לא מתכון לביצוע ביתי.",
+      "topic": "natural-pharmacy"
+    },
+    {
+      "id": "drive-1HQ7_lb_zjKpapJBlBM2pLRM89Qxl_NcQ",
+      "sourceUrl": "https://drive.google.com/file/d/1HQ7_lb_zjKpapJBlBM2pLRM89Qxl_NcQ/view",
+      "reviewMethod": "On-screen Hebrew subtitle OCR at one-second intervals, with editorial review",
+      "evidenceSeconds": [
+        [
+          0,
+          15
+        ],
+        [
+          49,
+          84
+        ]
+      ],
+      "title": "השריית פרחי קלנדולה בשמן",
+      "description": "אורן ממלא צנצנת בפרחי קלנדולה ומדגים את תחילת הכנתו של שמן תשרית. שיחה על דחיסת הפרחים, בחירת שמן הבסיס והשימוש המסורתי בקלנדולה לעור.",
+      "topic": "natural-pharmacy"
+    },
+    {
+      "id": "drive-17us-trhIwgev3weow6PVxPb0blapMuCX",
+      "sourceUrl": "https://drive.google.com/file/d/17us-trhIwgev3weow6PVxPb0blapMuCX/view",
+      "reviewMethod": "On-screen Hebrew subtitle OCR at one-second intervals, with editorial review",
+      "identicalRecordingTo": "drive-1BwL-grrf78vS_ikHhCWg_hvDXaQt7o64",
+      "evidenceSeconds": [
+        [
+          19,
+          43
+        ],
+        [
+          46,
+          80
+        ]
+      ],
+      "title": "פירות האלה הארץ־ישראלית במטבח",
+      "description": "היכרות עם פירות האלה הארץ־ישראלית ועם הטעם החמצמץ־ארומטי שלהם. אורן מסביר על ייבוש הפירות, הפרדת הציפה והשימוש בה כתבלין וגם כתוספת לקפה.",
+      "topic": "foraging"
+    },
+    {
+      "id": "drive-1ADsccMqmJ424q-NnQBTwnZ_aC4rXD_0O",
+      "sourceUrl": "https://drive.google.com/file/d/1ADsccMqmJ424q-NnQBTwnZ_aC4rXD_0O/view",
+      "reviewMethod": "On-screen Hebrew subtitle OCR at one-second intervals, with editorial review",
+      "evidenceSeconds": [
+        [
+          0,
+          16
+        ],
+        [
+          32,
+          77
+        ]
+      ],
+      "title": "סינון וסחיטת שמן קלנדולה",
+      "description": "אחרי שלושה חודשי השריה, אורן מסנן וסוחט את פרחי הקלנדולה בעזרת בד ומכבש. זהו שלב הפקת השמן לקראת הכנת המשחה, לא מתכון המשחה המלא.",
+      "topic": "natural-pharmacy"
+    },
+    {
+      "id": "drive-1YdiqePziS1N0rIiaRztQo4-0ZJscs6iC",
+      "sourceUrl": "https://drive.google.com/file/d/1YdiqePziS1N0rIiaRztQo4-0ZJscs6iC/view",
+      "reviewMethod": "On-screen Hebrew subtitle OCR at one-second intervals, with editorial review",
+      "evidenceSeconds": [
+        [
+          0,
+          26
+        ],
+        [
+          40,
+          73
+        ],
+        [
+          83,
+          134
+        ]
+      ],
+      "title": "העלים והשימושים המסורתיים של הבוצין",
+      "description": "אורן מציג את עלי הבוצין, את הכסות השעירה שלהם ואת תהליך הניקוי והייבוש. השיחה נוגעת בשימושים מסורתיים בחליטה וגם בעישון, ואינה המלצה לעשן.",
+      "topic": "medicinal-plants"
+    },
+    {
+      "id": "drive-164VxlWlOi3G8z7KN6j5T5D9G8qrn9Qj4",
+      "sourceUrl": "https://drive.google.com/file/d/164VxlWlOi3G8z7KN6j5T5D9G8qrn9Qj4/view",
+      "reviewMethod": "On-screen Hebrew subtitle OCR at one-second intervals, with editorial review",
+      "evidenceSeconds": [
+        [
+          0,
+          29
+        ],
+        [
+          33,
+          59
+        ]
+      ],
+      "title": "איסוף אבקנים מאורן קנרי וקפריסאי",
+      "description": "מה ההבדל בין התפרחות הזכריות של אורן קנרי ואורן קפריסאי? השוואה במטבח של גודל התפרחות, כמות האבקה ואופן האיסוף.",
+      "topic": "foraging"
+    },
+    {
+      "id": "drive-1Nh9oh1plujJLRHCvY1mrrzd6cXtJq9Yj",
+      "sourceUrl": "https://drive.google.com/file/d/1Nh9oh1plujJLRHCvY1mrrzd6cXtJq9Yj/view",
+      "reviewMethod": "On-screen Hebrew subtitle OCR at one-second intervals, with editorial review",
+      "evidenceSeconds": [
+        [
+          20,
+          41
+        ],
+        [
+          56,
+          89
+        ]
+      ],
+      "title": "הריח והמרירות של הגעדה",
+      "description": "אורן מציג את הגעדה בשטח ומתבונן בעלים, בריח הארומטי ובמרירות האופיינית לה. היכרות עם צמח מקומי ועם מקומו במסורת ההרבליסטית.",
+      "topic": "medicinal-plants"
+    },
+    {
+      "id": "drive-18yn4LHsmWP4Z2Thye-Drr867QHFXkm9G",
+      "sourceUrl": "https://drive.google.com/file/d/18yn4LHsmWP4Z2Thye-Drr867QHFXkm9G/view",
+      "reviewMethod": "On-screen Hebrew subtitle OCR at one-second intervals, with editorial review",
+      "evidenceSeconds": [
+        [
+          18,
+          43
+        ],
+        [
+          44,
+          86
+        ]
+      ],
+      "title": "מתי מלקטים אבקני אורן?",
+      "description": "מבט על שני עצים סמוכים כדי להבין מתי התפרחות עדיין סגורות ומתי האבקה כבר התפזרה. אורן מראה את סימני התזמון לליקוט ואת ההבדל בין שלבי הפריחה.",
+      "topic": "foraging"
+    },
+    {
+      "id": "drive-1YMmkAjXDad1N_5wRS9H6CN3E6LQFaEl9",
+      "sourceUrl": "https://drive.google.com/file/d/1YMmkAjXDad1N_5wRS9H6CN3E6LQFaEl9/view",
+      "reviewMethod": "On-screen Hebrew subtitle OCR at one-second intervals, with editorial review",
+      "evidenceSeconds": [
+        [
+          1,
+          37
+        ],
+        [
+          52,
+          72
+        ]
+      ],
+      "title": "ההבדלים בין עלי הגדילן והברקן",
+      "description": "השוואה מקרוב בין דגמי הלבן על העלים של הגדילן והברקן. אורן מצביע על הקשר בין סימני העלה לעורקים כדי להמחיש את ההבדל ביניהם.",
+      "topic": "foraging"
+    },
+    {
+      "id": "drive-1RVjVB8IdLrsqUMHPf5e6ASPtwQkcOUOR",
+      "sourceUrl": "https://drive.google.com/file/d/1RVjVB8IdLrsqUMHPf5e6ASPtwQkcOUOR/view",
+      "reviewMethod": "On-screen Hebrew subtitle OCR at one-second intervals, with editorial review",
+      "evidenceSeconds": [
+        [
+          0,
+          13
+        ],
+        [
+          14,
+          64
+        ]
+      ],
+      "title": "מה קורה לסירופ אצטרובלים בחימום?",
+      "description": "מה קורה לסירופ האצטרובלים בזמן החימום? אורן מסביר על ויטמין C ועל החומרים שבאצטרובל שיוצרים את תחושת היובש בפה.",
+      "topic": "medicinal-plants"
+    },
+    {
+      "id": "drive-1rV1Rn6Efeo6hpbOBpdTlGqZYgqZWf3Ee",
+      "sourceUrl": "https://drive.google.com/file/d/1rV1Rn6Efeo6hpbOBpdTlGqZYgqZWf3Ee/view",
+      "reviewMethod": "On-screen Hebrew subtitle OCR at one-second intervals, with editorial review",
+      "evidenceSeconds": [
+        [
+          0,
+          42
+        ],
+        [
+          84,
+          124
+        ]
+      ],
+      "title": "פירות הדודא במקרא ובמסורת",
+      "description": "מפגש עם פירות הדודא בשלבי הבשלה שונים ועם הסיפורים שנקשרו אליהם במקרא ובמסורת. הסרטון עוסק גם ברעילות הצמח ובצורך בזהירות, ואינו המלצה לאכילה או לשימוש עצמי.",
+      "topic": "medicinal-plants"
+    },
+    {
+      "id": "drive-1pzWWuD4mb5rWhDZNit0onjHhW8I9bLZt",
+      "sourceUrl": "https://drive.google.com/file/d/1pzWWuD4mb5rWhDZNit0onjHhW8I9bLZt/view",
+      "reviewMethod": "On-screen Hebrew subtitle OCR at one-second intervals, with editorial review",
+      "evidenceSeconds": [
+        [
+          1,
+          19
+        ],
+        [
+          36,
+          84
+        ]
+      ],
+      "title": "איך מזהים פטל קדוש בשל?",
+      "description": "ליד הנחל, אורן משווה בין פירות פטל בשלבי הבשלה שונים. מבט בצבע, במגע ובקלות הניתוק מהאשכול, לצד הדגמה של גישה עדינה בין הקוצים.",
+      "topic": "foraging"
+    },
+    {
+      "id": "drive-1WsOS_CIugBGonTbzb6k5gb3Vp3D_3upZ",
+      "sourceUrl": "https://drive.google.com/file/d/1WsOS_CIugBGonTbzb6k5gb3Vp3D_3upZ/view",
+      "reviewMethod": "On-screen Hebrew subtitle OCR at one-second intervals, with editorial review",
+      "evidenceSeconds": [
+        [
+          0,
+          36
+        ],
+        [
+          39,
+          76
+        ]
+      ],
+      "title": "סיור במרכז צמחי המרפא על־עלים",
+      "description": "ביקור במרכז על־עלים שבציפורי, בין צמחי מרפא, פטריות, שרפים ותבלינים. אורן ואוהד עוברים בין המדפים ומשוחחים על איכות חומרי הגלם ועל תהליך הייבוש.",
+      "topic": "medicinal-plants"
+    },
+    {
+      "id": "drive-1xk27mEWDWBqYSRGZoUZwa0LFl-B3aY-c",
+      "sourceUrl": "https://drive.google.com/file/d/1xk27mEWDWBqYSRGZoUZwa0LFl-B3aY-c/view",
+      "reviewMethod": "On-screen Hebrew subtitle OCR at one-second intervals, with editorial review",
+      "identicalRecordingTo": "drive-1ADsccMqmJ424q-NnQBTwnZ_aC4rXD_0O",
+      "evidenceSeconds": [
+        [
+          0,
+          16
+        ],
+        [
+          32,
+          77
+        ]
+      ],
+      "title": "סינון וסחיטת שמן קלנדולה",
+      "description": "אחרי שלושה חודשי השריה, אורן מסנן וסוחט את פרחי הקלנדולה בעזרת בד ומכבש. זהו שלב הפקת השמן לקראת הכנת המשחה, לא מתכון המשחה המלא.",
+      "topic": "natural-pharmacy"
+    },
+    {
+      "id": "drive-1TRLxzI3YSJT_AFy_p70I9bNwQcqOyXnG",
+      "sourceUrl": "https://drive.google.com/file/d/1TRLxzI3YSJT_AFy_p70I9bNwQcqOyXnG/view",
+      "reviewMethod": "On-screen Hebrew subtitle OCR at one-second intervals, with editorial review",
+      "evidenceSeconds": [
+        [
+          10,
+          30
+        ],
+        [
+          63,
+          85
+        ]
+      ],
+      "title": "זיהוי מרווה משולשת והכנת חליטה",
+      "description": "למה קוראים לה מרווה משולשת? אורן מציג את מבנה העלה, משווה למרווה הרפואית ומשוחח על חליטה ועל שימושים מסורתיים בצמח.",
+      "topic": "medicinal-plants"
+    },
+    {
+      "id": "drive-1RaEaKR61kGua_M5AMFyRHOrSP44PDqN4",
+      "sourceUrl": "https://drive.google.com/file/d/1RaEaKR61kGua_M5AMFyRHOrSP44PDqN4/view",
+      "reviewMethod": "On-screen Hebrew subtitle OCR at one-second intervals, with editorial review",
+      "identicalRecordingTo": "drive-1HQ7_lb_zjKpapJBlBM2pLRM89Qxl_NcQ",
+      "evidenceSeconds": [
+        [
+          0,
+          15
+        ],
+        [
+          49,
+          84
+        ]
+      ],
+      "title": "השריית פרחי קלנדולה בשמן",
+      "description": "אורן ממלא צנצנת בפרחי קלנדולה ומדגים את תחילת הכנתו של שמן תשרית. שיחה על דחיסת הפרחים, בחירת שמן הבסיס והשימוש המסורתי בקלנדולה לעור.",
+      "topic": "natural-pharmacy"
+    },
+    {
+      "id": "drive-1sGwybYWJWkC_cBF4qBGsUHann5PfrUy1",
+      "sourceUrl": "https://drive.google.com/file/d/1sGwybYWJWkC_cBF4qBGsUHann5PfrUy1/view",
+      "reviewMethod": "On-screen Hebrew subtitle OCR at one-second intervals, with editorial review",
+      "identicalRecordingTo": "drive-18yn4LHsmWP4Z2Thye-Drr867QHFXkm9G",
+      "evidenceSeconds": [
+        [
+          18,
+          43
+        ],
+        [
+          44,
+          86
+        ]
+      ],
+      "title": "מתי מלקטים אבקני אורן?",
+      "description": "מבט על שני עצים סמוכים כדי להבין מתי התפרחות עדיין סגורות ומתי האבקה כבר התפזרה. אורן מראה את סימני התזמון לליקוט ואת ההבדל בין שלבי הפריחה.",
+      "topic": "foraging"
+    },
+    {
+      "id": "drive-1xWB0Qlsdluydgb4aE00mDz8U2MdpoLJw",
+      "sourceUrl": "https://drive.google.com/file/d/1xWB0Qlsdluydgb4aE00mDz8U2MdpoLJw/view",
+      "reviewMethod": "On-screen Hebrew subtitle OCR at one-second intervals, with editorial review",
+      "evidenceSeconds": [
+        [
+          0,
+          24
+        ],
+        [
+          25,
+          64
+        ]
+      ],
+      "title": "בחירת אצטרובלים להכנת סירופ",
+      "description": "אילו אצטרובלים מתאימים להכנת סירופ? אורן משווה גדלים ושלבי התפתחות ומדגים את הרכות שהוא מחפש באצטרובל הירוק.",
+      "topic": "foraging"
+    },
+    {
+      "id": "drive-1JFuhpcfoynZ3oAXE_Mnh9_L6utGKejS2",
+      "sourceUrl": "https://drive.google.com/file/d/1JFuhpcfoynZ3oAXE_Mnh9_L6utGKejS2/view",
+      "reviewMethod": "On-screen Hebrew subtitle OCR at one-second intervals, with editorial review",
+      "evidenceSeconds": [
+        [
+          5,
+          40
+        ],
+        [
+          42,
+          88
+        ]
+      ],
+      "title": "ריח הדודא והזהירות בשימוש בו",
+      "description": "אורן מציג את ריח העלים והפירות של הדודא ואת הקשר שלו לסיפורי פריון ופולקלור. השיחה כוללת אזהרה מפני רעילות הצמח ואינה מדריך לאכילה או לטיפול עצמי.",
+      "topic": "medicinal-plants"
+    },
+    {
+      "id": "drive-1eEfim1f2CAMbUqXKTief93Wd0pTQjzNz",
+      "sourceUrl": "https://drive.google.com/file/d/1eEfim1f2CAMbUqXKTief93Wd0pTQjzNz/view",
+      "reviewMethod": "On-screen Hebrew subtitle OCR at one-second intervals, with editorial review",
+      "identicalRecordingTo": "drive-1rV1Rn6Efeo6hpbOBpdTlGqZYgqZWf3Ee",
+      "evidenceSeconds": [
+        [
+          0,
+          42
+        ],
+        [
+          84,
+          124
+        ]
+      ],
+      "title": "פירות הדודא במקרא ובמסורת",
+      "description": "מפגש עם פירות הדודא בשלבי הבשלה שונים ועם הסיפורים שנקשרו אליהם במקרא ובמסורת. הסרטון עוסק גם ברעילות הצמח ובצורך בזהירות, ואינו המלצה לאכילה או לשימוש עצמי.",
+      "topic": "medicinal-plants"
+    },
+    {
+      "id": "drive-1KdgV1gJvLPr_2NkGVj9jJedlYZu0ItP-",
+      "sourceUrl": "https://drive.google.com/file/d/1KdgV1gJvLPr_2NkGVj9jJedlYZu0ItP-/view",
+      "reviewMethod": "On-screen Hebrew subtitle OCR at one-second intervals, with editorial review",
+      "evidenceSeconds": [
+        [
+          0,
+          15
+        ],
+        [
+          30,
+          73
+        ]
+      ],
+      "title": "השערות הצורבות של הסרפד",
+      "description": "מבט מקרוב בשערות הצורבות של הסרפד ובהבדלים בצפיפותן לאורך הצמח. אורן מדגים כיצד הוא ניגש לקטיף ולהכנת העלים בשטח.",
+      "topic": "foraging"
+    },
+    {
+      "id": "drive-1BMFqKfwcBSnttuccKqdmn04qTpn2QI8U",
+      "sourceUrl": "https://drive.google.com/file/d/1BMFqKfwcBSnttuccKqdmn04qTpn2QI8U/view",
+      "reviewMethod": "On-screen Hebrew subtitle OCR at one-second intervals, with editorial review",
+      "identicalRecordingTo": "drive-1fnuMZ_BFaogoRN3R78rlArDAHjNRuRKi",
+      "evidenceSeconds": [
+        [
+          0,
+          24
+        ],
+        [
+          24,
+          63
+        ]
+      ],
+      "title": "חסת המצפן וחלימה צלולה",
+      "description": "מהי חלימה צלולה, ואיך נקשרה לחסת המצפן במסורת ההרבליסטית? אורן משוחח על מודעות בזמן החלום ועל השימוש המסורתי בצמח בהקשר הזה.",
+      "topic": "medicinal-plants"
+    },
+    {
+      "id": "drive-16CO9g53RcAogPLUGk8od1kaDsz2oliJB",
+      "sourceUrl": "https://drive.google.com/file/d/16CO9g53RcAogPLUGk8od1kaDsz2oliJB/view",
+      "reviewMethod": "On-screen Hebrew subtitle OCR at one-second intervals, with editorial review",
+      "evidenceSeconds": [
+        [
+          0,
+          29
+        ],
+        [
+          30,
+          54
+        ]
+      ],
+      "title": "כרמלית נאה ומשפחת המצליבים",
+      "description": "דרך פרחי הכרמלית הנאה, אורן מציג את מבנה ארבעת עלי הכותרת הנפרדים המסודרים כצלב. שיחה על סימני משפחת המצליבים ועל החריפות האופיינית לצמחים במשפחה.",
+      "topic": "foraging"
+    },
+    {
+      "id": "5XaKIqrVzQs",
+      "sourceUrl": "https://www.youtube.com/watch?v=5XaKIqrVzQs",
+      "reviewMethod": "On-screen Hebrew subtitle OCR at one-second intervals; cross-checked with Hebrew automatic captions where available",
+      "evidenceSeconds": [
+        [
+          29,
+          57
+        ],
+        [
+          100,
+          190
+        ]
+      ],
+      "title": "שיחה עם פרץ על סמבוק שחור",
+      "description": "פרץ מעל־עלים משוחח עם אורן על גבעולי הסמבוק, על סגולות עממיות ועל מקור שמו של הצמח. תיעוד של מסורות וסיפורים, לא הנחיה לטיפול בתינוקות.",
+      "topic": "medicinal-plants"
+    },
+    {
+      "id": "baCel93LGAM",
+      "sourceUrl": "https://www.youtube.com/watch?v=baCel93LGAM",
+      "reviewMethod": "On-screen Hebrew subtitle OCR at one-second intervals; cross-checked with Hebrew automatic captions where available",
+      "evidenceSeconds": [
+        [
+          0,
+          38
+        ],
+        [
+          40,
+          140
+        ]
+      ],
+      "title": "הכנת עלי בוצין מפורץ",
+      "description": "היכרות עם הבוצין המפורץ ועם העלים המכוסים שערות עדינות. אורן מדגים את הכנת העלים ומספר על שימושים מסורתיים בחליטה וגם בעישון, ללא המלצה לעשן.",
+      "topic": "medicinal-plants"
+    },
+    {
+      "id": "A0LhLF-EHwU",
+      "sourceUrl": "https://www.youtube.com/watch?v=A0LhLF-EHwU",
+      "reviewMethod": "On-screen Hebrew subtitle OCR at one-second intervals; cross-checked with Hebrew automatic captions where available",
+      "evidenceSeconds": [
+        [
+          0,
+          35
+        ],
+        [
+          35,
+          54
+        ]
+      ],
+      "title": "האזוב במטבח ובמסורת המקומית",
+      "description": "האזוב שמוכר כזעתר, מהעלים הריחניים ועד התוספת לסלט ולמרק. אורן משוחח על טעמו של הצמח ועל מקומו במסורת צמחי המרפא המקומית.",
+      "topic": "medicinal-plants"
+    },
+    {
+      "id": "1dSl-rc-K5Y",
+      "sourceUrl": "https://www.youtube.com/watch?v=1dSl-rc-K5Y",
+      "reviewMethod": "On-screen Hebrew subtitle OCR at one-second intervals; cross-checked with Hebrew automatic captions where available",
+      "evidenceSeconds": [
+        [
+          5,
+          25
+        ],
+        [
+          34,
+          57
+        ]
+      ],
+      "title": "היכרות עם ולריאנה איטלקית",
+      "description": "בין צמחי הבר מסתתרת ולריאנה איטלקית, קרובה של הוולריאנה הרפואית. אורן מראה את העלים ומסביר מדוע השורש, עם ריחו האופייני, הוא החלק שמוזכר בשימוש המסורתי.",
+      "topic": "medicinal-plants"
+    },
+    {
+      "id": "ie1XCKPkTT4",
+      "sourceUrl": "https://www.youtube.com/watch?v=ie1XCKPkTT4",
+      "reviewMethod": "On-screen Hebrew subtitle OCR at one-second intervals; cross-checked with Hebrew automatic captions where available",
+      "evidenceSeconds": [
+        [
+          10,
+          43
+        ],
+        [
+          44,
+          80
+        ]
+      ],
+      "title": "הכנת שמן משרף אורן",
+      "description": "למה עץ האורן מפריש שרף, ומה רואים סביב פצע ישן בגזע? אורן משוחח על איסוף השרף ועל תהליך הכנת שמן בבן־מארי וסינונו.",
+      "topic": "natural-pharmacy"
+    },
+    {
+      "id": "77K_0Jfd-wk",
+      "sourceUrl": "https://www.youtube.com/watch?v=77K_0Jfd-wk",
+      "reviewMethod": "On-screen Hebrew subtitle OCR at one-second intervals; cross-checked with Hebrew automatic captions where available",
+      "evidenceSeconds": [
+        [
+          0,
+          28
+        ],
+        [
+          34,
+          59
+        ]
+      ],
+      "title": "שלבי הצמיחה של חרחבינה מכחילה",
+      "description": "איך משתנה החרחבינה מעלים צעירים ועגולים לצמח בוגר וקוצני? אורן מציג את שלבי הצמיחה ואת ההבדל בין השימוש הקולינרי בעלים לשימוש המסורתי בשורש.",
+      "topic": "foraging"
+    },
+    {
+      "id": "dW3hDGr-1T8",
+      "sourceUrl": "https://www.youtube.com/watch?v=dW3hDGr-1T8",
+      "reviewMethod": "On-screen Hebrew subtitle OCR at one-second intervals; cross-checked with Hebrew automatic captions where available",
+      "evidenceSeconds": [
+        [
+          6,
+          24
+        ],
+        [
+          28,
+          37
+        ]
+      ],
+      "title": "קומפרי וזהירות בשימוש בו",
+      "description": "אורן מציג את הקומפרי ביער ומספר על השימוש המסורתי שלו במיצויים לשימוש חיצוני. השיחה מדגישה את האזהרה מפני שימוש פנימי בצמח.",
+      "topic": "medicinal-plants"
+    },
+    {
+      "id": "9LLRsOUS_Cs",
+      "sourceUrl": "https://www.youtube.com/watch?v=9LLRsOUS_Cs",
+      "reviewMethod": "On-screen Hebrew subtitle OCR at one-second intervals; cross-checked with Hebrew automatic captions where available",
+      "evidenceSeconds": [
+        [
+          0,
+          19
+        ],
+        [
+          24,
+          43
+        ]
+      ],
+      "title": "ליקוט כוכבית בין מחטי האורן",
+      "description": "מפגש עם הכוכבית הגדלה בין מחטי האורן בקדיתא. אורן מציג את המרקם הרך והרירי שלה ומשוחח על מקומה במטבח ובמיצויים מסורתיים לשימוש חיצוני.",
+      "topic": "foraging"
+    }
+  ]
+}

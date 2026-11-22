@@ -112,6 +112,27 @@ test("retries retain the Resend idempotency key; changed enquiries receive a new
   await invoke({ ...valid(), message: "Changed enquiry" });
   assert.notEqual(calls[5].options.headers["Idempotency-Key"], first);
 });
+test("English enquiries receive an escaped English confirmation and LTR email", async () => {
+  const body = { ...valid(), language: "en", name: "English visitor", phone: "" };
+  assert.equal((await invoke(body)).body.success, true);
+  const emails = JSON.parse(calls[1].options.body);
+  assert.equal(emails[1].subject, "Your message to Oren Herbalist");
+  assert.ok(emails[0].text.includes("Phone: Not provided"));
+  assert.ok(emails[1].text.endsWith(emails[0].text));
+  for (const email of emails) {
+    assert.ok(email.html.includes('lang="en" dir="ltr"'));
+    assert.ok(email.html.includes('text-align:left'));
+    assert.ok(email.html.includes('&lt;script&gt;plain text&lt;/script&gt;'));
+    assert.ok(!email.html.includes('<script>'));
+    assert.equal(email.reply_to, email === emails[0] ? body.email : "liora1018@gmail.com");
+  }
+});
+test("unrecognized language values use the Hebrew default", async () => {
+  assert.equal((await invoke({ ...valid(), language: '<script>' })).body.success, true);
+  const emails = JSON.parse(calls[1].options.body);
+  assert.ok(emails[1].html.includes('lang="he" dir="rtl"'));
+  assert.ok(!emails[1].html.includes('<script>'));
+});
 test("provider rejection and incomplete batches never report success", async () => {
   for (const value of [{}, { data: [{ id: "one" }] }, { data: [{ id: "one" }, {}] }]) {
     sendResult = value;

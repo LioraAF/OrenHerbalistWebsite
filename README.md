@@ -1,7 +1,25 @@
 # Oren Herbalist Website
 
-A static Hebrew website for Oren Herbalist with dedicated pages for treatments,
+A static Hebrew and English website for Oren Herbalist with dedicated pages for treatments,
 products, workshops, and educational videos, plus a Vercel contact endpoint.
+
+## English version
+
+The five English public pages are in `en/`, starting at `/en/index.html`.
+Every public page has a language switch to the matching page. It also preserves
+the current section and query parameters. English pages use a left-to-right layout;
+video titles and descriptions are translated, while recordings retain their
+original Hebrew audio. The original Hebrew logo artwork is shared by both versions.
+
+Edit shared page structure in the root Hebrew HTML files and shared behavior in
+`js/`. English copy lives in `translations/en.json`, keyed by the Hebrew source
+text (with whitespace collapsed). Run `node scripts/build-english.cjs` after edits
+to regenerate the English HTML and scripts. The build fails if new public copy
+has no translation. Avoid editing the generated `en/` files directly.
+
+Vercel runs both the gallery generator and the English builder on deployment.
+The contact form submits its language to `/api/contact`; English submissions
+receive English confirmation emails, while Hebrew remains the default.
 
 ## Local preview
 
@@ -19,7 +37,12 @@ The 37 shared Drive videos are listed in `js/drive-videos.js`; their thumbnails
 are stored in `images/video-thumbnails/`. They appear alongside the existing
 YouTube videos, 12 at a time. Drive playback loads only when a card is opened.
 Keep the Drive files viewable by anyone with the link for public playback.
-Titles and topics are editable working labels based on the visible thumbnails.
+Titles, descriptions and topics were reviewed against Hebrew subtitles throughout
+the recordings on 2026-11-22, using one-second frame samples and YouTube captions
+where available. Six byte-identical Drive uploads retain matching labels; none
+were removed. The review index is in `output/video-subtitle-review-20261122/review.json`.
+Descriptions summarise the recordings rather than endorse their health claims;
+the mandrake and comfrey entries retain explicit cautions.
 To migrate an entry to YouTube, fill its `youtubeId` with the YouTube video ID;
 the player and external viewing link then switch automatically.
 

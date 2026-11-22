@@ -8,17 +8,19 @@ const escapeHtml = (value) => value.replace(/[&<>"']/g, (character) => ({
   "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;",
 })[character]);
 
-function brandedEmail(title, text) {
+function brandedEmail(title, text, language = "he") {
+  const english = language === "en";
+  const direction = english ? "ltr" : "rtl";
   return `<!doctype html>
-<html lang="he" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"></head>
+<html lang="${language}" dir="${direction}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"></head>
 <body style="margin:0;padding:0;background-color:#f5f1e8;color:#33392a;font-family:Arial,sans-serif;">
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#f5f1e8;"><tr><td align="center" style="padding:24px 12px;">
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0" dir="rtl" style="max-width:600px;background-color:#fffdf7;text-align:right;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" dir="${direction}" style="max-width:600px;background-color:#fffdf7;text-align:${english ? "left" : "right"};">
 <tr><td style="padding:28px 24px 12px;"><h1 style="margin:0;font-size:22px;line-height:1.5;color:#39472d;">${escapeHtml(title)}</h1></td></tr>
 <tr><td style="padding:12px 24px 28px;font-size:16px;line-height:1.8;overflow-wrap:anywhere;word-break:break-word;">${escapeHtml(text).replace(/\r?\n/g, "<br>")}</td></tr>
 <tr><td align="center" style="padding:24px;background-color:#eee7d8;border-top:1px solid #d8d1c0;">
-<a href="https://www.orenherbalist.com/" style="text-decoration:none;"><img src="https://www.orenherbalist.com/images/Logo%20_full.png" width="200" height="112" alt="אמת מארץ תצמח — אורן הרבליסט" style="display:block;width:200px;max-width:100%;height:auto;border:0;"></a>
-<p style="margin:12px 0 0;font-size:14px;color:#39472d;">אורן עמנואל שושנה | הרבליסט קליני</p>
+<a href="https://www.orenherbalist.com/${english ? "en/" : ""}" style="text-decoration:none;"><img src="https://www.orenherbalist.com/images/Logo%20_full.png" width="200" height="112" alt="${english ? "Oren Herbalist" : "אמת מארץ תצמח — אורן הרבליסט"}" style="display:block;width:200px;max-width:100%;height:auto;border:0;"></a>
+<p style="margin:12px 0 0;font-size:14px;color:#39472d;">${english ? "Oren Emanuel Shoshana | Clinical Herbalist" : "אורן עמנואל שושנה | הרבליסט קליני"}</p>
 </td></tr></table></td></tr></table></body></html>`;
 }
 
@@ -99,18 +101,27 @@ module.exports = async function handler(req, res) {
       return reply(400, { success: false, code: "verification" });
     }
 
-    const details = `שם: ${name}\nאימייל: ${email}\nטלפון: ${phone || "לא צוין"}\n\nהודעה:\n${message}`;
-    const confirmation = `תודה שפנית לאורן הרבליסט. נחזור אליך בהקדם.\n\nזהו עותק הפרטים ששלחת דרך טופס יצירת הקשר:\n\n${details}`;
-    const fromAddress = `אורן הרבליסט <${from}>`;
+    const english = field("language") === "en";
+    const language = english ? "en" : "he";
+    const details = english
+      ? `Name: ${name}\nEmail: ${email}\nPhone: ${phone || "Not provided"}\n\nMessage:\n${message}`
+      : `שם: ${name}\nאימייל: ${email}\nטלפון: ${phone || "לא צוין"}\n\nהודעה:\n${message}`;
+    const confirmation = english
+      ? `Thank you for contacting Oren Herbalist. We’ll get back to you soon.\n\nHere is a copy of the details you submitted through the contact form:\n\n${details}`
+      : `תודה שפנית לאורן הרבליסט. נחזור אליך בהקדם.\n\nזהו עותק הפרטים ששלחת דרך טופס יצירת הקשר:\n\n${details}`;
+    const fromAddress = `${english ? "Oren Herbalist" : "אורן הרבליסט"} <${from}>`;
+    const enquiryTitle = english ? "New enquiry from the Oren Herbalist website" : "פנייה חדשה מאתר אורן הרבליסט";
+    const confirmationSubject = english ? "Your message to Oren Herbalist" : "עותק הפנייה שלך לאורן הרבליסט";
+    const confirmationTitle = english ? "Thank you for contacting Oren Herbalist" : "תודה על הפנייה לאורן הרבליסט";
     // Separate messages keep the owner's address out of the visitor's To field.
     // Escape submitted text in HTML and retain a plain-text alternative.
     const emails = [
       { from: fromAddress, to: [RECIPIENT], reply_to: email,
-        subject: "פנייה חדשה מאתר אורן הרבליסט", text: details,
-        html: brandedEmail("פנייה חדשה מאתר אורן הרבליסט", details) },
+        subject: enquiryTitle, text: details,
+        html: brandedEmail(enquiryTitle, details, language) },
       { from: fromAddress, to: [email], reply_to: RECIPIENT,
-        subject: "עותק הפנייה שלך לאורן הרבליסט",
-        text: confirmation, html: brandedEmail("תודה על הפנייה לאורן הרבליסט", confirmation) },
+        subject: confirmationSubject,
+        text: confirmation, html: brandedEmail(confirmationTitle, confirmation, language) },
     ];
     // Retrying the same enquiry within Resend's 24-hour window avoids duplicates.
     const key = createHash("sha256").update(JSON.stringify([requestId, emails])).digest("hex");
