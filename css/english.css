@@ -293,7 +293,7 @@ html[lang="en"] .library-disclaimer { max-width: none; }
   html[lang="en"] .reels-grid {
     grid-template-columns: minmax(0, 1fr);
     padding-inline: 1rem;
-    row-gap: 4.5rem;
+    row-gap: 3rem;
   }
   html[lang="en"] .reel-library-card {
     width: 100%;
@@ -303,4 +303,46 @@ html[lang="en"] .library-disclaimer { max-width: none; }
   html[lang="en"] .reel-card-topic,
   html[lang="en"] .reel-card-description { display: none; }
   html[lang="en"] .reel-card-copy { min-height: 0; }
+}
+
+/* Keep the page's scroll indicator below the sticky header. */
+html[lang="en"]::-webkit-scrollbar { width: 12px; }
+html[lang="en"]::-webkit-scrollbar-track {
+  margin-top: var(--site-header-height, 88px);
+  background: transparent;
+}
+html[lang="en"]::-webkit-scrollbar-thumb {
+  background: #a6a39b;
+  border: 3px solid transparent;
+  border-radius: 8px;
+  background-clip: padding-box;
+}
+
+/* Curved olive stems continue between mobile cards; eight variations avoid a stamp effect. */
+@media (max-width: 600px) {
+  html[lang="en"] .reel-library-card {
+    position: relative;
+    overflow: visible;
+    --video-vine: url("../images/icons/video-vines/vine-1.svg");
+  }
+  html[lang="en"] .reel-card-media { border-radius: 7px 7px 0 0; }
+  html[lang="en"] .reel-card-copy { border-radius: 0 0 7px 7px; }
+  html[lang="en"] .reel-library-card:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 70px;
+    height: calc(3rem + 2px);
+    transform: translateX(-50%);
+    background: var(--video-vine) center / 70px 100% no-repeat;
+    pointer-events: none;
+  }
+  html[lang="en"] .reel-library-card:nth-child(8n + 2) { --video-vine: url("../images/icons/video-vines/vine-2.svg"); }
+  html[lang="en"] .reel-library-card:nth-child(8n + 3) { --video-vine: url("../images/icons/video-vines/vine-3.svg"); }
+  html[lang="en"] .reel-library-card:nth-child(8n + 4) { --video-vine: url("../images/icons/video-vines/vine-4.svg"); }
+  html[lang="en"] .reel-library-card:nth-child(8n + 5) { --video-vine: url("../images/icons/video-vines/vine-5.svg"); }
+  html[lang="en"] .reel-library-card:nth-child(8n + 6) { --video-vine: url("../images/icons/video-vines/vine-6.svg"); }
+  html[lang="en"] .reel-library-card:nth-child(8n + 7) { --video-vine: url("../images/icons/video-vines/vine-7.svg"); }
+  html[lang="en"] .reel-library-card:nth-child(8n + 0) { --video-vine: url("../images/icons/video-vines/vine-8.svg"); }
 }

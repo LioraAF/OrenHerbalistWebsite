@@ -22,6 +22,19 @@ fitEnglishBrandName();
 window.addEventListener('resize', fitEnglishBrandName);
 document.fonts.ready.then(fitEnglishBrandName);
 
+// Start the English page scrollbar beneath the responsive, sticky header.
+if (document.documentElement.lang === 'en') {
+  const header = document.querySelector('.site-header');
+  if (header) {
+    const syncHeaderHeight = () => document.documentElement.style.setProperty(
+      '--site-header-height', `${header.getBoundingClientRect().height}px`
+    );
+    syncHeaderHeight();
+    new ResizeObserver(syncHeaderHeight).observe(header);
+  }
+}
+
+
 const galleryImages = (name) => siteGalleryImages[name] || [];
 const galleryImageUrl = (src) => new URL(`images/${src.split("/").map(encodeURIComponent).join("/")}`, document.baseURI).href;
 const galleryBackground = (src) => src ? `url("${galleryImageUrl(src)}")` : "none";

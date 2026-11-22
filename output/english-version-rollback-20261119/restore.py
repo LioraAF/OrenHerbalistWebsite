@@ -32,7 +32,7 @@ for name in manifest['original_files']:
     shutil.copyfile(snapshot / source if source else snapshot / 'originals' / name, root / name)
 for name in manifest['english_added_files']:
     (root / name).unlink()
-for name in ['en/js', 'en/css', 'en', 'translations', 'images/font-preview']:
+for name in ['images/icons/video-vines', 'en/js', 'en/css', 'en', 'translations', 'images/font-preview']:
     directory = root / name
     if directory.is_dir() and not any(directory.iterdir()):
         directory.rmdir()
